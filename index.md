@@ -1,8 +1,8 @@
-<meta></meta>
 
-## Projects Beta
+## **Projects Beta**
 
-### Player Áudio e Vídeo 
-[Demo Live](https://fcasfs-of.github.io/TECH-Free/)
+> [!Note]
+> ### Player Áudio e Vídeo NOTE]
+> - [Demo Live](https://fcasfs-of.github.io/TECH-Free/)
 
 
