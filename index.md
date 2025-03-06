@@ -1,6 +1,6 @@
 
 
-> ### Info
+> ### Informações 
 > - [![Profile](https://fcasfs-of.cloud-fs.net/Icon/info.png)](https://fcasfs-of.cloud-fs.net/info-profile/)
 
 
