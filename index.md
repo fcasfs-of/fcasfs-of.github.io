@@ -9,6 +9,6 @@
 <hr/>
 
 ## **Projects**
-> ### [Beta](https://fcasfs-of.cloud-fs.net/TECH-Free/projects)
+> ### [Beta](https://fcasfs-of.cloud-fs.net/projects)
 
 
