@@ -1,3 +1,7 @@
+---
+site_favicon: "favicon.png"
+---
+
 
 #### Informações 
 
