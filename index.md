@@ -10,7 +10,8 @@
 
 ## **Projects**
 
-> ### [Beta](https://fcasfs-of.cloud-fs.net/projects)
+> - ### [English](https://fcasfs-of.cloud-fs.net/projects)
+> - ### [**Português**](https://fcasfs-of.cloud-fs.net/projects-pt)
 
 
 <br/><br/>
