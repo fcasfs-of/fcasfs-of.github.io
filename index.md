@@ -1,7 +1,12 @@
----
-site_favicon: https://fcasfs-of.cloud-fs.net/favicon.ico
----
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<script>
+  var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+}
+link.href = '/favicon.ico';
+</script>
 
 
 #### Informações 
