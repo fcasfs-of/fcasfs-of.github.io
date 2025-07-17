@@ -1,6 +1,6 @@
 ## List of **Projects** for Online ***Testing***
 
-> - ### [**Media Player ('Audio, Image and Video')**](test/mdpl)
+> - ### [**Media Player ('Audio, Image and Video')**](mdpl)
 
 <br/>
 <hr />
