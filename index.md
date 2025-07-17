@@ -1,12 +1,7 @@
 <script>
-  var link = document.querySelector("link[rel~='icon']");
-if (!link) {
-    link = document.createElement('link');
-    link.rel = 'icon';
-    link.href = '/favicon.ico';
+  var link = link = document.createElement('link');
+    link.rel = 'icon';    link.href = 'favicon.ico';
     document.head.appendChild(link);
-}
-link.href = '/favicon.ico';
 </script>
 
 
