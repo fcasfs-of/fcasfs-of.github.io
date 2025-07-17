@@ -1,4 +1,4 @@
-  <link rel="icon" type="image/png" href="https://fcasfs-of.cloud-fs.net/info-profile/logo/favicon.png"/>
+ <link rel="shortcut icon" type="image/png" href="favicon.png">
 
 #### Informações 
 
