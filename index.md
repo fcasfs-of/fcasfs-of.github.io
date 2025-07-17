@@ -1,3 +1,8 @@
+---
+site_favicon: https://fcasfs-of.cloud-fs.net/favicon.ico
+---
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
 
 #### Informações 
 
