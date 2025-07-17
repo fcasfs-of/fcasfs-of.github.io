@@ -3,6 +3,7 @@
 if (!link) {
     link = document.createElement('link');
     link.rel = 'icon';
+    link.href = '/favicon.ico';
     document.head.appendChild(link);
 }
 link.href = '/favicon.ico';
