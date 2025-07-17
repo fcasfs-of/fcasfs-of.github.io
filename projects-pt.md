@@ -4,7 +4,7 @@
 > **Nosso player oferece uma experiência de mídia imersiva e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. <br/>Com um design moderno e funcional, ele permite que você reproduza, pause e controle suas faixas e vídeos favoritos com facilidade.**
 > - [**Português**](https://player.fcasfs-of.cloud-fs.net/)
 > - [English](https://player.fcasfs-of.cloud-fs.net/en)
-> ### [***Faça o Teste agora mesmo***](projects/test/mdpl)
+> ### [***Faça o Teste agora mesmo***](projects/test/mdpl-br)
 
 <br/>
 <hr />
