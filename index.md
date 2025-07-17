@@ -1,5 +1,5 @@
 ---
-site_favicon: "favicon.png"
+favicon: "favicon.png"
 ---
 
 
