@@ -1,6 +1,6 @@
 ## List of **Projects** for Online ***Testing***
 
-> - ### [**Media Player ('Audio, Image and Video')**](mdpl)
+> - ### ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png) <br/> [**Media Player ('Audio, Image and Video')**](mdpl)
 
 <br/>
 <hr />
