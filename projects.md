@@ -1,3 +1,9 @@
+<script>
+  var link = link = document.createElement('link');
+    link.rel = 'icon';    link.href = 'favicon.png';     link.type = 'image/png';
+    document.head.appendChild(link);
+</script>
+
 ## Projects 
 
 > ### ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png) <br/> Player: Audio, Imagem e Video
