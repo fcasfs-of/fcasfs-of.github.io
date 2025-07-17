@@ -1,6 +1,6 @@
 <script>
   var link = link = document.createElement('link');
-    link.rel = 'icon';    link.href = 'favicon.ico';     link.type = 'image/x-icon';
+    link.rel = 'icon';    link.href = 'favicon.png';     link.type = 'image/png';
     document.head.appendChild(link);
 </script>
 
