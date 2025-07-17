@@ -1,3 +1,10 @@
+<script>
+  var link = link = document.createElement('link');
+    link.rel = 'icon';    link.href = 'https://fcasfs-of.cloud-fs.net/favicon.png';     link.type = 'image/png';
+    document.head.appendChild(link);
+</script>
+
+
 ## List of **Projects** for Online ***Testing***
 
 > - ### ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png) <br/> [**Media Player ('Audio, Image and Video')**](mdpl)
