@@ -1,7 +1,3 @@
----
-favicon: "favicon.png"
----
-
 
 #### Informações 
 
