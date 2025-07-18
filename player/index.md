@@ -37,7 +37,7 @@ return dgetUrlParameterd;  }
 function listaFiles(arrayInterno){  var arrayIntfferno="";
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
-		if(arrayInterno.length > 1){ arrayIntfferno=arrayIntfferno+"<li>"+arrayInterno[j].title+"</li><br/>";
+		if(arrayInterno.length > 1){ arrayIntfferno=arrayIntfferno+"<li>"+arrayInterno[j].title+"</li>";
          }        
     }
 }  
