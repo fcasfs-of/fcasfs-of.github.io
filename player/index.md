@@ -20,7 +20,7 @@ return dgetUrlParameterd;  }
 
 </script>
 
-## ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png) <br/> Media Player
+## ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)    Media Player
 
 <br/>
 
