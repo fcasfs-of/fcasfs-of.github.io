@@ -44,7 +44,7 @@ if(arrayInterno[j].poster!=""){
 thumfer='<img style="text-align:center;margin:0 auto;" width="150px" src="'+arrayInterno[j].poster+'"/><br/>';
 }
 
-arrayIntfferno=arrayIntfferno+'<li><div style="margin:0 auto;text-align:center;">'+thumfer+arrayInterno[j].title+"</div></li>";
+arrayIntfferno=arrayIntfferno+'<li><span style="margin:0 auto;text-align:center;">'+thumfer+arrayInterno[j].title+"</span></li>";
          }        
     }
 }  
