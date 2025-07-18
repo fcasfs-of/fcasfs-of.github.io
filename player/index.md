@@ -33,11 +33,25 @@ return dgetUrlParameterd;  }
 <br/><br/>
 
 <script>
+
+function listaFiles(arrayInterno){  var arrayIntfferno="";
+if(arrayInterno){
+if(arrayInterno.list){
+for(var j=0; j<arrayInterno.list.length; j++){
+		if(arrayInterno.list.length > 1){
+			  arrayIntfferno=arrayIntfferno+"<li>"arrayInterno.list[j]+"</li><br/>";
+         }        
+    }
+}  }
+return arrayIntfferno;  }
+
+
   var getfval_tyget=getUrlParameter("fileID");
 if (getfval_tyget!="") {
   
   var getfvaddl_tyget=getUrlParameter("cover");
-  
+  var getfvaddl_listyget=getUrlParameter("list");
+
   var scriptfd = document.createElement("script");
     scriptfd.setAttribute("type", "text/javascript");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
