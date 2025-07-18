@@ -29,10 +29,16 @@ return dgetUrlParameterd;  }
   var getfval_tyget=getUrlParameter("fileID");
 if (getfval_tyget!="") {
 
+  var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("type", "text/javascript");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
+document.getElementsByTagName("body")[0].appendChild(scriptfd);
+
+  
   var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('  var amptar = document.getElementById(\'mpt\');      var ampmpl = document.getElementById(\'mpl\');   function onstart_file(){  if(typeof run_file==\'function\'){    amptar.innerHTML=run_file().file_title;   ampmpl.innerHTML=\'<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="https://player.fcasfs-of.cloud-fs.net/en?fileID=\'+getfval_tyget+\'&fileView=true" style="border: 1px solid black"></iframe>\'; }   }  onstart_file();  '));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(' function onstart_file(){   var amptar = document.getElementById(\'mpt\');      var ampmpl = document.getElementById(\'mpl\');    if(typeof run_file==\'function\'){    amptar.innerHTML=run_file().file_title;   ampmpl.innerHTML=\'<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="https://player.fcasfs-of.cloud-fs.net/en?fileID=\'+getfval_tyget+\'&fileView=true" style="border: 1px solid black"></iframe>\'; }   }  onstart_file();  '));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file();   };
 
