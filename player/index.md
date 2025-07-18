@@ -40,25 +40,12 @@ if (getfval_tyget!="") {
     scriptfd.setAttribute("type", "text/javascript");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
-  
-  var scriptdfd = document.createElement("script");
-    scriptdfd.setAttribute("type", "text/javascript");
-    scriptdfd.setAttribute("src", "https://fcasfs-of.github.io/info-profile/scripts/modal.js");
-document.getElementsByTagName("head")[0].appendChild(scriptdfd);
- var scripftdfd = document.createElement("link");
-    scripftdfd.setAttribute("rel", "stylesheet");
-    scripftdfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/modal.css");
-document.getElementsByTagName("head")[0].appendChild(scripftdfd);
- var scridpftdfd = document.createElement("link");
-    scridpftdfd.setAttribute("rel", "stylesheet");
-    scridpftdfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/tooltip.css");
-document.getElementsByTagName("head")[0].appendChild(scridpftdfd);
 
   
   var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(' function onstart_file(){   var amptar = document.getElementById(\'mpt\');     var ammpdr = document.getElementById(\'mpd\');     var ampmpl = document.getElementById(\'mpl\');    if(typeof run_file==\'function\'){   document.title=\'Player: \'+run_file().file_title+\' - \'+document.title;  ammpdr.innerHTML=run_file().file_desc;  amptar.style.cursor="pointer";  amptar.innerHTML=run_file().file_title;  amptar.onclick=function(){  cmodal(run_file().file_title+" - Cover",""+run_file().cover,"Close","360","yes"); };   ampmpl.innerHTML=\'<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="https://player.fcasfs-of.cloud-fs.net/\'+run_file().player_lang+\'?fileID=\'+getfval_tyget+\'&fileView=true" style="border: 1px solid black"></iframe>\'; }   }  onstart_file();  '));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(' function onstart_file(){   var amptar = document.getElementById(\'mpt\');     var ammpdr = document.getElementById(\'mpd\');     var ampmpl = document.getElementById(\'mpl\');    if(typeof run_file==\'function\'){   document.title=\'Player: \'+run_file().file_title+\' - \'+document.title;  ammpdr.innerHTML=run_file().file_desc;  amptar.innerHTML=run_file().file_title;   ampmpl.innerHTML=\'<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="https://player.fcasfs-of.cloud-fs.net/\'+run_file().player_lang+\'?fileID=\'+getfval_tyget+\'&fileView=true" style="border: 1px solid black"></iframe>\'; }   }  onstart_file();  '));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file();   };
 
