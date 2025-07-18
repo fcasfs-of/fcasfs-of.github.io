@@ -26,9 +26,7 @@ return dgetUrlParameterd;  }
 
 <div id="mpl" style="width:100%;height:100%;"></div>
 
-<br/>
-
-> <span id="mpd"></span>
+> <div id="mpd" style="text-align:left;"></div>
 
 <br/><br/>
 
