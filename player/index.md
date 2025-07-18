@@ -26,7 +26,7 @@ return dgetUrlParameterd;  }
 
 <div id="mpl" style="width:100%;height:100%;"> <div style="text-align:center;"><img src="https://fcasfs-of.cloud-fs.net/404.png"/></div> </div>
 
-> <div id="mpd" style="text-align:left;"> <span tyle="text-align:center;">Página Não Encontrada. </span></div>
+> <div id="mpd" style="text-align:left;"> <div tyle="text-align:center;">Arquivo Não Encontrado. </div></div>
 
 <div id="custimmdf"></div>
 
