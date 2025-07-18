@@ -22,11 +22,11 @@ return dgetUrlParameterd;  }
 
 ## ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)    Media Player
 
-<div style="text-align:center;font-weight:bold;"><h3 id="mpt"></h3></div>
+<div style="text-align:center;font-weight:bold;"><h3 id="mpt">Error</h3></div>
 
-<div id="mpl" style="width:100%;height:100%;"></div>
+<div id="mpl" style="width:100%;height:100%;"> ![404](https://fcasfs-of.cloud-fs.net/404.png) </div>
 
-> <div id="mpd" style="text-align:left;"></div>
+> <div id="mpd" style="text-align:left;"> **Página Não Encontrada.** </div>
 
 <div id="custimmdf"></div>
 
