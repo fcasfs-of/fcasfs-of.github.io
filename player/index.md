@@ -22,7 +22,7 @@ return dgetUrlParameterd;  }
 
 ## ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)    Media Player
 
-<div style="text-align:center;"><h1 id="mpt"></h1></div>
+<div style="text-align:center;font-weight:bold;"><h2 id="mpt"></h2></div>
 
 <div id="mpl" style="width:100%;height:100%;"></div>
 
