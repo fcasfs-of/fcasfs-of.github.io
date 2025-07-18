@@ -38,6 +38,15 @@ if (getfval_tyget!="") {
     scriptfd.setAttribute("type", "text/javascript");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
+  
+  var scriptdfd = document.createElement("script");
+    scriptdfd.setAttribute("type", "text/javascript");
+    scriptdfd.setAttribute("src", "https://fcasfs-of.github.io/info-profile/scripts/modal.js");
+document.getElementsByTagName("head")[0].appendChild(scriptdfd);
+ var scripftdfd = document.createElement("link");
+    scripftdfd.setAttribute("rel", "stylesheet");
+    scripftdfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/modal.css");
+document.getElementsByTagName("head")[0].appendChild(scripftdfd);
 
   
   var scrfiptfd = document.createElement("script");
@@ -50,5 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 }
   
 </script>
-  
+
+<div id="custimmdf"></div>
+
 <br/><br/>
