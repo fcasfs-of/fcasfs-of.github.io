@@ -41,7 +41,7 @@ for(var j=0; j<arrayInterno.length; j++){
 
 var thumfer="";
 if(arrayInterno[j].poster!=""){
-thumfer='<img style="text-align:center;margin:0 auto;" width="150px" src="\'+arrayInterno[j].poster+\'"/><br/>';
+thumfer='<img style="text-align:center;margin:0 auto;" width="150px" src="'+arrayInterno[j].poster+'"/><br/>';
 }
 
 arrayIntfferno=arrayIntfferno+'<li><div style="margin:0 auto;text-align:center;">'+thumfer+arrayInterno[j].title+"</div></li>";
