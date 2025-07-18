@@ -41,10 +41,10 @@ for(var j=0; j<arrayInterno.length; j++){
 
 var thumfer="";
 if(arrayInterno[j].poster!=""){
-thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/><br/>';
+thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
-arrayIntfferno=arrayIntfferno+'<li>'+thumfer+arrayInterno[j].title+"</li>";
+arrayIntfferno=arrayIntfferno+'<li>'+thumfer+"  >  "+arrayInterno[j].title+"</li>";
          }        
     }
 }  
