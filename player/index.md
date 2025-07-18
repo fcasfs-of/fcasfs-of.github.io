@@ -24,9 +24,9 @@ return dgetUrlParameterd;  }
 
 <div style="text-align:center;font-weight:bold;"><h3 id="mpt">Error</h3></div>
 
-<div id="mpl" style="width:100%;height:100%;"> ![404](https://fcasfs-of.cloud-fs.net/404.png) </div>
+<div id="mpl" style="width:100%;height:100%;"> <img src="https://fcasfs-of.cloud-fs.net/404.png"/> </div>
 
-> <div id="mpd" style="text-align:left;"> **Página Não Encontrada.** </div>
+> <div id="mpd" style="text-align:left;"> Página Não Encontrada. </div>
 
 <div id="custimmdf"></div>
 
