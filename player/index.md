@@ -38,13 +38,14 @@ return dgetUrlParameterd;  }
 <script>
 
 var acusttssr = document.getElementById('cuspl');
-acusttssr.innerHTML="";  acusttssr.style.display="block";
+acusttssr.innerHTML="";  acusttssr.style.display="none";
 
 
 
-var plcustom;
 
-function listaFiles(arrayInterno){   var arrayIntfferno="";
+function listaFiles(arrayInterno){   var arrayIntfferno="";  var plcustom;
+var acusttssr = document.getElementById('cuspl');
+
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 		if(arrayInterno.length > 1){ 
@@ -54,7 +55,7 @@ if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
-acusttssr.innerHTML="";  acusttssr.style.display="none";
+acusttssr.innerHTML="";  acusttssr.style.display="block";
 
 var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
@@ -71,7 +72,7 @@ plcustom.api("pause");
 });
 
 
-arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(thuddfmfer)+") </li>";
+arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 
 
          }        
