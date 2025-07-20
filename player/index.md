@@ -42,19 +42,26 @@ acusttssr.innerHTML="";  acusttssr.style.display="none";
 
 
 
+
+var plcustom="";
+
 function listaFiles(arrayInterno){  var arrayIntfferno="";
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 		if(arrayInterno.length > 1){ 
 
-var thumfer="";
+var thumfer="";  var thumdefer=0;
 if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
-arrayIntfferno=arrayIntfferno+'<li>'+thumfer+"  >  "+arrayInterno[j].title+"</li>";
 
+plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:0, loop:0, title:t, file:f });
+plcustom.OnEvents("init",function(){  thumdefer=plcustom.api("duration");  });
 acusttssr.innerHTML="";  acusttssr.style.display="none";
+
+arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(thumdefer)+") </li>";
+
          }        
     }
 }  
