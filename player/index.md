@@ -1,13 +1,9 @@
+<script src="https://player.fcasfs-of.cloud-fs.net/app/api.js"></script>
+
 <script>
   var link = document.createElement('link');
     link.rel = 'icon';    link.href = 'https://fcasfs-of.cloud-fs.net/Icon/mdpl.png';     link.type = 'image/png';
     document.head.appendChild(link);
-
-
-var scriptfddd = document.createElement("script");
-    scriptfddd.setAttribute("type", "text/javascript");
-    scriptfddd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("head")[0].appendChild(scriptfddd);
 
 
 
@@ -64,7 +60,6 @@ plcustom.OnEvents("init",function(){
 thuddfmfer=plcustom.api("duration"); 
 alert(thuddfmfer);
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
-acusttssr.innerHTML=""; 
 
 });
 
