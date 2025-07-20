@@ -7,7 +7,7 @@
 var scriptfddd = document.createElement("script");
     scriptfddd.setAttribute("type", "text/javascript");
     scriptfddd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("body")[0].appendChild(scriptfddd);
+document.getElementsByTagName("head")[0].appendChild(scriptfddd);
 
 
 
@@ -38,15 +38,11 @@ return dgetUrlParameterd;  }
 
 <div id="custimmdf"></div>
 
-<div id="cuspl"></div>
-
 
 <br/><br/>
 
 <script>
 var plcustom;
-var acusttssr = document.getElementById('cuspl');
-
 
 function listaFiles(arrayInterno){   var arrayIntfferno="";  
 
@@ -65,17 +61,11 @@ plcustom = fs_Playerjs({ OSD:false, id:"mpl", config:{}, nocontrols:1, autoplay:
 
 plcustom.OnEvents("init",function(){
 
-plcustom.OnEvents("seek",function(){
 thuddfmfer=plcustom.api("duration"); 
-
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 acusttssr.innerHTML=""; 
-});
-
-plcustom.api("seek",2); 
 
 });
-
 
          }        
     }
