@@ -60,7 +60,9 @@ var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
 plcustom.OnEvents("init",function(){
 plcustom.api("play");
-thuddfmfer=plcustom.api("duration");
+plcustom.OnEvents("pause",function(){
+thuddfmfer=plcustom.api("duration"); });
+
 });
 
 
