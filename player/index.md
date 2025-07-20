@@ -71,6 +71,7 @@ plcustom.OnEvents("seek",function(){
 thuddfmfer=plcustom.api("duration"); 
 
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
+acusttssr.innerHTML=""; 
 });
 
 plcustom.api("seek",2); 
@@ -79,7 +80,7 @@ plcustom.api("seek",2);
 
 
 
-acusttssr.innerHTML="";  acusttssr.style.display="none";
+ acusttssr.style.display="none";
 
          }        
     }
