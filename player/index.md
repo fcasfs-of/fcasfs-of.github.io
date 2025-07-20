@@ -7,7 +7,7 @@
 var scriptfddd = document.createElement("script");
     scriptfddd.setAttribute("type", "text/javascript");
     scriptfddd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.head.appendChild(scriptfddd);
+document.getElementsByTagName("body")[0].appendChild(scriptfddd);
 
 
 
