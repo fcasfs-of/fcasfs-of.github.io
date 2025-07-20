@@ -49,7 +49,7 @@ if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 		if(arrayInterno.length > 1){ 
 
-var thumfer="";  
+var thumfer="";   var thuddfmfer=0;
 if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
@@ -57,8 +57,10 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
 plcustom.OnEvents("init",function(){
-arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(plcustom.api("duration"))+") </li>";
+thuddfmfer=plcustom.api("duration");
 });
+
+arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 
 
 acusttssr.innerHTML="";  acusttssr.style.display="none";
