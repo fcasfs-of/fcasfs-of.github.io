@@ -56,14 +56,14 @@ acusttssr.innerHTML="";
 
 var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
-plcustom.OnEvents("init",function(){
 
 plcustom.OnEvents("seek",function(){
 thuddfmfer=plcustom.api("duration"); });
 
 plcustom.OnEvents("pause",function(){
-plcustom.api("time",2); });
+plcustom.api("seek",2); });
 
+plcustom.OnEvents("init",function(){
 plcustom.api("pause");
 
 });
