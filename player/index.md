@@ -49,16 +49,18 @@ if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 		if(arrayInterno.length > 1){ 
 
-var thumfer="";  var thumdefer=0;
+var thumfer="";  
 if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:0, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
-plcustom.OnEvents("init",function(){   thumdefer=Number(plcustom.api("duration"));  });
+plcustom.OnEvents("init",function(){  
+arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(plcustom.api("duration"))+") </li>";
 
-arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(thumdefer)+") </li>";
+ });
+
 
 acusttssr.innerHTML="";  acusttssr.style.display="none";
 
