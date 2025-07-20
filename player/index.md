@@ -36,13 +36,12 @@ return dgetUrlParameterd;  }
 <br/><br/>
 
 <script>
-
+var plcustom;
 var acusttssr = document.getElementById('cuspl');
 acusttssr.innerHTML=""; 
 
 
-function listaFiles(arrayInterno){   var arrayIntfferno="";  var plcustom;
-var acusttssr = document.getElementById('cuspl');
+function listaFiles(arrayInterno){   var arrayIntfferno="";  
 
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
