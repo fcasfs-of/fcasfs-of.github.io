@@ -38,7 +38,7 @@ return dgetUrlParameterd;  }
 <script>
 
 var acusttssr = document.getElementById('cuspl');
-acusttssr.innerHTML="";  acusttssr.style.display="none";
+acusttssr.innerHTML="";  acusttssr.style.display="block";
 
 
 
