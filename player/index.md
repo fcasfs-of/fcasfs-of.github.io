@@ -51,12 +51,11 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 
-var thuddfmfer=0;
-var plcustom = fs_Playerjs({ OSD:false, id:"mpl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
+var plcustom = fs_Playerjs({ OSD:false, id:"mpl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:[ {title:"",file:arrayInterno[j].file} ] });
 
 plcustom.OnEvents("init",function(){
 
-thuddfmfer=plcustom.api("duration"); 
+var thuddfmfer=plcustom.api("duration"); 
 alert(thuddfmfer);
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 
