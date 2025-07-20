@@ -59,9 +59,11 @@ acusttssr.innerHTML="";  acusttssr.style.display="none";
 var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
 plcustom.OnEvents("init",function(){
-plcustom.api("play");
+
 plcustom.OnEvents("pause",function(){
 thuddfmfer=plcustom.api("duration"); });
+
+plcustom.api("pause");
 
 });
 
