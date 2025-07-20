@@ -58,7 +58,10 @@ var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
 
 plcustom.OnEvents("seek",function(){
-thuddfmfer=plcustom.api("duration"); });
+thuddfmfer=plcustom.api("duration"); 
+
+arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
+});
 
 plcustom.OnEvents("pause",function(){
 plcustom.api("seek",2); });
@@ -69,7 +72,6 @@ plcustom.api("pause");
 });
 
 
-arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 
 acusttssr.innerHTML="";  
 
@@ -77,7 +79,7 @@ acusttssr.innerHTML="";
     }
 }  
 
-
+acusttssr.innerHTML="";  
 
 return arrayIntfferno;  }
 
