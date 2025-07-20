@@ -38,9 +38,7 @@ return dgetUrlParameterd;  }
 <script>
 
 var acusttssr = document.getElementById('cuspl');
-acusttssr.innerHTML="";  acusttssr.style.display="none";
-
-
+acusttssr.innerHTML=""; 
 
 
 function listaFiles(arrayInterno){   var arrayIntfferno="";  var plcustom;
@@ -55,7 +53,7 @@ if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
-acusttssr.innerHTML="";  acusttssr.style.display="block";
+acusttssr.innerHTML="";  
 
 var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
@@ -74,12 +72,13 @@ plcustom.api("pause");
 
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 
+acusttssr.innerHTML="";  
 
          }        
     }
 }  
 
-acusttssr.innerHTML="";  acusttssr.style.display="none";
+
 
 return arrayIntfferno;  }
 
