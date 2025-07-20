@@ -62,6 +62,7 @@ plcustom = fs_Playerjs({ OSD:false, id:"mpl", config:{}, nocontrols:1, autoplay:
 plcustom.OnEvents("init",function(){
 
 thuddfmfer=plcustom.api("duration"); 
+alert(thuddfmfer);
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 acusttssr.innerHTML=""; 
 
