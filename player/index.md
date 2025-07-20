@@ -55,10 +55,10 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 
-plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:0, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
-
+plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
+plcustom.OnEvents("init",function(){
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"  ("+convertSecondsDurationto(plcustom.api("duration"))+") </li>";
-
+});
 
 
 acusttssr.innerHTML="";  acusttssr.style.display="none";
