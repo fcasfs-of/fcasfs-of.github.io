@@ -40,10 +40,11 @@ return dgetUrlParameterd;  }
 
 function listaFiles(arrayInterno, link){   var arrayIntfferno="";  
 
-if(arrayInterno.length > 1){  arrayIntfferno=arrayIntfferno+"<br/><br/>";  }
-
 if(link!=""){
 if(arrayInterno){
+
+if(arrayInterno.length > 1){  arrayIntfferno=arrayIntfferno+"<br/><br/>";  }
+
 for(var j=0; j<arrayInterno.length; j++){
 		if(arrayInterno.length > 1){ 
 
