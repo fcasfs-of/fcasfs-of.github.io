@@ -42,10 +42,9 @@ acusttssr.innerHTML="";  acusttssr.style.display="none";
 
 
 
-
 var plcustom="";
 
-function listaFiles(arrayInterno){  var arrayIntfferno="";
+function listaFiles(arrayInterno){   var arrayIntfferno="";
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
 		if(arrayInterno.length > 1){ 
@@ -56,7 +55,7 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 
-plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:0, loop:0, title:t, file:f });
+plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:0, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
 plcustom.OnEvents("init",function(){  thumdefer=plcustom.api("duration");  });
 acusttssr.innerHTML="";  acusttssr.style.display="none";
 
