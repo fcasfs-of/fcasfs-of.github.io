@@ -3,6 +3,14 @@
     link.rel = 'icon';    link.href = 'https://fcasfs-of.cloud-fs.net/Icon/mdpl.png';     link.type = 'image/png';
     document.head.appendChild(link);
 
+
+var scriptfddd = document.createElement("script");
+    scriptfddd.setAttribute("type", "text/javascript");
+    scriptfddd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+document.head.appendChild(scriptfddd);
+
+
+
   function getUrlParameter(sParam) {  var dgetUrlParameterd="";
     var sPageURL = decodeURIComponent(location.href);//window.location.search.substring(1));
    if(sPageURL.split('?')){
@@ -82,12 +90,6 @@ acusttssr.innerHTML="";
 acusttssr.innerHTML="";  
 
 return arrayIntfferno;  }
-
-
-var scriptfddd = document.createElement("script");
-    scriptfddd.setAttribute("type", "text/javascript");
-    scriptfddd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("head")[0].appendChild(scriptfddd);
 
 
 
