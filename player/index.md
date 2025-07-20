@@ -73,12 +73,10 @@ thuddfmfer=plcustom.api("duration");
 arrayIntfferno=arrayIntfferno+'<li> '+thumfer+"  >  "+arrayInterno[j].title+"   ("+convertSecondsDurationto(thuddfmfer)+") </li>";
 });
 
-plcustom.OnEvents("pause",function(){
-plcustom.api("seek",2); });
+plcustom.api("seek",2); 
 
 });
 
-plcustom.api("pause");
 
 
 acusttssr.innerHTML="";  acusttssr.style.display="none";
