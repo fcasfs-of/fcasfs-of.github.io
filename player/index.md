@@ -46,7 +46,7 @@ return dgetUrlParameterd;  }
 <script>
 var plcustom;
 var acusttssr = document.getElementById('cuspl');
-acusttssr.innerHTML=""; 
+acusttssr.innerHTML=""; acusttssr.style.display="none";
 
 
 function listaFiles(arrayInterno){   var arrayIntfferno="";  
@@ -60,10 +60,10 @@ if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
-acusttssr.innerHTML="";  
+acusttssr.innerHTML="";  acusttssr.style.display="none";
 
 var thuddfmfer=0;
-plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
+var plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
 
 plcustom.OnEvents("seek",function(){
 thuddfmfer=plcustom.api("duration"); 
@@ -81,7 +81,7 @@ plcustom.api("pause");
 
 
 
-acusttssr.innerHTML="";  
+acusttssr.innerHTML="";  acusttssr.style.display="none";
 
          }        
     }
