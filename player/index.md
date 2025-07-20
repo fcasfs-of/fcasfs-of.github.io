@@ -30,9 +30,17 @@ return dgetUrlParameterd;  }
 
 <div id="custimmdf"></div>
 
+<div id="cuspl"></div>
+
+
 <br/><br/>
 
 <script>
+
+var acusttssr = document.getElementById('cuspl');
+acusttssr.innerHTML="";  acusttssr.style.display="none";
+
+
 
 function listaFiles(arrayInterno){  var arrayIntfferno="";
 if(arrayInterno){
@@ -45,9 +53,14 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 arrayIntfferno=arrayIntfferno+'<li>'+thumfer+"  >  "+arrayInterno[j].title+"</li>";
+
+acusttssr.innerHTML="";  acusttssr.style.display="none";
          }        
     }
 }  
+
+acusttssr.innerHTML="";  acusttssr.style.display="none";
+
 return arrayIntfferno;  }
 
 
