@@ -38,6 +38,7 @@ return dgetUrlParameterd;  }
 <br/><br/>
 
 <script>
+var plcustom;
 
 function listaFiles(arrayInterno){   var arrayIntfferno="";  
 
@@ -51,7 +52,7 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 
-var plcustom = fs_Playerjs({ OSD:false, id:"mpl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:[ {title:"",file:arrayInterno[j].file} ] });
+plcustom = fs_Playerjs({ OSD:false, id:"mpl", nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:[ {title:"",file:arrayInterno[j].file} ] });
 
 plcustom.OnEvents("init",function(){
 
