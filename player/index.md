@@ -57,7 +57,8 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 
 var thuddfmfer=0;
 plcustom = fs_Playerjs({ OSD:false, id:"cuspl", config:{}, nocontrols:1, autoplay:1, loop:0, title:arrayInterno[j].title, file:arrayInterno[j].file });
-plcustom.OnEvents("play",function(){
+plcustom.OnEvents("init",function(){
+plcustom.api("play");
 thuddfmfer=plcustom.api("duration");
 });
 
