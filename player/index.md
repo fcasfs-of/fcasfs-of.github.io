@@ -74,7 +74,7 @@ return arrayIntfferno;  }
 var scriptfddd = document.createElement("script");
     scriptfddd.setAttribute("type", "text/javascript");
     scriptfddd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("body")[0].appendChild(scriptfddd);
+document.getElementsByTagName("head")[0].appendChild(scriptfddd);
 
 
 
