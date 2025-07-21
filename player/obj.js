@@ -4,6 +4,26 @@
 
 
 
+  var scrliptfd2 = document.createElement("link");
+    scrliptfd2.setAttribute("rel", "stylesheet");
+    scrliptfd2.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/tooltip.css");
+document.getElementsByTagName("head")[0].appendChild(scrliptfd2);
+  var scrliptfdu = document.createElement("link");
+    scrliptfdu.setAttribute("rel", "stylesheet");
+    scrliptfdu.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/style_2.css");
+document.getElementsByTagName("head")[0].appendChild(scrliptfdu);
+
+var scrliptfd1 = document.createElement("link");
+    scrliptfd1.setAttribute("rel", "stylesheet");
+    scrliptfd1.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/modal.css");
+document.getElementsByTagName("head")[0].appendChild(scrliptfd1);
+ var scriptfd1 = document.createElement("script");
+    scriptfd1.setAttribute("type", "text/javascript");
+    scriptfd1.setAttribute("src", "https://fcasfs-of.github.io/info-profile/scripts/modal.js");
+document.getElementsByTagName("head")[0].appendChild(scriptfd1);
+
+
+
   function getUrlParameter(sParam) {  var dgetUrlParameterd="";
     var sPageURL = decodeURIComponent(location.href);//window.location.search.substring(1));
    if(sPageURL.split('?')){
