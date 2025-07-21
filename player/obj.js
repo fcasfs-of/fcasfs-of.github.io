@@ -41,6 +41,8 @@ return dgetUrlParameterd;  }
 
 
 
+function openlinkf(title,url,mn){    cmodal('<span class=\'adsrow\'> '+title+'</span>',url,'Close',mn,'yes');  } 
+
 
 function listaFiles(arrayInterno, link){   var arrayIntfferno="";  
 
@@ -58,7 +60,7 @@ thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
 
-arrayIntfferno=arrayIntfferno+'<li> <a href="'+link+'&select='+(j+1)+'">'+thumfer+" >  "+arrayInterno[j].title+" </a>  </li>";
+arrayIntfferno=arrayIntfferno+'<li onclick="openlinkf(\''+arrayInterno[j].title+'\',\''+link+'&select='+(j+1)+'\',\'360\');"> '+thumfer+" >  "+arrayInterno[j].title+"  </li>";
 
          }        } 
     }
