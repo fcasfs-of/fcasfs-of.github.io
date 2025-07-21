@@ -1,4 +1,4 @@
-function onstart_file(){    
+function onstart_file(run_file){    
   var acssr = document.getElementById('custimmdf');   
   var amptar = document.getElementById('mpt'); 
   var ammpdr = document.getElementById('mpd'); 
