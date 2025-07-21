@@ -1,5 +1,5 @@
 <script>
-  var link = link = document.createElement('link');
+  var link = document.createElement('link');
     link.rel = 'icon';    link.href = 'https://fcasfs-of.cloud-fs.net/Icon/mdpl.png';     link.type = 'image/png';
     document.head.appendChild(link);
 </script>
