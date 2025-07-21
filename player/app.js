@@ -25,7 +25,7 @@ function onstart_file(run_file){
     }  
     if(getfvaddl_listyget=="true"){  
       ampmpl.innerHTML="";  
-      ammpdr.innerHTML=""+listaFiles(run_file().list);  
+      ammpdr.innerHTML=""+listaFiles(run_file().list, linkfrarromd);  
     } 
     if(getfvadinf_listyget=="true"){   
       amptar.innerHTML="<a href='"+linkfroplauemd+"'>"+run_file().file_title+"</a>";  
