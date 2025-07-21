@@ -1,5 +1,5 @@
 
-<script></script>
+<script src="app.js"></script>
 
 ## ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)    Media Player
 
