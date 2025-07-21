@@ -29,7 +29,7 @@ function onstart_file(run_file){
     } 
     if(getfvadinf_listyget=="true"){   
       amptar.innerHTML="<a href='"+linkfroplauemd+"'>"+run_file().file_title+"</a>";  
-      ammpdr.innerHTML=ammpdr.innerHTML+""+listaFiles(run_file().list, linkfroplauemd);  
+      ammpdr.innerHTML=ammpdr.innerHTML+""+listaFiles(run_file().list, linkfrarromd);  
       ampmpl.innerHTML='<div style="margin:0 auto;text-align:center;"><img style="text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/></div>';  
     } 
 }  
