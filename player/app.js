@@ -1,5 +1,5 @@
 function onstart_file(run_file){    
-  var acssr = document.getElementById('custimmdf');   
+  var acssr = document.getElementById('cutompll');   
   var amptar = document.getElementById('mpt'); 
   var ammpdr = document.getElementById('mpd'); 
   var ampmpl = document.getElementById('mpl');   
