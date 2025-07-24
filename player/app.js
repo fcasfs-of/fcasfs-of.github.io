@@ -5,7 +5,7 @@ function onstart_file(run_file){
   var ampmpl = document.getElementById('mpl');   
   
   if(typeof run_file=='function'){  
-    var sryrkk="<style> body img{ pointer-events:none; } </style>";  
+    var sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
     if(run_file().pg_dark==true){  
       sryrkk="<style> .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
     }  
