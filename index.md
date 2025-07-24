@@ -7,7 +7,7 @@
 
 #### Informações 
 
-> ### ![Profile](https://fcasfs-of.cloud-fs.net/Icon/info.png) <br/> **Portfolio**
+> ### ![Profile](https://fcasfs-of.cloud-fs.net/Icon/info.png) <br/> <span style="color:#000;"> **Portfolio** </span>
 > - [![](https://fcasfs-of.cloud-fs.net/Icon/br.png) **Português**](https://fcasfs-of.cloud-fs.net/info-profile/)
 > - [![](https://fcasfs-of.cloud-fs.net/Icon/en.png) English](https://fcasfs-of.cloud-fs.net/info-profile-en/)
 
