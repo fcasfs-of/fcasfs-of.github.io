@@ -12,9 +12,7 @@
 <br/>
 <hr />
 
-<span style="display:block;text-align:right;"> 
-- ### [Return Home Page](https://fcasfs-of.cloud-fs.net)
-- ### [Return Projects Page](https://fcasfs-of.cloud-fs.net/projects)
-</span>
+- ### <span style="display:block;text-align:right;"> [Return Home Page](https://fcasfs-of.cloud-fs.net) </span>
+- ### <span style="display:block;text-align:right;"> [Return Projects Page](https://fcasfs-of.cloud-fs.net/projects) </span>
 
 <br/><br/>
