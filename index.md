@@ -5,7 +5,7 @@
 </script>
 
 
-#### Informações 
+#### <span style="display:block;text-align:center;"> Informações </span>
 
 > ### ![Profile](https://fcasfs-of.cloud-fs.net/Icon/info.png) <br/> <span style="color:#000;"> **Portfolio** </span>
 > - [![](https://fcasfs-of.cloud-fs.net/Icon/br.png) **Português**](https://fcasfs-of.cloud-fs.net/info-profile/)
@@ -14,7 +14,7 @@
 
 <hr/>
 
-#### **Projetos**
+#### <span style="display:block;text-align:center;"> **Projetos** </span>
 
 > -  [![](https://fcasfs-of.cloud-fs.net/Icon/en.png) English](https://fcasfs-of.cloud-fs.net/projects)
 > -  [![](https://fcasfs-of.cloud-fs.net/Icon/br.png) **Português**](https://fcasfs-of.cloud-fs.net/projects-pt)
