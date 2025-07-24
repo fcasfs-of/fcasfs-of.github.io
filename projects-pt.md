@@ -14,5 +14,5 @@
 
 <br/>
 <hr />
-### <span style="display:block;text-align:right;"> [Voltar à Página Inicial](https://fcasfs-of.cloud-fs.net) </span>span>
+### <span style="display:block;text-align:right;"> [Voltar à Página Inicial](https://fcasfs-of.cloud-fs.net) </span>
 <br/><br/>
