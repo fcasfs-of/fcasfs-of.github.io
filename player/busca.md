@@ -11,7 +11,7 @@
     <input type="checkbox" checked="true" valeu="true" name="fileView"/>
     <span class="checkmark"></span></label>
   <label class="range" data-tooltip="Posição" data-flow="bottom"><span>  </span>
-    <input type="range" min="1" max="99" value="1" name="fileSelect" id="fileSelect"/>
+    <input type="range" min="1" max="99" value="1" name="select" id="fileSelect"/>
     <span class="value" style="color:#000;"></span>
   </label>
   <button type="submit" value="Buscar">Buscar</button>
