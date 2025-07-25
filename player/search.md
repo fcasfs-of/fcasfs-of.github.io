@@ -2,8 +2,8 @@
 
 ## <span style="display:block;text-align:center;"> ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)    Media Player </span>
 
-<div style="text-align:center;font-weight:bold;"><h3>Search Page</h3></div>
-<hr/>
+### <span style="display:block;text-align:center;"> ![](https://fcasfs-of.cloud-fs.net/Icon/en.png)    Search Page </span>
+
 <div class="llk" style="width: 100%;  text-align: center;">
 <form class="busca" action="https://fcasfs-of.cloud-fs.net/player/">
   <input type="text" value="" placeholder="ID..." id="textidf" name="fileID"/>
