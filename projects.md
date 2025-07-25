@@ -11,6 +11,7 @@
 > - [![](https://fcasfs-of.cloud-fs.net/Icon/br.png) **Portuguese**](https://player.fcasfs-of.cloud-fs.net/)
 > - [![](https://fcasfs-of.cloud-fs.net/Icon/en.png) English](https://player.fcasfs-of.cloud-fs.net/en)
 > ### <span style="display:block;text-align:center;"> [***Take the Test right now***](projects/test/mdpl) </span>
+> ### <span style="display:block;text-align:right;"> [***Page Search***](player/search) </span>
 
 <br/>
 <hr />
