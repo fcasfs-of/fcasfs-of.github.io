@@ -4,6 +4,12 @@
     document.head.appendChild(link);
 </script>
 
+<style>
+[href="https://fcasfs-of.cloud-fs.net/"]{  text-align:center;  display:block; }
+  
+</style>
+
+
 ## <span style="display:block;text-align:center;"> Projetos </span>
 
 > ### <span style="display:block;text-align:center;"> ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png) <br/> <span style="color:#000;"> Player: Audio, Imagem e Video </span>  </span>
