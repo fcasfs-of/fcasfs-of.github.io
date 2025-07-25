@@ -4,7 +4,7 @@
 
 <div style="text-align:center;font-weight:bold;"><h3>Search Page</h3></div>
 
-<div class="llk">
+<div class="llk" style="    width: 100%;    text-align: center;">
 <form class="busca" action="https://fcasfs-of.cloud-fs.net/player/">
   <input type="text" value="" placeholder="ID..." id="textidf" name="fileID"/>
   <label class="container" data-tooltip="Preview" data-flow="top">
