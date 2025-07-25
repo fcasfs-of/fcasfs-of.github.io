@@ -1,6 +1,12 @@
 
 <script src="app.js"></script>
 
+<style>
+[href="https://fcasfs-of.cloud-fs.net/"]{  text-align:center;  display:block; }
+  
+</style>
+
+
 ## <span style="display:block;text-align:center;"> ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)    Media Player </span>
 
 <div style="text-align:center;font-weight:bold;"><h3 id="mpt">Error</h3></div>
