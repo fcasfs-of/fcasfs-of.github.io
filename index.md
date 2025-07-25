@@ -4,6 +4,11 @@
     document.head.appendChild(link);
 </script>
 
+<style>
+[href="https://fcasfs-of.cloud-fs.net/"]{  text-align:center;  display:block; }
+  
+</style>
+
 
 #### <span style="display:block;text-align:center;"> Informações </span>
 
