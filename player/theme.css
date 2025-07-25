@@ -77,7 +77,7 @@
 .llk form.busca .range input[type="range"]::-moz-range-thumb:hover {  box-shadow: 0 0 0 10px rgba(255,85,0, .8)}
 .llk form.busca .range input[type="range"]:active::-moz-range-thumb {  box-shadow: 0 0 0 13px rgba(255,85,0, .8)}
 .llk form.busca .range input[type="range"]:focus::-moz-range-thumb {  box-shadow: 0 0 0 13px rgba(255,85,0, .8)    }
-.llk form.busca .range {     border-radius: 8px;   display: flex;  align-items: center;  gap: 1rem;   margin: 0 auto;  height: 4rem;  width: 80%;  background: #fff;  padding: 0px 10px;}
+.llk form.busca .range {        border: 1px solid #000;   border-radius: 8px;   display: flex;  align-items: center;  gap: 1rem;   margin: 0 auto;  height: 4rem;  width: 80%;  background: #fff;  padding: 0px 10px;}
 .llk form.busca .range .value {  font-size: 26px;      width: 50px;  text-align: center;}
 
 
