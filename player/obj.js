@@ -59,7 +59,7 @@ if(arrayInterno[j].poster!=""){
 thumfer='<img width="150px" src="'+arrayInterno[j].poster+'"/>  ';
 }
 
-arrayIntfferno=arrayIntfferno+'<li style="user-select:none; text-align:center;"  onclick="openlinkf(\''+arrayInterno[j].title+'\',\''+link+'&fileSelect='+(j+1)+'\',\'360\');"> '+thumfer+" >  "+arrayInterno[j].title+"  </li>";
+arrayIntfferno=arrayIntfferno+'<li style="user-select:none;"  onclick="openlinkf(\''+arrayInterno[j].title+'\',\''+link+'&fileSelect='+(j+1)+'\',\'360\');"> '+thumfer+" >  "+arrayInterno[j].title+"  </li>";
 			
          }        } 
     }
