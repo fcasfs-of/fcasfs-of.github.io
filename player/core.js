@@ -8,11 +8,6 @@
     scrlipftfd2.setAttribute("href", "theme.css");
 document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
-  var scrliptfd2 = document.createElement("link");
-    scrliptfd2.setAttribute("rel", "stylesheet");
-    scrliptfd2.setAttribute("href", "https://fcasfs-of.cloud-fs.net/info-profile/theme/tooltip.css");
-document.getElementsByTagName("head")[0].appendChild(scrliptfd2);
-
 
  function getUrlParameter(sParam) {  var dgetUrlParameterd="";
     var sPageURL = decodeURIComponent(location.href);//window.location.search.substring(1));
