@@ -1,6 +1,6 @@
 # fcasfs-of.github.io
 
-[Site](https://fcasfs-of.cloud-fs.net)
+<span style="text-align:center;width:100%;"> [![](favicon.png) <br/> Site](https://fcasfs-of.cloud-fs.net) </span>
 
 
 
