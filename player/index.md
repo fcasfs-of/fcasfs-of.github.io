@@ -28,7 +28,7 @@
 
 > <div id="mpd" style="text-align:left;">
 <div class="err">
-<h1>Arquivo Não Encontrada</h1>
+<h1>Arquivo Não Encontrado</h1>
 <p>O site configurado neste endereço não contém o arquivo solicitado.</p>
 <img src="https://fcasfs-of.cloud-fs.net/404.png" alt="Imagem 404" />
 </div>    
