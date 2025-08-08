@@ -24,15 +24,15 @@
 
 <div style="text-align:center;font-weight:bold;"><h3 id="mpt">Error</h3></div>
 
-<div id="mpl" style="width:100%;height:100%;"> 
+<div id="mpl" style="width:100%;height:100%;"> </div>
+
+> <div id="mpd" style="text-align:left;">
 <div class="err">
 <h1>Arquivo Não Encontrada</h1>
 <p>O site configurado neste endereço não contém o arquivo solicitado.</p>
 <img src="https://fcasfs-of.cloud-fs.net/404.png" alt="Imagem 404" />
+</div>    
 </div>
-</div>
-
-> <div id="mpd" style="text-align:left;"></div>
 
 <div id="custimmdf"></div>
 <span id="cutompll"></span>
