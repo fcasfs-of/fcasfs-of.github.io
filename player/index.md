@@ -26,7 +26,7 @@
 
 <div id="mpl" style="width:100%;height:100%;"> 
 <div class="err">
-<h1>Página Não Encontrada</h1>
+<h1>Arquivo Não Encontrada</h1>
 <p>O site configurado neste endereço não contém o arquivo solicitado.</p>
 <img src="https://fcasfs-of.cloud-fs.net/404.png" alt="Imagem 404" />
 </div>
