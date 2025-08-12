@@ -21,7 +21,7 @@
       min-height: 100vh;
     }
 
-    .container {
+    .fcontainer {
       background-color: #ffffff;
       padding: 40px 30px;
       border-radius: 12px;
@@ -31,7 +31,7 @@
       transition: box-shadow 0.3s ease;
     }
 
-    .container:hover {
+    .fcontainer:hover {
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
 
@@ -92,7 +92,7 @@
  </style>
   
 
-<div class="container">
+<div class="fcontainer">
 <h1>Search Page</h1>
 <div class="form">
   
