@@ -104,7 +104,7 @@
   }
 
   .page-title {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px 0;  text-align:center;
     font-size: 1.2em;
   }
 
