@@ -24,7 +24,7 @@
     --dark-hover-background: #333;
   }
 
-  body {
+  body {   user-select: none;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
@@ -103,6 +103,8 @@
     background-color: var(--dark-hover-background);
   }
 
+  img{  pointer-events:none;  } 
+  
   .page-title {
     margin: 0 0 10px 0;  text-align:center;
     font-size: 1.2em;
