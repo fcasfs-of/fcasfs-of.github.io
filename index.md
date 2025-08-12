@@ -112,8 +112,8 @@
     display: inline-block;
     margin-top: 10px;
     padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.3s;
@@ -135,11 +135,6 @@
   }
 </style>
 
-
-<header>
-  <h1></h1>
-  <button id="toggle-theme">Modo Escuro</button>
-</header>
 
 
 <main>
@@ -167,21 +162,20 @@
   const body = document.body;
 
   button.addEventListener('click', () => {
-    body.classList.toggle('dark');
-    if (body.classList.contains('dark')) {
-      button.textContent = 'Modo Claro';
- localStorage.setItem('tema', 'escuro');
-    } else {
-      button.textContent = 'Modo Escuro';        localStorage.setItem('tema', 'claro');
-      
-    }
+   // body.classList.toggle('dark');
+    //if (body.classList.contains('dark')) {
+    //  button.textContent = 'Modo Claro';
+// localStorage.setItem('tema', 'escuro');
+    //} else {
+     // button.textContent = 'Modo Escuro';        localStorage.setItem('tema', 'claro');  
+    //}
   });
   
   
   if(localStorage.getItem('tema') === 'escuro') {
-   body.classList.add('dark');   button.textContent = 'Modo Claro';
+  // body.classList.add('dark');   button.textContent = 'Modo Claro';
     } else {
-   body.classList.remove('dark');      button.textContent = 'Modo Escuro';  
+   //body.classList.remove('dark');      button.textContent = 'Modo Escuro';  
     }
     
 </script>
