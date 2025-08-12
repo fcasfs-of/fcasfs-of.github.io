@@ -120,7 +120,7 @@
   }
 
   .page-link:hover {
-    background-color: #0056b3;
+    background-color: #ccc;  color:#000;     text-decoration: none;
   }
 
   @media(max-width: 600px) {
