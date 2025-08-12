@@ -116,8 +116,8 @@
       padding: 0.5rem 1rem;
       border: none;  margin-bottom:4px;
       border-radius: 4px;
-      background-color: var(--botao-cor);
-      color: #fff;
+      background-color: #ccc;
+      color: #000;
       cursor: pointer;
       font-weight: bold;
       align-self: flex-start;
@@ -125,7 +125,7 @@
     }
 
     .info-button:hover {
-      background-color: var(--botao-hover);
+      background-color: #fff;
     }
     
   img{  pointer-events:none;  } 
