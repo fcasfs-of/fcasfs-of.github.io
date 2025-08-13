@@ -103,16 +103,15 @@
       padding: 0.5rem 1rem;
       border: none;  margin-bottom:4px;
       border-radius: 4px;
-      background-color: #ccc;
+      background-color: #fff;
       color: #000;
       cursor: pointer;
-      font-weight: bold;
       align-self: flex-start;
       transition: background-color 0.2s;
     }
 
     .info-button:hover {
-      background-color: #fff;
+      background-color: #ccc;   color:#000;    font-weight: bold;
     }
     
   img{  pointer-events:none;  } 
