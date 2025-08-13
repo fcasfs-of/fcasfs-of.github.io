@@ -5,7 +5,7 @@
     }
 
 
-.container-lg {  width:95%;   max-width:100%;  }
+.container-lg {  width:100%;   max-width:100%;  }
 
 
     body {
@@ -61,7 +61,7 @@
     }
 
     @media (max-width: 768px) {
-    .container-lg {  width:80%;     }
+    .container-lg {  width:100%;     }
         
       h1 {
         font-size: 2rem;
