@@ -13,7 +13,7 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 </style>
 
-<div class="container">
+<div class="xscontainer">
 <header>
 <h3  style="text-align:center;font-weight:bold;" id="mpt">Error</h3>
 <p id="mpd" style="text-align:left;"></p>
