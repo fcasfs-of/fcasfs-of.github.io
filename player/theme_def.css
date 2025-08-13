@@ -81,7 +81,7 @@
     .err a:hover {      background-color: #2980b9;    }
   
     @media (max-width: 600px) {
-      .container-lg {  width:70%;     }
+      .container-lg {  width:100%;     }
         
       .err h1 {        font-size: 2em;      }
       .err p {        font-size: 1em;      }
