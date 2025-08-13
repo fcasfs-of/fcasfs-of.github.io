@@ -1,4 +1,11 @@
 
+ var scrlipftfd2 = document.createElement("link");
+    scrlipftfd2.setAttribute("rel", "stylesheet");
+    scrlipftfd2.setAttribute("href", "core_a.css");
+document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
+
+
+
     function ir_pat(gg) {
       location.href = gg; 
     }
