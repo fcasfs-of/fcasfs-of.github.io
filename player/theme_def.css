@@ -5,7 +5,7 @@
     }
 
 
-.container-lg {  width:80%;   max-width:100%;  }
+.container-lg {  width:95%;   max-width:100%;  }
 
 
     body {
@@ -44,8 +44,8 @@
       position: relative;
       width: 100%;
       padding-bottom: 56.25%; 
-      height: 100%;
-      overflow: hidden;
+      height: 0;
+      overflow: auto;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
@@ -61,6 +61,8 @@
     }
 
     @media (max-width: 768px) {
+    .container-lg {  width:80%;     }
+        
       h1 {
         font-size: 2rem;
       }
@@ -79,6 +81,8 @@
     .err a:hover {      background-color: #2980b9;    }
   
     @media (max-width: 600px) {
+      .container-lg {  width:70%;     }
+        
       .err h1 {        font-size: 2em;      }
       .err p {        font-size: 1em;      }
       .err a {        padding: 10px 20px;        font-size: 0.9em;      }
