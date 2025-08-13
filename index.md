@@ -13,7 +13,7 @@
 <main>
 <div class="page-card">
 <h2 class="page-title">Portfolio</h2>
-<p>
+<p style="display:block;text-align:center;">
 <img src="https://fcasfs-of.cloud-fs.net/Icon/info.png"/>     
 </p>
 <a class="page-link" href="https://fcasfs-of.cloud-fs.net/info-profile/"> <img src="https://fcasfs-of.cloud-fs.net/Icon/br.png"/>  Português</a>
