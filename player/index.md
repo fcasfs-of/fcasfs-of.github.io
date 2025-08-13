@@ -13,9 +13,6 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 </style>
 
-
-## <span style="display:block;text-align:center;"> ![](https://fcasfs-of.cloud-fs.net/Icon/mdpl.png)   <br/>  Media Player </span>
-
 <div class="container">
 <header>
 <h3  style="text-align:center;font-weight:bold;" id="mpt">Error</h3>
