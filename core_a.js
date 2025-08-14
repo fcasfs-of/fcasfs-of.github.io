@@ -14,6 +14,10 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
       location.href = 'https://fcasfs-of.cloud-fs.net/'; 
     }
 
+
+
+    function ir_runtt() {
+
     let temaEscuro = false;
     
     function alternarTema() {
@@ -33,4 +37,6 @@ temaEscuro = true;   document.body.classList.add('dark');
   temaEscuro = false;  document.body.classList.remove('dark');
     }
    
-   
+ }
+
+  
