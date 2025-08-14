@@ -32,7 +32,7 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 
 
-function ir_runtt() {
+function ir_runtt(temaEscuro) {
     
   if(localStorage.getItem('tema') === 'escuro') {
 temaEscuro = true;   document.body.classList.add('dark');
