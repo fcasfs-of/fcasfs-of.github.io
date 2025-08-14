@@ -18,7 +18,7 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
     let temaEscuro = false;
 
-    function alternarTema() {
+    function alternarTema(temaEscuro) {
       temaEscuro = !temaEscuro;
       if (temaEscuro) {
         document.body.classList.add('dark');
