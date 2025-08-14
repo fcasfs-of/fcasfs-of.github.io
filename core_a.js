@@ -19,13 +19,14 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
     let temaEscuro = false;
 
     function alternarTema(temaEscuro) {
-      temaEscuro = !temaEscuro;
       if (temaEscuro) {
         document.body.classList.add('dark');
          localStorage.setItem('tema', 'escuro');
+temaEscuro = false;
       } else {
         document.body.classList.remove('dark');
         localStorage.setItem('tema', 'claro');
+temaEscuro = true;
       }
     }
 
