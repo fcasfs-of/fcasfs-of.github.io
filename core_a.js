@@ -16,7 +16,8 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 
 
-    
+    let temaEscuro = false;
+
     function alternarTema() {
       temaEscuro = !temaEscuro;
       if (temaEscuro) {
@@ -29,7 +30,6 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
     }
 
 
-let temaEscuro = false;
 
 
 function ir_runtt() {
