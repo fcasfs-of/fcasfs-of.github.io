@@ -4,24 +4,32 @@
 document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 
-  const button = document.getElementById('toggle-theme');
+
+function run_inruff(){
+
+ // const button = document.getElementById('toggle-theme');
   const body = document.body;
 
-  button.addEventListener('click', () => {
+  //button.addEventListener('click', () => {
    // body.classList.toggle('dark');
     //if (body.classList.contains('dark')) {
     //  button.textContent = 'Modo Claro';
 // localStorage.setItem('tema', 'escuro');
     //} else {
-     // button.textContent = 'Modo Escuro';        localStorage.setItem('tema', 'claro');  
+     // button.textContent = 'Modo Escuro';        
+//localStorage.setItem('tema', 'claro');  
     //}
-  });
+//  });
   
   
   if(localStorage.getItem('tema') === 'escuro') {
-  // body.classList.add('dark');   button.textContent = 'Modo Claro';
+  // body.classList.add('dark');   
+//button.textContent = 'Modo Claro';
     } else {
-   //body.classList.remove('dark');      button.textContent = 'Modo Escuro';  
+   //body.classList.remove('dark');   
+  // button.textContent = 'Modo Escuro';  
     }
+
+}
 
 
