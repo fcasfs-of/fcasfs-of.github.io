@@ -18,7 +18,7 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
     let temaEscuro = false;
 
-    function alternarTema(temaEscuro) {
+    function alternarTema() {
       if (temaEscuro) {
         document.body.classList.add('dark');
          localStorage.setItem('tema', 'escuro');
@@ -33,7 +33,7 @@ temaEscuro = true;
 
 
 
-function ir_runtt(temaEscuro) {
+function ir_runtt() {
     
   if(localStorage.getItem('tema') === 'escuro') {
 temaEscuro = true;   document.body.classList.add('dark');
