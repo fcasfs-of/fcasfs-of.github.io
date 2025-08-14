@@ -19,7 +19,7 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
     let temaEscuro = false;
 
     function alternarTema() {
-      if (temaEscuro) {
+      if (temaEscuro==true) {
         document.body.classList.add('dark');
          localStorage.setItem('tema', 'escuro');
 temaEscuro = false;
