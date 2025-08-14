@@ -16,9 +16,6 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 
 
-    function ir_runtt() {
-
-    let temaEscuro = false;
     
     function alternarTema() {
       temaEscuro = !temaEscuro;
@@ -31,6 +28,12 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
       }
     }
 
+
+let temaEscuro = false;
+
+
+function ir_runtt() {
+    
   if(localStorage.getItem('tema') === 'escuro') {
 temaEscuro = true;   document.body.classList.add('dark');
     } else {
