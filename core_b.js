@@ -23,10 +23,10 @@ function run_inruff(){
   
   
   if(localStorage.getItem('tema') === 'escuro') {
-  // body.classList.add('dark');   
+   body.classList.add('dark');   
 //button.textContent = 'Modo Claro';
     } else {
-   //body.classList.remove('dark');   
+   body.classList.remove('dark');   
   // button.textContent = 'Modo Escuro';  
     }
 
