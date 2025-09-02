@@ -106,14 +106,17 @@
       background-color: #fff;
       color: #000;
       cursor: pointer;
-      align-self: flex-start;
       transition: background-color 0.2s;
     }
 
     .info-button:hover {
       background-color: #ccc;   color:#000;    font-weight: bold;
     }
-    
+
+ .projeto-descricao .info-button{
+     text-align:center;
+ }
+
   img{  pointer-events:none;  } 
 
     .modal {
