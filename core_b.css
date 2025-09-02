@@ -67,7 +67,7 @@
     gap: 20px;
   }
 
-  .page-card {
+  .page-card {  text-align:center;  
     background-color: var(--card-background);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -98,7 +98,7 @@
     font-size: 1.2em;
   }
 
-  .page-link {   margin-right:5px; 
+  .page-link {   text-align:center;   margin-right:5px; 
     display: inline-block;
     margin-top: 10px;
     padding: 8px 12px;
