@@ -40,7 +40,7 @@
       color: #fff;
     }
 
-    .menu-buttons button {
+    .menu-buttons button, .menu-buttons .button {
       margin-left: 1rem;
       padding: 0.5rem 1rem;
       border: none;
@@ -52,7 +52,7 @@
       transition: background-color 0.2s, color 0.2s;
     }
 
-    .menu-buttons button:hover {
+    .menu-buttons button:hover, .menu-buttons .button:hover {
       background-color: #e0e0e0;
     }
 
