@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FCAS_FS</title>
+
+    <script src="https://player.fcasfs-of.cloud-fs.net/app/all_files.js"></script>
+  
     <script>
   var link = document.createElement('link');
     link.rel = 'icon';    link.href = 'https://fcasfs-of.cloud-fs.net/favicon.png';     link.type = 'image/png';
@@ -34,6 +37,55 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
       nav ul {        color:#fff;  flex-direction: column;        align-items: center;      }
       nav ul li {    color:#fff;      margin: 10px 0;      }
     }
+
+
+  .search-container {
+      width: 70%;
+      margin: 30px auto; overflow:auto;
+      text-align: center;
+    }
+    .search-container input[type="text"] {    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAACYktHRAD/h4/MvwAAAAl2cEFnAAABKgAAASkAUBZlMQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxMy0wNC0xMFQwNjo1OTowNy0wNzowMI5BiVEAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTMtMDQtMTBUMDY6NTk6MDctMDc6MDD/HDHtAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAABF0RVh0VGl0bGUAc2VhcmNoLWljb27Cg+x9AAACKklEQVQ4T6WUSavqQBCFK+2sII7gShFXLpUsBBHFf+1KcAQFwaWiolsnnBDn++4p0iHRqPDuByFJd/Wp6qrqVn5+IQP3+52m0ymtVis6Ho885na7KRgMUiKR4O9vmEQHgwGNx2NyOp0khCBFUXgcJo/Hg67XK8ViMcpkMjz+Dl200+nQZrMhh8PBE4gYQgDidrudvzEOm2KxyP9WsCginM1mHKEUS6VSFA6HOWI4G41GPAfx2+1GgUCAVFXVZMwovwY/lUqFPB4PiyFn+XxemzbT6/VovV6z8Ol0olwux+LPCBQFEQKIvhME2WyWbWGHFCD/VghUGVvE1rDlb6TTabbFmuVyqY2aEWgbFALeI5GINvyeUCjEtlgju+IZoRWfkS30CURoxFJUNjMEt9stf38CNjJKIFvNiMBJgTebzcZt843hcMhCELWqPBDxeJwulwtvC/3X7/e1qVfgFD0rC5tMJrUZM8Lr9VI0GmVBRDCfz6nZbHI/Sna7HXW7XZpMJtxSiBIP1lmhH9NqtaqfGKQDTmQREBnSgwfmMqfYYblc1o+2xHShtNttLgSiee4EmMEp3hDBPJzikimVSuRyuTTLJ1GwWCz4pCB3UhiL/X4/Hw50C5zjLSM+n898weCogxdRIzAGxigAdtNqtV6EC4UC+Xy+z6Kf2O/31Gg0TMK4ZBDxf4uCw+FA9XpdF0aaUOg/iQLcHbVaTb/p0Cl/FgXIJ/oYnaCqKv0DC6dltH6Ks84AAAAASUVORK5CYII=');  background-position: 10px 10px;  background-repeat: no-repeat;
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px; padding: 12px 20px 12px 40px;
+    }
+    .lista-arquivos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .lista-arquivos .arquivo {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .lista-arquivos .arquivo:hover {
+      transform: scale(1.02);
+    }
+    .lista-arquivos .arquivo .miniatura {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;   user-select:none; pointer-events:none;  
+    }
+    .lista-arquivos .arquivo .titulo {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;   user-select:none; pointer-events:none;  
+    }
+    @media(max-width: 600px){
+      .search-container {
+        padding: 0 10px;
+      }
+    }
+  
   </style>
 </head>
 <body>
@@ -50,20 +102,20 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
  <div class="xscontainer">
 <header>
-<h3  style="text-align:center;font-weight:bold;" id="mpt">Error</h3>
+<h3  style="text-align:center;font-weight:bold;" id="mpt">
+  <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Buscar por título..."/>
+</div>
+</h3>
 <p id="mpd" style="text-align:left;"></p>
 </header>
-
 <div class="iframe-container" id="mpl">
-<span class="err">
-<h1>Arquivo Não Encontrado</h1>
-<p>O site configurado neste endereço não contém o arquivo solicitado.</p>
-<img src="https://fcasfs-of.cloud-fs.net/404.png" alt="Imagem 404" />
-</span>
+<div class="lista-arquivos" id="listaArquivos"></div>
 </div>
     
 </div>
 
+<div id="preview_fle"></div>
 
 <br/><br/>
 
@@ -74,6 +126,99 @@ document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 </section>
   </main>
 
+  <script>
+const arquivos = [];
+var arquivos_al="";    var idarquivo="";
+
+function onstart_file(run_file,gg){    
+if(typeof run_file=='function' && gg && gg!=""){  
+  
+var arquivos_listr=[];   var arquivos_lisgtr=0;
+  if(run_file().list){
+    arquivos_lisgtr=run_file().list.length;
+for(var j=0; j<run_file().list.length; j++){
+  arquivos_listr[j]={
+dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo:run_file().file_title+": "+run_file().list[j].title, descricao:"", 
+link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), playlist:[], listtotl:0
+  };
+}  }
+  
+arquivos.push({
+dark: run_file().pg_dark, miniatura: run_file().cover, titulo:run_file().file_title, descricao:run_file().file_desc, 
+link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"",
+playlist:arquivos_listr, listtotl:arquivos_lisgtr
+});
+}   }
+
+
+  if(mdpl_fielsd){
+    for (var i = 0; i < mdpl_fielsd.length; i++) {
+idarquivo=mdpl_fielsd[i];
+ 
+var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("id", "fileplayer_fd");
+    scriptfd.setAttribute("onload", "onstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);    ");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
+document.getElementsByTagName("head")[0].appendChild(scriptfd);
+
+var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
+     
+    }
+  }    
+  
+
+  const listaContainer = document.getElementById('listaArquivos');
+  
+  const listpreview_fleer = document.getElementById('preview_fle');
+
+
+  function deleteite() {  listpreview_fleer.innerHTML="";   }   
+  
+  function criarItem(arquivo) {
+    const div = document.createElement('div');
+    div.className = 'arquivo';
+    div.innerHTML = `     <img src="${arquivo.miniatura}" class="miniatura" />      <div class="titulo">${arquivo.titulo}</div>    `;
+    div.onclick = () => {    
+      var darkthevv="";          if(arquivo.dark==true){ darkthevv=" dark"; }
+    listpreview_fleer.innerHTML="";     var styelcopsdsd="";
+var contednfgile= `  ` ;
+     if(arquivo.playlist && arquivo.listtotl == 1){ 
+   location.href= arquivo.link;   }
+  else if(arquivo.playlist && arquivo.listtotl > 1){ 
+    styelcopsdsd=' style=" overflow: auto;  "';
+    contednfgile='<div class="lista-arquivos" id="listaAffrquivos"></div>';  }
+            location.href= arquivo.link;
+listpreview_fleer.innerHTML = `   `;
+      
+      if(arquivo.playlist && arquivo.listtotl > 1){  
+    const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
+   arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });        }   
+      
+    };
+    return div;
+  }
+
+  function renderizarLista(lista) {
+    listaContainer.innerHTML = '';
+    if(lista){
+     lista.forEach(arquivo => {  listaContainer.appendChild(criarItem(arquivo));   });   
+    }
+  }
+
+
+
+  const inputBusca = document.getElementById('searchInput');
+  inputBusca.addEventListener('input', () => {
+    const termo = inputBusca.value.toLowerCase();
+    const filtrados = arquivos.filter(arquivo =>  arquivo.titulo.toLowerCase().includes(termo));
+    renderizarLista(filtrados);
+  });
+
+
+  
+</script>
+
+  
 <div id="custimmdf"></div>
 <span id="cutompll"></span>
  
