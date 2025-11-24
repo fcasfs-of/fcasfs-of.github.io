@@ -59,7 +59,7 @@ var contednfgile= `  ` ;
    location.href= arquivo.link;   }
   else if(arquivo.playlist && arquivo.listtotl > 1){ 
     styelcopsdsd=' style=" overflow: auto;  "';
-    contednfgile='<div class="lista-arquivos" id="listaAffrquivos"></div>';  }
+    contednfgile='<h2>'+arquivo.titulo+'</h2><br/><br/><div class="lista-arquivos" id="listaAffrquivos"></div>';  }
     listpreview_fleer.innerHTML = `   `;
       
       if(arquivo.playlist && arquivo.listtotl > 1){  
@@ -167,6 +167,8 @@ arrayIntfferno=arrayIntfferno+'<li style="user-select:none;"  onclick="openlinkf
 return arrayIntfferno;  }
 
 
+loaded_filesa();
+
 
   var getfval_tyget=getUrlParameter("fileID");
 	
@@ -206,6 +208,6 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();    };
 
-}   else {  loaded_filesa();  }
+}   
 
 
