@@ -1,4 +1,96 @@
-  var link = document.createElement('link');
+
+function loaded_filesa(){
+const arquivos = [];
+var arquivos_al="";    var idarquivo="";
+
+function onstart_file(run_file,gg){    
+if(typeof run_file=='function' && gg && gg!=""){  
+  
+var arquivos_listr=[];   var arquivos_lisgtr=0;
+  if(run_file().list){
+    arquivos_lisgtr=run_file().list.length;
+for(var j=0; j<run_file().list.length; j++){
+  arquivos_listr[j]={
+dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo:run_file().file_title+": "+run_file().list[j].title, descricao:"", 
+link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), playlist:[], listtotl:0
+  };
+}  }
+  
+arquivos.push({
+dark: run_file().pg_dark, miniatura: run_file().cover, titulo:run_file().file_title, descricao:run_file().file_desc, 
+link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"",
+playlist:arquivos_listr, listtotl:arquivos_lisgtr
+});
+}   }
+
+
+  if(mdpl_fielsd){
+    for (var i = 0; i < mdpl_fielsd.length; i++) {
+idarquivo=mdpl_fielsd[i];
+ 
+var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("id", "fileplayer_fd");
+    scriptfd.setAttribute("onload", "onstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);    ");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
+document.getElementsByTagName("head")[0].appendChild(scriptfd);
+
+var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
+     
+    }
+  }    
+  
+
+  const listaContainer = document.getElementById('listaArquivos');
+  
+  const listpreview_fleer = document.getElementById('preview_fle');
+
+
+  function deleteite() {  listpreview_fleer.innerHTML="";   }   
+  
+  function criarItem(arquivo) {
+    const div = document.createElement('div');
+    div.className = 'arquivo';
+    div.innerHTML = `     <img src="${arquivo.miniatura}" class="miniatura" />      <div class="titulo">${arquivo.titulo}</div>    `;
+    div.onclick = () => {    
+      var darkthevv="";          if(arquivo.dark==true){ darkthevv=" dark"; }
+    listpreview_fleer.innerHTML="";     var styelcopsdsd="";
+var contednfgile= `  ` ;
+     if(arquivo.playlist && arquivo.listtotl == 1){ 
+   location.href= arquivo.link;   }
+  else if(arquivo.playlist && arquivo.listtotl > 1){ 
+    styelcopsdsd=' style=" overflow: auto;  "';
+    contednfgile='<div class="lista-arquivos" id="listaAffrquivos"></div>';  }
+    listpreview_fleer.innerHTML = `   `;
+      
+      if(arquivo.playlist && arquivo.listtotl > 1){  
+    const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
+   arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });        }   
+      
+    };
+    return div;
+  }
+
+  function renderizarLista(lista) {
+    listaContainer.innerHTML = '';
+    if(lista){
+     lista.forEach(arquivo => {  listaContainer.appendChild(criarItem(arquivo));   });   
+    }
+  }
+
+
+
+  const inputBusca = document.getElementById('searchInput');
+  inputBusca.addEventListener('input', () => {
+    const termo = inputBusca.value.toLowerCase();
+    const filtrados = arquivos.filter(arquivo =>  arquivo.titulo.toLowerCase().includes(termo));
+    renderizarLista(filtrados);
+  });
+
+}
+
+
+
+var link = document.createElement('link');
     link.rel = 'icon';    link.href = 'https://fcasfs-of.cloud-fs.net/Icon/mdpl.png';     link.type = 'image/png';
     document.head.appendChild(link);
 
@@ -77,7 +169,9 @@ return arrayIntfferno;  }
 
 
   var getfval_tyget=getUrlParameter("fileID");
-if (getfval_tyget!="") {
+	
+if (getfval_tyget=="") {	loaded_filesa();  }
+else if (getfval_tyget!="") {
   
   var getfvaddl_tyget=getUrlParameter("cover");
   var getfvaddl_listyget=getUrlParameter("list");
