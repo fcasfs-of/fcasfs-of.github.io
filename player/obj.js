@@ -24,7 +24,8 @@ playlist:arquivos_listr, listtotl:arquivos_lisgtr
 
 
  const listaContainer = document.getElementById('listaArquivos');
-  
+   const listtitlr = document.getElementById('mpt');
+
   const listpreview_fleer = document.getElementById('preview_fle');
 
 
@@ -42,9 +43,9 @@ var contednfgile= `  ` ;
    location.href= arquivo.link;   }
   else if(arquivo.playlist && arquivo.listtotl > 1){ 
     styelcopsdsd=' style=" overflow: auto;  "';
-    contednfgile='<h2>'+arquivo.titulo+'</h2><br/><br/><div class="lista-arquivos" id="listaAffrquivos"></div>';  }
-    listpreview_fleer.innerHTML = `   `;
-      
+    listtitlr.innerHTML=''+arquivo.titulo+''; 
+  listaContainer.innerHTML = '<div class="lista-arquivos" id="listaAffrquivos"></div>';}
+    
       if(arquivo.playlist && arquivo.listtotl > 1){  
     const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
    arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });        }   
