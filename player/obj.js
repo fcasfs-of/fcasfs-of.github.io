@@ -1,5 +1,4 @@
 
-function loaded_filesa(){
 const arquivos = [];
 var arquivos_al="";    var idarquivo="";
 
@@ -24,23 +23,7 @@ playlist:arquivos_listr, listtotl:arquivos_lisgtr
 }   }
 
 
-  if(mdpl_fielsd){
-    for (var i = 0; i < mdpl_fielsd.length; i++) {
-idarquivo=mdpl_fielsd[i];
- 
-var scriptfd = document.createElement("script");
-    scriptfd.setAttribute("id", "fileplayer_fd");
-    scriptfd.setAttribute("onload", "onfdstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);    ");
-    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
-document.getElementsByTagName("head")[0].appendChild(scriptfd);
-
-var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }   
-     
-    }
-  }    
-  
-
-  const listaContainer = document.getElementById('listaArquivos');
+ const listaContainer = document.getElementById('listaArquivos');
   
   const listpreview_fleer = document.getElementById('preview_fle');
 
@@ -77,6 +60,24 @@ var contednfgile= `  ` ;
     }
   }
 
+
+
+function loaded_filesa(){
+
+  if(mdpl_fielsd){
+    for (var i = 0; i < mdpl_fielsd.length; i++) {
+idarquivo=mdpl_fielsd[i];
+ 
+var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("id", "fileplffayer_fd");
+    scriptfd.setAttribute("onload", "onfdstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);    ");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
+document.getElementsByTagName("head")[0].appendChild(scriptfd);
+
+var infilefaz = document.getElementById("fileplffayer_fd");     if(infilefaz){   infilefaz.remove();   }   
+     
+    }
+  }   
 
 
   const inputBusca = document.getElementById('searchInput');
