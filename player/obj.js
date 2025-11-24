@@ -39,9 +39,9 @@ playlist:arquivos_listr, listtotl:arquivos_lisgtr
       var darkthevv="";          if(arquivo.dark==true){ darkthevv=" dark"; }
     listpreview_fleer.innerHTML="";     var styelcopsdsd="";
 var contednfgile= `  ` ;
-     if(arquivo.playlist && arquivo.listtotl == 1){ 
-   location.href= arquivo.link;   }
-  else if(arquivo.playlist && arquivo.listtotl > 1){ 
+     if(arquivo.playlist && arquivo.listtotl == 1){    location.href= arquivo.link;   }
+	 else if(arquivo.playlist && arquivo.listtotl == 0){    location.href= arquivo.link;   
+     else if(arquivo.playlist && arquivo.listtotl > 1){ 
     styelcopsdsd=' style=" overflow: auto;  "';
     listtitlr.innerHTML=''+arquivo.titulo+''; 
   listaContainer.innerHTML = '<div class="lista-arquivos" id="listaAffrquivos"></div>';}
