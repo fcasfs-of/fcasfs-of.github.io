@@ -206,6 +206,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();     };
 
-}   else if (getfval_tyget=="undefined") {   loaded_filesa();  }   
+}   
+if (getfval_tyget=="undefined") {   loaded_filesa();  }   
 
 
