@@ -170,7 +170,7 @@ return arrayIntfferno;  }
 
   var getfval_tyget=getUrlParameter("fileID");
 	
-if (getfval_tyget=="") {	loaded_filesa();  }
+if (getfval_tyget=="" || getfval_tyget=="undefined" || getfval_tyget==undefined) {	loaded_filesa();  }
 else if (getfval_tyget!="") {
   
   var getfvaddl_tyget=getUrlParameter("cover");
