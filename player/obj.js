@@ -171,7 +171,9 @@ return arrayIntfferno;  }
   var getfval_tyget=getUrlParameter("fileID");
 	
 if (getfval_tyget!="") {
-  
+
+	if (getfval_tyget=="undefined" || getfval_tyget==undefined) {   loaded_filesa();  }   
+	
   var getfvaddl_tyget=getUrlParameter("cover");
   var getfvaddl_listyget=getUrlParameter("list");
 
@@ -202,9 +204,9 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
   var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(' onstart_file(run_file);  remover_id_playerfile();   if(typeof run_file==\'function\'){   }  else {  loaded_filesa();   }   '));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(' onstart_file(run_file);  remover_id_playerfile();   '));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
-  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();  if(typeof run_file=='function'){   }  else {  loaded_filesa();   }     };
+  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();     };
 
 }   
 
