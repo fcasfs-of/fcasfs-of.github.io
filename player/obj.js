@@ -202,11 +202,10 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
   var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(' onstart_file(run_file);  remover_id_playerfile();   '));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('   loaded_filesa();   onstart_file(run_file);  remover_id_playerfile();   '));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();     };
 
 }   
-if (getfval_tyget=="undefined") {   loaded_filesa();  }   
 
 
