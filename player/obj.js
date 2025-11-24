@@ -54,7 +54,7 @@ var contednfgile= `  ` ;
   }
 
   function renderizarLista(lista) {
-    listaContainer.innerHTML = '';   run_file="";   
+    listaContainer.innerHTML = '';     
     if(lista){
      lista.forEach(arquivo => {  listaContainer.appendChild(criarItem(arquivo));   });   
     }
@@ -70,7 +70,7 @@ idarquivo=mdpl_fielsd[i];
  
 var scriptfd = document.createElement("script");
     scriptfd.setAttribute("id", "fileplffayer_fd");
-    scriptfd.setAttribute("onload", "onfdstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);    ");
+    scriptfd.setAttribute("onload", "onfdstart_file(run_file,\""+idarquivo+"\");renderizarLista(arquivos);  run_file=\"\";    ");
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
 document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
