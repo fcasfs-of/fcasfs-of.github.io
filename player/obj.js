@@ -30,7 +30,7 @@ playlist:arquivos_listr, listtotl:arquivos_lisgtr
 
   function deleteite() {  listpreview_fleer.innerHTML="";   }   
   
-  function criarItem(arquivo) {
+  function criarItem(arquivo) {    
     const div = document.createElement('div');
     div.className = 'arquivo';
     div.innerHTML = `     <img src="${arquivo.miniatura}" class="miniatura" />      <div class="titulo">${arquivo.titulo}</div>    `;
@@ -54,7 +54,7 @@ var contednfgile= `  ` ;
   }
 
   function renderizarLista(lista) {
-    listaContainer.innerHTML = '';
+    listaContainer.innerHTML = '';   run_file="";   
     if(lista){
      lista.forEach(arquivo => {  listaContainer.appendChild(criarItem(arquivo));   });   
     }
