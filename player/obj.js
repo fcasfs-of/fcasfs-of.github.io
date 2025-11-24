@@ -170,8 +170,7 @@ return arrayIntfferno;  }
 
   var getfval_tyget=getUrlParameter("fileID");
 	
-if (getfval_tyget=="" || getfval_tyget=="undefined" || getfval_tyget==undefined) {	loaded_filesa();  }
-else if (getfval_tyget!="") {
+if (getfval_tyget!="") {
   
   var getfvaddl_tyget=getUrlParameter("cover");
   var getfvaddl_listyget=getUrlParameter("list");
@@ -207,6 +206,6 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();    };
 
-}
+}   else {  loaded_filesa();  }
 
 
