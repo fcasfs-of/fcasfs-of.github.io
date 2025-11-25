@@ -1,5 +1,5 @@
 
-const arquivos = [];
+var arquivos = [];
 var arquivos_al="";    var idarquivo="";
 
 function onfdstart_file(run_file,gg){    
@@ -65,8 +65,7 @@ var contednfgile= `  ` ;
 function restart_itendf(){    arquivos = [];
 	listaContainer.innerHTML = '';     listpreview_fleer.innerHTML="";     
 	listtitlr.innerHTML='<div class="search-container">  <input type="text" id="searchInput" placeholder="Buscar por título..."/>   </div>'; 
-	loaded_filesa();
-	//loaded_itenf(mdpl_fielsd);
+	loaded_itenf(mdpl_fielsd);     	loaded_filesa();
 }
 
 
