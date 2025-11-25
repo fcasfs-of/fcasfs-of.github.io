@@ -44,10 +44,11 @@ var contednfgile= `  ` ;
     styelcopsdsd=' style=" overflow: auto;  "';
     listtitlr.innerHTML=''+arquivo.titulo+''; 
   listaContainer.innerHTML = '<div class="lista-arquivos" id="listaAffrquivos"></div>';}
-    
+    listpreview_fleer.innerHTML="";     
       if(arquivo.playlist && arquivo.listtotl > 1){  
     const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
-   arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });        }   
+   arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });    
+	  listpreview_fleer.innerHTML='<button class="botao-voltar" onclick="loaded_filesa();">  <svg class="icone-voltar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 18l-6-6 6-6v12z"/></svg>  </button>';     }   
       
     };
     return div;
