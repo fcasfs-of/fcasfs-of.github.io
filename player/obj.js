@@ -63,6 +63,7 @@ var contednfgile= `  ` ;
 
 
 function restart_itendf(){  
+	listpreview_fleer.innerHTML="";     
 	listtitlr.innerHTML='<div class="search-container">  <input type="text" id="searchInput" placeholder="Buscar por título..."/>   </div>'; 
 	loaded_filesa();
 	loaded_itenf(mdpl_fielsd);
