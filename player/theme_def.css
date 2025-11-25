@@ -87,3 +87,38 @@
       .err a {        padding: 10px 20px;        font-size: 0.9em;      }
     }
 
+
+
+  .botao-voltar {
+    display: inline-flex;  width:100%;
+    align-items: center;
+    padding: 10px 20px;  text-align:center;
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+
+  .botao-voltar:hover {
+    background-color: #0056b3;
+  }
+
+  .icone-voltar {
+    width: 1.5em;  text-align:center;
+    height: 1.5em;  
+    margin: 0 auto;
+    fill: currentColor; 
+  }
+
+  @media (max-width: 600px) {
+    .botao-voltar {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+    .icone-voltar {    }
+  }
+
+
