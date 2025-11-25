@@ -61,9 +61,6 @@ var contednfgile= `  ` ;
   }
 
 
-
-function loaded_filesa(){
-
 function loaded_itenf(mdpl_fielsd){  
   if(mdpl_fielsd){
     for (var i = 0; i < mdpl_fielsd.length; i++) {
@@ -82,6 +79,8 @@ var infilefaz = document.getElementById("fileplffayer_fd");     if(infilefaz){  
      var infiddlefdaz = document.getElementById("fileplffggayer_fd");     if(infiddlefdaz){   infiddlefdaz.remove();   }   
 
 }
+
+function loaded_filesa(){
 
   const inputBusca = document.getElementById('searchInput');
   inputBusca.addEventListener('input', () => {
