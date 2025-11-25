@@ -62,7 +62,7 @@ var contednfgile= `  ` ;
   }
 
 
-function restart_itendf(){  
+function restart_itendf(){    arquivos = [];
 	listaContainer.innerHTML = '';     listpreview_fleer.innerHTML="";     
 	listtitlr.innerHTML='<div class="search-container">  <input type="text" id="searchInput" placeholder="Buscar por título..."/>   </div>'; 
 	loaded_filesa();
