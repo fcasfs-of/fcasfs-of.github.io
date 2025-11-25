@@ -48,7 +48,7 @@ var contednfgile= `  ` ;
       if(arquivo.playlist && arquivo.listtotl > 1){  
     const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
    arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });    
-	  listpreview_fleer.innerHTML='<button class="botao-voltar" onclick="loaded_itenf(mdpl_fielsd);">  <svg class="icone-voltar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 18l-6-6 6-6v12z"/></svg>  </button>';     }   
+	  listpreview_fleer.innerHTML='<button class="botao-voltar" onclick="restart_itendf();">  <svg class="icone-voltar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 18l-6-6 6-6v12z"/></svg>  </button>';     }   
       
     };
     return div;
@@ -60,6 +60,13 @@ var contednfgile= `  ` ;
      lista.forEach(arquivo => {  listaContainer.appendChild(criarItem(arquivo));   });   
     }
   }
+
+
+function restart_itendf(){  
+	listtitlr.innerHTML='<div class="search-container">  <input type="text" id="searchInput" placeholder="Buscar por título..."/>   </div>'; 
+	loaded_filesa();
+	loaded_itenf(mdpl_fielsd);
+}
 
 
 function loaded_itenf(mdpl_fielsd){  
