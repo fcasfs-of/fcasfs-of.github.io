@@ -11,14 +11,14 @@ var arquivos_listr=[];   var arquivos_lisgtr=0;
 for(var j=0; j<run_file().list.length; j++){
   arquivos_listr[j]={
 dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo:run_file().file_title+": "+run_file().list[j].title, descricao:"", 
-link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), playlist:[], listtotl:0
+link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), playlist:[], listtotl:0, id:gg, select:""+(j+1)
   };
 }  }
   
 arquivos.push({
 dark: run_file().pg_dark, miniatura: run_file().cover, titulo:run_file().file_title, descricao:run_file().file_desc, 
 link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"",
-playlist:arquivos_listr, listtotl:arquivos_lisgtr
+playlist:arquivos_listr, listtotl:arquivos_lisgtr, id:gg, select:"1",
 });
 }   }
 
@@ -39,7 +39,25 @@ playlist:arquivos_listr, listtotl:arquivos_lisgtr
       var darkthevv="";          if(arquivo.dark==true){ darkthevv=" dark"; }
     listpreview_fleer.innerHTML="";     var styelcopsdsd="";
 var contednfgile= `  ` ;
-     if(arquivo.playlist && arquivo.listtotl == 1 || arquivo.listtotl == 0){    location.href= arquivo.link;  location.href= arquivo.link;    }
+     if(arquivo.playlist && arquivo.listtotl == 1 || arquivo.listtotl == 0){     getfval_tyget=arquivo.id; 	 getfvald_tygetsle=arquivo.select;  getfvalddd_tyget="0";  
+																			
+  var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("type", "text/javascript");
+	scriptfd.setAttribute("id", "fileplayer_fd");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
+document.getElementsByTagName("body")[0].appendChild(scriptfd);
+
+  function remover_id_playerfile(){  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
+
+ 
+  var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+      scrfiptfd.setAttribute("onload", "onstart_file();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    onstart_file(run_file);  remover_id_playerfile();   '));
+document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+  document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();     };
+
+ }
      else if(arquivo.playlist && arquivo.listtotl > 1){ 
     styelcopsdsd=' style=" overflow: auto;  "';
     listtitlr.innerHTML=''+arquivo.titulo+''; 
