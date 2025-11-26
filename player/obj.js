@@ -18,7 +18,7 @@ link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), play
 arquivos.push({
 dark: run_file().pg_dark, miniatura: run_file().cover, titulo:run_file().file_title, descricao:run_file().file_desc, 
 link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"",
-playlist:arquivos_listr, listtotl:arquivos_lisgtr, id:gg, select:"1",
+playlist:arquivos_listr, listtotl:arquivos_lisgtr, id:gg, select:"1"
 });
 }   }
 
