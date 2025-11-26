@@ -1,4 +1,8 @@
 
+
+function voltarAoTopo() {. window.scrollTo({top: 0,behavior: 'smooth'});  }
+
+
 var arquivos = [];
 var arquivos_al="";    var idarquivo="";
 
@@ -49,7 +53,8 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
   function remover_id_playerfile(){  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
 
- 
+ voltarAoTopo();
+
   var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
@@ -66,6 +71,9 @@ document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
       if(arquivo.playlist && arquivo.listtotl > 1){  
     const llistaAffrquivosfleer = document.getElementById('listaAffrquivos');
    arquivo.playlist.forEach(arqudivo => {  llistaAffrquivosfleer.appendChild(criarItem(arqudivo));   });    
+
+voltarAoTopo();
+
 	  listpreview_fleer.innerHTML='<button class="botao-voltar" onclick="restart_itendf();">  <svg class="icone-voltar" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 18l-6-6 6-6v12z"/></svg>  </button>';     }   
       
     };
