@@ -1,6 +1,6 @@
 
 
-function voltarAoTopo() {. window.scrollTo({top: 0,behavior: 'smooth'});  }
+function voltarAoTopo() {  window.scrollTo({top: 0,behavior: 'smooth'});  }
 
 
 var arquivos = [];
