@@ -10,7 +10,7 @@ var arquivos_listr=[];   var arquivos_lisgtr=0;
     arquivos_lisgtr=run_file().list.length;
 for(var j=0; j<run_file().list.length; j++){
   arquivos_listr[j]={
-dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo:run_file().file_title+": "+run_file().list[j].title, descricao:"", 
+dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulor:run_file().file_title, título:run_file().list[j].title, descricao:"", 
 link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), playlist:[], listtotl:0, id:gg, select:""+(j+1)
   };
 }  }
