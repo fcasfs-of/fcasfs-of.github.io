@@ -14,7 +14,7 @@ var arquivos_listr=[];   var arquivos_lisgtr=0;
     arquivos_lisgtr=run_file().list.length;
 for(var j=0; j<run_file().list.length; j++){
   arquivos_listr[j]={
-dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulor:run_file().file_title, titulo:run_file().list[j].title, descricao:"", 
+dark: run_file().pg_dark, miniatura: run_file().list[j].poster, titulo2:run_file().file_title, titulo: ""+run_file().list[j].title, descricao:"", 
 link: "https://fcasfs-of.cloud-fs.net/player/?fileID="+gg+"&select="+(j+1), playlist:[], listtotl:0, id:gg, select:""+(j+1)
   };
 }  }
@@ -53,12 +53,10 @@ document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
   function remover_id_playerfile(){  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
 
- voltarAoTopo();
-
   var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
       scrfiptfd.setAttribute("onload", "onstart_file();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    onstart_file(run_file);  remover_id_playerfile();   '));
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    onstart_file(run_file);  voltarAoTopo();  remover_id_playerfile();   '));
 document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
   document.getElementsByTagName("body")[0].onload=function(){  onstart_file(run_file);   remover_id_playerfile();     };
 
