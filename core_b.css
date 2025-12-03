@@ -51,7 +51,12 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    
+
+
+img {  pointer-events:none;  }
+* { user-select:none; }
+
+
     /* Header */
     header {
       background-color: var(--primary-color);
