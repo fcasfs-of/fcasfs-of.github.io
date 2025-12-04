@@ -19,6 +19,7 @@ if(texty!==""){  modalTxt.innerHTML=texty;   }
 if(imgalt!==""){  modalImg.alt = imgalt;   }
 if(imgsrc!==""){  modalImg.src = imgsrc;   }
 body.style.overflow="hidden";
+clodeclikmm();
 }
 
  closeModal.onclick = function() {
@@ -29,6 +30,7 @@ body.style.overflow="hidden";
       body.style.overflow="auto";
   }
 
+function clodeclikmm(){
   window.onclick = function(event) {
     if (event.target == modal) {
        modal.style.display = 'none';
@@ -36,7 +38,7 @@ body.style.overflow="hidden";
        modalImg.alt = "";
        modalTxt.innerHTML="";
        body.style.overflow="auto";
-  }    }
+  }    }   }
 
 }
 
