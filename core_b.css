@@ -114,7 +114,7 @@ img {  pointer-events:none;  }
       gap: 20px;
     }
 
-nav a { text-decoration: none;  }
+   nav a { text-decoration: none;  }
 
     nav button, nav a {
       background: none;
@@ -203,6 +203,7 @@ nav a { text-decoration: none;  }
       height: 35px;
       fill: var(--dsecondary-color);
     }
+
 
 .cards-container .card:hover .card-icon .card-icon img {
     content: url(attr(img-preview));
