@@ -288,7 +288,11 @@ nav a { text-decoration: none;  }
       background-color: var(--secondary-color);
       transform: translateY(-5px);
     }
-    
+    .social-link img {
+      width: 24px;
+      height: 24px;  top:-1px;   position:relative; 
+    }    
+
     .copyright {
       color: rgba(255, 255, 255, 0.7);
       font-size: 0.9rem;
