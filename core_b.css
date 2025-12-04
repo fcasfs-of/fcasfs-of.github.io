@@ -194,8 +194,9 @@ img {  pointer-events:none;  }
       justify-content: center;
       margin-bottom: 20px;
     }
-    
-    .card-icon svg {
+
+    .card-icon img {  position:relative;  top:-1px;  }
+    .card-icon svg, .card-icon img {
       width: 35px;
       height: 35px;
       fill: var(--dsecondary-color);
