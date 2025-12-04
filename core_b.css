@@ -248,7 +248,7 @@ nav a { text-decoration: none;  }
     
     .page-link img {
       width: 24px;
-      height: 24px;
+      height: 24px;  top:-1px;   position:relative; 
     }
     
     /* Footer */
