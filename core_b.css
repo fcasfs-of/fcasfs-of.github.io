@@ -203,7 +203,13 @@ nav a { text-decoration: none;  }
       height: 35px;
       fill: var(--dsecondary-color);
     }
-    
+
+.card:hover .card-icon .card-icon img {
+    content: url(attr(img_preview));
+    object-fit: contain;
+    width: 100%;
+}
+
     .card h2, .card h2 a {
       font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
