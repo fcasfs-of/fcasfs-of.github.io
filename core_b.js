@@ -8,7 +8,6 @@ const modal = document.getElementById('modal');
   const modalTxt = document.getElementById('modal-txt');
   const closeModal = document.getElementById('closeModal');
 
-function modalfs_create(){  }
 
 function modal_fs(){
 if (closeModal && modalTxt && modalImg && modal){
@@ -19,9 +18,9 @@ modalTxt.innerHTML="";
  modalImg.alt = "";   
  modalImg.src = "";   
 
-if (texty && texty!="") { modalTxt.innerHTML=texty;   }
-if (imgalt && imgalt!="") { modalImg.alt = imgalt;   }
-if (imgsrc && imgsrc!="") { modalImg.src = imgsrc;   }
+if (texty && texty!=="") { modalTxt.innerHTML=texty;   }
+if (imgalt && imgalt!=="") { modalImg.alt = imgalt;   }
+if (imgsrc && imgsrc!=="") { modalImg.src = imgsrc;   }
 
 body.style.overflow="hidden";
 }
