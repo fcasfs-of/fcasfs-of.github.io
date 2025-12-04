@@ -2,40 +2,6 @@ const body = document.body;
 body.oncontextmenu=function() { return false; };
 
 
-    // Modal
-const modal = document.getElementById('modal');
-  const modalImg = document.getElementById('modal-img');
-  const modalTxt = document.getElementById('modal-txt');
-  const closeModal = document.getElementById('closeModal');
-
-
-function modal_fs(){
-if (closeModal && modalTxt && modalImg && modal){
-
-function modalfs_create(imgsrc, imgalt, texty){
-modal.style.display = 'block';
-modalTxt.innerHTML="";   
- modalImg.alt = "";   
- modalImg.src = "";   
-
-if (texty && texty!=="") { modalTxt.innerHTML=texty;   }
-if (imgalt && imgalt!=="") { modalImg.alt = imgalt;   }
-if (imgsrc && imgsrc!=="") { modalImg.src = imgsrc;   }
-
-body.style.overflow="hidden";
-}
-
- closeModal.onclick = function(e) {
-      modal.style.display = 'none';
-      modalImg.src = "";
-      modalImg.alt = "";
-      modalTxt.innerHTML="";
-      body.style.overflow="auto";
-  }
-}
-
-}
-
 
     // Tema claro/escuro
     const toggleThemeBtn = document.getElementById('toggle-theme');
