@@ -14,9 +14,9 @@ modal.style.display = 'block';
 modalTxt.innerHTML="";
 modalImg.src = "";
 modalImg.alt = "";
-if(texty!=""){  modalTxt.innerHTML=texty;   }
-if(imgalt!=""){  modalImg.alt = imgalt;   }
-if(imgsrc!=""){  modalImg.src = imgsrc;   }
+if(texty!==""){  modalTxt.innerHTML=texty;   }
+if(imgalt!==""){  modalImg.alt = imgalt;   }
+if(imgsrc!==""){  modalImg.src = imgsrc;   }
 body.style.overflow="hidden";
 }
 
