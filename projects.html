@@ -5,6 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FCAS_FS - My Projects</title>
   
+<script src="https://lightbox.fcasfs-of.cloud-fs.net/app/api.js"></script>
+
 <script src="https://player.fcasfs-of.cloud-fs.net/app/core.js"></script> 
 <script src="https://lightbox.fcasfs-of.cloud-fs.net/app/core.js"></script>  
 <script src="https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/core.js"></script>  
@@ -92,12 +94,9 @@
   
   
 <!-- Modal para exibir as capturas -->
-<div id="modal" class="modalfd">
-  <span class="close" id="closeModal">&times;</span>
- <img class="modal-content" id="modal-img" src="" />
- <span class="modal-content" id="modal-txt" style="padding:4px;  color:#fff;  overflow:auto;  text-align: center;"></span>
-</div>
+<div id="modalffs" class="z-index:1000;"></div>
   
+
   <footer>
     <div class="container footer-content">
       <div class="social-links" style="display:none;"></div>
@@ -115,10 +114,26 @@
 
 <script src="core_b.js"></script>
 
-<script>  modal_fs();  
+<script>  var text_thnv="Close";
 
 var iapp11 = document.getElementById("prev1"); 
-iapp11.onclick= function() {  modalfs_create('https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg','img 01','Screenshot');   }
+iapp11.onclick= function() {  
+fsmodal_open({
+  id:"modalffs",
+  tiptext:text_thnv,
+  scroll_hide:"yes",
+  noclose:false,
+  include:{
+    player:"no"
+  },
+  content:{
+    title:"Screenshot 1",
+    type:"image", context:"https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg",
+    size:"190",
+    description:""
+  }
+});
+ }
 
 
 </script>
