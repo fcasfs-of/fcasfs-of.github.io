@@ -240,7 +240,9 @@ img {  object-fit: contain;   pointer-events:none;  }
       min-width: 150px;
       justify-content: center;
     }
-    
+
+    button.page-link { border:0px;  cursor:pointer;  }
+
     .page-link:hover {
       background-color: var(--secondary-color);
       transform: translateY(-3px);
