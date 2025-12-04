@@ -1,3 +1,40 @@
+    // Modal
+function modal_fs(){
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTxt = document.getElementById('modal-txt');
+  const closeModal = document.getElementById('closeModal');
+
+function modalfs_create(imgsrc, imgalt, texty){
+modal.style.display = 'block';
+modalTxt.innerHTML="";
+modalImg.src = "";
+modalImg.alt = "";
+if(texty!=""){  modalTxt.innerHTML=texty;   }
+if(imgalt!=""){  modalImg.alt = imgalt;   }
+if(imgsrc!=""){  modalImg.src = imgsrc;   }
+body.style.overflow="hidden";
+}
+
+ closeModal.onclick = function() {
+      modal.style.display = 'none';
+      modalImg.src = "";
+      modalImg.alt = "";
+      modalTxt.innerHTML="";
+      body.style.overflow="auto";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+       modal.style.display = 'none';
+       modalImg.src = "";
+       modalImg.alt = "";
+       modalTxt.innerHTML="";
+       body.style.overflow="auto";
+  }    }
+}
+
+
     // Tema claro/escuro
     const toggleThemeBtn = document.getElementById('toggle-theme');
     
