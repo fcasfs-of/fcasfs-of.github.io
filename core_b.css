@@ -204,8 +204,8 @@ nav a { text-decoration: none;  }
       fill: var(--dsecondary-color);
     }
 
-.cards-container .card:hover .card-icon .card-icon img:before {
-    content: url(attr(img_preview));
+.cards-container .card:hover .card-icon .card-icon img {
+    content: url(attr(img-preview));
     object-fit: contain;
     width: 100%;
 }
