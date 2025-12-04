@@ -4,11 +4,15 @@ body.oncontextmenu=function() { return false; };
 
     // Modal
 function modal_fs(){
+
+function modalfs_create(){  }
+
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   const modalTxt = document.getElementById('modal-txt');
   const closeModal = document.getElementById('closeModal');
 
+if (modal && modalImg && modalTxt && closeModal){
 function modalfs_create(imgsrc, imgalt, texty){
 modal.style.display = 'block';
 modalTxt.innerHTML="";
@@ -36,6 +40,7 @@ body.style.overflow="hidden";
        modalTxt.innerHTML="";
        body.style.overflow="auto";
   }    }
+}
 }
 
 
