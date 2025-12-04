@@ -4,9 +4,6 @@ body.oncontextmenu=function() { return false; };
 
     // Modal
 function modal_fs(){
-
-function modalfs_create(){  }
-
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   const modalTxt = document.getElementById('modal-txt');
