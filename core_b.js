@@ -12,12 +12,9 @@ function modal_fs(){
 
 function modalfs_create(imgsrc, imgalt, texty){
 modal.style.display = 'block';
-modalTxt.innerHTML="";
-modalImg.src = "";
-modalImg.alt = "";
-if(texty!==""){  modalTxt.innerHTML=texty;   }
-if(imgalt!==""){  modalImg.alt = imgalt;   }
-if(imgsrc!==""){  modalImg.src = imgsrc;   }
+ modalTxt.innerHTML=texty;   
+ modalImg.alt = imgalt;   
+ modalImg.src = imgsrc;   
 body.style.overflow="hidden";
 clodeclikmm();
 }
