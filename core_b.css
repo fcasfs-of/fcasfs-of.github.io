@@ -205,7 +205,7 @@ img {  pointer-events:none;  }
     }
 
 
-.card:hover .card-icon .card-icon:before {
+.card:hover .card-icon img {
     content: url(attr(img-preview));
     object-fit: contain;
     width: 100%;
