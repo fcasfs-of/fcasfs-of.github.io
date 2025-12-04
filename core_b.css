@@ -204,7 +204,7 @@ nav a { text-decoration: none;  }
       fill: var(--dsecondary-color);
     }
 
-.card:hover .card-icon .card-icon img {
+.cards-container .card:hover .card-icon .card-icon img:before {
     content: url(attr(img_preview));
     object-fit: contain;
     width: 100%;
