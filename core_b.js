@@ -1,3 +1,7 @@
+const body = document.body;
+body.oncontextmenu=function() { return false; };
+
+
     // Modal
 function modal_fs(){
   const modal = document.getElementById('modal');
