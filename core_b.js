@@ -16,19 +16,9 @@ modal.style.display = 'block';
  modalImg.alt = imgalt;   
  modalImg.src = imgsrc;   
 body.style.overflow="hidden";
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-       modal.style.display = 'none';
-       modalImg.src = "";
-       modalImg.alt = "";
-       modalTxt.innerHTML="";
-       body.style.overflow="auto";
-  }    }  
-
 }
 
- closeModal.onclick = function() {
+ closeModal.onclick = function(e) {
       modal.style.display = 'none';
       modalImg.src = "";
       modalImg.alt = "";
