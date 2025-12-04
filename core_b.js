@@ -9,7 +9,7 @@ function modal_fs(){
   const modalTxt = document.getElementById('modal-txt');
   const closeModal = document.getElementById('closeModal');
 
-if (modal && modalImg && modalTxt && closeModal){
+
 function modalfs_create(imgsrc, imgalt, texty){
 modal.style.display = 'block';
 modalTxt.innerHTML="";
@@ -37,7 +37,7 @@ body.style.overflow="hidden";
        modalTxt.innerHTML="";
        body.style.overflow="auto";
   }    }
-}
+
 }
 
 
