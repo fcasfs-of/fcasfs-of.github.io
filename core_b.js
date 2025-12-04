@@ -16,7 +16,16 @@ modal.style.display = 'block';
  modalImg.alt = imgalt;   
  modalImg.src = imgsrc;   
 body.style.overflow="hidden";
-clodeclikmm();
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+       modal.style.display = 'none';
+       modalImg.src = "";
+       modalImg.alt = "";
+       modalTxt.innerHTML="";
+       body.style.overflow="auto";
+  }    }  
+
 }
 
  closeModal.onclick = function() {
@@ -27,15 +36,6 @@ clodeclikmm();
       body.style.overflow="auto";
   }
 
-function clodeclikmm(){
-  window.onclick = function(event) {
-    if (event.target == modal) {
-       modal.style.display = 'none';
-       modalImg.src = "";
-       modalImg.alt = "";
-       modalTxt.innerHTML="";
-       body.style.overflow="auto";
-  }    }   }
 
 }
 
