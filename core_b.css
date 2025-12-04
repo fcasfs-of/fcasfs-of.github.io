@@ -258,7 +258,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   .modalfd {   transition: all .1s linear;
     display: none; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 1000; 
     padding-top: 60px; 
     left: 0;
     top: 0;
