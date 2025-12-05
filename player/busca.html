@@ -2,38 +2,81 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FCAS_FS</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FCAS_FS - Player - Página de Pesquisa</title>
+  
+  <link rel="stylesheet" href="https://fcasfs-of.cloud-fs.net/core_b.css"/>
+  <link rel="stylesheet" href="theme.css"/>
 
-<script src="core.js"></script>
+  <link rel="icon" href="https://fcasfs-of.cloud-fs.net/favicon.png" type="image/png"/>
 
 <style>
-[href="https://fcasfs-of.cloud-fs.net/"]{  text-align:center;  display:block; }
-  
-    * {   user-select:none;      margin: 0;      padding: 0;      box-sizing: border-box;    }
-    body {  font-family: 'Helvetica Neue', Arial, sans-serif;      line-height: 1.6;      background-color: #f4f4f4;      color: #333;    }
-    header {    color:#fff;    background-color: #2c3e50;      color: #fff;      padding: 20px;      text-align: center;    }    header h1 {      color:#fff;  font-size: 2rem;    }
-    nav {    color:#fff;    margin-top: 10px;    }    nav ul {      list-style: none;      display: flex;      justify-content: center;      flex-wrap: wrap;    }    nav ul li {     color:#fff;   margin: 0 15px;    }    nav ul li a {      color: #ecf0f1;      text-decoration: none;      font-weight: 600;      transition: color 0.3s;    }    nav ul li a:hover {      color: #3498db;    }
-    .main {    color:#fff;    max-width: 1200px;      margin: 30px auto;      padding: 0 20px;    }    
-    .cards-container {       display: grid;      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));      gap: 20px;    }    
-    .card {       background-color: #fff;      border-radius: 8px;      box-shadow: 0 4px 8px rgba(0,0,0,0.1);      padding: 20px;      transition: transform 0.3s, box-shadow 0.3s;    }    .card:hover {      transform: translateY(-5px);      box-shadow: 0 12px 20px rgba(0,0,0,0.2);    }    .card h2 {      margin-bottom: 15px;      font-size: 1.5rem;     color: #2c3e50;    }    .card p {      font-size: 1rem;      color: #666;    }
-    footer {       background-color: #2c3e50;      color: #ecf0f1;      text-align: center;      padding: 20px;      margin-top: 40px;    }
-    @media (max-width: 768px) {
-      header h1 {         font-size: 1.5rem;      }
-      nav ul {        flex-direction: column;        align-items: center;      }
-      nav ul li {        margin: 10px 0;      }
-    }
-  </style>
+
+</style>
+<script>
+  function progress_valo(mumh) {  var mumhf=0;    
+if(mumh){   mumhf=mumh;
+if(mumh<=9){  mumhf="0"+mumh;  }
+}
+return mumhf;  }
+
+
+
+function progressScript(idf,ll) {
+    const progress = (idf.value / idf.max) * 100;
+  ll.textContent = progress_valo(idf.value);
+  idf.style.background = `linear-gradient(to right, #4682B4 ${progress}%, #ccc ${progress}%)`;
+ }
+
+function progressScriptfile(oper,valks){
+  const sliderEl = document.querySelector(oper);
+const sliderValue = document.querySelector(valks);
+sliderEl.addEventListener("input", (event) => {
+  const tempSliderValue = event.target.value; 
+  sliderValue.textContent = progress_valo(tempSliderValue);
+  const progress = (tempSliderValue / sliderEl.max) * 100;
+  sliderEl.style.background = `linear-gradient(to right, #4682B4 ${progress}%, #ccc ${progress}%)`;
+});
+ progressScript(sliderEl,sliderValue);
+}
+
+
+</script>
+
 </head>
 <body>
   <header>
-    <h1>FCAS_FS</h1>
-    <nav>
-    </nav>
+    <div class="container header-content">
+      <div class="logo">
+        <div class="logo-icon">
+         <img src="https://fcasfs-of.cloud-fs.net/Icon/info.png"/>
+        </div>
+        <h1>FCAS_FS <span> Player - Página de Pesquisa</span></h1>
+      </div>
+      
+      <nav>
+        <ul>
+          <li>
+            <button id="toggle-theme">
+              <span>Tema</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  
   <main>
-    
+    <div class="container">
+      <div class="hero">
+        <h2>Player</h2>
+        <p></p>
+      </div>
+      
+      <div class="cards-container">
+        <div class="card">
+
 <div class="form_buscpg">
 <div class="fcontainer">
 <h1>Página de Pesquisa</h1>
@@ -56,18 +99,26 @@
 </div>
 </div>
 </div>
-
+          
+        </div>
+      </div>
+    </div>
   </main>
+  
+  
+  <footer>
+    <div class="container footer-content">
+      <div class="social-links" style="display:none;"></div>
+      <p class="copyright">FCAS_FS. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-<br/><br/>
+  <script src="https://fcasfs-of.cloud-fs.net/core_b.js"></script>
 
-<script>
+ <script>
   progressScriptfile("#fileSelect",".value");
 </script>
 
-<br/><br/>
-  <footer>
-    <p>Todos os direitos reservados.</p>
-  </footer>
+  
 </body>
 </html>
