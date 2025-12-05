@@ -74,6 +74,7 @@
           <p>Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, links, images, audio, and videos in an intuitive and modern way. <br/>With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation. </p>
           <div class="card-links">
             <a class="page-link" href="https://lightbox.fcasfs-of.cloud-fs.net/en">Access Website</a>
+            <button class="page-link" id="prev3">View Preview</button>
           </div>
         </div>
 
@@ -119,44 +120,36 @@
 
 var iapp11 = document.getElementById("prev1"); 
 var iapp12 = document.getElementById("prev2"); 
+var iapp13 = document.getElementById("prev3"); 
 
 iapp11.onclick= function() {  
 fsmodal_open({
-  id:"modalffs",
-  tiptext:text_thnv,
-  scroll_hide:"yes",
-  noclose:false,
-  remove_efect: true,
-  include:{
-    player:"no"
-  },
+  id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
+  include:{    player:"no"  },
   content:{
-    title:"Screenshot",
-    type:"image", context:"https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg",
-    size:"340",
-    description:"01"
+    title:"Screenshot",    type:"image", context:"https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg",    size:"340",    description:"01"
   }
 });
  }
 iapp12.onclick= function() {  
 fsmodal_open({
-  id:"modalffs",
-  tiptext:text_thnv,
-  scroll_hide:"yes",
-  noclose:false,
-  remove_efect: true,
-  include:{
-    player:"yes"
-  },
+  id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,  
+  include:{    player:"yes"  },
   content:{
-    title:"Preview",
-    type:"link", context:"https://player.fcasfs-of.cloud-fs.net/en",
-    size:"300",
-    description:""
+    title:"Preview",    type:"link", context:"https://player.fcasfs-of.cloud-fs.net/en",    size:"300",    description:""
   }
 });
  }
-
+iapp13.onclick= function() {  
+fsmodal_open({
+  id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,  
+  include:{    player:"yes"  },
+  content:{
+    title:"Preview",    type:"link", context:"https://lightbox.fcasfs-of.cloud-fs.net/en",    size:"300",    description:""
+  }
+});
+ }
+  
 </script>
 
 </body>
