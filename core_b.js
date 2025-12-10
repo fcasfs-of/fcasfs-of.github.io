@@ -1,4 +1,4 @@
-function add_itens_fr(id, op, conn){  
+function add_itens_fr(id, op, conn, objsd){  
 var dadd_itens_ocu="";  var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
 if (id && id!="" && op){
 const idfadd_itens_fr = document.getElementById(id);
@@ -56,6 +56,15 @@ if(conn && conn==true){   idfadd_itens_fr.innerHTML='<div class="'+dadd_itens_fr
 
 }   }
 
+ if(objsd){
+  if(objsd.length>=1){  
+ for (let sis = 0; sis < objsd.length; sis++) {
+  if(objsd[is].id && objsd[is].id!="" && objsd[is].value && objsd[is].value!=""){
+if(document.getElementById(objsd[is].id)){ document.getElementById(objsd[is].id).innerHTML=objsd[is].value;  }
+  }
+ }
+  }     }
+ 
 }
 
 
