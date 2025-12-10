@@ -1,5 +1,5 @@
 function add_itens_fr(id, op, conn){  
-var dadd_itens_ocu"";  var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
+var dadd_itens_ocu="";  var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
 if (id && id!="" && op){
 const idfadd_itens_fr = document.getElementById(id);
  var dad_icond_itens_fra="";    var dalickstens_fra=""; 
