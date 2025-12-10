@@ -5,6 +5,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FCAS_FS - Meus Projetos</title>
 
+<script src="core_a.js"></script>
+
 <script src="https://lightbox.fcasfs-of.cloud-fs.net/app/api.js"></script>
 
 <script src="https://player.fcasfs-of.cloud-fs.net/app/core.js"></script> 
@@ -52,45 +54,8 @@
         <p></p>
       </div>
       
-      <div class="cards-container">
-        <div class="card">
-          <div class="card-icon">
-           <img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>
-          </div>
-          <h2>Player: PDF, Audio, Imagem e Video  <span id="versionplayer"></span>  </h2>
-          <p>Nosso player oferece uma experiência de mídia imersiva e intuitiva, projetada para atender a todas as suas necessidades de entretenimento digital. <br/>Com um design moderno e funcional, ele permite que você reproduza, pause e controle suas faixas e vídeos favoritos com facilidade. </p>
-          <div class="card-links">
-            <a class="page-link" href="https://player.fcasfs-of.cloud-fs.net/">Acesse o Site</a>
-            <a class="page-link" href="https://player.fcasfs-of.cloud-fs.net/support-br">Visite a Página de Suporte</a>
-<button class="page-link" id="prev2">Ver Pré-visualização</button>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-icon">
-           <img src="https://fcasfs-of.cloud-fs.net/Icon/lightbox1.png"/>
-          </div>
-          <h2>LightBox: Texto, Link, Video, Imagem e Audio   <span id="versionlightbox"></span> </h2>
-          <p>Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, imagens, áudios e vídeos de forma intuitiva e moderna. <br/>Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.</p>
-          <div class="card-links">
-            <a class="page-link" href="https://lightbox.fcasfs-of.cloud-fs.net/">Acesse o Site</a>
-            <button class="page-link" id="prev3">Ver Pré-visualização</button>
-          </div>
-        </div>
+      <div class="cards-container" id="listr"></div>
 
-          <div class="card">
-          <div class="card-icon">
-           <img src="https://fcasfs-of.cloud-fs.net/Icon/i-app.png"/>
-          </div>
-          <h2>Buscar Arquivo em Pastas   <span id="versionlfoldfdf"></span>   </h2>
-          <p>O aplicativo permite selecionar uma pasta, escolher o formato do arquivo, inserir um texto e buscar os arquivos correspondentes na pasta.</p>
-          <div class="card-links">
-            <a class="page-link" href="https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/">Acesse o Site</a>
-<button class="page-link" id="prev1">Captura de Tela</button>
-          </div>
-        </div>
-        
-      </div>
     </div>
   </main>
   
@@ -105,23 +70,26 @@
     </div>
   </footer>
 
-<script>  
- var iversionplayerzz = document.getElementById("versionplayer");  if(app_ver){  if(app_ver!=""){   iversionplayerzz.innerHTML="  ("+app_ver+")";   }   }  
- var iversionplayferzz = document.getElementById("versionlightbox");  if(app_2ver){  if(app_2ver!=""){   iversionplayferzz.innerHTML="  ("+app_2ver+")";   }   }  
- var iversionplayfderzz = document.getElementById("versionlfoldfdf");  if(dversion){  if(dversion!=""){   iversionplayfderzz.innerHTML="  ("+dversion+")";   }   }  
-
-
-</script>
-
 <script src="core_b.js"></script>
 
 <script>  var text_thnv="Fechar";
+
+add_itens_fr("listr", {
+config:set_skincs,
+itens:set_itend_cd.project.pt
+}, "", [
+{ id:"versionplayer", value:app_ver },
+{ id:"versionlfoldfdf", value:dversion },
+{ id:"versionlightbox", value:app_2ver }
+]);
+
+
 
 var iapp11 = document.getElementById("prev1"); 
 var iapp12 = document.getElementById("prev2"); 
 var iapp13 = document.getElementById("prev3"); 
 
-iapp11.onclick= function() {  
+if(iapp11){   iapp11.onclick= function() {  
 fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
   include:{    player:"no"  },
@@ -129,8 +97,8 @@ fsmodal_open({
     title:"Captura de Tela",    type:"image", context:"https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg",    size:"340",    description:"01"
   }
 });
- }
-iapp12.onclick= function() {  
+ }     }
+if(iapp12){  iapp12.onclick= function() {  
 fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
   include:{    player:"yes"  },
@@ -138,8 +106,8 @@ fsmodal_open({
     title:"Pré-visualização",    type:"link", context:"https://player.fcasfs-of.cloud-fs.net/",    size:"300",    description:""
   }
 });
- }
-iapp13.onclick= function() {  
+ }    }
+if(iapp13){   iapp13.onclick= function() {  
 fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,  
   include:{    player:"yes"  },
@@ -147,7 +115,7 @@ fsmodal_open({
     title:"Pré-visualização",    type:"link", context:"https://lightbox.fcasfs-of.cloud-fs.net/",    size:"300",    description:""
   }
 });
- }
+ }    }
   
 </script>
 
