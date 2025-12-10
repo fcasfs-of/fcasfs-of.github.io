@@ -45,7 +45,6 @@ if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 }  }
 }
-}
 
 }
 return ddloaded_listff;   }
