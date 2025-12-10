@@ -1,10 +1,12 @@
 var set_skincs={ class:"card", class_b:"page-link"};
 
-var set_itend_cder=[
+if(app_ver && dversion && app_2ver){
+  var set_itend_cder=[
 { id:"versionplayer", value:app_ver },
 { id:"versionlfoldfdf", value:dversion },
 { id:"versionlightbox", value:app_2ver },
 ];
+}
 
 var set_itend_cd={
 
