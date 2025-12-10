@@ -1,4 +1,4 @@
-function add_itens_fr(id, op){   var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"" };
+function add_itens_fr(id, op, conn){   var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"" };
 if (id && id!="" && op){
 const idfadd_itens_fr = document.getElementById(id);
  var dad_icond_itens_fra="";    var dalickstens_fra=""; 
@@ -7,25 +7,36 @@ if(op.config){
    if (op.config.class && op.config.class!=""){   dadd_itens_fra_co["class"]=op.config.class;   }
 }
 
-if(op.links){
-    if(op.links.length>=1){
+if(op.itens){
+    if(op.itens.length>=1){  
+ for (let is = 0; is < op.itens.length; is++) {
+ dalickstens_fra="";  
+ 
+ if(op.itens[is].links){
+    if(op.itens[is].links.length>=1){
     dalickstens_fra='<div class="'+dadd_itens_fra_co["class"]+'-links">'; 
-    for (let i = 0; i < op.links.length; i++) {
-        if(op.links[i] && op.links[i]!=""){    dalickstens_fra=dalickstens_fra+op.links[i];    }
+    for (let i = 0; i < op.itens[is].links.length; i++) {
+        if(op.itens[is].links[i] && op.itens[is].links[i]!=""){    dalickstens_fra=dalickstens_fra+op.itens[is].links[i];      }
     }
     dalickstens_fra=dalickstens_fra+"</div>";
     }
 }
+
+    dad_icond_itens_fra="";      if (op.itens[is].icon && op.itens[is].icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.itens[is].icon+'</div>';     } 
     
-  if (op.icon && op.icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.icon+'</div>';     } 
-    
-  if (op.title && op.title!="" && op.desc && op.desc!=""){
-      dadd_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'">'+dad_icond_itens_fra+'<h2>'+op.title+'</h2><p>'+op.desc+'</p>'+dalickstens_fra+'</div>';   
+  if (op.itens[is].title && op.itens[is].title!="" && op.itens[is].desc && op.itens[is].desc!=""){
+    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+'">'+dad_icond_itens_fra+'<h2>'+op.itens[is].title+'</h2><p>'+op.itens[is].desc+'</p>'+dalickstens_fra+'</div>';       
   } 
+  
+  } }
 
 idfadd_itens_fr.innerHTML=dadd_itens_fra;
+if(conn && conn==true){   idfadd_itens_fr.innerHTML='<div class="'+dadd_itens_fra_co["class"]+'-container">'+dadd_itens_fra+"<div>";   }
+
+}   }
+
 }
-}
+
 
 
 
