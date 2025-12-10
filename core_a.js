@@ -34,12 +34,12 @@ if(tp && tp!=""){
 
 if(tp=="skin"){
 ddloaded_listff={ class:"card", class_b:"page-link"};
-} eles if (tp=="home" && lag && lag!=""){
+} else if (tp=="home" && lag && lag!=""){
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 }  }
-} eles if (tp=="project" && lag && lag!=""){
+} else if (tp=="project" && lag && lag!=""){
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
