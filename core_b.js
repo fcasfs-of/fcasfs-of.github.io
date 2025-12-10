@@ -1,3 +1,35 @@
+function add_itens_fr(id, op){   var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"" };
+if (id!="" && op){
+const idfadd_itens_fr = document.getElementById(id);
+ var dad_icond_itens_fra="";    var dalickstens_fra=""; 
+    
+if(op.config){
+   if (op.config.class!=""){   dadd_itens_fra_co["class"]=op.config.class;   }
+}
+
+if(op.links){
+    if(op.links.length>=1){
+    dalickstens_fra='<div class="'+dadd_itens_fra_co["class"]+'-links">'; 
+    for (let i = 0; i < op.links.length; i++) {
+        if(op.links[i]!=""){    dalickstens_fra=dalickstens_fra+op.links[i];    }
+    }
+    dalickstens_fra=dalickstens_fra+"</div>";
+    }
+}
+    
+  if (op.icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.icon+'</div>';     } 
+    
+  if (op.title!="" && op.desc!=""){
+      dadd_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'">'+dad_icond_itens_fra+'<h2>'+op.title+'</h2><p>'+op.desc+'</p>'+dalickstens_fra+'</div>';   
+  } 
+
+idfadd_itens_fr.innerHTML=dadd_itens_fra;
+}
+}
+
+
+
+
 const body = document.body;
 body.oncontextmenu=function() { return false; };
 
