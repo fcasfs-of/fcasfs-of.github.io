@@ -30,11 +30,16 @@ if(op.itens){
     }
 }
 
-    dad_icond_itens_fra="";      if (op.itens[is].icon && op.itens[is].icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.itens[is].icon+'</div>';     } 
+    dad_icond_itens_fra="";   var dad_descnd_itens_fra="";  var dad_titlend_itens_fra="";
     
-  if (op.itens[is].title && op.itens[is].title!="" && op.itens[is].desc && op.itens[is].desc!=""){
-    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+'">'+dad_icond_itens_fra+'<h2>'+op.itens[is].title+'</h2><p>'+op.itens[is].desc+'</p>'+dalickstens_fra+'</div>';       
-  } 
+    if (op.itens[is].icon && op.itens[is].icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.itens[is].icon+'</div>';     } 
+    
+    
+      if(op.itens[is].title && op.itens[is].title!=""){  dad_titlend_itens_fra='<h2>'+op.itens[is].title+'</h2>';   }
+  if(op.itens[is].desc && op.itens[is].desc!=""){   dad_descnd_itens_fra='<p>'+op.itens[is].desc+'</p>';   }
+  
+  
+    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+'">'+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dalickstens_fra+'</div>';       
   
   } }
 
