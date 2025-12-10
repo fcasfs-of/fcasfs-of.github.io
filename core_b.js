@@ -1,10 +1,11 @@
-function add_itens_fr(id, op, conn){   var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"" };
+function add_itens_fr(id, op, conn){   var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
 if (id && id!="" && op){
 const idfadd_itens_fr = document.getElementById(id);
  var dad_icond_itens_fra="";    var dalickstens_fra=""; 
     
 if(op.config){
    if (op.config.class && op.config.class!=""){   dadd_itens_fra_co["class"]=op.config.class;   }
+   if (op.config.class_b && op.config.class_b!=""){   dadd_itens_fra_co["class_b"]=op.config.class_b;   }
 }
 
 if(op.itens){
@@ -16,7 +17,14 @@ if(op.itens){
     if(op.itens[is].links.length>=1){
     dalickstens_fra='<div class="'+dadd_itens_fra_co["class"]+'-links">'; 
     for (let i = 0; i < op.itens[is].links.length; i++) {
-        if(op.itens[is].links[i] && op.itens[is].links[i]!=""){    dalickstens_fra=dalickstens_fra+op.itens[is].links[i];      }
+        if(op.itens[is].links[i] && op.itens[is].links[i]){ 
+         if (op.itens[is].links[i].type && op.itens[is].links[i].type!="" && op.itens[is].links[i].text && op.itens[is].links[i].text!=""){  
+         var hredadd_itens_fradd="";
+         if(op.itens[is].links[i].link && op.itens[is].links[i].link!=""){         hredadd_itens_fradd=" href='"+op.itens[is].links[i].link+"'";         }
+         if(op.itens[is].links[i].id && op.itens[is].links[i].id!=""){         hredadd_itens_fradd=" id='"+op.itens[is].links[i].id+"'";         }
+        dalickstens_fra=dalickstens_fra+"<"+op.itens[is].links[i].type+" class='"+dadd_itens_fra_co["class_b"]+"' "+hredadd_itens_fradd+">"+op.itens[is].links[i].text+"<"+"/"+op.itens[is].links[i].type+">";  
+        }
+        }
     }
     dalickstens_fra=dalickstens_fra+"</div>";
     }
