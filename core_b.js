@@ -59,8 +59,8 @@ if(conn && conn==true){   idfadd_itens_fr.innerHTML='<div class="'+dadd_itens_fr
  if(objsd){
   if(objsd.length>=1){  
  for (let sis = 0; sis < objsd.length; sis++) {
-  if(objsd[is].id && objsd[is].id!="" && objsd[is].value && objsd[is].value!=""){
-if(document.getElementById(objsd[is].id)){ document.getElementById(objsd[is].id).innerHTML=objsd[is].value;  }
+  if(objsd[sis].id && objsd[sis].id!="" && objsd[sis].value && objsd[sis].value!=""){
+if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].id).innerHTML=objsd[sis].value;  }
   }
  }
   }     }
