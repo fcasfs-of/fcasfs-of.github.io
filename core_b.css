@@ -508,14 +508,15 @@ img {  object-fit: contain;   pointer-events:none;  }
 }
 
 
-.dark-mode .card[data-tooltip]::after {   background: #333333;  color: #FFFFFF;   }  
+.dark-mode .card[data-tooltip]::after {   background: #FFFFFF;  color: #333333;   }  
 .dark-mode .card[data-tooltip][data-flow^="top"]::before {  border-top-color: #FFFFFF; }
 .dark-mode .card[data-tooltip][data-flow^="bottom"]::before { border-bottom-color: #FFFFFF; }
 .dark-mode .card[data-tooltip][data-flow^="left"]::before { border-left-color: #FFFFFF; }
 .dark-mode .card[data-tooltip][data-flow^="right"]::before {  border-right-color: #FFFFFF; }
 
+.card[data-tooltip][data-ver='true']{    display: block;    }
 
-.card[data-tooltip][data-tooltip-ver^="true"], .card[data-tooltip]:hover::before,
+.card[data-tooltip]:hover::before,
 .card[data-tooltip]:hover::after {
   display: block;
 }
