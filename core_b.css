@@ -216,7 +216,10 @@ img {  object-fit: contain;   pointer-events:none;  }
       margin-bottom: 25px;
       flex-grow: 1;
     }
-    
+
+
+    .separate, .card div.separate {  padding: 5px;    border-top: 1px solid #ccc;    width: 100%;    pointer-events: none;   }
+
     .card-links {
       display: flex;
       flex-wrap: wrap;
