@@ -261,7 +261,7 @@ img {  object-fit: contain;   pointer-events:none;  }
     }
 
 
-.ribbon.right {   user-select:none;   pointer-events:none;  
+.card .ribbon.right {   user-select:none;   pointer-events:none;  
   position: absolute;
   right: -5px; top: -5px;
   z-index: 1;
@@ -269,7 +269,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   width: 75px; height: 75px;
   text-align: right;
 }
-.ribbon, .ribbon.left {
+.card .ribbon, .ribbon.left {
   position: absolute;   user-select:none;      pointer-events:none;  
   left: -5px; top: -5px;
   z-index: 1;
@@ -278,7 +278,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   text-align: right;
 }
 
-.ribbon.right span {  user-select:none;      pointer-events:none;  
+.card .ribbon.right span {  user-select:none;      pointer-events:none;  
   font-size: 10px;
   font-weight: bold;
   color: #FFF;
@@ -295,7 +295,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   position: absolute;
   top: 19px; right: -21px;
 }
-.ribbon span, .ribbon.left span {  user-select:none;      pointer-events:none;  
+.card .ribbon span, .ribbon.left span {  user-select:none;      pointer-events:none;  
   font-size: 10px;
   font-weight: bold;
   color: #FFF;
@@ -313,7 +313,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   top: 19px; left: -21px;
 }
 
-.ribbon span::before {
+.card .ribbon span::before {
   content: "";
   position: absolute; left: 0px; top: 100%;
   z-index: -1;
@@ -322,7 +322,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   border-bottom: 3px solid transparent;
   border-top: 3px solid #1e5799;
 }
-.ribbon span::after {
+.card .ribbon span::after {
   content: "";
   position: absolute; right: 0px; top: 100%;
   z-index: -1;
