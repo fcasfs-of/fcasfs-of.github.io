@@ -45,9 +45,11 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
     
       if(op.itens[is].title && op.itens[is].title!=""){  dad_titlend_itens_fra='<h2>'+op.itens[is].title+'</h2>';   }
   if(op.itens[is].desc && op.itens[is].desc!=""){   dad_descnd_itens_fra='<p>'+op.itens[is].desc+'</p>';   }
+
+  var dad_icond_itens_fra_odfd="";
+  if(op.itens[is].separate && op.itens[is].separate==true){   dad_icond_itens_fra_odfd="<div class='separate'></div>";   }
   
-  
-    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+'" '+dadd_itens_ocu+'>'+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dalickstens_fra+'</div>';       
+    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+'" '+dadd_itens_ocu+'>'+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
   
   } }
 
