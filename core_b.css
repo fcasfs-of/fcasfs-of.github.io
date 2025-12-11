@@ -263,16 +263,16 @@ img {  object-fit: contain;   pointer-events:none;  }
 
 .card .ribbon.right {   user-select:none;   pointer-events:none;  
   position: absolute;
-  right: -5px; top: -5px;
+  right: -5px; top: -5px; transition: var(--transition);
   z-index: 1;
   overflow: hidden;
   width: 75px; height: 75px;
   text-align: right;
 }
-.card .ribbon, .card .ribbon.left {
+.card .ribbon.left {
   position: absolute;   user-select:none;      pointer-events:none;  
   left: -5px; top: -5px;
-  z-index: 1;
+  z-index: 1; transition: var(--transition);
   overflow: hidden;
   width: 75px; height: 75px;
   text-align: right;
@@ -280,7 +280,7 @@ img {  object-fit: contain;   pointer-events:none;  }
 
 .card .ribbon.right span {  user-select:none;      pointer-events:none;  
   font-size: 10px;
-  font-weight: bold;
+  font-weight: bold; transition: var(--transition);
   color: #FFF;
   text-transform: uppercase;
   text-align: center;
@@ -298,7 +298,7 @@ img {  object-fit: contain;   pointer-events:none;  }
 .card .ribbon.left span {  user-select:none;      pointer-events:none;  
   font-size: 10px;
   font-weight: bold;
-  color: #FFF;
+  color: #FFF; transition: var(--transition);
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
@@ -314,7 +314,7 @@ img {  object-fit: contain;   pointer-events:none;  }
 }
 
 .card .ribbon span::before {
-  content: "";
+  content: ""; transition: var(--transition);
   position: absolute; left: 0px; top: 100%;
   z-index: -1;
   border-left: 3px solid #1e5799;
@@ -325,25 +325,25 @@ img {  object-fit: contain;   pointer-events:none;  }
 .card .ribbon span::after {
   content: "";
   position: absolute; right: 0px; top: 100%;
-  z-index: -1;
+  z-index: -1; transition: var(--transition);
   border-left: 3px solid transparent;
   border-right: 3px solid #1e5799;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #1e5799;
 }
 
-.card .ribbon.green span {    background: linear-gradient(#9BC90D 0%, #79A70A 100%);    }
-.card .ribbon.green span::before {  border-left: 3px solid #79A70A;    border-top: 3px solid #79A70A;   }
-.card .ribbon.green span::after {  border-right: 3px solid #79A70A;  border-top: 3px solid #79A70A;   }
-.card .ribbon.blue span {    background: linear-gradient(#2989d8 0%, #1e5799 100%);   }
-.card .ribbon.blue span::before {  border-left: 3px solid #1e5799;    border-top: 3px solid #1e5799;   }
-.card .ribbon.blue span::after {  border-right: 3px solid #1e5799;  border-top: 3px solid #1e5799;   }
-.card .ribbon.red span {    background: linear-gradient(#F70505 0%, #8F0808 100%);   }
-.card .ribbon.red span::before {  border-left: 3px solid #8F0808;    border-top: 3px solid #8F0808;   }
-.card .ribbon.red span::after {  border-right: 3px solid #8F0808;  border-top: 3px solid #8F0808;   }
-.card .ribbon.disabled span {    background: linear-gradient(#B6BAC9 0%, #808080 100%);   }
-.card .ribbon.disabled span::before {  border-left: 3px solid #808080;    border-top: 3px solid #808080;   }
-.card .ribbon.disabled span::after {  border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
+.card .ribbon.green span {    transition: var(--transition); background: linear-gradient(#9BC90D 0%, #79A70A 100%);    }
+.card .ribbon.green span::before {  transition: var(--transition); border-left: 3px solid #79A70A;    border-top: 3px solid #79A70A;   }
+.card .ribbon.green span::after {   transition: var(--transition);border-right: 3px solid #79A70A;  border-top: 3px solid #79A70A;   }
+.card .ribbon.blue span {   transition: var(--transition);  background: linear-gradient(#2989d8 0%, #1e5799 100%);   }
+.card .ribbon.blue span::before {  transition: var(--transition); border-left: 3px solid #1e5799;    border-top: 3px solid #1e5799;   }
+.card .ribbon.blue span::after {   transition: var(--transition);border-right: 3px solid #1e5799;  border-top: 3px solid #1e5799;   }
+.card .ribbon.red span {    transition: var(--transition); background: linear-gradient(#F70505 0%, #8F0808 100%);   }
+.card .ribbon.red span::before {  transition: var(--transition); border-left: 3px solid #8F0808;    border-top: 3px solid #8F0808;   }
+.card .ribbon.red span::after {  transition: var(--transition); border-right: 3px solid #8F0808;  border-top: 3px solid #8F0808;   }
+.card .ribbon.disabled span {    transition: var(--transition); background: linear-gradient(#B6BAC9 0%, #808080 100%);   }
+.card .ribbon.disabled span::before {  transition: var(--transition); border-left: 3px solid #808080;    border-top: 3px solid #808080;   }
+.card .ribbon.disabled span::after {   transition: var(--transition);border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
 
 
  /* Modal */
