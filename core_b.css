@@ -607,10 +607,10 @@ img {  object-fit: contain;   pointer-events:none;  }
 .card[data-tooltip][data-flow^="bottom"]:hover::after {
   animation: tooltip-vert .5s ease-out forwards;
 }
-.card[data-ver^='true'][data-flow^="top"]::before,
-.card[data-ver^='true'][data-flow^="top"]::after,
-.card[data-ver^='true'][data-flow^="bottom"]::before,
-.card[data-ver^='true'][data-flow^="bottom"]::after {
+.card[data-tooltip][data-ver='true'][data-flow^="top"]::before,
+.card[data-tooltip][data-ver='true'][data-flow^="top"]::after,
+.card[data-tooltip][data-ver='true'][data-flow^="bottom"]::before,
+.card[data-tooltip][data-ver='true'][data-flow^="bottom"]::after {
   animation: tooltip-vert .5s ease-out forwards;
 }
 .card[data-tooltip][data-ver='true'][data-flow^="right"], .card[data-tooltip][data-ver='true'][data-flow^="left"], .card[data-tooltip][data-flow^="left"]:hover::before,
@@ -619,9 +619,9 @@ img {  object-fit: contain;   pointer-events:none;  }
 .card[data-tooltip][data-flow^="right"]:hover::after {
    transform: translate(0, -50%); 
 }
-.card[data-ver^='true'][data-flow^="left"]::before, .card[data-ver='true'][data-flow^="left"]::after,
-.card[data-ver^='true'][data-flow^="right"]::before,
-.card[data-ver^='true'][data-flow^="right"]::after {
+.card[data-tooltip][data-ver='true'][data-flow^="left"]::before, .card[data-tooltip][data-ver='true'][data-flow^="left"]::after,
+.card[data-tooltip][data-ver='true'][data-flow^="right"]::before,
+.card[data-tooltip][data-ver='true'][data-flow^="right"]::after {
    transform: translate(-50%, 0); 
 }
 
