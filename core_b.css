@@ -604,13 +604,20 @@ img {  object-fit: contain;   pointer-events:none;  }
 .card[data-tooltip][data-flow^="top"]:hover::before,
 .card[data-tooltip][data-flow^="top"]:hover::after,
 .card[data-tooltip][data-flow^="bottom"]:hover::before,
-.card[data-tooltip][data-flow^="bottom"]:hover::after {
+.card[data-tooltip][data-flow^="bottom"]:hover::after,
+.card[data-tooltip][data-ver='true'][data-flow^="top"]:hover::before,
+.card[data-tooltip][data-ver='true'][data-flow^="top"]:hover::after,
+.card[data-tooltip][data-ver='true'][data-flow^="bottom"]:hover::before,
+.card[data-tooltip][data-ver='true'][data-flow^="bottom"]:hover::after {
   animation: tooltip-vert .5s ease-out forwards;
 }
 .card[data-tooltip][data-ver='true'][data-flow^="right"], .card[data-tooltip][data-ver='true'][data-flow^="left"], .card[data-tooltip][data-flow^="left"]:hover::before,
 .card[data-tooltip][data-flow^="left"]:hover::after,
 .card[data-tooltip][data-flow^="right"]:hover::before,
-.card[data-tooltip][data-flow^="right"]:hover::after {
+.card[data-tooltip][data-flow^="right"]:hover::after,
+.card[data-tooltip][data-ver='true'][data-flow^="left"]:hover::after,
+.card[data-tooltip][data-ver='true'][data-flow^="right"]:hover::before,
+.card[data-tooltip][data-ver='true'][data-flow^="right"]:hover::after {
   animation: tooltip-horz .5s ease-out forwards;
 }
 
