@@ -295,7 +295,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   position: absolute;
   top: 19px; right: -21px;
 }
-.card .ribbon span, .card .ribbon.left span {  user-select:none;      pointer-events:none;  
+.card .ribbon.left span {  user-select:none;      pointer-events:none;  
   font-size: 10px;
   font-weight: bold;
   color: #FFF;
