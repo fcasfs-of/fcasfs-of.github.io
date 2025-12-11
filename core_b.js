@@ -1,5 +1,5 @@
 function add_itens_fr(id, op, conn, objsd){  
-var dadd_itens_ocu="";  var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
+var dadd_itens_ocu="";   var dadd_itens_efect="";     var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
 if (id && id!="" && op){
 const idfadd_itens_fr = document.getElementById(id);
  var dad_icond_itens_fra="";    var dalickstens_fra=""; 
@@ -38,7 +38,7 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
     }
 }
 
-    dad_icond_itens_fra="";   var dad_descnd_itens_fra="";  var dad_titlend_itens_fra="";
+    dad_icond_itens_fra="";   dadd_itens_efect=" ef";   var dad_descnd_itens_fra="";  var dad_titlend_itens_fra="";
     
     if (op.itens[is].icon && op.itens[is].icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.itens[is].icon+'</div>';     } 
     
@@ -48,8 +48,10 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
 
   var dad_icond_itens_fra_odfd="";
   if(op.itens[is].separate && op.itens[is].separate==true){   dad_icond_itens_fra_odfd="<div class='separate'></div>";   }
-  
-    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+'" '+dadd_itens_ocu+'>'+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
+
+    if(op.itens[is].remove_efect && op.itens[is].remove_efect==true){   dadd_itens_efect="";   }
+
+    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+'" '+dadd_itens_ocu+'>'+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
   
   } }
 
