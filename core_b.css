@@ -269,7 +269,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   width: 75px; height: 75px;
   text-align: right;
 }
-.card .ribbon, .ribbon.left {
+.card .ribbon, .card .ribbon.left {
   position: absolute;   user-select:none;      pointer-events:none;  
   left: -5px; top: -5px;
   z-index: 1;
@@ -295,7 +295,7 @@ img {  object-fit: contain;   pointer-events:none;  }
   position: absolute;
   top: 19px; right: -21px;
 }
-.card .ribbon span, .ribbon.left span {  user-select:none;      pointer-events:none;  
+.card .ribbon span, .card .ribbon.left span {  user-select:none;      pointer-events:none;  
   font-size: 10px;
   font-weight: bold;
   color: #FFF;
@@ -332,18 +332,18 @@ img {  object-fit: contain;   pointer-events:none;  }
   border-top: 3px solid #1e5799;
 }
 
-.ribbon.green span {    background: linear-gradient(#9BC90D 0%, #79A70A 100%);    }
-.ribbon.green span::before {  border-left: 3px solid #79A70A;    border-top: 3px solid #79A70A;   }
-.ribbon.green span::after {  border-right: 3px solid #79A70A;  border-top: 3px solid #79A70A;   }
-.ribbon.blue span {    background: linear-gradient(#2989d8 0%, #1e5799 100%);   }
-.ribbon.blue span::before {  border-left: 3px solid #1e5799;    border-top: 3px solid #1e5799;   }
-.ribbon.blue span::after {  border-right: 3px solid #1e5799;  border-top: 3px solid #1e5799;   }
-.ribbon.red span {    background: linear-gradient(#F70505 0%, #8F0808 100%);   }
-.ribbon.red span::before {  border-left: 3px solid #8F0808;    border-top: 3px solid #8F0808;   }
-.ribbon.red span::after {  border-right: 3px solid #8F0808;  border-top: 3px solid #8F0808;   }
-.ribbon.disabled span {    background: linear-gradient(#B6BAC9 0%, #808080 100%);   }
-.ribbon.disabled span::before {  border-left: 3px solid #808080;    border-top: 3px solid #808080;   }
-.ribbon.disabled span::after {  border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
+.card .ribbon.green span {    background: linear-gradient(#9BC90D 0%, #79A70A 100%);    }
+.card .ribbon.green span::before {  border-left: 3px solid #79A70A;    border-top: 3px solid #79A70A;   }
+.card .ribbon.green span::after {  border-right: 3px solid #79A70A;  border-top: 3px solid #79A70A;   }
+.card .ribbon.blue span {    background: linear-gradient(#2989d8 0%, #1e5799 100%);   }
+.card .ribbon.blue span::before {  border-left: 3px solid #1e5799;    border-top: 3px solid #1e5799;   }
+.card .ribbon.blue span::after {  border-right: 3px solid #1e5799;  border-top: 3px solid #1e5799;   }
+.card .ribbon.red span {    background: linear-gradient(#F70505 0%, #8F0808 100%);   }
+.card .ribbon.red span::before {  border-left: 3px solid #8F0808;    border-top: 3px solid #8F0808;   }
+.card .ribbon.red span::after {  border-right: 3px solid #8F0808;  border-top: 3px solid #8F0808;   }
+.card .ribbon.disabled span {    background: linear-gradient(#B6BAC9 0%, #808080 100%);   }
+.card .ribbon.disabled span::before {  border-left: 3px solid #808080;    border-top: 3px solid #808080;   }
+.card .ribbon.disabled span::after {  border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
 
 
  /* Modal */
