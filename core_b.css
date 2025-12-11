@@ -230,7 +230,7 @@ img {  object-fit: contain;   pointer-events:none;  }
       width: 100%;
     }
     
-    .page-link {
+    .page-link {   font-size: 15px;   
       display: flex;
       align-items: center;
       gap: 10px;
