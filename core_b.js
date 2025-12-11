@@ -1,3 +1,16 @@
+
+function create_infoxr(op){    var create_infoxrs="";   
+ if (op){
+   if (op.text && op.text!=""){  
+  var create_infoxrcolor="";   var dcreate_infoxrcolor=""; 
+     if (op.color && op.color!=""){   create_infoxrcolor=" "+op.color;   }
+     if (op.pos && op.pos!=""){   dcreate_infoxrcolor=" "+op.pos;   }
+   create_infoxrs='<div class="ribbon'+dcreate_infoxrcolor+create_infoxrcolor+'"><span>'+op.text+'</span></div>';
+   }
+ }
+return create_infoxrs;  }
+
+
 function add_itens_fr(id, op, conn, objsd){  
 var dadd_itens_ocu="";   var dadd_itens_efect="";     var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
 if (id && id!="" && op){
@@ -51,7 +64,7 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
 
     if(op.itens[is].remove_efect && op.itens[is].remove_efect==true){   dadd_itens_efect="";   }
 
-    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+'" '+dadd_itens_ocu+'>'+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
+    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+'" '+dadd_itens_ocu+'>'+create_infoxr(op.itens[is].info)+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
   
   } }
 
