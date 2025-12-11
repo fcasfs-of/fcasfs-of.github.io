@@ -2,10 +2,12 @@
 function create_infoxr(op){    var create_infoxrs="";   
  if (op){
    if (op.text && op.text!=""){  
-  var create_infoxrcolor="";   var dcreate_infoxrcolor=""; 
+   var create_infoxrcolorid="";    var create_infoxrcolor="";   var create_infsixeolor="10px";    var dcreate_infoxrcolor=""; 
      if (op.color && op.color!=""){   create_infoxrcolor=" "+op.color;   }
      if (op.pos && op.pos!=""){   dcreate_infoxrcolor=" "+op.pos;   }
-   create_infoxrs='<div class="ribbon'+dcreate_infoxrcolor+create_infoxrcolor+'"><span>'+op.text+'</span></div>';
+     if (op.size && op.size!=""){   create_infsixeolor=" "+op.size;   }
+     if (op.id && op.id!=""){   create_infoxrcolorid=" id='"+op.id+"'";    }
+   create_infoxrs='<div'+create_infoxrcolorid+' class="ribbon'+dcreate_infoxrcolor+create_infoxrcolor+'"><span style="font-size: '+create_infsixeolor+';">'+op.text+'</span></div>';
    }
  }
 return create_infoxrs;  }
