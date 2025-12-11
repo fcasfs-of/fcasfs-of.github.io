@@ -261,6 +261,73 @@ img {  object-fit: contain;   pointer-events:none;  }
     }
 
 
+.ribbon.right {   user-select:none;   pointer-events:none;  
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon.left {
+  position: absolute;   user-select:none;      pointer-events:none;  
+  left: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+
+.ribbon span {
+  font-size: 10px;    user-select:none;      pointer-events:none;  
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#2989d8 0%, #1e5799 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #1e5799;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1e5799;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #1e5799;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #1e5799;
+}
+
+.ribbon.green span {    background: linear-gradient(#9BC90D 0%, #79A70A 100%);    }
+.ribbon.green span::before {  border-left: 3px solid #79A70A;    border-top: 3px solid #79A70A;   }
+.ribbon.green span::after {  border-right: 3px solid #79A70A;  border-top: 3px solid #79A70A;   }
+.ribbon.blue span {    background: linear-gradient(#2989d8 0%, #1e5799 100%);   }
+.ribbon.blue span::before {  border-left: 3px solid #1e5799;    border-top: 3px solid #1e5799;   }
+.ribbon.blue span::after {  border-right: 3px solid #1e5799;  border-top: 3px solid #1e5799;   }
+.ribbon.red span {    background: linear-gradient(#F70505 0%, #8F0808 100%);   }
+.ribbon.red span::before {  border-left: 3px solid #8F0808;    border-top: 3px solid #8F0808;   }
+.ribbon.red span::after {  border-right: 3px solid #8F0808;  border-top: 3px solid #8F0808;   }
+.ribbon.disabled span {    background: linear-gradient(#B6BAC9 0%, #808080 100%);   }
+.ribbon.disabled span::before {  border-left: 3px solid #808080;    border-top: 3px solid #808080;   }
+.ribbon.disabled span::after {  border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
+
+
  /* Modal */
   .modalfd {   transition: all .1s linear;
     display: none; 
