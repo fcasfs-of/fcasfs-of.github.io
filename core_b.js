@@ -1,4 +1,16 @@
 
+function create_tooltipr(op){    var create_infoxrs="";   
+ if (op){
+   if (op.text && op.text!=""){  
+    var create_infoxrcolor="";    var dcreate_infoxrcolor="top"; 
+     if (op.visible && op.visible==true){   create_infoxrcolor=' data-ver="true"';   }
+     if (op.pos && op.pos!=""){   dcreate_infoxrcolor=""+op.pos;   }
+   create_infoxrs=' data-tooltip="'+op.text+'" data-flow="'+dcreate_infoxrcolor+'"'+create_infoxrcolor;
+   }
+ }
+return create_infoxrs;  }
+
+
 function create_infoxr(op){    var create_infoxrs="";   
  if (op){
    if (op.text && op.text!=""){  
@@ -66,7 +78,7 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
 
     if(op.itens[is].remove_efect && op.itens[is].remove_efect==true){   dadd_itens_efect="";   }
 
-    dadd_itens_fra=dadd_itens_fra+'<div class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+'" '+dadd_itens_ocu+'>'+create_infoxr(op.itens[is].info)+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
+    dadd_itens_fra=dadd_itens_fra+'<div'+create_tooltipr(op.itens[is].tip)+' class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+'" '+dadd_itens_ocu+'>'+create_infoxr(op.itens[is].info)+dad_icond_itens_fra+dad_titlend_itens_fra+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
   
   } }
 
