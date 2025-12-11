@@ -182,10 +182,12 @@ img {  object-fit: contain;   pointer-events:none;  }
     }
     
     .card:hover {
-      transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
-    
+     .card.ef:hover {
+      transform: translateY(-10px);
+    }
+
     .card-icon {
       width: 70px;
       height: 70px;
@@ -248,9 +250,11 @@ img {  object-fit: contain;   pointer-events:none;  }
 
     .page-link:hover {
       background-color: var(--secondary-color);
+    }
+    .card.ef .page-link:hover {
       transform: translateY(-3px);
     }
-    
+
     .page-link img {
       width: 24px;
       height: 24px;  top:-1px;   position:relative; 
