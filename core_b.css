@@ -514,7 +514,7 @@ img {  object-fit: contain;   pointer-events:none;  }
 .dark-mode .card[data-tooltip][data-flow^="left"]::before { border-left-color: #FFFFFF; }
 .dark-mode .card[data-tooltip][data-flow^="right"]::before {  border-right-color: #FFFFFF; }
 
-.card[data-tooltip][data-ver='true']::before, .card[data-tooltip][data-ver='true']::after{    display: block;    }
+.card[data-tooltip][data-ver^='true']::before, .card[data-tooltip][data-ver^='true']::after{    display: block;    }
 
 .card[data-tooltip]:hover::before,
 .card[data-tooltip]:hover::after {
