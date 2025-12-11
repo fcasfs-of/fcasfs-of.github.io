@@ -7,7 +7,7 @@ function create_infoxr(op){    var create_infoxrs="";
      if (op.pos && op.pos!=""){   dcreate_infoxrcolor=" "+op.pos;   }
      if (op.size && op.size!=""){   create_infsixeolor=" "+op.size;   }
      if (op.id && op.id!=""){   create_infoxrcolorid=" id='"+op.id+"'";    }
-   create_infoxrs='<div'+create_infoxrcolorid+' class="ribbon'+dcreate_infoxrcolor+create_infoxrcolor+'"><span style="font-size: '+create_infsixeolor+';">'+op.text+'</span></div>';
+   create_infoxrs='<div class="ribbon'+dcreate_infoxrcolor+create_infoxrcolor+'"><span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';">'+op.text+'</span></div>';
    }
  }
 return create_infoxrs;  }
