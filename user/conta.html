@@ -42,15 +42,85 @@
   <main>
     <div class="container">
       <div class="hero">
+
+        <div class="container">
+
+  <!-- Configuração da Conta -->
+  <section id="configuracao">
+    <h2>Configuração da Conta</h2>
+    <p>Usuário: <span id="usuario"></span></p>
+    <p>Idade: <span id="idade"></span></p>
+    <p>Último Acesso: <span id="ultimoAcesso"></span></p>
+    <p>Status de Segurança: <span id="statusSeguranca"></span></p>
+    <p>Autenticação: <span id="autenticacao"></span></p>
+  </section>
+
+  <!-- Perfil -->
+  <section id="perfil">
+    <h2>Perfil</h2>
+    <p>Nome completo: <span id="nomeCompleto"></span></p>
+    <p>Data de nascimento: <span id="nascimento"></span></p>
+  </section>
+
+  <!-- Armazenamento Uso -->
+  <section id="armazenamento">
+    <h2>Armazenamento</h2>
+    <p>Total: <span id="totalArmazenamento"></span></p>
+    <p>Usado: <span id="usoArmazenamento"></span></p>
+    <div class="progress-bar">
+      <div class="progress" id="progressArmazenamento"></div>
+    </div>
+    <p>Percentual de uso: <span id="percentualUso"></span></p>
+  </section>
+
+  <!-- Bloqueio e Recursos -->
+  <section id="statusBloqueio">
+    <h2>Status do Conta</h2>
+    <p id="statusConta" class="status"></p>
+    <p id="motivoBloqueio"></p>
+    <p id="tipoBloqueio"></p>
+    <h3>Recursos disponíveis</h3>
+    <ul id="recursosDisponiveis"></ul>
+    <p>Uso de recursos: <span id="usoRecursos"></span></p>
+    <button id="vincularCelular">Vincular Celular ao App</button>
+    <button id="desvincularCelular" style="display:none;">Desvincular Celular</button>
+  </section>
+
+  <!-- Plano -->
+  <section id="plano">
+    <h2>Plano Atual</h2>
+    <p>Nome do Plano: <span id="nomePlano"></span></p>
+    <p>Validade: <span id="validadePlano"></span></p>
+    <p>Expira em: <span id="diasRestantes"></span></p>
+  </section>
+
+  <!-- Lista de Arquivos -->
+  <section id="arquivos">
+    <h2>Arquivos</h2>
+    <p>Total de arquivos: <span id="totalArquivos"></span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Tipo</th>
+          <th>Tamanho</th>
+        </tr>
+      </thead>
+      <tbody id="listaArquivos"></tbody>
+    </table>
+  </section>
+
+  <!-- Segurança e Último Acesso -->
+  <section id="seguranca">
+    <h2>Sistema de Segurança</h2>
+    <p>Último acesso com autenticação: <span id="ultimoAcessoSeguranca"></span></p>
+  </section>
+
+</div>
         
       </div>
       
       <div class="cards-container">
-        <div class="card">
-          <div class="card-links">
-           
-          </div>
-        </div>
       </div>
     </div>
   </main>
