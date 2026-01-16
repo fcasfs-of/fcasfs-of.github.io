@@ -1,0 +1,72 @@
+.container {
+    width: 90%;  user-select: none;  
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Seções */
+  section {   overflow:auto;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+   section h2 {
+    margin-top: 0; text-align:center;  
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;   
+  }
+
+  /* Estilo de texto */
+  .status {
+    font-weight: bold;
+  }
+
+  .status.expired, .status.blocked {
+    color: red;
+  }
+  
+  /* Progress Bar */
+  .progress-bar, #desvincularCelular, #vincularCelular {
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;  color: #fff;
+    margin-top: 10px;
+  }
+  
+   .progress, #desvincularCelular:hover, #vincularCelular:hover {
+    background-color: #4caf50;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s;
+  }    
+  
+ #desvincularCelular, #vincularCelular, #desvincularCelular:hover, #vincularCelular:hover {  padding:6px;   height: 40px;  width: 50%;   cursor:pointer;  }
+ 
+  #desvincularCelular.none, #vincularCelular.none {  opacity:0.7; pointer-events:none; }
+ 
+
+  /* Lista de arquivos */
+  table {
+    width: 100%; 
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    border: 1px solid #444;
+    padding: 8px; 
+    text-align: left;
+  }
+  th {
+    background-color: #2a2a2a;
+  }
+
+  /* Responsividade */
+  @media(max-width: 768px){
+    table, th, td {
+      font-size: 0.9em;
+    }
+  }
+
