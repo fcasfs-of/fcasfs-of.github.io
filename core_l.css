@@ -1,0 +1,48 @@
+  .sitemap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%; 
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .subdomain {  overflow:auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .subdomain:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .subdomain h2 {  width:100%; 
+    font-size: 1.2rem;overflow:auto;
+    margin-bottom: 15px;
+    color: #34495e;
+  }
+
+  .links {
+    list-style: none;
+  }
+
+  .links a {
+    display: block;
+    color: #2980b9;
+    text-decoration: none;
+    padding: 8px 0; text-align:center;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .links a:hover {
+    background: #ecf0f1;
+    color: #2c3e50;
+  }
+
+
+
