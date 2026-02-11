@@ -1,13 +1,14 @@
+let currentLanguage = "pt";
 
 function renderPosts() {
   const postsContainer = document.getElementById('posts-container');
-
+  
   if(postsContainer){
    postsContainer.innerHTML = '';
  if(blogPosts){            blogPosts.forEach(post => {
 if(post){
    var postsContainer_more="";
-   if(post.more && post.more==true){  postsContainer_more= `<a href="#" class="read-more" data-pt="Ler mais" data-en="Read more">${currentLanguage === 'pt' ? 'Ler mais' : 'Read more'}</a>`;
+   if(post.more && post.more==true){    postsContainer_more= `<a href="#" class="read-more" data-pt="Ler mais" data-en="Read more">${currentLanguage === 'pt' ? 'Ler mais' : 'Read more'}</a>`;     }
                                       
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
@@ -24,15 +25,17 @@ if(post){
                     </div>
                 `;
                 postsContainer.appendChild(postElement);
-            });
 
-              }    }
+}
+            });   
+
+              }    
            }
-        }     }
+        }     
 
 
     function switchLanguage(lang) {
-           if(lang && lang!=""){   let currentLanguage = lang;
+           if(lang && lang!=""){    currentLanguage = lang;
 
              document.querySelectorAll('[data-pt], [data-en]').forEach(element => {
                 if (element.hasAttribute(`data-${lang}`)) {
