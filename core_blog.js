@@ -7,7 +7,7 @@ function renderPosts() {
   if(postsContainer){
    postsContainer.innerHTML = '';
  if(blogPosts){            blogPosts.forEach(post => {
-
+if(post){
    var postsContainer_more="";
    if(post.more && post.more==true){  postsContainer_more= `<a href="#" class="read-more" data-pt="Ler mais" data-en="Read more">${currentLanguage === 'pt' ? 'Ler mais' : 'Read more'}</a>`;
                                       
@@ -29,7 +29,8 @@ function renderPosts() {
             });
 
               }    }
-        }
+           }
+        }     }
 
 
     function switchLanguage(lang) {
