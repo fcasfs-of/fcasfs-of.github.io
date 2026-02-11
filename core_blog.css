@@ -109,6 +109,20 @@
 
 
 
+.pagination-container {  width: 100%;      background-color: #f1f1f1;   color: #000;    display: flex;  align-items: center;  position: relative;  bottom: 0;  padding: 1rem 0;  justify-content: center;transition: all .1s linear; }
+
+.pagination-number[disabled="true"],.pagination-button[disabled="true"]{  cursor:default;transition: all .1s linear;   }
+.pagination-number,.pagination-button{  color: #000;    padding:8px;   font-size: 1.1rem;     margin: 0.25rem 0.25rem;  cursor: pointer;  height: 2.5rem;  border-radius: .2rem;transition: all .1s linear; }
+.pagination-number.active{   border: none; transition: all .1s linear;  }
+.pagination-number:hover,.pagination-button:not(.disabled):hover {  background: #fff; transition: all .1s linear; }
+.pagination-button.disabled {  color: #ccc; background: #fff;transition: all .1s linear;  }
+.pagination-button {     font-weight: bold;transition: all .1s linear;  }
+.pagination-number.active {  color: #fff;  background: #0085b6;transition: all .1s linear; }
+
+.dealerti{  text-align:center;  }
+
+
+
 
        @media (max-width: 768px) {
             .posts-grid {
