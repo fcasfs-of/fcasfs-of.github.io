@@ -6,6 +6,9 @@
 
 
 
+.hidden { display:none;  }
+
+
         .blog-posts {
             padding: 40px 0;
         }
