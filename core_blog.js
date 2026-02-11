@@ -8,7 +8,7 @@ function renderPosts() {
  if(blogPosts){            blogPosts.forEach(post => {
 if(post){
    var postsContainer_more="";
-   if(post.more && post.more==true){    postsContainer_more= `<a href="#" class="read-more" data-pt="Ler mais" data-en="Read more">${currentLanguage === 'pt' ? 'Ler mais' : 'Read more'}</a>`;     }
+   if(post.more && post.more==true){     if(post.link && post.link!=""){    postsContainer_more= `<a href="${post.link}" class="read-more" data-pt="Ler mais" data-en="Read more">${currentLanguage === 'pt' ? 'Ler mais' : 'Read more'}</a>`;      }    }
                                       
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
