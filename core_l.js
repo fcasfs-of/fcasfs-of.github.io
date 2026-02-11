@@ -1,4 +1,5 @@
-  const container = document.getElementById('sitemap-container');
+  const containerd = document.getElementById('sitemap-container');
+  const containerp = document.getElementById('psitemap-container');
 
 function createSubdomainCard(subdomain) {
   if(subdomain){
@@ -40,8 +41,18 @@ if(fs_subdomains){
   fs_subdomains.forEach(sub => {
       if(sub){
     const card = createSubdomainCard(sub);
-    container.appendChild(card);
+    if(containerd){   containerd.appendChild(card);    }
       }
   });
   }
+
+if(fs_subdomains_pp){
+  fs_subdomains_pp.forEach(sub => {
+      if(sub){
+    const card = createSubdomainCard(sub);
+    if(containerp){   containerp.appendChild(card);    }
+      }
+  });
+  }
+
 
