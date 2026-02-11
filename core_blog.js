@@ -9,7 +9,7 @@ function renderPosts() {
 if(post){
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
   if(post.custom){  
-    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }
+    if(post.custom[currentLanguage]){    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }     }
   }
    if(post.more && post.more==true){     if(post.link){  if(post.link[currentLanguage] && post.link[currentLanguage]!=""){   postsContainer_more= `<a href="${post.link[currentLanguage]}" class="read-more" data-pt="${postsContainer_moretxt.pt}" data-en="${postsContainer_moretxt.en}">${currentLanguage === 'pt' ? postsContainer_moretxt.pt : postsContainer_moretxt.en}</a>`;     }    }    }
                                       
