@@ -20,6 +20,9 @@ function createSubdomainCard(subdomain) {
        if(link.url){   a.href = link.url;   }
        if(link.title){    a.textContent = link.title;    }
       a.target = '_blank'; 
+      if(link.disable && link.disable==true){  
+      a.target="";  a.className="disabled";
+      }
       li.appendChild(a);
       ul.appendChild(li);
       }
