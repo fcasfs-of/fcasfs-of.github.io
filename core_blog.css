@@ -11,8 +11,13 @@
 
 
 
-  .blog-posts {
+        .blog-posts {
             padding: 40px 0;
+        }
+        .blog-posts .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px; 
         }
 
         .section-title {
@@ -43,7 +48,7 @@
         .post-card {
             background-color: white;
             border-radius: 8px;
-            overflow: hidden;
+            overflow: auto;
             box-shadow: var(--card-shadow);
             transition: var(--transition);
         }
