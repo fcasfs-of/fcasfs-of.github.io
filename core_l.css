@@ -39,7 +39,9 @@
     transition: background 0.2s, color 0.2s;
   }
 
-  .links a:hover {
+  .links a.disabled {  pointer-events:none;  }
+
+  .links a:hover, .links a.disabled {
     background: #ecf0f1;
     color: #2c3e50;
   }
