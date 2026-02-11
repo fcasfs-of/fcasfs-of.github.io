@@ -10,7 +10,7 @@
     {
      name: "PAGES",
      links: [
-       { title: "Search Files in Folders", url: "http://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", disabled: true }
+       { title: "Search Files in Folders", url: "http://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", disable: true }
       ]
     }
     
