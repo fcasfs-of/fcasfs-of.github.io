@@ -7,8 +7,11 @@ function renderPosts() {
    postsContainer.innerHTML = '';
  if(blogPosts){            blogPosts.forEach(post => {
 if(post){
-   var postsContainer_more="";
-   if(post.more && post.more==true){     if(post.link){  if(post.link[currentLanguage] && post.link[currentLanguage]!=""){   postsContainer_more= `<a href="${post.link[currentLanguage]}" class="read-more" data-pt="Ler mais" data-en="Read more">${currentLanguage === 'pt' ? 'Ler mais' : 'Read more'}</a>`;     }    }    }
+   var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
+  if(post.custom){  
+    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }
+  }
+   if(post.more && post.more==true){     if(post.link){  if(post.link[currentLanguage] && post.link[currentLanguage]!=""){   postsContainer_more= `<a href="${post.link[currentLanguage]}" class="read-more" data-pt="${postsContainer_moretxt.pt}" data-en="${postsContainer_moretxt.en}">${currentLanguage === 'pt' ? postsContainer_moretxt.pt : postsContainer_moretxt.en}</a>`;     }    }    }
                                       
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
