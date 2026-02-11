@@ -1,7 +1,7 @@
 const blogPosts = [
             {
                 category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
-                custom: { pt:"Ver mais", en:"View more" },
+                custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
                 title: { 
                     pt: "Nova versão do Player: '3.0.0.1'", 
                     en: "New Player Version: '3.0.0.1'" 
