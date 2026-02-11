@@ -34,6 +34,21 @@ function renderPosts() {
 
     function switchLanguage(lang) {
            if(lang && lang!=""){   currentLanguage = lang;
+
+             document.querySelectorAll('[data-pt], [data-en]').forEach(element => {
+                if (element.hasAttribute(`data-${lang}`)) {
+                    const newText = element.getAttribute(`data-${lang}`);
+                    
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.value = newText;
+                    } else if (element.hasAttribute('data-html')) {
+                        element.innerHTML = newText;
+                    } else {
+                        element.textContent = newText;
+                    }
+                }
+            });
+
             
             renderPosts();    }
    }
