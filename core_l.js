@@ -22,6 +22,7 @@ function createSubdomainCard(subdomain) {
       a.target = '_blank'; 
       if(link.disable && link.disable==true){  
       a.target="";  a.className="disabled";
+      a.href="#";
       }
       li.appendChild(a);
       ul.appendChild(li);
