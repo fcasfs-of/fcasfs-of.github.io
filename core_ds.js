@@ -6,6 +6,10 @@
         { title: "LIGHTBOX", url: "https://lightbox.fcasfs-of.cloud-fs.net/" }
         
       ]
+    },
+    {
+     name: "PAGES",
+     links: []
     }
     
 ];
