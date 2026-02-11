@@ -9,7 +9,9 @@
     },
     {
      name: "PAGES",
-     links: []
+     links: [
+       { title: "Search Files in Folders", url: "http://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", disabled: true }
+      ]
     }
     
 ];
