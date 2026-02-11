@@ -20,7 +20,7 @@ if(post){
                             <span>${post.date} | ${post.author}</span>
                         </div>
                         <h3 class="post-title" data-pt="${post.title.pt}" data-en="${post.title.en}">${post.title[currentLanguage]}</h3>
-                        <p class="post-excerpt" data-pt="${post.excerpt.pt}" data-en="${post.excerpt.en}">${post.excerpt[currentLanguage]}</p>
+                        <p class="post-excerpt" style="color:#fff; " data-pt="${post.excerpt.pt}" data-en="${post.excerpt.en}">${post.excerpt[currentLanguage]}</p>
                         ${postsContainer_more}
                     </div>
                 `;
