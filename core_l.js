@@ -6,9 +6,8 @@ function createSubdomainCard(subdomain) {
     const card = document.createElement('div');
     card.className = 'subdomain';
 
-    const title = document.createElement('h2');
-    if(subdomain.name){   title.textContent = subdomain.name;    }
-    card.appendChild(title);
+    if(subdomain.name && subdomain.name!=""){       const title = document.createElement('h2');
+        title.textContent = subdomain.name;        card.appendChild(title);     }
 
     const ul = document.createElement('ul');
     ul.className = 'links';
@@ -18,8 +17,9 @@ function createSubdomainCard(subdomain) {
       if(link){
       const li = document.createElement('li');
       const a = document.createElement('a');
-       if(link.url){   a.href = link.url;   }
-       if(link.title){    a.textContent = link.title;    }
+         a.href="#";   a.textContent = "";
+       if(link.url && link.url!=""){   a.href = link.url;   }
+       if(link.title && link.title!=""){    a.textContent = link.title;    }
       a.target = '_blank'; 
       if(link.disable && link.disable==true){  
       a.target="";  a.className="disabled";
