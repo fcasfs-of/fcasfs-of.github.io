@@ -1,9 +1,7 @@
-let currentLanguage = 'pt';
-
-const postsContainer = document.getElementById('posts-container');
-
 
 function renderPosts() {
+  const postsContainer = document.getElementById('posts-container');
+
   if(postsContainer){
    postsContainer.innerHTML = '';
  if(blogPosts){            blogPosts.forEach(post => {
@@ -34,7 +32,7 @@ if(post){
 
 
     function switchLanguage(lang) {
-           if(lang && lang!=""){   currentLanguage = lang;
+           if(lang && lang!=""){   let currentLanguage = lang;
 
              document.querySelectorAll('[data-pt], [data-en]').forEach(element => {
                 if (element.hasAttribute(`data-${lang}`)) {
@@ -50,7 +48,6 @@ if(post){
                 }
             });
 
-            
             renderPosts();    }
    }
 
