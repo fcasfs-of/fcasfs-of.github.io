@@ -53,11 +53,11 @@
     }
 
 
-img {  object-fit: contain;   pointer-events:none;  }
+img {  object-fit: contain;   pointer-events:none;    margin: 0 auto;    }
 * { user-select:none; }
 svg {  pointer-events:none;  }
 
-svg {   width:19px;  height:19px;   }
+svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
 
 
