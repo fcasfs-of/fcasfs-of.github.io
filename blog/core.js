@@ -219,8 +219,9 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
 
 const newDilofggfv = document.createElement("div");
 newDilofggfv.id = "previ_box";   
-document.body.appendChild(newDilofggfv);
+document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
  
+
 
   function openModal(contentOptions) {
     fsmodal_open({
