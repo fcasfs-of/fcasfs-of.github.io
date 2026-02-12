@@ -642,7 +642,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
 
 
-body #loader, #loader {
+body #loaderfs, #loaderfs {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -655,6 +655,7 @@ body #loader, #loader {
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+  display:block;
 }
 
 @-webkit-keyframes spin {
