@@ -81,7 +81,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     .logo {
       display: flex;
       align-items: center;
-      gap: 15px;    padding: 5px;
+      gap: 15px;    
     }
     
     .logo-icon {
@@ -114,7 +114,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
    .header-content nav  {
        margin-right: 6px;   margin-left: 6px;
-       padding: 6px;    overflow:auto;
+       overflow:auto;
    }
 
     nav ul {
