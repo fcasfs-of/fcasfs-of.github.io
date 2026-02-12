@@ -151,7 +151,7 @@ if(post){
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
                 postElement.innerHTML = `
-                    <div onclick="openModal_img('${post.title[currentLanguage]}','${post.image}');" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
+                    <div onclick="openModal_img('${post.name[currentLanguage]}','${post.image}');" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
                     <div class="post-content">
                         <div class="post-meta">
                             <span class="post-category" data-pt="${post.category.pt}" data-en="${post.category.en}">${post.category[currentLanguage]}</span>
