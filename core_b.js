@@ -17,14 +17,14 @@ function loaded_maut(){    if(manut){
 
 const newDilofv = document.createElement("div");
 newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
-document.getElementsByTagName('main')[0].appendChild(newDilofv);
+//document.getElementsByTagName('main')[0].appendChild(newDilofv);
  
-if(document.getElementById("loaderfs")){   document.body.style.pointerEvents = "none";   }
+//if(document.getElementById("loaderfs")){   document.body.style.pointerEvents = "none";   }
 
 
 function showPage() {
-    document.getElementById("loaderfs").style.display = "none";
- if(document.getElementById("loaderfs")){  document.body.style.pointerEvents = "auto";    }
+   // document.getElementById("loaderfs").style.display = "none";
+ //if(document.getElementById("loaderfs")){  document.body.style.pointerEvents = "auto";    }
 }
 
 
