@@ -4,7 +4,7 @@ function check_utt(eww){
   if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance";   }
  }   
  else { 
-  if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance"){   location.href="/";   }
+  if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance" || location.href=="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="/";   }
  }
    }
 
