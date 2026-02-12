@@ -75,13 +75,13 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     .header-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center;    overflow:auto;  
     }
     
     .logo {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 15px;    padding: 5px;
     }
     
     .logo-icon {
@@ -111,7 +111,12 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     .logo span {
       color: var(--secondary-color);
     }
-    
+
+   .header-content nav  {
+       margin-right: 6px;   margin-left: 6px;
+       padding: 6px;
+   }
+
     nav ul {
       display: flex;
       list-style: none;
