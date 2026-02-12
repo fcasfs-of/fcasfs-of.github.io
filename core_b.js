@@ -146,7 +146,12 @@ body.oncontextmenu=function() { return false; };
     if (typeof run_inruff === 'function') {
 
     }
-    
+
+
+
+   document.body.onload=function(){   showPage();   };
+
+
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
       document.body.style.opacity = '0';
