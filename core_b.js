@@ -1,13 +1,19 @@
 
-function loaded_maut(eww){    if(eww){
+function check_utt(eww){    
  if(eww==true){
   if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance.html";   }
  }   
- if(eww==false){ 
+ else if(eww==false){ 
   if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="/";   }
  }
- 
- }     }
+   }
+
+
+function loaded_maut(eww){    if(eww){
+ if(eww==true){  check_utt(eww);    }   
+ else if(eww==false){  check_utt(eww);   }
+ else  {    check_utt(false);    }
+ }   else  {    check_utt(false);    }    }
 
 
 const newDilofv = document.createElement("div");
