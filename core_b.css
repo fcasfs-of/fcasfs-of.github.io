@@ -59,6 +59,7 @@ svg {  pointer-events:none;  }
 
 svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
+.page-link img {    margin: 0;    }
 
 
     /* Header */
