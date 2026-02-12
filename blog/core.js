@@ -135,6 +135,56 @@ contdstItems.innerHTML="Lista de \"Histórico\" está Vazia.";
 
 
 
+var scriptmsfdffgg = document.createElement("script");
+    scriptmsfdffgg.setAttribute("type", "text/javascript");
+    scriptmsfdffgg.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/api.js");
+document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
+
+
+
+  const text_thnv = "";
+
+
+const newDilofggfv = document.createElement("div");
+newDilofggfv.id = "previ_box";   
+document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
+ 
+
+
+  function openModal(contentOptions) {
+    fsmodal_open({
+      id: "previ_box",
+      tiptext: text_thnv,
+      scroll_hide: "yes",
+      noclose: false,
+      include: { player: contentOptions.includePlayer },
+      content: {
+        title: contentOptions.title,
+        type: contentOptions.type,
+        context: contentOptions.context,
+        poster: contentOptions.poster,
+        size: contentOptions.size,
+        description: contentOptions.description,
+      }
+    });
+  }
+
+
+function openModal_img(tl, im) {
+openModal({
+      title: tl,
+      type: "image",
+      context: im,
+      size: "150",
+      includePlayer: "no",
+      description: ""
+    });
+}
+
+
+
+
+
 function renderPosts() {
   const postsContainer = document.getElementById('posts-container');
   
@@ -207,51 +257,4 @@ if(post){
 
 
 
-  var scriptmsfdffgg = document.createElement("script");
-    scriptmsfdffgg.setAttribute("type", "text/javascript");
-    scriptmsfdffgg.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
-
-
-
-  const text_thnv = "";
-
-
-const newDilofggfv = document.createElement("div");
-newDilofggfv.id = "previ_box";   
-document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
- 
-
-
-  function openModal(contentOptions) {
-    fsmodal_open({
-      id: "previ_box",
-      tiptext: text_thnv,
-      scroll_hide: "yes",
-      noclose: false,
-      include: { player: contentOptions.includePlayer },
-      content: {
-        title: contentOptions.title,
-        type: contentOptions.type,
-        context: contentOptions.context,
-        poster: contentOptions.poster,
-        size: contentOptions.size,
-        description: contentOptions.description,
-      }
-    });
-  }
-
-
-function openModal_img(tl, im) {
-openModal({
-      title: tl,
-      type: "image",
-      context: im,
-      size: "150",
-      includePlayer: "no",
-      description: ""
-    });
-}
-
-
-
+  
