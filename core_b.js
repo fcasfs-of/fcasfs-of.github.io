@@ -11,7 +11,6 @@ function check_utt(eww){
 
 function loaded_maut(){    if(manut){
  if(manut==true){  check_utt(true);    }   
- else if(manut==false){  check_utt(false);   }
  else  {    check_utt(false);    }
  }   else  {    check_utt(false);    }    }
 
