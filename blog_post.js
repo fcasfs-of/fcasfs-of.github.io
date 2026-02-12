@@ -1,5 +1,22 @@
 const blogPosts = [
             {
+                category: { pt: "Aplicativo_Windows", en: "App_Windows" },
+                custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
+                title: { 
+                    pt: "Aplicativo em Desenvolvimento: Buscar Arquivo em Pastas ('1.0.0.0')", 
+                    en: "Application under Development: Search Files in Folders ('1.0.0.0')" 
+                },
+                excerpt: { 
+                    pt: "O aplicativo permite selecionar uma pasta, escolher o formato do arquivo, inserir um texto e buscar os arquivos correspondentes na pasta.", 
+                    en: "The app allows selecting a folder, choosing the file format, entering text, and searching files in the folder." 
+                },
+                date: "11/02/2026",
+                author: "FCASFS-OF",
+                more: true,
+                link: { pt: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", en: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/" },
+                image: ""
+            },
+            {
                 category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
                 custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
                 title: { 
