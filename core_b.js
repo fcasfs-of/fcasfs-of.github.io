@@ -1,9 +1,13 @@
 
-function loaded_maut(){  
- if(manut && manut==true){
+function loaded_maut(eww){    if(eww){
+ if(eww==true){
   if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance.html";   }
  }   else {
   if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="/";   } 
+ }  
+else {
+  if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="/";   } 
+ }  
  }
  }
 
@@ -27,7 +31,7 @@ function showPage() {
 
   var scriptmsfd = document.createElement("script");
     scriptmsfd.setAttribute("type", "text/javascript");
-    scriptmsfd.setAttribute("onload", "loaded_maut();");
+    scriptmsfd.setAttribute("onload", "loaded_maut(manut);");
     scriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/av_man.js");
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
