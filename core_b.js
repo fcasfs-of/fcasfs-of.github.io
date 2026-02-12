@@ -23,11 +23,8 @@ if(document.getElementById("loaderfs")){   document.body.style.pointerEvents = "
 
 
 function showPage() {
- setTimeout(function() {   
     document.getElementById("loaderfs").style.display = "none";
-
  if(document.getElementById("loaderfs")){  document.body.style.pointerEvents = "auto";    }
-      }, 150); 
 }
 
 
@@ -179,9 +176,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){    loaded_maut();  
-     showPage();
-       };
+   document.body.onload=function(){    loaded_maut();         };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
@@ -190,5 +185,7 @@ body.oncontextmenu=function() { return false; };
       
       setTimeout(function() {   
         document.body.style.opacity = '1';  
+
+            showPage();   
       }, 100);
     });
