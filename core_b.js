@@ -1,11 +1,10 @@
 
 const newDilofv = document.createElement("div");
-newDilofv.id = "loader";
+newDilofv.id = "loaderfs";
 document.body.appendChild(newDilofv);
 
-
 function showPage() {
-  document.getElementById("loader").style.display = "none";
+  document.getElementById("loaderfs").style.display = "none";
 }
 
 
