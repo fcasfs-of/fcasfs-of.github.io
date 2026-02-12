@@ -149,15 +149,14 @@ body.oncontextmenu=function() { return false; };
 
 
 
-   document.body.onload=function(){   showPage();   };
-
+   document.body.onload=function(){     };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
       document.body.style.opacity = '0';
       document.body.style.transition = 'opacity 0.5s';
       
-      setTimeout(function() {
+      setTimeout(function() {    showPage();
         document.body.style.opacity = '1';
       }, 100);
     });
