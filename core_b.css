@@ -507,7 +507,7 @@ body .loaderffs, .loaderffs {
   border-top: 16px solid #3498db;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
-  display:block;
+  display:block;   background: #ccc;
 }
 
 @-webkit-keyframes spin {
