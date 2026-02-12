@@ -150,7 +150,7 @@ body.oncontextmenu=function() { return false; };
 
 
 
-   document.body.onload=function(){     showPage();   };
+   document.body.onload=function(){       };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
@@ -159,5 +159,7 @@ body.oncontextmenu=function() { return false; };
       
       setTimeout(function() {   
         document.body.style.opacity = '1';  
+
+        showPage();
       }, 100);
     });
