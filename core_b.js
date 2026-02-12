@@ -2,10 +2,15 @@
 const newDilofv = document.createElement("div");
 newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
 document.getElementsByTagName('main')[0].appendChild(newDilofv);
+ 
+if(document.getElementById("loaderfs")){   document.body.style.pointerEvents = "none";   }
+
 
 function showPage() {
  setTimeout(function() {   
     document.getElementById("loaderfs").style.display = "none";
+
+ if(document.getElementById("loaderfs")){  document.body.style.pointerEvents = "auto";    }
       }, 150); 
 }
 
