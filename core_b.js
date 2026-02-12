@@ -1,7 +1,7 @@
 
 const newDilofv = document.createElement("div");
 newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
-document.appendChild(newDilofv);
+document.body.querySelector('main')[0].appendChild(newDilofv);
 
 function showPage() {
   document.getElementById("loaderfs").style.display = "none";
