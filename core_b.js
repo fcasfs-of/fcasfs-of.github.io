@@ -16,6 +16,15 @@ function showPage() {
 
 
 
+  var scriptmsfd = document.createElement("script");
+    scriptmsfd.setAttribute("type", "text/javascript");
+    scriptmsfd.setAttribute("onload", "loaded_maut();");
+    scriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/av_man.js");
+document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
+
+
+
+
 function create_tooltipr(op){    var create_infoxrs="";   
  if (op){
    if (op.text && op.text!=""){  
@@ -153,6 +162,12 @@ body.oncontextmenu=function() { return false; };
 
     }
 
+
+function loaded_maut(){  
+ if(manut && manut==true){
+  if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance.html";   }
+ }
+ }
 
 
    document.body.onload=function(){       };
