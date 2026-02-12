@@ -2,6 +2,10 @@ const blogPosts = [
             {
                 category: { pt: "Aplicativo_Windows", en: "App_Windows" },
                 custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
+                name: {
+                    pt: "Buscar Arquivo em Pastas", 
+                    en: "Search Files in Folders"
+                },
                 title: { 
                     pt: "Aplicativo em Desenvolvimento: Buscar Arquivo em Pastas ('1.0.0.0')", 
                     en: "Application under Development: Search Files in Folders ('1.0.0.0')" 
@@ -19,9 +23,13 @@ const blogPosts = [
             {
                 category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
                 custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
+                name: {
+                    pt: "Tech Player", 
+                    en: "Tech Player"
+                },
                 title: { 
-                    pt: "Nova versão do Player: '3.0.0.1'", 
-                    en: "New Player Version: '3.0.0.1'" 
+                    pt: "Nova versão do Tech Player: '3.0.0.1'", 
+                    en: "New Tech Player Version: '3.0.0.1'" 
                 },
                 excerpt: { 
                     pt: "A nova versão inclui:  <br/><br/>  Design e desempenho aprimorado.<br/> Correções de bugs e erros.<br/> Ícones atualizados. ", 
