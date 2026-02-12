@@ -4,7 +4,9 @@ newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
 document.getElementsByTagName('main')[0].appendChild(newDilofv);
 
 function showPage() {
-  document.getElementById("loaderfs").style.display = "none";
+ setTimeout(function() {   
+    document.getElementById("loaderfs").style.display = "none";
+      }, 150); 
 }
 
 
@@ -148,7 +150,7 @@ body.oncontextmenu=function() { return false; };
 
 
 
-   document.body.onload=function(){     };
+   document.body.onload=function(){     showPage();   };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
@@ -156,6 +158,6 @@ body.oncontextmenu=function() { return false; };
       document.body.style.transition = 'opacity 0.5s';
       
       setTimeout(function() {   
-        document.body.style.opacity = '1';    showPage();
+        document.body.style.opacity = '1';  
       }, 100);
     });
