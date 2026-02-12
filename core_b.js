@@ -2,6 +2,8 @@
 function loaded_maut(){  
  if(manut && manut==true){
   if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance.html";   }
+ }   else {
+  if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="/";   } 
  }
  }
 
