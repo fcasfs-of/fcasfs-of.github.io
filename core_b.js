@@ -1,4 +1,11 @@
 
+function loaded_maut(){  
+ if(manut && manut==true){
+  if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance.html";   }
+ }
+ }
+
+
 const newDilofv = document.createElement("div");
 newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
 document.getElementsByTagName('main')[0].appendChild(newDilofv);
@@ -161,13 +168,6 @@ body.oncontextmenu=function() { return false; };
     if (typeof run_inruff === 'function') {
 
     }
-
-
-function loaded_maut(){  
- if(manut && manut==true){
-  if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance.html";   }
- }
- }
 
 
    document.body.onload=function(){       };
