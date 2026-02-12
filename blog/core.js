@@ -241,7 +241,7 @@ document.body.appendChild(newDilofggfv);
   }
 
 
-function openModal_img(tô, im) {
+function openModal_img(tl, im) {
 openModal({
       title: tl,
       type: "image",
