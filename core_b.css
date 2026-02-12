@@ -114,7 +114,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
    .header-content nav  {
        margin-right: 6px;   margin-left: 6px;
-       padding: 6px;
+       padding: 6px;    overflow:auto;
    }
 
     nav ul {
