@@ -156,7 +156,7 @@ body.oncontextmenu=function() { return false; };
       document.body.style.opacity = '0';
       document.body.style.transition = 'opacity 0.5s';
       
-      setTimeout(function() {    showPage();
-        document.body.style.opacity = '1';
+      setTimeout(function() {   
+        document.body.style.opacity = '1';    showPage();
       }, 100);
     });
