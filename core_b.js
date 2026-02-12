@@ -176,7 +176,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){    loaded_maut();         };
+   document.body.onload=function(){    loaded_maut();       showPage();      };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
@@ -184,8 +184,6 @@ body.oncontextmenu=function() { return false; };
       document.body.style.transition = 'opacity 0.5s';
       
       setTimeout(function() {   
-        document.body.style.opacity = '1';  
-
-            showPage();   
+        document.body.style.opacity = '1';   
       }, 100);
     });
