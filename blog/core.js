@@ -206,3 +206,27 @@ if(post){
    }
 
 
+
+
+  const text_thnv = "";
+
+
+  function openModal(contentOptions) {
+    fsmodal_open({
+      id: "previ_box",
+      tiptext: text_thnv,
+      scroll_hide: "yes",
+      noclose: false,
+      include: { player: contentOptions.includePlayer },
+      content: {
+        title: contentOptions.title,
+        type: contentOptions.type,
+        context: contentOptions.context,
+        poster: contentOptions.poster,
+        size: contentOptions.size,
+        description: contentOptions.description,
+      }
+    });
+  }
+
+
