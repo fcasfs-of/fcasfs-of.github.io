@@ -1,4 +1,7 @@
 var aviso=false;
 
-var manutenção=true;
+var manut=true;
+
+
+
 
