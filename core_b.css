@@ -642,7 +642,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
 
 
-body #loaderfs, #loaderfs {
+body .loaderffs, .loaderffs {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -669,8 +669,9 @@ body #loaderfs, #loaderfs {
 }
 
 
+.animate-bottom {  position: relative;    }
+
 .animate-bottom, body {
-  position: relative;
   -webkit-animation-name: animatebottom;
   -webkit-animation-duration: 1s;
   animation-name: animatebottom;
