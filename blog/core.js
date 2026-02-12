@@ -217,6 +217,11 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
   const text_thnv = "";
 
 
+const newDilofggfv = document.createElement("div");
+newDilofggfv.id = "previ_box";   
+document.body.appendChild(newDilofggfv);
+ 
+
   function openModal(contentOptions) {
     fsmodal_open({
       id: "previ_box",
@@ -234,5 +239,18 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
       }
     });
   }
+
+
+function openModal_img(tô, im) {
+openModal({
+      title: tl,
+      type: "image",
+      context: im,
+      size: "150",
+      includePlayer: "no",
+      description: ""
+    });
+}
+
 
 
