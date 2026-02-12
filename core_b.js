@@ -9,9 +9,9 @@ function check_utt(eww){
    }
 
 
-function loaded_maut(eww){    if(eww){
- if(eww==true){  check_utt(eww);    }   
- else if(eww==false){  check_utt(eww);   }
+function loaded_maut(){    if(manut){
+ if(manut==true){  check_utt(true);    }   
+ else if(manut==false){  check_utt(false);   }
  else  {    check_utt(false);    }
  }   else  {    check_utt(false);    }    }
 
@@ -35,7 +35,7 @@ function showPage() {
 
   var scriptmsfd = document.createElement("script");
     scriptmsfd.setAttribute("type", "text/javascript");
-    scriptmsfd.setAttribute("onload", "loaded_maut(manut);");
+    scriptmsfd.setAttribute("onload", "loaded_maut();");
     scriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/av_man.js");
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
