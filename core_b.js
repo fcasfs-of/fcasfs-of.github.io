@@ -179,7 +179,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){       };
+   document.body.onload=function(){    loaded_maut();    };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
