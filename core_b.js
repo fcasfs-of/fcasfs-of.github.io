@@ -1,4 +1,15 @@
 
+const newDilofv = document.createElement("div");
+newDilofv.id = "loader";
+document.body.appendChild(newDilofv);
+
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+}
+
+
+
 function create_tooltipr(op){    var create_infoxrs="";   
  if (op){
    if (op.text && op.text!=""){  
