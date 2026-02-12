@@ -1,10 +1,10 @@
 
 function check_utt(eww){    
  if(eww==true){
-  if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance" || location.href!="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance";   }
+  if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance";   }
  }   
  else { 
-  if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance" || location.href=="https://fcasfs-of.cloud-fs.net/maintenance.html"){   location.href="/";   }
+  if (location.href=="https://fcasfs-of.cloud-fs.net/maintenance"){   location.href="/";   }
  }
    }
 
