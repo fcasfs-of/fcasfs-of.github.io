@@ -642,11 +642,11 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 
 
 
-#loader {
+body #loader, #loader {
   position: absolute;
   left: 50%;
   top: 50%;
-  z-index: 1000;
+  z-index: 100;
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
@@ -667,6 +667,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
   100% { transform: rotate(360deg); }
 }
 
+
 .animate-bottom, body {
   position: relative;
   -webkit-animation-name: animatebottom;
@@ -684,6 +685,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
   from{ bottom:-100px; opacity:0; } 
   to{ bottom:0; opacity:1; }
 }
+
 
 
 
