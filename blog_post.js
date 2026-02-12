@@ -14,7 +14,7 @@ const blogPosts = [
                 author: "FCASFS-OF",
                 more: true,
                 link: { pt: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", en: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/" },
-                image: ""
+                image: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg"
             },
             {
                 category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
