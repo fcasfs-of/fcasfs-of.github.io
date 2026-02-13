@@ -192,7 +192,7 @@ openModal_img(ppost_infos[id].tl, ppost_infos[id].im);
 
 var postiid=0;   var ppost_infos=[];
 
-ppost_infos[postiid]={ tl: "", im: "" };
+ppost_infos.push({ tl: "", im: "" });
               
 
 
@@ -205,7 +205,7 @@ function renderPosts() {  postiid=0;
 if(post){
 postiid=postiid+1;
 
-ppost_infos[postiid]={ tl: `${post.name[currentLanguage]}`, im: `${post.image}` };
+ppost_infos.push({ tl: `${post.name[currentLanguage]}`, im: `${post.image}` });
               
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
 var lbox_moday="";
