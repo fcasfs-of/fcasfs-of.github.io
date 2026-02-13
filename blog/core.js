@@ -134,7 +134,7 @@ contdstItems.innerHTML="Lista de \"Histórico\" está Vazia.";
 
 
 var newDil_modal = document.createElement("div");
-newDil_modal.id="previ_box";    newDil_modal.innerHTML = '';
+newDil_modal.id="previ_box";    newDil_modal.innerHTML = '<span></span>';
 document.getElementsByTagName("body")[0].appendChild(newDil_modal);
 
 
