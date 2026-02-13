@@ -184,7 +184,13 @@ openModal({
 
 function postF_imgs(id){
 if(id && ppost_infos){   if(ppost_infos[id]){
-openModal_img(ppost_infos[id].tl[currentLanguage], ppost_infos[id].im);  
+openModal_img(ppost_infos[id].tl, ppost_infos[id].im);  
+}    }
+}
+
+function postf_add(po){
+if(po && ppost_infos){
+ppost_infos.push({ tl: po["name"][currentLanguage], im: po["image"] });   
 }    }
 }
 
@@ -205,8 +211,8 @@ function renderPosts() {  postiid=0;
 if(post){
 postiid=postiid+1;
 
-ppost_infos.push({ tl: post.name, im: post.image });   
-              
+postf_add(post);
+
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
 
 var lbox_moday="";
