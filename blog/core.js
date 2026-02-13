@@ -200,7 +200,7 @@ ppost_infos.push({ tlt: "", img: "" });
 function renderPosts() {  postiid=0;
 
 var check_modall=false; 
-if(document.getElementById("previ_box"){   check_modall=true;   }                     
+if(document.getElementById("previ_box")){   check_modall=true;   }                     
 if(check_modall==false){   var newDil_modal = document.createElement("div");   newDil_modal.id="previ_box";    newDil_modal.innerHTML = '<span></span>';     document.getElementsByTagName("body")[0].appendChild(newDil_modal);     }
 
                     
