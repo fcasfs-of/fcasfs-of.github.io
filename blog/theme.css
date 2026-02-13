@@ -33,7 +33,7 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background-color: var(--primary-color);
+            background-color: var(--dark-color);
         }
 
         .posts-grid {
