@@ -168,7 +168,7 @@ openModal({
       title: tl,
       type: "image",
       context: im,
-      size: "320",
+      size: "450",
       includePlayer: "no",
       description: ""
     });
