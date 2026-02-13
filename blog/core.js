@@ -2,6 +2,24 @@ let currentLanguage = "pt";
 
 
 
+function filtrarLista() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("filtroInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("posts-container");
+  li = ul.querySelectorAll(".post-card");
+  for (i = 0; i < li.length; i++) {
+    if (li[i].innerText.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+
+
 function get_infos_historic(asdd){     var itnt_forpag= "";  var count_itend= 0;  var paginationLimit=0;   var pageCount=0;
 if(asdd){
     if(asdd.paginationLimit && asdd.listItems && asdd.paginatedList){  
