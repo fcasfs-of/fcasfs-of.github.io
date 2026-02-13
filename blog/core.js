@@ -207,8 +207,11 @@ postiid=postiid+1;
 
 ppost_infos[postiid]={ tl: post.name[currentLanguage], im: post.image };
               
-
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
+var lbox_moday="";
+if(post.lbox && post.lbox==true){
+lbox_moday='onclick="postF_imgs('+postiid+');' ;
+}
   if(post.custom){  
     if(post.custom[currentLanguage]){    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }     }
   }
@@ -217,7 +220,7 @@ ppost_infos[postiid]={ tl: post.name[currentLanguage], im: post.image };
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
                 postElement.innerHTML = `
-                    <div onclick="postF_imgs(${postiid});" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
+                    <div ${lbox_moday} class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
                     <div class="post-content">
                         <div class="post-meta">
                             <span class="post-category" data-pt="${post.category.pt}" data-en="${post.category.en}">${post.category[currentLanguage]}</span>
