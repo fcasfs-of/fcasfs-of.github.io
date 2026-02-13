@@ -143,9 +143,9 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
   const text_thnv = "";
 
 
-const newDilofggfv = document.createElement("div");
-newDilofggfv.id = "previ_box";     newDilofggfv.innerHTML = '';
-document.body.appendChild(newDilofggfv);
+var newDilofggfv = document.createElement("div");
+newDilofggfv.setAttribute("id", "previ_box");     newDilofggfv.innerHTML = '';
+document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
  
 
 
