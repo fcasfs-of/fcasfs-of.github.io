@@ -210,7 +210,7 @@ ppost_infos.push({ tl: `${post.name[currentLanguage]}`, im: `${post.image}` });
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
 var lbox_moday="";
 if(post.lbox && post.lbox==true){
-lbox_moday=` onclick="postF_imgs('${postiid}');" `;
+//lbox_moday=` onclick="postF_imgs('${postiid}');" `;
 }
   if(post.custom){  
     if(post.custom[currentLanguage]){    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }     }
