@@ -145,7 +145,7 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
 
 const newDilofggfv = document.createElement("div");
 newDilofggfv.id = "previ_box";   
-document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
+document.getElementsByTagName('body').appendChild(newDilofggfv);
  
 
 
