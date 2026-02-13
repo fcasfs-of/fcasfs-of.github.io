@@ -200,6 +200,10 @@ function renderPosts() {  postiid=0;
  if(blogPosts){            blogPosts.forEach(post => {
 if(post){
 postiid=postiid+1;
+
+ppost_infos[postiid]={ tl: post.name[currentLanguage], im: post.image };
+              
+
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
   if(post.custom){  
     if(post.custom[currentLanguage]){    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }     }
@@ -221,8 +225,7 @@ postiid=postiid+1;
                     </div>
                 `;
 
- ppost_infos[postiid]={ tl: post.name[currentLanguage], im: post.image };
-               postsContainer.appendChild(postElement);
+  postsContainer.appendChild(postElement);
 
 }
             });   
