@@ -28,10 +28,10 @@
             statusLabel = 'Offline';
             break;
           case 'maintenance':
-            statusLabel = 'Manutenção';
+            statusLabel = 'Maintenance';
             break;
           default:
-            statusLabel = 'Desconhecido';
+            statusLabel = 'Unknown';
         }
         statusText.textContent = statusLabel;
 
