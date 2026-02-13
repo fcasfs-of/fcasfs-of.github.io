@@ -183,13 +183,14 @@ openModal({
 
 
 
-function renderPosts() {
+function renderPosts() {  var postiid=0;
   const postsContainer = document.getElementById('posts-container');
   
   if(postsContainer){
    postsContainer.innerHTML = '';
  if(blogPosts){            blogPosts.forEach(post => {
 if(post){
+postiid=postiid+1;
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
   if(post.custom){  
     if(post.custom[currentLanguage]){    if(post.custom[currentLanguage].more && post.custom[currentLanguage].more!=""){    postsContainer_moretxt[currentLanguage]=post.custom[currentLanguage].more;   }     }
@@ -199,7 +200,7 @@ if(post){
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
                 postElement.innerHTML = `
-                    <div onclick="openModal_img(\'${post.name[currentLanguage]}\',\'${post.image}\');" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
+                    <div id="post_img_${postiid}" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
                     <div class="post-content">
                         <div class="post-meta">
                             <span class="post-category" data-pt="${post.category.pt}" data-en="${post.category.en}">${post.category[currentLanguage]}</span>
@@ -211,6 +212,11 @@ if(post){
                     </div>
                 `;
                 postsContainer.appendChild(postElement);
+
+const privenim = document.getElementById("post_img_"+postiid);
+privenim.onclick=function(){  openModal_img(post.name[currentLanguage], post.image);  };
+
+
 
 }
             });   
