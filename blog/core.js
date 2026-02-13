@@ -157,20 +157,20 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
         context: contentOptions.context,
         poster: contentOptions.poster,
         size: contentOptions.size,
-        description: contentOptions.description,
+        description: contentOptions.description
       }
     });
   }
 
 
-function openModal_img(tl, im) {
+function openModal_img(tl, im, des) {
 openModal({
       title: tl,
       type: "image",
       context: im,
       size: "450",
       includePlayer: "no",
-      description: ""
+      description: des
     });
 }
 
@@ -179,13 +179,13 @@ openModal({
 
 function postF_imgs(id){
 if(id && ppost_infos){   if(ppost_infos[id]){
-openModal_img(ppost_infos[id].tlt, ppost_infos[id].img);  
+openModal_img(ppost_infos[id].tlt, ppost_infos[id].img, ppost_infos[id].desc);  
 }    }
 }
 
 function postf_add(po){
 if(po && ppost_infos){
-ppost_infos.push({ tlt: po["name"][currentLanguage], img: po["image"] });   
+ppost_infos.push({ tlt: po["name"][currentLanguage], img: po["image"], desc: po.date+" | "+po.author });   
 }  
 }
 
@@ -193,7 +193,7 @@ ppost_infos.push({ tlt: po["name"][currentLanguage], img: po["image"] });
 
 var postiid=0;   var ppost_infos=[];
 
-ppost_infos.push({ tlt: "", img: "" });
+ppost_infos.push({ tlt: "", img: "", desc:"" });
               
 
 
