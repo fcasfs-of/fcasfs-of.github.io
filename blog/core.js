@@ -217,7 +217,7 @@ postf_add(post);
 
 var lbox_moday="";
 if(post.lbox && post.lbox==true){
-//lbox_moday=` onclick="postF_imgs(${postiid});" `;
+lbox_moday=` onclick="postF_imgs(${postiid});" `;
 }
 
   if(post.custom){  
