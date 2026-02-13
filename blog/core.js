@@ -192,6 +192,10 @@ openModal_img(ppost_infos[id].tl, ppost_infos[id].im);
 
 var postiid=0;   var ppost_infos=[];
 
+ppost_infos[postiid]={ tl: "", im: "" };
+              
+
+
 function renderPosts() {  postiid=0;
   const postsContainer = document.getElementById('posts-container');
   
