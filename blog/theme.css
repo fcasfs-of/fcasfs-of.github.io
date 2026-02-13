@@ -36,7 +36,7 @@
             background-color: var(--dark-color);
         }
 
-        .hero h2.section-title::after {
+        .hero .section-title::after {
             content: '';
             background-color: var(--dark-color);
         }
