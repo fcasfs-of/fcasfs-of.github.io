@@ -181,9 +181,9 @@ openModal({
 
 
 
+var postiid=0;
 
-
-function renderPosts() {  var postiid=0;
+function renderPosts() {  postiid=0;
   const postsContainer = document.getElementById('posts-container');
   
   if(postsContainer){
@@ -200,7 +200,11 @@ postiid=postiid+1;
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
                 postElement.innerHTML = `
-                    <div id="post_img_${postiid}" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
+<script>
+function post_img_${postiid}(){  openModal_img('${post.name[currentLanguage]}', '${post.image}');  }
+</script>
+
+                    <div onclick="post_img_${postiid}();" class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
                     <div class="post-content">
                         <div class="post-meta">
                             <span class="post-category" data-pt="${post.category.pt}" data-en="${post.category.en}">${post.category[currentLanguage]}</span>
@@ -212,11 +216,6 @@ postiid=postiid+1;
                     </div>
                 `;
                 postsContainer.appendChild(postElement);
-
-const privenim = document.getElementById("post_img_"+postiid);
-privenim.onclick=function(){  openModal_img(post.name[currentLanguage], post.image);  };
-
-
 
 }
             });   
