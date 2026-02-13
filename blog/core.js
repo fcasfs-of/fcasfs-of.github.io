@@ -206,7 +206,7 @@ if(post){
 postiid=postiid+1;
 
 if(post.lbox && post.lbox==true){
-ppost_infos.push({ tl: `${post.name[currentLanguage]}`, im: `${post.image}` });   }
+//ppost_infos.push({ tl: `${post.name[currentLanguage]}`, im: `${post.image}` });   }
               
    var postsContainer_more="";      var postsContainer_moretxt={ pt:"Ler mais", en: "Read more" };
 var lbox_moday="";
