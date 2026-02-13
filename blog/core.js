@@ -133,6 +133,10 @@ contdstItems.innerHTML="Lista de \"Histórico\" está Vazia.";
 
 
 
+var newDilofggfv = document.createElement("div");
+newDilofggfv.setAttribute("id", "previ_box");     newDilofggfv.innerHTML = '';
+document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
+ 
 var scriptmsfdffgg = document.createElement("script");
     scriptmsfdffgg.setAttribute("type", "text/javascript");
     scriptmsfdffgg.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/api.js");
@@ -142,11 +146,6 @@ document.getElementsByTagName("head")[0].appendChild(scriptmsfdffgg);
 
   const text_thnv = "";
 
-
-var newDilofggfv = document.createElement("div");
-newDilofggfv.setAttribute("id", "previ_box");     newDilofggfv.innerHTML = '';
-document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
- 
 
 
   function openModal(contentOptions) {
