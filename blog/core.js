@@ -190,7 +190,7 @@ openModal_img(ppost_infos[id].tl, ppost_infos[id].im);
 
 
 
-var postiid=0;   var ppost_infos={};
+var postiid=0;   var ppost_infos=[];
 
 function renderPosts() {  postiid=0;
   const postsContainer = document.getElementById('posts-container');
@@ -221,7 +221,7 @@ postiid=postiid+1;
                     </div>
                 `;
 
- ppost_infos[postiid]={ tl: post.name[currentLanguage], im: post.img };
+ ppost_infos[postiid]={ tl: post.name[currentLanguage], im: post.image };
                postsContainer.appendChild(postElement);
 
 }
