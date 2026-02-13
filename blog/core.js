@@ -133,10 +133,11 @@ contdstItems.innerHTML="Lista de \"Histórico\" está Vazia.";
 
 
 
-var newDilofggfv = document.createElement("div");
-newDilofggfv.setAttribute("id", "previ_box");     newDilofggfv.innerHTML = '';
-document.getElementsByTagName('main')[0].appendChild(newDilofggfv);
- 
+var newDil_modal = document.createElement("div");
+newDil_modal.id="previ_box";    newDil_modal.innerHTML = '';
+document.getElementsByTagName("body")[0].appendChild(newDil_modal);
+
+
 var scriptmsfdffgg = document.createElement("script");
     scriptmsfdffgg.setAttribute("type", "text/javascript");
     scriptmsfdffgg.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/api.js");
@@ -226,6 +227,7 @@ lbox_moday=` onclick="postF_imgs('${postiid}');" `;
                                       
                 const postElement = document.createElement('article');
                 postElement.className = 'post-card';
+                postElement.id = 'post_'+postiid+"_fs";
                 postElement.innerHTML = `
                     <div ${lbox_moday} class="post-image" style="pointer-events: auto;  background-image: url('${post.image}')"></div>
                     <div class="post-content">
