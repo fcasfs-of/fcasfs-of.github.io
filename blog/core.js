@@ -133,11 +133,6 @@ contdstItems.innerHTML="Lista de \"Histórico\" está Vazia.";
 
 
 
-var newDil_modal = document.createElement("div");
-newDil_modal.id="previ_box";    newDil_modal.innerHTML = '<span></span>';
-document.getElementsByTagName("body")[0].appendChild(newDil_modal);
-
-
 var scriptmsfdffgg = document.createElement("script");
     scriptmsfdffgg.setAttribute("type", "text/javascript");
     scriptmsfdffgg.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/api.js");
@@ -203,6 +198,12 @@ ppost_infos.push({ tlt: "", img: "" });
 
 
 function renderPosts() {  postiid=0;
+
+var check_modall=false; 
+if(document.getElementById("previ_box"){   check_modall=true;   }                     
+if(check_modall==false){   var newDil_modal = document.createElement("div");   newDil_modal.id="previ_box";    newDil_modal.innerHTML = '<span></span>';     document.getElementsByTagName("body")[0].appendChild(newDil_modal);     }
+
+                    
   const postsContainer = document.getElementById('posts-container');
   
   if(postsContainer){
