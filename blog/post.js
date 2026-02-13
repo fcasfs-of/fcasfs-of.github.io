@@ -18,6 +18,7 @@ const blogPosts = [
                 author: "FCASFS-OF",
                 more: true,
                 link: { pt: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", en: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/" },
+                lbox:true,
                 image: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg"
             },
             {
@@ -39,6 +40,7 @@ const blogPosts = [
                 author: "FCASFS-OF",
                 more: true,
                 link: { pt: "https://player.fcasfs-of.cloud-fs.net/", en: "https://player.fcasfs-of.cloud-fs.net/en" },
+                lbox:false,
                 image: "https://player.fcasfs-of.cloud-fs.net/player_banner.jpg"
             }
 
