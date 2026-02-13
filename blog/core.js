@@ -168,7 +168,7 @@ openModal({
       title: tl,
       type: "image",
       context: im,
-      size: "150",
+      size: "320",
       includePlayer: "no",
       description: ""
     });
@@ -201,7 +201,9 @@ function renderPosts() {  postiid=0;
 
 var check_modall=false; 
 if(document.getElementById("previ_box")){   check_modall=true;   }                     
-if(check_modall==false){   var newDil_modal = document.createElement("div");   newDil_modal.id="previ_box";    newDil_modal.innerHTML = '<span></span>';     document.getElementsByTagName("body")[0].appendChild(newDil_modal);     }
+if(check_modall==false){    
+    var newDil_modal = document.createElement("div");   newDil_modal.id="previ_box";    newDil_modal.innerHTML = '';      document.getElementsByTagName("body")[0].appendChild(newDil_modal);     
+}
 
                     
   const postsContainer = document.getElementById('posts-container');
