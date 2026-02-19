@@ -40,7 +40,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 if(cokk_plu && cokk_plu==true){    var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookiebar-latest.min.js?theme=flying&customize=1&tracking=&thirdparty=1&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&privacyPage=");
-document.getElementsByTagName("head")[0].appendChild(script_cokkied);        }
+document.getElementsByTagName("body")[0].appendChild(script_cokkied);        }
 
 
 
