@@ -543,6 +543,9 @@ body .loaderffs, .loaderffs {
 
 
 
+a#cookie-bar-prompt-logo{  display:none;  }
+
+
 
 
 .card[data-tooltip]::before,
