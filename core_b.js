@@ -9,8 +9,9 @@ function check_utt(eww){
    }
 
 
+var cokk_plu=true;
 function loaded_maut(){    if(manut){
- if(manut==true){  check_utt(true);    }   
+ if(manut==true){  cokk_plu=false;  check_utt(true);    }   
  else  {    check_utt(false);    }
  }   else  {    check_utt(false);    }    }
 
@@ -36,10 +37,10 @@ function showPage() {
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
-  var script_cokkied = document.createElement("script");
+if(cokk_plu && cokk_plu==true){    var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookiebar-latest.min.js?theme=flying&customize=1&tracking=&thirdparty=1&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&privacyPage=");
-document.getElementsByTagName("head")[0].appendChild(script_cokkied);
+document.getElementsByTagName("head")[0].appendChild(script_cokkied);        }
 
 
 
