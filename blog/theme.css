@@ -13,6 +13,8 @@
 .busca {  margin: 0 auto;  }
 .busca button, .busca input[type=text]{  height:45px;  }
 
+.busca button svg {  position: relative;    top: 1px;   }
+
 
 
   .hidden { display:none;  }
