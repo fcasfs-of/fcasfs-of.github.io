@@ -11,6 +11,7 @@
 .busca button:hover {  background: #0b7dda;   }
 .busca::after {  content: "";  clear: both;  display: table;   }
 .busca {  margin: 0 auto;  }
+.busca button, .busca input[type=text]{  height:45px;  }
 
 
 
