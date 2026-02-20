@@ -37,10 +37,15 @@ function showPage() {
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
-if(cokk_plu && cokk_plu==true){    var script_cokkied = document.createElement("script");
+if(cokk_plu && cokk_plu==true){   
+
+ var cokk_plu_enf="/en";  cokk_plu_esdnf="br";
+ if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
+ 
+ var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("onload", "setupCookieBar();");
-    script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookiebar-latest.min.js?theme=flying&customize=1&tracking=&thirdparty=1&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&privacyPage=");
+    script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookiebar-latest.min.js?forceLang="+cokk_plu_esdnf+"&theme=flying&customize=1&tracking=&thirdparty=1&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=1&showPolicyLink=1&privacyPage=");
 document.getElementsByTagName("body")[0].appendChild(script_cokkied);        }
 
 
