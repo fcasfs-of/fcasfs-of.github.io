@@ -39,7 +39,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 if(cokk_plu && cokk_plu==true){   
 
- var cokk_plu_enf="/en";  cokk_plu_esdnf="br";
+ var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
  
  var script_cokkied = document.createElement("script");
