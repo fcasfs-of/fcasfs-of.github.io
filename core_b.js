@@ -168,7 +168,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
  CookieConsent.run({
     guiOptions: {
         consentModal: {
-            layout: "box",
+            layout: "cloud inline",
             position: "bottom right",
             equalWeightButtons: true,
             flipButtons: false
