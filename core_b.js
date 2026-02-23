@@ -29,38 +29,6 @@ function showPage() {
 }
 
 
-function setup_CookieBadr(cokk_plu_esdnf,langs_cokkiesd){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
- CookieConsent.run({
-    guiOptions: {
-        consentModal: {
-            layout: "box",
-            position: "bottom right",
-            equalWeightButtons: true,
-            flipButtons: false
-        },
-        preferencesModal: {
-            layout: "bar wide",
-            position: "right",
-            equalWeightButtons: true,
-            flipButtons: false
-        }
-    },
-    categories: {
-        necessary: {
-            readOnly: true
-        },
-        functionality: {},
-        analytics: {},
-        marketing: {}
-    },
-    language: {
-        default: cokk_plu_esdnf,
-        translations: langs_cokkiesd,
-        autoDetect: "document"
-    }
-});    }
-}
-
 
   var scriptmsfd = document.createElement("script");
     scriptmsfd.setAttribute("type", "text/javascript");
@@ -83,9 +51,9 @@ document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
  
  var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
-    script_cokkied.setAttribute("onload", "setup_CookieBadr(cokk_plu_esdnf,langs_cokkiesd);");
+    script_cokkied.setAttribute("onload", "setup_CookieBadr();");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
-document.getElementsByTagName("body")[0].appendChild(script_cokkied);       setup_CookieBadr(cokk_plu_esdnf,langs_cokkiesd);      }
+document.getElementsByTagName("body")[0].appendChild(script_cokkied);       setup_CookieBadr();      }
 
 
 
@@ -188,6 +156,39 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
  
 }
 
+
+
+function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
+ CookieConsent.run({
+    guiOptions: {
+        consentModal: {
+            layout: "box",
+            position: "bottom right",
+            equalWeightButtons: true,
+            flipButtons: false
+        },
+        preferencesModal: {
+            layout: "bar wide",
+            position: "right",
+            equalWeightButtons: true,
+            flipButtons: false
+        }
+    },
+    categories: {
+        necessary: {
+            readOnly: true
+        },
+        functionality: {},
+        analytics: {},
+        marketing: {}
+    },
+    language: {
+        default: cokk_plu_esdnf,
+        translations: langs_cokkiesd,
+        autoDetect: "document"
+    }
+});    }
+}
 
 
 
