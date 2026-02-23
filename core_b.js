@@ -29,7 +29,7 @@ function showPage() {
 }
 
 
-function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
+function setup_CookieBadr(cokk_plu_esdnf,langs_cokkiesd){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  CookieConsent.run({
     guiOptions: {
         consentModal: {
@@ -83,9 +83,9 @@ document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
  
  var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
-    script_cokkied.setAttribute("onload", "setup_CookieBadr();");
+    script_cokkied.setAttribute("onload", "setup_CookieBadr(cokk_plu_esdnf,langs_cokkiesd);");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
-document.getElementsByTagName("body")[0].appendChild(script_cokkied);        }
+document.getElementsByTagName("body")[0].appendChild(script_cokkied);       setup_CookieBadr(cokk_plu_esdnf,langs_cokkiesd);      }
 
 
 
