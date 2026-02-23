@@ -29,6 +29,38 @@ function showPage() {
 }
 
 
+function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
+ CookieConsent.run({
+    guiOptions: {
+        consentModal: {
+            layout: "box",
+            position: "bottom right",
+            equalWeightButtons: true,
+            flipButtons: false
+        },
+        preferencesModal: {
+            layout: "bar wide",
+            position: "right",
+            equalWeightButtons: true,
+            flipButtons: false
+        }
+    },
+    categories: {
+        necessary: {
+            readOnly: true
+        },
+        functionality: {},
+        analytics: {},
+        marketing: {}
+    },
+    language: {
+        default: cokk_plu_esdnf,
+        translations: langs_cokkiesd,
+        autoDetect: "document"
+    }
+});    }
+}
+
 
   var scriptmsfd = document.createElement("script");
     scriptmsfd.setAttribute("type", "text/javascript");
@@ -37,16 +69,23 @@ function showPage() {
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
+
+var cokk_plu_esdnf="pt";
 if(cokk_plu && cokk_plu==true){   
 
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
+
+   var sccokkesfd = document.createElement("link");
+    sccokkesfd.setAttribute("rel", "stylesheet");
+    sccokkesfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/cookies/consent.css");
+document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
  
  var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
-    script_cokkied.setAttribute("onload", "setupCookieBar();");
-    script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookiebar-latest.min.js?forceLang="+cokk_plu_esdnf+"&theme=flying&customize=1&tracking=&thirdparty=1&always=1&noGeoIp=1&refreshPage=1&showNoConsent=1&hideDetailsBtn=&showPolicyLink=1&privacyPage=");
-document.getElementsByTagName("body")[0].appendChild(script_cokkied);        }
+    script_cokkied.setAttribute("onload", "setup_CookieBadr();");
+    script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
+document.getElementsByTagName("head")[0].appendChild(script_cokkied);        }
 
 
 
