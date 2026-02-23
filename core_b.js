@@ -44,22 +44,41 @@ if(cokk_plu && cokk_plu==true){
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 
-   var sccokkesfd = document.createElement("link");
+   var sccgramedsfd = document.createElement("link");
+    sccgramedsfd.setAttribute("rel", "stylesheet");
+    sccgramedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/iframe/manager.css");
+document.getElementsByTagName("head")[0].appendChild(sccgramedsfd);
+
+ var sccokkesfd = document.createElement("link");
     sccokkesfd.setAttribute("rel", "stylesheet");
     sccokkesfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/cookies/consent.css");
 document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
+
  
   var dscript_cokkied = document.createElement("script");
     dscript_cokkied.setAttribute("type", "text/javascript");
     dscript_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/langs.js");
 document.getElementsByTagName("body")[0].appendChild(dscript_cokkied); 
  
+  var dscript_framedkied = document.createElement("script");
+    dscript_framedkied.setAttribute("type", "text/javascript");
+    dscript_framedkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/iframe/langs.js");
+document.getElementsByTagName("body")[0].appendChild(dscript_framedkied); 
+ 
  
  var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("onload", "setup_CookieBadr();");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
-document.getElementsByTagName("body")[0].appendChild(script_cokkied);          }
+document.getElementsByTagName("body")[0].appendChild(script_cokkied);          
+
+  var script_framercokkied = document.createElement("script");
+    script_framercokkied.setAttribute("type", "text/javascript");
+    //script_framercokkied.setAttribute("onload", "();");
+    script_framercokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/iframe/manager.js");
+document.getElementsByTagName("body")[0].appendChild(script_framercokkied);   
+
+}
 
 
 
