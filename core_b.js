@@ -181,16 +181,16 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
             layout: "bar wide",
             position: "right",
             equalWeightButtons: true,
-            flipButtons: false
+            flipButtons: true
         }
     },
     categories: {
         necessary: {
             readOnly: true
         },
-        functionality: {},
-        analytics: {},
-        marketing: {}
+        functionality: { enabled: true },
+        analytics: { enabled: false },
+        marketing: { enabled: false }
     },
     language: {
         default: cokk_plu_esdnf,
