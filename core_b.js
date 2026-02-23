@@ -165,8 +165,6 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
- if (document.body.classList.contains('dark-mode')) {        document.documentElement.classList.add('cc--darkmode');       }
- 
  CookieConsent.run({
     guiOptions: {
         consentModal: {
@@ -220,7 +218,8 @@ body.oncontextmenu=function() { return false; };
     
     toggleThemeBtn.addEventListener('click', function() {
       document.body.classList.toggle('dark-mode');
-      
+      document.documentElement.classList.toggle('cc--darkmode');    
+
       if (document.body.classList.contains('dark-mode')) {
         toggleThemeBtn.querySelector('span').textContent = 'Claro';
         localStorage.setItem('theme', 'dark');
