@@ -59,7 +59,7 @@ document.getElementsByTagName("body")[0].appendChild(dscript_cokkied);
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("onload", "setup_CookieBadr();");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
-document.getElementsByTagName("body")[0].appendChild(script_cokkied);       setup_CookieBadr();      }
+document.getElementsByTagName("body")[0].appendChild(script_cokkied);          }
 
 
 
