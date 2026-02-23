@@ -57,6 +57,12 @@ if(cokk_plu && cokk_plu==true){
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 
+   var dscr_menudkkied = document.createElement("script");
+    dscr_menudkkied.setAttribute("type", "text/javascript");
+    dscr_menudkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cmenu.js");
+document.getElementsByTagName("body")[0].appendChild(dscr_menudkkied); 
+
+ 
    var sccgramedsfd = document.createElement("link");
     sccgramedsfd.setAttribute("rel", "stylesheet");
     sccgramedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/iframe/manager.css");
