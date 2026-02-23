@@ -49,6 +49,12 @@ if(cokk_plu && cokk_plu==true){
     sccokkesfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/cookies/consent.css");
 document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
  
+  var dscript_cokkied = document.createElement("script");
+    dscript_cokkied.setAttribute("type", "text/javascript");
+    dscript_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/langs.js");
+document.getElementsByTagName("body")[0].appendChild(dscript_cokkied); 
+ 
+ 
  var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("onload", "setup_CookieBadr();");
