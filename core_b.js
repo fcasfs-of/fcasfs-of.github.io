@@ -23,6 +23,15 @@ newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
 //if(document.getElementById("loaderfs")){   document.body.style.pointerEvents = "none";   }
 
 
+
+function loaded_menus(){
+if(Contextmenu && options_menu && options_menu[location.href]){
+const contextmenu = Contextmenu(document.getElementsByTagName("body")[0], {
+    options: options_menu[location.href],
+});    }
+}
+
+
 function showPage() {
    // document.getElementById("loaderfs").style.display = "none";
  //if(document.getElementById("loaderfs")){  document.body.style.pointerEvents = "auto";    }
@@ -74,7 +83,7 @@ document.getElementsByTagName("body")[0].appendChild(script_cokkied);
 
   var script_framercokkied = document.createElement("script");
     script_framercokkied.setAttribute("type", "text/javascript");
-    //script_framercokkied.setAttribute("onload", "();");
+    script_framercokkied.setAttribute("onload", "loaded_menus();");
     script_framercokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/iframe/manager.js");
 document.getElementsByTagName("body")[0].appendChild(script_framercokkied);   
 
