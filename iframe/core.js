@@ -1,4 +1,7 @@
 
+//<div data-service="<service-name>" data-id="<resource-id>" data-params="<iframe-query-parameters>" data-thumbnail="<path-to-image>" data-autoscale data-ratio="<x:y>"></div>
+
+
 function loaded_iframes(){
   if (cokk_plu_esdnf && langs_cframe){
 const imbjd = iframemanager();
