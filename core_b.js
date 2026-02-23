@@ -26,13 +26,11 @@ newDilofv.id = "loaderfs";    newDilofv.className = "loaderffs";
 
 function loaded_menus(){
 if(Contextmenu && options_menu && options_menu[location.href]){
-const contextmenu = Contextmenu(document.getElementsByTagName("body")[0], {
-    options: options_menu[location.href],
-});    }
+//const contextmenu = Contextmenu(document.getElementsByTagName("body")[0], {    options: options_menu[location.href]  });  
+}
  else {  if(options_menu && options_menu["*"]){
-const contextmenu = Contextmenu(document.getElementsByTagName("body")[0], {
-    options: options_menu["*"],
-});    }   }
+//const contextmenu = Contextmenu(document.getElementsByTagName("body")[0], {    options: options_menu["*"]  }); 
+ }   }
 }
 
 
