@@ -85,7 +85,7 @@ document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("onload", "setup_CookieBadr();");
     script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
-document.getElementsByTagName("head")[0].appendChild(script_cokkied);        }
+document.getElementsByTagName("body")[0].appendChild(script_cokkied);        }
 
 
 
