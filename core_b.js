@@ -60,6 +60,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
   var scffriptmsfd = document.createElement("script");
     scffriptmsfd.setAttribute("type", "text/javascript");
     scffriptmsfd.setAttribute("onload", "share_btsD_all();");
+    scffriptmsfd.setAttribute("defer", "");       scffriptmsfd.setAttribute("init", "");
     scffriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/share/core.js");
 document.getElementsByTagName("body")[0].appendChild(scffriptmsfd);
 
