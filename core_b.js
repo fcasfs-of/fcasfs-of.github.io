@@ -82,9 +82,15 @@ share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[l
 share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
 }  }
 
+const scripjkshd = document.createElement("span");
 const scriptfd_shd = document.createElement("div");
 scriptfd_shd.className="shareon";
-scriptfd_shd.innerHTML = "<div style='padding:3px;'><br/>"+share_btsD_al+"<br/><br/></div>";
+scriptfd_shd.innerHTML = ""+share_btsD_al+"";
+ scripjkshd.style.padding="5px";
+ scripjkshd.innerHTML = "<br/>";
+ scripjkshd.appendChild(scriptfd_shd);   
+ scripjkshd.innerHTML = scripjkshd.innerHTML+"<br/><br/>";
+
 
 if(att){
 for(var jdsdd=0; jdsdd<att.length; jdsdd++){
@@ -94,7 +100,7 @@ for(var jddsdd=0; jddsdd<att[jdsdd].length; jddsdd++){
 scriptfd_shd.setAttribute(att[jdsdd][0], att[jdsdd][1]);     
 }   }   }   }   }   
 
-if(scriptfd_shd){  add_vjif.appendChild(scriptfd_shd);   }
+if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);   }
 
 }
 
