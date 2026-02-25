@@ -44,11 +44,64 @@ function showPage() {
 
 
 
+   var sccgfframedsfd = document.createElement("link");
+    sccgfframedsfd.setAttribute("rel", "stylesheet");
+    sccgfframedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/share/theme.css");
+document.getElementsByTagName("head")[0].appendChild(sccgfframedsfd);
+
+
   var scriptmsfd = document.createElement("script");
     scriptmsfd.setAttribute("type", "text/javascript");
     scriptmsfd.setAttribute("onload", "loaded_maut();");
     scriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/av_man.js");
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
+
+
+  var scffriptmsfd = document.createElement("script");
+    scffriptmsfd.setAttribute("type", "text/javascript");
+    scffriptmsfd.setAttribute("onload", "share_btsD_all();");
+    scffriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/share/core.js");
+document.getElementsByTagName("body")[0].appendChild(scffriptmsfd);
+
+
+
+function share_btsD(att, listd, listdld, id){
+var add_vjif = document.getElementsByTagName("body")[0];
+if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vjif=addd_vjif;  }   }
+
+var share_btsD_al="";
+if(listd){
+for(var jdd=0; jdd<listd.length; jdd++){
+var share_btsDdf_al="";
+if(listdld){  if(listdld[listd[jdd]]){ 
+for(var gfff=0; gfff<listdld[listd[jdd]].length; gfff++){
+share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[listd[jdd]][gfff][1]+"\' "; 
+}    }    }
+
+share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
+}  }
+
+const scriptfd_shd = document.createElement("div");
+scriptfd_shd.className="shareon";
+scriptfd_shd.innerHTML = share_btsD_al;
+
+if(att){
+for(var jdsdd=0; jdsdd<att.length; jdsdd++){
+if(att[jdsdd]){  
+for(var jddsdd=0; jddsdd<att[jdsdd].length; jddsdd++){   
+  if(att[jdsdd][0] && att[jdsdd][0]!=""){  
+scriptfd_shd.setAttribute(att[jdsdd][0], att[jdsdd][1]);     
+}   }   }   }   }   
+
+if(scriptfd_shd){  add_vjif.appendChild(scriptfd_shd);   }
+
+}
+
+
+function share_btsD_all(){   
+ share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, "");    
+}
+
 
 
 
