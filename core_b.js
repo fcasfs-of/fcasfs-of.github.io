@@ -67,7 +67,7 @@ document.getElementsByTagName("body")[0].appendChild(scffriptmsfd);
 
 
 function share_btsD(att, listd, listdld, id){
-var add_vjif = document.getElementsByTagName("body")[0];
+var add_vjif = document.getElementsByTagName("main")[0];
 if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vjif=addd_vjif;  }   }
 
 var share_btsD_al="";
@@ -82,9 +82,10 @@ share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[l
 share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
 }  }
 
+const scripftfd_shd = document.createElement("div");
 const scriptfd_shd = document.createElement("div");
 scriptfd_shd.className="shareon";
-scriptfd_shd.innerHTML = "<br/>"+share_btsD_al+"<br/><br/>";
+scriptfd_shd.innerHTML = ""+share_btsD_al+"";
 
 if(att){
 for(var jdsdd=0; jdsdd<att.length; jdsdd++){
