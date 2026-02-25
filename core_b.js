@@ -82,11 +82,11 @@ share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[l
 share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
 }  }
 
-const scripjkshd = document.createElement("span");
+const scripjkshd = document.createElement("div");
 const scriptfd_shd = document.createElement("div");
 scriptfd_shd.className="shareon";
 scriptfd_shd.innerHTML = ""+share_btsD_al+"";
- scripjkshd.style.padding="5px";
+ scripjkshd.style.padding="5px";     scripjkshd.style.width="100%";
  scripjkshd.innerHTML = "<br/>";
  scripjkshd.appendChild(scriptfd_shd);   
  scripjkshd.innerHTML = scripjkshd.innerHTML+"<br/><br/>";
