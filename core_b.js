@@ -82,7 +82,6 @@ share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[l
 share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
 }  }
 
-const scripftfd_shd = document.createElement("div");
 const scriptfd_shd = document.createElement("div");
 scriptfd_shd.className="shareon";
 scriptfd_shd.innerHTML = ""+share_btsD_al+"";
@@ -102,6 +101,7 @@ if(scriptfd_shd){  add_vjif.appendChild(scriptfd_shd);   }
 
 function share_btsD_all(){   
  share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, "");    
+ Shareon.init();
 }
 
 
