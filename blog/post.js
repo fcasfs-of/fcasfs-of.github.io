@@ -1,5 +1,27 @@
 const blogPosts = [
             {
+                category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
+                custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
+                name: {
+                    pt: "Tech Player", 
+                    en: "Tech Player"
+                },
+                title: { 
+                    pt: "Nova versão do Tech Player: '3.0.0.2'", 
+                    en: "New Tech Player Version: '3.0.0.2'" 
+                },
+                excerpt: { 
+                    pt: "A nova versão inclui:  <br/><br/>  Design e desempenho aprimorado.<br/> Correções de bugs e erros.<br/> Ícones atualizados. ", 
+                    en: "The new version includes: <br/><br/>  Improved design and performance.<br/> Bug and error fixes.<br/>Updated icons. " 
+                },
+                date: "25/02/2026",
+                author: "FCASFS-OF",
+                more: true,
+                link: { pt: "https://player.fcasfs-of.cloud-fs.net/", en: "https://player.fcasfs-of.cloud-fs.net/en" },
+                lbox:false,
+                image: "https://player.fcasfs-of.cloud-fs.net/player_banner.jpg"
+            },
+            {
                 category: { pt: "Aplicativo_Windows", en: "App_Windows" },
                 custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
                 name: {
@@ -20,28 +42,6 @@ const blogPosts = [
                 link: { pt: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", en: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/" },
                 lbox:true,
                 image: "https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg"
-            },
-            {
-                category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
-                custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
-                name: {
-                    pt: "Tech Player", 
-                    en: "Tech Player"
-                },
-                title: { 
-                    pt: "Nova versão do Tech Player: '3.0.0.1'", 
-                    en: "New Tech Player Version: '3.0.0.1'" 
-                },
-                excerpt: { 
-                    pt: "A nova versão inclui:  <br/><br/>  Design e desempenho aprimorado.<br/> Correções de bugs e erros.<br/> Ícones atualizados. ", 
-                    en: "The new version includes: <br/><br/>  Improved design and performance.<br/> Bug and error fixes.<br/>Updated icons. " 
-                },
-                date: "10/02/2026",
-                author: "FCASFS-OF",
-                more: true,
-                link: { pt: "https://player.fcasfs-of.cloud-fs.net/", en: "https://player.fcasfs-of.cloud-fs.net/en" },
-                lbox:false,
-                image: "https://player.fcasfs-of.cloud-fs.net/player_banner.jpg"
             }
 
 ];
