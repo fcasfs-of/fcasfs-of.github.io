@@ -84,7 +84,7 @@ share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
 
 const scriptfd_shd = document.createElement("div");
 scriptfd_shd.className="shareon";
-scriptfd_shd.innerHTML = ""+share_btsD_al+"";
+scriptfd_shd.innerHTML = "<div style='padding:3px;'><br/>"+share_btsD_al+"<br/><br/></div>";
 
 if(att){
 for(var jdsdd=0; jdsdd<att.length; jdsdd++){
