@@ -53,9 +53,17 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
   
-function share_btsD(att, listd, listdld, id){
+function share_btsD(att, listd, listdld, opti, id){
 var add_vjif = document.getElementsByTagName("main")[0];
 if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vjif=addd_vjif;  }   }
+
+var share_btsD_vars={ icon:true, text:false };
+if(opti){ 
+if(opti.icon && opti.icon==false){  share_btsD_vars.icon=false;  }
+if(opti.text && opti.text==true){  share_btsD_vars.text=true;  }
+}
+
+if(opti.text==false && opti.icon==false){  share_btsD_vars.icon=true;   share_btsD_vars.text=false;  }
 
 var share_btsD_al="";
 if(listd){
@@ -66,7 +74,10 @@ for(var gfff=0; gfff<listdld[listd[jdd]].length; gfff++){
 share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[listd[jdd]][gfff][1]+"\' "; 
 }    }    }
 
-share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+'"'+share_btsDdf_al+'></a>';
+var share_btsD_al_tectf="";   var shaicon_btsD_al_tectf="";  
+if(share_btsD_vars.icon==false){  shaicon_btsD_al_tectf=" icon_none";    }
+if(share_btsD_vars.text==true){  share_btsD_al_tectf=listd[jdd].toUpperCase();   }
+share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+shaicon_btsD_al_tectf+'"'+share_btsDdf_al+'>'+share_btsD_al_tectf+'</a>';
 }  }
 
 const scripjkshd = document.createElement("div");
@@ -93,8 +104,9 @@ if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);   }
 }
 
 
+
 function share_btsD_all(){   
- share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, "");    
+ share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:true, text:false }, "");    
  if(Shareon){  Shareon.init();   }
 }
 
