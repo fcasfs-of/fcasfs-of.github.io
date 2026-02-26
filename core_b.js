@@ -79,7 +79,7 @@ if(share_btsD_vars.icon===false){  shaicon_btsD_al_tectf=" icon_none";    }
 if(share_btsD_vars.text===true){  share_btsD_al_tectf=listd[jdd].toUpperCase();   }
 
  var object_shre='<a class="'+listd[jdd]+shaicon_btsD_al_tectf+'"'+share_btsDdf_al+'>'+share_btsD_al_tectf+'</a>';
- if(listd[jdd]=="separate"){  object_shre="<span class='separate'></span>";  }
+ if(listd[jdd]=="separate"){  object_shre="<span class='separte'></span>";  }
 share_btsD_al=share_btsD_al+object_shre;
 }  }
 
