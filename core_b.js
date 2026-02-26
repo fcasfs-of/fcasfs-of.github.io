@@ -59,11 +59,11 @@ if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vji
 
 var share_btsD_vars={ icon:true, text:false };
 if(opti){ 
-if(opti.icon && opti.icon==false){  share_btsD_vars.icon=false;  }
-if(opti.text && opti.text==true){  share_btsD_vars.text=true;  }
+if(opti.icon && opti.icon===false){  share_btsD_vars.icon=false;  }
+if(opti.text && opti.text===true){  share_btsD_vars.text=true;  }
 }
 
-if(opti.text==false && opti.icon==false){  share_btsD_vars.icon=true;   share_btsD_vars.text=false;  }
+if(share_btsD_vars.text===false && share_btsD_vars.icon===false){  share_btsD_vars.icon=true;   share_btsD_vars.text=false;  }
 
 var share_btsD_al="";
 if(listd){
@@ -75,8 +75,9 @@ share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[l
 }    }    }
 
 var share_btsD_al_tectf="";   var shaicon_btsD_al_tectf="";  
-if(share_btsD_vars.icon==false){  shaicon_btsD_al_tectf=" icon_none";    }
-if(share_btsD_vars.text==true){  share_btsD_al_tectf=listd[jdd].toUpperCase();   }
+if(share_btsD_vars.icon===false){  shaicon_btsD_al_tectf=" icon_none";    }
+if(share_btsD_vars.text===true){  share_btsD_al_tectf=listd[jdd].toUpperCase();   }
+ 
 share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+shaicon_btsD_al_tectf+'"'+share_btsDdf_al+'>'+share_btsD_al_tectf+'</a>';
 }  }
 
