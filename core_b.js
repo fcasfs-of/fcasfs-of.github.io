@@ -44,11 +44,6 @@ function showPage() {
 
 
 
-   var sccgfframedsfd = document.createElement("link");
-    sccgfframedsfd.setAttribute("rel", "stylesheet");
-    sccgfframedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/share/theme.css");
-document.getElementsByTagName("head")[0].appendChild(sccgfframedsfd);
-
 
   var scriptmsfd = document.createElement("script");
     scriptmsfd.setAttribute("type", "text/javascript");
@@ -57,15 +52,7 @@ document.getElementsByTagName("head")[0].appendChild(sccgfframedsfd);
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
-  var scffriptmsfd = document.createElement("script");
-    scffriptmsfd.setAttribute("type", "text/javascript");
-    scffriptmsfd.setAttribute("onload", "share_btsD_all();");
-    scffriptmsfd.setAttribute("defer", "");       scffriptmsfd.setAttribute("init", "");
-    scffriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/share/core.js");
-document.getElementsByTagName("body")[0].appendChild(scffriptmsfd);
-
-
-
+  
 function share_btsD(att, listd, listdld, id){
 var add_vjif = document.getElementsByTagName("main")[0];
 if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vjif=addd_vjif;  }   }
@@ -86,7 +73,8 @@ const scripjkshd = document.createElement("div");
 const scriptfd_shd = document.createElement("div");
 scriptfd_shd.className="shareon";
 scriptfd_shd.innerHTML = ""+share_btsD_al+"";
- scripjkshd.style.padding="5px";     scripjkshd.style.width="100%";
+ scripjkshd.style.padding="5px";     scripjkshd.style.width="94%";
+scripjkshd.style.margin="0 auto";
  scripjkshd.innerHTML = "<br/>";
  scripjkshd.appendChild(scriptfd_shd);   
  scripjkshd.innerHTML = scripjkshd.innerHTML+"<br/><br/>";
@@ -107,7 +95,7 @@ if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);   }
 
 function share_btsD_all(){   
  share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, "");    
- Shareon.init();
+ if(Shareon){  Shareon.init();   }
 }
 
 
@@ -125,6 +113,12 @@ if(cokk_plu && cokk_plu==true){
 document.getElementsByTagName("body")[0].appendChild(dscr_menudkkied); 
 
  
+var sccgfframedsfd = document.createElement("link");
+    sccgfframedsfd.setAttribute("rel", "stylesheet");
+    sccgfframedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/share/theme.css");
+document.getElementsByTagName("head")[0].appendChild(sccgfframedsfd);
+
+
    var sccgramedsfd = document.createElement("link");
     sccgramedsfd.setAttribute("rel", "stylesheet");
     sccgramedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/iframe/manager.css");
@@ -147,6 +141,14 @@ document.getElementsByTagName("body")[0].appendChild(dscript_cokkied);
 document.getElementsByTagName("body")[0].appendChild(dscript_framedkied); 
  
  
+var scffriptmsfd = document.createElement("script");
+    scffriptmsfd.setAttribute("type", "text/javascript");
+    scffriptmsfd.setAttribute("onload", "share_btsD_all();");
+    scffriptmsfd.setAttribute("defer", "");       scffriptmsfd.setAttribute("init", "");
+    scffriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/share/core.js");
+document.getElementsByTagName("body")[0].appendChild(scffriptmsfd);
+
+
  var script_cokkied = document.createElement("script");
     script_cokkied.setAttribute("type", "text/javascript");
     script_cokkied.setAttribute("onload", "setup_CookieBadr();");
