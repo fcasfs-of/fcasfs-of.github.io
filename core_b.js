@@ -108,7 +108,7 @@ if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);
 
 
 function share_btsD_all(){   
- share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:true, text:false }, "");    
+ share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
  if(Shareon){  Shareon.init();   }
 }
 
