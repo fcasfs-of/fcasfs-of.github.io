@@ -88,8 +88,6 @@ scriptfd_shd.innerHTML = ""+share_btsD_al+"";
  scripjkshd.style.padding="5px";     scripjkshd.style.width="94%";
 scripjkshd.style.margin="0 auto";
  scripjkshd.innerHTML = "<br/>";
- scripjkshd.appendChild(scriptfd_shd);   
- scripjkshd.innerHTML = scripjkshd.innerHTML+"<br/><br/>";
 
 
 if(att){
@@ -100,7 +98,10 @@ for(var jddsdd=0; jddsdd<att[jdsdd].length; jddsdd++){
 scriptfd_shd.setAttribute(att[jdsdd][0], att[jdsdd][1]);     
 }   }   }   }   }   
 
-if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);   }
+if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);  
+  scripjkshd.appendChild(scriptfd_shd);   
+ scripjkshd.innerHTML = scripjkshd.innerHTML+"<br/><br/>";               
+ }
 
 }
 
