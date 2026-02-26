@@ -2,4 +2,5 @@
 
 
 .shareon, .shareon a {  text-align: center;   }   .shareon a {  cursor: pointer;   }     .shareon a:hover {border:0;cursor:pointer;opacity:0.7;}
+.shareon a.icon_none:before{  display:none;   }
 
