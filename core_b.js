@@ -77,8 +77,10 @@ share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[l
 var share_btsD_al_tectf="";   var shaicon_btsD_al_tectf="";  
 if(share_btsD_vars.icon===false){  shaicon_btsD_al_tectf=" icon_none";    }
 if(share_btsD_vars.text===true){  share_btsD_al_tectf=listd[jdd].toUpperCase();   }
- 
-share_btsD_al=share_btsD_al+'<a class="'+listd[jdd]+shaicon_btsD_al_tectf+'"'+share_btsDdf_al+'>'+share_btsD_al_tectf+'</a>';
+
+ var object_shre='<a class="'+listd[jdd]+shaicon_btsD_al_tectf+'"'+share_btsDdf_al+'>'+share_btsD_al_tectf+'</a>';
+ if(listd[jdd]=="separate"){  object_shre="<span class='separate'></span>";  }
+share_btsD_al=share_btsD_al+object_shre;
 }  }
 
 const scripjkshd = document.createElement("div");
@@ -108,7 +110,7 @@ if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);
 
 
 function share_btsD_all(){   
- share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","copy-url","email","print","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
+ share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","separte","copy-url","email","print","separate","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
  if(Shareon){  Shareon.init();   }
 }
 
