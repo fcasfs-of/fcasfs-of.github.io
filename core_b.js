@@ -59,8 +59,8 @@ if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vji
 
 var share_btsD_vars={ icon:true, text:false };
 if(opti){ 
-if(opti.icon && opti.icon===false){  share_btsD_vars.icon=false;  }
-if(opti.text && opti.text===true){  share_btsD_vars.text=true;  }
+if(opti.icon && opti.icon==="false"){  share_btsD_vars.icon=false;  }
+if(opti.text && opti.text==="true"){  share_btsD_vars.text=true;  }
 }
 
 if(share_btsD_vars.text===false && share_btsD_vars.icon===false){  share_btsD_vars.icon=true;   share_btsD_vars.text=false;  }
