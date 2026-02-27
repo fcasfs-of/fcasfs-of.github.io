@@ -3,7 +3,9 @@
       notificationsTitle: "Notificações",
       searchPlaceholder: "Pesquisar...",
       categories: [
+        { id: 'inotices', name: 'Avisos Importantes' },
         { id: 'alerts', name: 'Alertas' },
+        { id: 'reminders', name: 'Lembretes' },
         { id: 'messages', name: 'Mensagens' },
         { id: 'security', name: 'Segurança' },
         { id: 'support', name: 'Suporte' },
@@ -12,13 +14,15 @@
         { id: 'recommendations', name: 'Recomendações' },
         { id: 'maintenance', name: 'Manutenção' }
       ],
-      noResults: "Nenhuma notificação encontrada."
+      noResults: "Nenhuma Notificação Encontrada."
     },
     en: {
       notificationsTitle: "Notifications",
       searchPlaceholder: "Search...",
       categories: [
+        { id: 'inotices', name: 'Important Notices' },
         { id: 'alerts', name: 'Alerts' },
+        { id: 'reminders', name: 'Reminders' },
         { id: 'messages', name: 'Messages' },
         { id: 'security', name: 'Security' },
         { id: 'support', name: 'Support' },
@@ -27,7 +31,7 @@
         { id: 'recommendations', name: 'Recommendations' },
         { id: 'maintenance', name: 'Maintenance' }
       ],
-      noResults: "No notifications found."
+      noResults: "No Notifications Found."
     }
   };
 
