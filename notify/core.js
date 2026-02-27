@@ -61,10 +61,11 @@ function renderCategories() {
       filteredNotifications[cat.id] = filteredNotifs;
 
       const categoryDiv = document.createElement('div');
-      categoryDiv.className = 'category';
+      categoryTitle.textContent = cat.name;
 
       const categoryTitle = document.createElement('h2');
       categoryTitle.textContent = cat.name;
+      categoryTitle.className = cat.id;
       categoryDiv.appendChild(categoryTitle);
 
       const notifContainer = document.createElement('div');
