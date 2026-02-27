@@ -84,7 +84,7 @@
   .category h2 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #444;
+    color: #444;       position: relative;
     border-bottom: 2px solid #ddd;
     padding-bottom: 0.5rem;
   }
@@ -105,7 +105,7 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    top: 8px;
+    top: 5px;
     left: 8px;
     background-repeat: no-repeat;
     background-size: 20px 20px;
