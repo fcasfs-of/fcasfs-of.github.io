@@ -45,8 +45,8 @@
     currentLang = lang;
 
   document.querySelectorAll('.lang-btn').forEach(btfn => {
-      btfn.className.remove("active");
-      if(btfn.getAttribute('data-lang').toLowerCase()==currentLang.toLowerCase()){        btfn.className.add("active");   }
+      btfn.classList.remove("active");
+      if(btfn.getAttribute('data-lang').toLowerCase()==currentLang.toLowerCase()){        btfn.classList.add("active");   }
   });
 
     
