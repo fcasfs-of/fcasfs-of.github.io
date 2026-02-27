@@ -5,6 +5,9 @@
       categories: [
         { id: 'alerts', name: 'Alertas' },
         { id: 'messages', name: 'Mensagens' },
+        { id: 'security', name: 'Segurança' },
+        { id: 'support', name: 'Suporte' },
+        { id: 'wnew', name: 'Novidades' },
         { id: 'updates', name: 'Atualizações' }
       ],
       noResults: "Nenhuma notificação encontrada."
@@ -15,6 +18,9 @@
       categories: [
         { id: 'alerts', name: 'Alerts' },
         { id: 'messages', name: 'Messages' },
+        { id: 'security', name: 'Security' },
+        { id: 'support', name: 'Support' },
+        { id: 'wnew', name: 'What\'s New' },
         { id: 'updates', name: 'Updates' }
       ],
       noResults: "No notifications found."
