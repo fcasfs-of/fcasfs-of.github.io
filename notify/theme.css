@@ -41,6 +41,8 @@
     border-color: #999;
   }
 
+ button.lang-btn.active {    pointer-events:none;  opacity:0.7;   }
+
  .hero .main {
     flex: 1;
     padding: 1.5rem 2rem;
