@@ -1,10 +1,5 @@
- * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
 
-  body {
+   .hero  {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
@@ -13,7 +8,7 @@
     min-height: 100vh;
   }
 
-  header {
+  .hero header {
     background-color: #ffffff;
     padding: 1rem 2rem;
     display: flex;
@@ -22,7 +17,7 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  h1 {
+  .hero h1 {
     font-size: 1.5rem;
     color: #222;
   }
@@ -47,7 +42,7 @@
     border-color: #999;
   }
 
-  main {
+ .hero main {
     flex: 1;
     padding: 1.5rem 2rem;
     margin: 0 auto;  width:100%; 
@@ -123,7 +118,7 @@
     flex-shrink: 0;
   }
 
-  .content {
+ .hero .content {
     flex: 1;
   }
 
@@ -138,13 +133,13 @@
   }
 
   @media(max-width: 768px) {
-    header {
+     .hero header {
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
     }
 
-    main {
+     .hero main {
       padding: 1rem;
     }
   }
