@@ -7,6 +7,14 @@ var test_gnot={
 
 
   const notificationsData = {
+    maintenance: [
+      
+    ],
+          
+    recommendations: [
+      
+    ],
+
     security: [
       
     ],
