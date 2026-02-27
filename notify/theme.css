@@ -8,7 +8,7 @@
     min-height: 100vh;
   }
 
-  .hero header {
+  .hero .header {
     background-color: #ffffff;
     padding: 1rem 2rem;
     display: flex;
@@ -42,7 +42,7 @@
     border-color: #999;
   }
 
- .hero main {
+ .hero .main {
     flex: 1;
     padding: 1.5rem 2rem;
     margin: 0 auto;  width:100%; 
@@ -133,13 +133,13 @@
   }
 
   @media(max-width: 768px) {
-     .hero header {
+     .hero .header {
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
     }
 
-     .hero main {
+     .hero .main {
       padding: 1rem;
     }
   }
