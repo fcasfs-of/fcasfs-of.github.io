@@ -36,7 +36,7 @@
     transition: background 0.3s, border-color 0.3s;
   }
 
-  button.lang-btn:hover {
+  button.lang-btn:hover, button.lang-btn.active {
     background-color: #eee;
     border-color: #999;
   }
