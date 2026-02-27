@@ -29,7 +29,7 @@
 
   function setLanguage(lang) {
     currentLang = lang;
-    document.querySelector('h1 .notiis').textContent = translations[lang].notificationsTitle;
+    document.querySelector('.notiis').textContent = translations[lang].notificationsTitle;
     document.getElementById('search-input').setAttribute('placeholder', translations[lang].searchPlaceholder);
     renderCategories();
   }
