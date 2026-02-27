@@ -61,8 +61,8 @@ function renderCategories() {
       filteredNotifications[cat.id] = filteredNotifs;
 
       const categoryDiv = document.createElement('div');
-      categoryTitle.textContent = cat.name;
-
+      categoryDiv.className = 'category';
+      
       const categoryTitle = document.createElement('h2');
       categoryTitle.textContent = cat.name;
       categoryTitle.className = cat.id;
