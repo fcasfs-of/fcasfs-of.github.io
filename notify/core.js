@@ -43,6 +43,15 @@
 
   function setLanguage(lang) {
     currentLang = lang;
+
+  document.querySelectorAll('.lang-btn').forEach(btfn => {
+    btfn.addEventListener('click', () => {
+      btfn.className.remove("active");
+      if(btfn.getAttribute('data-lang')==currentLang){        btfn.className.add("active");   }
+    });
+  });
+
+    
     document.getElementById('dnotificationsTitle').textContent = translations[lang].notificationsTitle;
     document.querySelector('h1 .notiis').textContent = translations[lang].notificationsTitle;
     document.getElementById('search-input').setAttribute('placeholder', translations[lang].searchPlaceholder);
