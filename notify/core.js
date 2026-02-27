@@ -8,7 +8,9 @@
         { id: 'security', name: 'Segurança' },
         { id: 'support', name: 'Suporte' },
         { id: 'wnew', name: 'Novidades' },
-        { id: 'updates', name: 'Atualizações' }
+        { id: 'updates', name: 'Atualizações' },
+        { id: 'recommendations', name: 'Recomendações' },
+        { id: 'maintenance', name: 'Manutenção' }
       ],
       noResults: "Nenhuma notificação encontrada."
     },
@@ -21,7 +23,9 @@
         { id: 'security', name: 'Security' },
         { id: 'support', name: 'Support' },
         { id: 'wnew', name: 'What\'s New' },
-        { id: 'updates', name: 'Updates' }
+        { id: 'updates', name: 'Updates' },
+        { id: 'recommendations', name: 'Recommendations' },
+        { id: 'maintenance', name: 'Maintenance' }
       ],
       noResults: "No notifications found."
     }
