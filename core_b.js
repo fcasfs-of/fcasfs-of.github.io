@@ -129,7 +129,12 @@ if(cokk_plu && cokk_plu==true){
 document.getElementsByTagName("body")[0].appendChild(dscr_menudkkied); 
 
  
-var sccgfframedsfd = document.createElement("link");
+var sccgfframdedsfd = document.createElement("link");
+    sccgfframdedsfd.setAttribute("rel", "stylesheet");
+    sccgfframdedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/notify/theme2.css");
+document.getElementsByTagName("head")[0].appendChild(sccgfframdedsfd);
+ 
+ var sccgfframedsfd = document.createElement("link");
     sccgfframedsfd.setAttribute("rel", "stylesheet");
     sccgfframedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/share/theme.css");
 document.getElementsByTagName("head")[0].appendChild(sccgfframedsfd);
@@ -150,6 +155,11 @@ document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
     dscript_cokkied.setAttribute("type", "text/javascript");
     dscript_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/langs.js");
 document.getElementsByTagName("body")[0].appendChild(dscript_cokkied); 
+
+  var dscript_cofgfkkied = document.createElement("script");
+    dscript_cofgfkkied.setAttribute("type", "text/javascript");
+    dscript_cofgfkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/notify/core2.js");
+document.getElementsByTagName("body")[0].appendChild(dscript_cofgfkkied); 
  
   var dscript_framedkied = document.createElement("script");
     dscript_framedkied.setAttribute("type", "text/javascript");
