@@ -482,6 +482,10 @@ class CtxMenuClass {
      if (che==true){   this.menuContainer.classList.add("mdark"); }
      }
 
+	id(name = "") {
+		if(name && name!=""){    this.menuContainer.setAttribute("id", name);    }
+     }
+
 addItem(text, customFunction, icon = undefined, disable = false, hide=false, index = undefined, bInvertIconDarkMode = false) {
 		var element = document.createElement("div");
 		element.className = ECtxMenuNames.item;
