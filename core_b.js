@@ -611,12 +611,13 @@ var ctxMenuManager = new CtxMenuManagerClass();
     // Verificar preferência do usuário
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme');
-	      
+	  var chech_darrk=false;     
+
     if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
       document.body.classList.add('dark-mode');
       toggleThemeBtn.querySelector('span').textContent = 'Claro';
-	  if(MainContextMenu){   MainContextMenu.dark(true);   }
-    }   else {        if(MainContextMenu){   MainContextMenu.dark();   }     }
+		chech_darrk=true;
+    }   
     
     toggleThemeBtn.addEventListener('click', function() {
       document.body.classList.toggle('dark-mode');
@@ -640,7 +641,8 @@ var ctxMenuManager = new CtxMenuManagerClass();
     }
 
 
-   document.body.onload=function(){    loaded_maut();       showPage();      };
+   document.body.onload=function(){    loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
+   };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
