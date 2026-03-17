@@ -611,14 +611,12 @@ var ctxMenuManager = new CtxMenuManagerClass();
     // Verificar preferência do usuário
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme');
-	  
-    if(MainContextMenu){   MainContextMenu.dark();   }
-    
+	      
     if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
       document.body.classList.add('dark-mode');
       toggleThemeBtn.querySelector('span').textContent = 'Claro';
 	  if(MainContextMenu){   MainContextMenu.dark(true);   }
-    }
+    }   else {        if(MainContextMenu){   MainContextMenu.dark();   }     }
     
     toggleThemeBtn.addEventListener('click', function() {
       document.body.classList.toggle('dark-mode');
