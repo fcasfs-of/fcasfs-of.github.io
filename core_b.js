@@ -620,10 +620,13 @@ var ctxMenuManager = new CtxMenuManagerClass();
     toggleThemeBtn.addEventListener('click', function() {
       document.body.classList.toggle('dark-mode');
       document.documentElement.classList.toggle('cc--darkmode');    
+		
+    if(MainContextMenu){   MainContextMenu.dark();   }
 
       if (document.body.classList.contains('dark-mode')) {
         toggleThemeBtn.querySelector('span').textContent = 'Claro';
         localStorage.setItem('theme', 'dark');
+	  if(MainContextMenu){   MainContextMenu.dark(true);   }
       } else {
         toggleThemeBtn.querySelector('span').textContent = 'Escuro';
         localStorage.setItem('theme', 'light');
