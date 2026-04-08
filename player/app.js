@@ -1,3 +1,5 @@
+var fplayeri;
+
 
 function onstart_file(run_file){     
 var playlistData = [];
