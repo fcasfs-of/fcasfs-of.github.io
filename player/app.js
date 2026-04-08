@@ -1,3 +1,16 @@
+
+function onstart_file(run_file){    
+var playlistData = [];
+            
+  var acssr = document.getElementById('cutompll');   
+        const mainVideo = document.getElementById('main-video');
+        const videoTitle = document.getElementById('video-title');
+        const videoDescription = document.getElementById('video-description');
+        const playlistContainer = document.getElementById('playlist');
+        const playlistTotal = document.getElementById('playlisttotal');
+        const pfielidtile = document.getElementById('titlemfpf');
+
+
 function loadPlaylist() {
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
@@ -27,18 +40,6 @@ function loadPlaylist() {
 }
 
 
-const playlistData = [];
-
-
-function onstart_file(run_file){    
-  var acssr = document.getElementById('cutompll');   
-        const mainVideo = document.getElementById('main-video');
-        const videoTitle = document.getElementById('video-title');
-        const videoDescription = document.getElementById('video-description');
-        const playlistContainer = document.getElementById('playlist');
-        const playlistTotal = document.getElementById('playlisttotal');
-        const pfielidtile = document.getElementById('titlemfpf');
-  
   if(typeof run_file=='function'){  
     var sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
     if(run_file().pg_dark==true){  
@@ -85,10 +86,6 @@ function onstart_file(run_file){
       //ammpdr.innerHTML=ammpdr.innerHTML+""+listaFiles(run_file().list, linkfrarromd);  
       //ampmpl.innerHTML='<div style="margin:0 auto;text-align:center;"><img style="text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/></div>';  
     } 
-}  
-
-
-
 
 function changeVideo(videoId) {
             const video = playlistData.find(v => v.id === videoId);
@@ -123,5 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.video-meta').innerHTML = ``;
             }
 });
+
+
+            
+}  
 
 
