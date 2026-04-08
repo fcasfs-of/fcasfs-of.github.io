@@ -85,7 +85,7 @@ function loadPlaylist(playlistData) {
     
   var checjfdk=false;
    for(var j=0; j<run_file().list.length; j++){
-    checjfdk=false;  if(j==0){   checjfdk=true;  }
+    checjfdk=false;  if(j==(parseInt(getfvald_tygetslpose)-1)){   checjfdk=true;  }
  playlistData[j]={
                 id:j+1,
                 title: run_file().list[j].title,
