@@ -3,7 +3,7 @@ function onstart_file(run_file){
 var playlistData = [];
             
   var acssr = document.getElementById('cutompll');   
-          var acssr_cover = document.querySelector('header .logo img');
+          var acssr_cover = document.querySelector('.logo img');
         const mainVideo = document.getElementById('main-video');
         const videoTitle = document.getElementById('video-title');
         const videoDescription = document.getElementById('video-description');
@@ -77,7 +77,7 @@ function loadPlaylist(playlistData) {
     document.title='Player: '+run_file().file_title+' - '+document.title;  
     videoDescription.innerHTML=run_file().file_desc;  
     pfielidtile.innerHTML='Player: '+run_file().file_title+'';  
-     acssr_cover.src = `${run_file().cover}`;    acssr_cover.style.width="64px";      acssr_cover.style.borderRadius = "20px";   
+     acssr_cover.src = `${run_file().cover}`;    acssr_cover.style.width="160px";      acssr_cover.style.borderRadius = "20px";   
     var linkfroplauemd="https://fcasfs-of.cloud-fs.net/player/?fileID="+getfval_tyget+"";   
     var linkfrarromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true";  
     var linkfromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true&fileSelect="+getfvald_tygetsle+"&pos="+getfvald_tygetslpose; 
