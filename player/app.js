@@ -45,7 +45,7 @@ function changeVideo(videoId) {
             const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
-            mainVideo.src = `${video.videoId}`;
+            mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&select=${video.videoId}`;
             
             videoTitle.textContent = video.title;
             videoDescription.textContent = video.description;
@@ -89,7 +89,7 @@ function changeVideo(videoId) {
  playlistData.push({
                 title: run_file().list[j].title,
                 description: run_file().file_desc,
-                videoId: "https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true&select="+(j+1)+"",
+                videoId: ""+(j+1)+"",
                 duration: "",
                 views: "",
                 date: "",
