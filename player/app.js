@@ -5,6 +5,7 @@ var playlistData = [];
   var acssr = document.getElementById('cutompll');   
           var acssr_cover = document.querySelector('.logo img');
         const mainVideo = document.getElementById('main-video');
+        const mainVtha = document.getElementById('infotime');
         const videoTitle = document.getElementById('video-title');
         const videoDescription = document.getElementById('video-description');
         const playlistContainer = document.getElementById('playlist');
@@ -76,7 +77,8 @@ function loadPlaylist(playlistData) {
     acssr.innerHTML=sryrkk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
     videoDescription.innerHTML=run_file().file_desc;  
-    pfielidtile.innerHTML='Player: '+run_file().file_title+'';  
+    pfielidtile.innerHTML='Media Player';  
+    mainVtha.innerHTML=''+run_file().file_title+'';
      acssr_cover.src = `${run_file().cover}`;    acssr_cover.style.width="160px";      acssr_cover.style.borderRadius = "20px";   
     var linkfroplauemd="https://fcasfs-of.cloud-fs.net/player/?fileID="+getfval_tyget+"";   
     var linkfrarromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true";  
