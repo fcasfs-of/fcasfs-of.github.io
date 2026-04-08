@@ -519,21 +519,13 @@ body.darkmode::-webkit-scrollbar-thumb{
       * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box-box;
+            box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
-            background-color: #0f172a;
-            color: #f1f5f9;
-            line-height: 1.6;
-        }
+        body {            background-color: #0f172a;            color: #f1f5f9;            line-height: 1.6;        }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        .container {            width: 95%;            margin: 0 auto;            padding: 20px;        }
 
         header {
             text-align: center;
@@ -550,10 +542,7 @@ body.darkmode::-webkit-scrollbar-thumb{
             margin-bottom: 10px;
         }
 
-        .logo i {
-            color: #3b82f6;
-            font-size: 2.5rem;
-        }
+        .logo i {            color: #3b82f6;            font-size: 2.5rem;        }
 
         .logo h1 {
             font-size: 2.2rem;
@@ -563,10 +552,7 @@ body.darkmode::-webkit-scrollbar-thumb{
             color: transparent;
         }
 
-        .tagline {
-            color: #94a3b8;
-            font-size: 1.1rem;
-        }
+        .tagline {            color: #94a3b8;            font-size: 1.1rem;        }
 
         .main-content {
             display: flex;
@@ -575,14 +561,10 @@ body.darkmode::-webkit-scrollbar-thumb{
         }
 
         @media (min-width: 992px) {
-            .main-content {
-                flex-direction: row;
-            }
+            .main-content {                flex-direction: row;            }
         }
 
-        .video-section {
-            flex: 3;
-        }
+        .video-section {            flex: 3;        }
 
         .video-container {
             position: relative;
@@ -632,14 +614,9 @@ body.darkmode::-webkit-scrollbar-thumb{
             gap: 5px;
         }
 
-        .video-description {  
-            color: #cbd5e1; 
-            line-height: 1.7;
-        }
+        .video-description {              color: #cbd5e1;             line-height: 1.7;        }
 
-        .playlist-section {
-            flex: 1;
-        }
+        .playlist-section {            flex: 1;        }
 
         .playlist-header {
             display: flex; 
@@ -648,10 +625,7 @@ body.darkmode::-webkit-scrollbar-thumb{
             margin-bottom: 20px;
         }
 
-        .playlist-header h2 {
-            font-size: 1.5rem;
-            color: #f8fafc;
-        }
+        .playlist-header h2 {            font-size: 1.5rem;            color: #f8fafc;        }
 
         .playlist-count {
             background-color: #3b82f6;
@@ -678,21 +652,13 @@ body.darkmode::-webkit-scrollbar-thumb{
             transition: background-color 0.2s;
         }
 
-        .playlist-item:hover {
-            background-color: #2d3748;
-        }
+        .playlist-item:hover {            background-color: #2d3748;        }
 
-        .playlist-item.active {
-            background-color: #3b82f6;
-        }
+        .playlist-item.active {            background-color: #3b82f6;        }
 
-        .playlist-item.active .playlist-item-title {
-            color: white;
-        }
+        .playlist-item.active .playlist-item-title {            color: white;        }
 
-        .playlist-item.active .playlist-item-duration {
-            color: #e2e8f0;
-        }
+        .playlist-item.active .playlist-item-duration {            color: #e2e8f0;        }
 
         .playlist-item-thumb {
             width: 80px;
@@ -703,36 +669,17 @@ body.darkmode::-webkit-scrollbar-thumb{
             flex-shrink: 0;
         }
 
-        .playlist-item-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .playlist-item-thumb img {            width: 100%;            height: 100%;            object-fit: cover;        }
 
-        .playlist-item-info {
-            flex: 1;
-        }
+        .playlist-item-info {            flex: 1;        }
 
-        .playlist-item-title {
-            font-size: 1rem;
-            margin-bottom: 5px;
-            color: #f1f5f9;
-        }
+        .playlist-item-title {            font-size: 1rem;            margin-bottom: 5px;            color: #f1f5f9;        }
 
-        .playlist-item-duration {
-            font-size: 0.85rem;
-            color: #94a3b8;
-        }
+        .playlist-item-duration {            font-size: 0.85rem;            color: #94a3b8;        }
 
-        .playlist-item i {
-            color: #3b82f6;
-            align-self: center;
-            margin-left: 10px;
-        }
+        .playlist-item i {            color: #3b82f6;            align-self: center;            margin-left: 10px;        }
 
-        .playlist-item.active i {
-            color: white;
-        }
+        .playlist-item.active i {            color: white;        }
 
         footer {
             text text-align: center;
@@ -743,51 +690,28 @@ body.darkmode::-webkit-scrollbar-thumb{
             font-size: 0.9rem;
         }
 
-        .playlist-container::-webkit-scrollbar {
-            width: 8px;
-        }
+        .playlist-container::-webkit-scrollbar {            width: 8px;        }
 
-        .playlist-container::-webkit-scrollbar-track {
-            background: #1e293b;
-        }
+        .playlist-container::-webkit-scrollbar-track {            background: #1e293b;        }
 
-        .playlist-container::-webkit-scrollbar-thumb {
-            background: #3b82f6;
-            border-radius: 4px;
-        }
+        .playlist-container::-webkit-scrollbar-thumb {            background: #3b82f6;            border-radius: 4px;        }
 
         @media (max-width: 768px) {
-            .video-title {
-                font-size: 1.5rem;
-            }
+            .video-title {                font-size: 1.5rem;            }
             
-            .video-meta {
-                flex-direction: column;
-                gap: 8px;
-            }
+            .video-meta {                flex-direction: column;                gap: 8px;            }
             
-            .playlist-item {
-                padding: 12px;
-            }
+            .playlist-item {                padding: 12px;            }
             
-            .playlist-item-thumb {
-                width: 70px;
-                height: 45px;
-            }
+            .playlist-item-thumb {                width: 70px;                height: 45px;            }
         }
 
         @media (max-width: 576px) {
-            .container {
-                padding: 15px;
-            }
+            .container {                padding: 15px;            }
             
-            .logo h1 {
-                font-size: 1.8rem;
-            }
+            .logo h1 {                font-size: 1.8rem;            }
             
-            .video-info {
-                padding: 20px;
-            }
+            .video-info {                padding: 20px;            }
         }
 
 
