@@ -65,6 +65,7 @@ fplayeri = fs_Playerjs({ OSD:true, id:"main-video", customtext:{age:""}, config:
   colortexts:"fff",
   fontweight:"bold"
 }, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
+fplayeri.Toast("info",video.filetl,video.title);
 onstart_fplay(fplayeri);
             
             videoTitle.textContent = video.title;
@@ -143,6 +144,7 @@ function loadPlaylist(playlistData) {
     checjfdk=false;  if(j==checjfdksd){   checjfdk=true;  }
  playlistData[j]={
                 id:j+1,
+                filetl: run_file().file_title,
                 title: run_file().list[j].title,
                 file: run_file().list[j].file,
                 description: run_file().file_desc,
