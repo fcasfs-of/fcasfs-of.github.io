@@ -1,5 +1,37 @@
 var fplayeri;
 
+function onstart_fplay(fplayeri{ 
+fplayeri.OnEvents("exitfullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); fplayeri.OnEvents("fullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+
+    fplayeri.OnEvents("unmute",function(){      fs_OSD({ duration:3e3, text: 'Active Sound', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+    fplayeri.OnEvents("mute",function(){     fs_OSD({ duration:3e3, text: 'Muted', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+
+fplayeri.OnEvents("pause",function(){     fs_OSD({ duration:3e3, text: 'Paused', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
+fplayeri.OnEvents("stop",function(){     fs_OSD({ duration:3e3, text: 'Stopped', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
+fplayeri.OnEvents("play",function(){     fs_OSD({ duration:3e3, text: 'Reproducing', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '180'    });      });
+
+
+fplayeri.OnEvents("init",function(){
+   
+fplayeri.OnEvents("end",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Finishing', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
+ 
+
+fplayeri.OnEvents("volume",function(){     fs_OSD({ duration:3e3, position:"absolute", text: 'Volume: '+Math.floor(fplayeri.api("volume")*100)+"%", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+  
+fplayeri.OnEvents("finish",function(){       fs_OSD({ duration:3e3, position:"absolute", text: 'Finished', pos: "top-center", showAction: false,  actionText: "", width: '180px'    });      });
+
+fplayeri.OnEvents("seek",function(){      fs_OSD({ duration:3e3, position:"absolute", text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: "top-center", showAction: false,  actionText: "", width: '180px'   });      });
+
+fplayeri.OnEvents("userseek",function(){      fs_OSD({ duration:3e3, position:"absolute", text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: "top-center", showAction: false,  actionText: "", width: '180px'   });      });
+
+fplayeri.OnEvents("speed",function(){       fs_OSD({ duration:3e3, text: 'Speed: '+fplayeri.api("speed"), position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'     });       });
+
+});
+
+}
+
+
+
 
 function onstart_file(run_file){     
 var playlistData = [];
