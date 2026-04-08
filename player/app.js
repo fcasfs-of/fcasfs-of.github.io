@@ -1,6 +1,6 @@
 var fplayeri;
 
-function onstart_fplay(fplayeri{ 
+function onstart_fplay(fplayeri){ 
 fplayeri.OnEvents("exitfullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); fplayeri.OnEvents("fullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
 
     fplayeri.OnEvents("unmute",function(){      fs_OSD({ duration:3e3, text: 'Active Sound', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
@@ -57,7 +57,15 @@ function changeVideo(playlistData,videoId) {
             const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
-            mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
+            //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
+
+fplayeri = fs_Playerjs({ OSD:true, id:"main-video", customtext:{age:""}, config:{
+  osd:{    theme:"light"  },
+  coloricons:"FFD700",
+  colortexts:"fff",
+  fontweight:"bold"
+}, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
+onstart_fplay(fplayeri);
             
             videoTitle.textContent = video.title;
             videoDescription.textContent = video.description;
@@ -136,6 +144,7 @@ function loadPlaylist(playlistData) {
  playlistData[j]={
                 id:j+1,
                 title: run_file().list[j].title,
+                file: run_file().list[j].file,
                 description: run_file().file_desc,
                 videoId: j+1,
                 duration: "",
