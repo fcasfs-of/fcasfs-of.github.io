@@ -87,10 +87,10 @@ function loadPlaylist(playlistData) {
    for(var j=0; j<run_file().list.length; j++){
     checjfdk=false;  if(j==0){   checjfdk=true;  }
  playlistData[j]={
-                id:j,
+                id:j+1,
                 title: run_file().list[j].title,
                 description: run_file().file_desc,
-                videoId: ""+(j+1)+"",
+                videoId: j+1,
                 duration: "",
                 views: "",
                 date: "",
