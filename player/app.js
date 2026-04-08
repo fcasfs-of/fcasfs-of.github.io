@@ -83,7 +83,7 @@ function changeVideo(videoId) {
   var checjfdk=false;
    for(var j=0; j<run_file().list.length; j++){
     checjfdk=false;  if(j==0){   checjfdk=true;  }
- playlistData.push({
+ playlistData[j]={
                 title: run_file().list[j].title,
                 description: "",
                 videoId: ""+(j+1)+"",
@@ -93,7 +93,7 @@ function changeVideo(videoId) {
                 category: "",
                 thumb: run_file().list[j].poster,
                 active: checjfdk
-            });
+            };
    }
 
             loadPlaylist();
