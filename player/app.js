@@ -1,18 +1,6 @@
 
 var playlistData = [];
 
-function onstart_file(run_file){     
-playlistData = [];
-            
-  var acssr = document.getElementById('cutompll');   
-        const mainVideo = document.getElementById('main-video');
-        const videoTitle = document.getElementById('video-title');
-        const videoDescription = document.getElementById('video-description');
-        const playlistContainer = document.getElementById('playlist');
-        const playlistTotal = document.getElementById('playlisttotal');
-        const pfielidtile = document.getElementById('titlemfpf');
-
-
 function loadPlaylist() {
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
@@ -66,6 +54,18 @@ function changeVideo(videoId) {
 }
 
 
+function onstart_file(run_file){     
+playlistData = [];
+            
+  var acssr = document.getElementById('cutompll');   
+        const mainVideo = document.getElementById('main-video');
+        const videoTitle = document.getElementById('video-title');
+        const videoDescription = document.getElementById('video-description');
+        const playlistContainer = document.getElementById('playlist');
+        const playlistTotal = document.getElementById('playlisttotal');
+        const pfielidtile = document.getElementById('titlemfpf');
+
+
   if(typeof run_file=='function'){  
     var sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
     if(run_file().pg_dark==true){  
@@ -74,21 +74,20 @@ function changeVideo(videoId) {
     acssr.innerHTML=sryrkk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
     videoDescription.innerHTML=run_file().file_desc;  
-    pfielidtile.innerHTML='Player: '+run_file().file_title+' - '+document.title;;  
+    pfielidtile.innerHTML='Player: '+run_file().file_title+'';  
     var linkfroplauemd="https://fcasfs-of.cloud-fs.net/player/?fileID="+getfval_tyget+"";   
     var linkfrarromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true";  
     var linkfromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true&fileSelect="+getfvald_tygetsle+"&pos="+getfvald_tygetslpose; 
     if(getfvaddl_tyget=="true"){   linkfromd=run_file().cover;  
     //ammpdr.innerHTML="";  
  }  
-
     
   var checjfdk=false;
    for(var j=0; j<run_file().list.length; j++){
     checjfdk=false;  if(j==0){   checjfdk=true;  }
  playlistData.push({
                 title: run_file().list[j].title,
-                description: run_file().file_desc,
+                description: "",
                 videoId: ""+(j+1)+"",
                 duration: "",
                 views: "",
