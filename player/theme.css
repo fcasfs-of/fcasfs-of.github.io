@@ -562,7 +562,7 @@ body.darkmode::-webkit-scrollbar-thumb{
             gap: 30px;
         }
 
-        @media (min-width: 992px) {
+        @media (min-width: 800px) {
             .main-content {                flex-direction: row;            }
         }
 
