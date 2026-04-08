@@ -38,6 +38,30 @@ function loadPlaylist() {
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
 
 }
+            
+function changeVideo(videoId) {
+            const video = playlistData.find(v => v.id === videoId);
+            if (!video) return;
+            
+            mainVideo.src = `${video.videoId}`;
+            
+            videoTitle.textContent = video.title;
+            videoDescription.textContent = video.description;
+            
+            playlistData.forEach(v => v.active = v.id === videoId);
+            
+            document.querySelectorAll('.playlist-item').forEach(item => {
+                if (parseInt(item.dataset.id) === videoId) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            if (window.innerWidth < 992) {
+                document.querySelector('.video-section').scrollIntoView({ behavior: 'smooth' });
+            }
+}
 
 
   if(typeof run_file=='function'){  
@@ -70,7 +94,16 @@ function loadPlaylist() {
                 active: checjfdk
             });
    }
-    
+
+    document.addEventListener('DOMContentLoaded', () => {
+            loadPlaylist();
+            
+            const currentVideo = playlistData.find(v => v.active);
+            if (currentVideo) {
+                document.querySelector('.video-meta').innerHTML = ``;
+            }
+     });      
+              
     //ampmpl.innerHTML='<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="'+linkfromd+'" style="border: 1px solid black"></iframe>';  
     //amptar.innerHTML="<a href='"+linkfrarromd+"'>"+run_file().file_title+"</a>"; 
     }  
@@ -86,41 +119,6 @@ function loadPlaylist() {
       //ammpdr.innerHTML=ammpdr.innerHTML+""+listaFiles(run_file().list, linkfrarromd);  
       //ampmpl.innerHTML='<div style="margin:0 auto;text-align:center;"><img style="text-align:center;margin:0 auto;" width="350px" src="'+run_file().cover+'"/></div>';  
     } 
-
-function changeVideo(videoId) {
-            const video = playlistData.find(v => v.id === videoId);
-            if (!video) return;
-            
-            mainVideo.src = `${video.videoId}`;
-            
-            videoTitle.textContent = video.title;
-            videoDescription.textContent = video.description;
-            
-            playlistData.forEach(v => v.active = v.id === videoId);
-            
-            document.querySelectorAll('.playlist-item').forEach(item => {
-                if (parseInt(item.dataset.id) === videoId) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
-            });
-            
-            if (window.innerWidth < 992) {
-                document.querySelector('.video-section').scrollIntoView({ behavior: 'smooth' });
-            }
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-            loadPlaylist();
-            
-            const currentVideo = playlistData.find(v => v.active);
-            if (currentVideo) {
-                document.querySelector('.video-meta').innerHTML = ``;
-            }
-});
-
 
             
 }  
