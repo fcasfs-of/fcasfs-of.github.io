@@ -1,6 +1,19 @@
 var fplayeri;
 
-function onstart_fplay(fplayeri){ 
+
+function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undefined"){     dfyyggdfgetLastdRofw=g;    }       if(id==undefined){     dfyyggdfgetLastdRofw=g;    }    return dfyyggdfgetLastdRofw;    }
+
+
+
+
+function onstart_fplay(fplayeri, time){ 
+
+fplayeri.api("unmute");
+
+
+fplayeri.api('seek',Number(stringno_valtext(time,"0")));
+
+
 fplayeri.OnEvents("exitfullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); fplayeri.OnEvents("fullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
 
     fplayeri.OnEvents("unmute",function(){      fs_OSD({ duration:3e3, text: 'Active Sound', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
@@ -66,7 +79,7 @@ fplayeri = fs_Playerjs({ OSD:true, id:"main-video", customtext:{age:""}, config:
   fontweight:"bold"
 }, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
 fplayeri.Toast("info",video.filetl,video.title);
-onstart_fplay(fplayeri);
+onstart_fplay(fplayeri,getfvald_tygetslpose);
             
             videoTitle.innerHTML = video.title;
             videoDescription.innerHTML = video.description;
