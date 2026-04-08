@@ -133,7 +133,7 @@ var link = document.createElement('link');
  var scrlipftfd2 = document.createElement("link");
     scrlipftfd2.setAttribute("rel", "stylesheet");
     scrlipftfd2.setAttribute("href", "theme.css");
-document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
+//document.getElementsByTagName("head")[0].appendChild(scrlipftfd2);
 
 
 
