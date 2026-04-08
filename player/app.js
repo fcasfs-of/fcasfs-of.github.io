@@ -85,7 +85,7 @@ function changeVideo(videoId) {
     checjfdk=false;  if(j==0){   checjfdk=true;  }
  playlistData[j]={
                 title: run_file().list[j].title,
-                description: "",
+                description: run_file().file_desc,
                 videoId: ""+(j+1)+"",
                 duration: "",
                 views: "",
