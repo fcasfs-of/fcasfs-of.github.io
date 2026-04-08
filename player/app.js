@@ -8,12 +8,6 @@ function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undef
 
 function onstart_fplay(fplayeri, time){ 
 
-fplayeri.api("unmute");
-
-
-fplayeri.api('seek',Number(stringno_valtext(time,"0")));
-
-
 fplayeri.OnEvents("exitfullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); fplayeri.OnEvents("fullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
 
     fplayeri.OnEvents("unmute",function(){      fs_OSD({ duration:3e3, text: 'Active Sound', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
@@ -25,7 +19,12 @@ fplayeri.OnEvents("play",function(){     fs_OSD({ duration:3e3, text: 'Reproduci
 
 
 fplayeri.OnEvents("init",function(){
-   
+
+fplayeri.api("unmute");
+
+fplayeri.api('seek',Number(stringno_valtext(time,"0")));
+
+
 fplayeri.OnEvents("end",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Finishing', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
  
 
@@ -155,7 +154,7 @@ function loadPlaylist(playlistData) {
              
    for(var j=0; j<run_file().list.length; j++){
     checjfdk=false;  if(j==checjfdksd){   checjfdk=true;  }
- playlistData[j]={
+ playlistData.push({
                 id:j+1,
                 filetl: run_file().file_title,
                 title: run_file().list[j].title,
@@ -168,7 +167,7 @@ function loadPlaylist(playlistData) {
                 category: "",
                 thumb: run_file().list[j].poster,
                 active: checjfdk
-            };
+            });
    }
 
             loadPlaylist(playlistData);
