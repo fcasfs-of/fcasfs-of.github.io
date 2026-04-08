@@ -42,7 +42,7 @@ function loadPlaylist(playlistData) {
             playlistData.forEach(video => {
                 const playlistItem = document.createElement('div');
                 playlistItem.className = `playlist-item ${video.active ? 'active' : ''}`;
-                playlistItem.dataset.id = video.id;
+                playlistItem.dataset.id = ""+video.id;
                 
                 playlistItem.innerHTML = `
                     <div class="playlist-item-thumb">
@@ -54,10 +54,10 @@ function loadPlaylist(playlistData) {
                     </div>
                 `;
                 
-                playlistItem.addEventListener('click', () => changeVideo(playlistData,video.id));
+                playlistItem.addEventListener('click', () => changeVideo(playlistData,""+video.id));
                 playlistContainer.appendChild(playlistItem);
 
-                if(video.active==true){  changeVideo(playlistData,video.id);  }
+                if(video.active==true){  changeVideo(playlistData,""+video.id);  }
             });
             
             var playlistItemsd="";  if(playlistData.length>=2){  playlistItemsd="s";  }
