@@ -3,7 +3,13 @@ var fplayeri;
 
 function onstart_file(run_file){     
 var playlistData = [];
-            
+
+ var scriptddfd = document.createElement("script");
+    scriptddfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+document.getElementsByTagName("body")[0].appendChild(scriptddfd);
+
+
+           
   var acssr = document.getElementById('cutompll');   
           var acssr_cover = document.querySelector('.logo img');
         const mainVideo = document.getElementById('main-video');
