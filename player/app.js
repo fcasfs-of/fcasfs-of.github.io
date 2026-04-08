@@ -15,7 +15,7 @@ function changeVideo(playlistData,videoId) {
             const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
-            mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&select=${video.videoId}`;
+            mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
             
             videoTitle.textContent = video.title;
             videoDescription.textContent = video.description;
