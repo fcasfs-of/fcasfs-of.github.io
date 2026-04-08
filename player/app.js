@@ -68,8 +68,8 @@ fplayeri = fs_Playerjs({ OSD:true, id:"main-video", customtext:{age:""}, config:
 fplayeri.Toast("info",video.filetl,video.title);
 onstart_fplay(fplayeri);
             
-            videoTitle.textContent = video.title;
-            videoDescription.textContent = video.description;
+            videoTitle.innerHTML = video.title;
+            videoDescription.innerHTML = video.description;
             
             playlistData.forEach(v => v.active = v.id === videoId);
             
