@@ -1,6 +1,8 @@
 
-function onstart_file(run_file){    
 var playlistData = [];
+
+function onstart_file(run_file){     
+playlistData = [];
             
   var acssr = document.getElementById('cutompll');   
         const mainVideo = document.getElementById('main-video');
@@ -72,11 +74,13 @@ function changeVideo(videoId) {
     acssr.innerHTML=sryrkk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
     videoDescription.innerHTML=run_file().file_desc;  
-    videoTitle.innerHTML=document.title;  
+    videoTitle.innerHTML=''+run_file().file_title;  
     var linkfroplauemd="https://fcasfs-of.cloud-fs.net/player/?fileID="+getfval_tyget+"";   
     var linkfrarromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true";  
     var linkfromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true&fileSelect="+getfvald_tygetsle+"&pos="+getfvald_tygetslpose; 
-    if(getfvaddl_tyget=="true"){   linkfromd=run_file().cover;  ammpdr.innerHTML="";    }  
+    if(getfvaddl_tyget=="true"){   linkfromd=run_file().cover;  
+    //ammpdr.innerHTML="";  
+ }  
 
     
   var checjfdk=false;
@@ -95,14 +99,14 @@ function changeVideo(videoId) {
             });
    }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    //document.addEventListener('DOMContentLoaded', () => {
             loadPlaylist();
             
             const currentVideo = playlistData.find(v => v.active);
             if (currentVideo) {
                 document.querySelector('.video-meta').innerHTML = ``;
             }
-     });      
+    // });      
               
     //ampmpl.innerHTML='<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="'+linkfromd+'" style="border: 1px solid black"></iframe>';  
     //amptar.innerHTML="<a href='"+linkfrarromd+"'>"+run_file().file_title+"</a>"; 
