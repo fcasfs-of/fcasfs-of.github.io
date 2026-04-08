@@ -10,35 +10,8 @@ var playlistData = [];
         const playlistTotal = document.getElementById('playlisttotal');
         const pfielidtile = document.getElementById('titlemfpf');
 
-function loadPlaylist() {
-            playlistContainer.innerHTML = '';
-            playlistTotal.innerHTML = '';
 
-            playlistData.forEach(video => {
-                const playlistItem = document.createElement('div');
-                playlistItem.className = `playlist-item ${video.active ? 'active' : ''}`;
-                playlistItem.dataset.id = video.id;
-                
-                playlistItem.innerHTML = `
-                    <div class="playlist-item-thumb">
-                        <img src="${video.thumb}" alt="${video.title}">
-                    </div>
-                    <div class="playlist-item-info">
-                        <h3 class="playlist-item-title">${video.title}</h3>
-                        <p class="playlist-item-duration"></p>
-                    </div>
-                `;
-                
-                playlistItem.addEventListener('click', () => changeVideo(video.id));
-                playlistContainer.appendChild(playlistItem);
-            });
-            
-            var playlistItemsd="";  if(playlistData.length>=2){  playlistItemsd="s";  }
-             playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
-
-}
-            
-function changeVideo(videoId) {
+function changeVideo(playlistData,videoId) {
             const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
@@ -62,6 +35,36 @@ function changeVideo(videoId) {
             }
 }
 
+function loadPlaylist(playlistData) {
+            playlistContainer.innerHTML = '';
+            playlistTotal.innerHTML = '';
+
+            playlistData.forEach(video => {
+                const playlistItem = document.createElement('div');
+                playlistItem.className = `playlist-item ${video.active ? 'active' : ''}`;
+                playlistItem.dataset.id = video.id;
+                
+                playlistItem.innerHTML = `
+                    <div class="playlist-item-thumb">
+                        <img src="${video.thumb}" alt="${video.title}">
+                    </div>
+                    <div class="playlist-item-info">
+                        <h3 class="playlist-item-title">${video.title}</h3>
+                        <p class="playlist-item-duration"></p>
+                    </div>
+                `;
+                
+                playlistItem.addEventListener('click', () => changeVideo(playlistData,video.id));
+                playlistContainer.appendChild(playlistItem);
+
+                if(video.active==true){  changeVideo(playlistData,video.id);  }
+            });
+            
+            var playlistItemsd="";  if(playlistData.length>=2){  playlistItemsd="s";  }
+             playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
+
+}
+            
 
             
   if(typeof run_file=='function'){  
@@ -96,7 +99,7 @@ function changeVideo(videoId) {
             };
    }
 
-            loadPlaylist();
+            loadPlaylist(playlistData);
             const currentVideo = playlistData.find(v => v.active);
             if (currentVideo) {
                 document.querySelector('.video-meta').innerHTML = ``;
