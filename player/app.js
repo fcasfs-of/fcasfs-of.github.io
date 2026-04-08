@@ -83,9 +83,9 @@ function loadPlaylist(playlistData) {
     //ammpdr.innerHTML="";  
  }  
     
-  var checjfdk=false;
+  var checjfdk=false;   var checjfdksd=parseInt(getfvald_tygetsle)-1;
    for(var j=0; j<run_file().list.length; j++){
-    checjfdk=false;  if(j==(parseInt(getfvald_tygetslpose)-1)){   checjfdk=true;  }
+    checjfdk=false;  if(j==checjfdksd){   checjfdk=true;  }
  playlistData[j]={
                 id:j+1,
                 title: run_file().list[j].title,
