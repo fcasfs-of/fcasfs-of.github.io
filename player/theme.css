@@ -544,6 +544,8 @@ body.darkmode::-webkit-scrollbar-thumb{
 
         .logo i {            color: #3b82f6;            font-size: 2.5rem;        }
 
+.logo img {  object-fit: cover;   }
+
         .logo h1 {
             font-size: 2.2rem;
             background: linear-gradient(90deg, #3b82f6, #8b5cf6);
@@ -583,7 +585,7 @@ body.darkmode::-webkit-scrollbar-thumb{
             left: 0;
             width: 100%;
             height: 100%;
-            border: none;
+            border: none;  overflow: hidden;
         }
 
         .video-info {   overflow:auto; 
@@ -654,7 +656,7 @@ body.darkmode::-webkit-scrollbar-thumb{
 
         .playlist-item:hover {            background-color: #2d3748;        }
 
-        .playlist-item.active {            background-color: #3b82f6;        }
+        .playlist-item.active {            background-color: #3b82f6;     pointer-events: none;  opacity:0.7;  }
 
         .playlist-item.active .playlist-item-title {            color: white;        }
 
