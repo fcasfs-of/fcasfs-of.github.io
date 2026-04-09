@@ -67,11 +67,15 @@ function changeVideo(playlistData,videoId) {
             //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
 var playernoprib=1;
-if(run_file().fl_priv==true){  playernoprib=2;  }
+if(run_file().fl_priv==true){  playernoprib=0;  }
 
-fplayeri = fs_Playerjs({ OSD:true, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:playernoprib,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
+mainVideo.innerHTML='';
+
+if(playernoprib==1){
+fplayeri = fs_Playerjs({ OSD:true, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
 fplayeri.Toast("info",video.filetl,video.title);
-onstart_fplay(fplayeri,getfvald_tygetslpose);
+onstart_fplay(fplayeri,getfvald_tygetslpose);  
+}
             
             videoTitle.innerHTML = video.title;
             videoDescription.innerHTML = video.description;
