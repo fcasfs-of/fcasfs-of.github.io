@@ -224,6 +224,7 @@ const idfadd_itens_fr = document.getElementById(id);
  var dad_icond_itens_fra="";    var dalickstens_fra=""; 
     
 if(op.config){
+if (op.config.class_icon && op.config.class_icon!=""){   dadd_itens_fra_co["type_icon"]=op.config.class_icon;   }
    if (op.config.class && op.config.class!=""){   dadd_itens_fra_co["class"]=op.config.class;   }
    if (op.config.class_b && op.config.class_b!=""){   dadd_itens_fra_co["class_b"]=op.config.class_b;   }
 }
