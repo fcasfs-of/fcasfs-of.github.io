@@ -245,7 +245,7 @@ if(op.itens){
          if (op.itens[is].links[i].type && op.itens[is].links[i].type!="" && op.itens[is].links[i].text && op.itens[is].links[i].text!=""){  
          var hredadd_itens_fradd="";  var hredadd_itens_ocul="";  var hredaiconns_octyoeul="";   var hredaiconns_ocul="";
 
-if(dadd_itens_fra_co["type_icon"] && dadd_itens_fra_co["type_icon"]!=""){  hredaiconns_octyoeul=""+dadd_itens_fra_co["type_icon"];  }
+if(dadd_itens_fra_co["type_icon"] && dadd_itens_fra_co["type_icon"]!=""){  hredaiconns_octyoeul=" "+dadd_itens_fra_co["type_icon"];  }
 
 if(op.itens[is].links[i].icon && op.itens[is].links[i].icon!=""){   hredaiconns_ocul="<span class='icon "+op.itens[is].links[i].icon+"'></span>";  } 
          if(op.itens[is].links[i].link && op.itens[is].links[i].link!=""){         hredadd_itens_fradd=" href='"+op.itens[is].links[i].link+"'";         }
