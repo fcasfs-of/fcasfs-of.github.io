@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FCAS_FS - Download Projects</title>
+  
+<script src="core_a.js"></script>
+
+<script src="https://lightbox.fcasfs-of.cloud-fs.net/app/api.js"></script>
+  
+  <link rel="stylesheet" href="core_b.css"/>
+
+  <link rel="icon" href="favicon.png" type="image/png"/>
+
+<style>
+
+</style>
+  
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <div class="logo-icon">
+         <img src="https://fcasfs-of.cloud-fs.net/Icon/info.png"/>
+        </div>
+        <h1>FCAS_FS <span> Download Projects</span></h1>
+      </div>
+      
+      <nav>
+        <ul>
+          <li><a href="en">Return Home Page</a></li>
+          <li><a href="downloads"><img style="top: 0px;  position: relative; " src="Icon/br.png"/></a></li>
+          <li>
+            <button id="toggle-theme">
+              <span>Tema</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <main>
+    <div class="container">
+      <div class="hero">
+        <h2>My Projects</h2>
+        <p>Download my complete projects.</p>
+      </div>
+      
+      <div class="cards-container" id="listr"></div>
+
+    </div>
+  </main>
+  
+  
+<div id="modalffs" class="z-index:1000;"></div>
+  
+
+  <footer>
+    <div class="container footer-content">
+      <div class="social-links" style="display:none;"></div>
+      <p class="copyright">FCAS_FS. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+<script src="core_b.js"></script>
+
+<script>  var text_thnv="Close";
+
+add_itens_fr("listr", {
+config:loaded_listff("skin"),
+itens:loaded_listff("download","en")
+}, "", []);
+
+
+
+</script>
+
+</body>
+</html>
