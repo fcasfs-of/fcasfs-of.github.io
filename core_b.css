@@ -277,6 +277,30 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
       justify-content: center;
     }
 
+
+.page-link.android::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.page-link.windows::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-image: url('');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
     button.page-link { border:0px;  cursor:pointer;  }
 
     .page-link:hover {
