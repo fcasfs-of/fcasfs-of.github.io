@@ -278,7 +278,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     }
 
 
-.page-link.android::before {
+.page-link .icon.android::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -289,7 +289,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     background-size: contain;
     background-repeat: no-repeat;
 }
-.page-link.windows::before {
+.page-link .icon.windows::before {
     content: "";
     display: inline-block;
     width: 20px;
@@ -311,7 +311,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
       transform: translateY(-3px);
     }
 
-    .page-link img {
+    .page-link img, .page-link .icon {
       width: 24px;
       height: 24px;  top:-1px;   position:relative; 
     }
