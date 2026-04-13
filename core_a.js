@@ -54,6 +54,11 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 }  }
+} else if (tp=="download" && lag && lag!=""){
+if(set_itend_cd[tp]){
+if(set_itend_cd[tp][lag]){
+ddloaded_listff=set_itend_cd[tp][lag]; 
+}  }
 }
 
 }
