@@ -4,10 +4,10 @@ var set_itend_cd={
 
 download:{
 en:[
-{ icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video ',desc:"Our innovative player recognizes your PDF files, videos, audio, and images. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'}  ]}
+{ icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video ',desc:"Our innovative player recognizes your PDF files, videos, audio, and images. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"https://player.fcasfs-of.cloud-fs.net/downloads/TechPlayer-English.zip",text:"Windows", icon:'windows'}  ]}
 ],
 pt:[
-{ icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem e Video ',desc:"Nosso player inovador reconhece seus arquivos PDF, vídeos, áudios e imagens. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'}  ]}
+{ icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem e Video ',desc:"Nosso player inovador reconhece seus arquivos PDF, vídeos, áudios e imagens. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"https://player.fcasfs-of.cloud-fs.net/downloads/TechPlayer-Portugues.zip",text:"Windows", icon:'windows'}  ]}
 ]
 },
 project:{
