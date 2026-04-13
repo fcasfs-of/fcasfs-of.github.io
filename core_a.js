@@ -2,6 +2,14 @@
 
 var set_itend_cd={
 
+download:{
+en:[
+{ icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video ',desc:"Our innovative player recognizes your PDF files, videos, audio, and images. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android"}  ]}
+],
+pt:[
+{ icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem e Video ',desc:"Nosso player inovador reconhece seus arquivos PDF, vídeos, áudios e imagens. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android"}  ]}
+]
+},
 project:{
 en:[
 { icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video  <span id="versionplayer"></span>',desc:"Our player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. <br/>With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease. ", links:[{type:"a",link:"https://fcasfs-of.cloud-fs.net/player",text:"Search Page"}, {type:"a",link:"https://player.fcasfs-of.cloud-fs.net/en",text:"Access Website"},{type:"a",link:"https://player.fcasfs-of.cloud-fs.net/support-en",text:"Visit the Support Page"},{type:"button",id:"prev2",text:"View Preview"} ]},
