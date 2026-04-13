@@ -43,7 +43,7 @@ var ddloaded_listff="";
 if(tp && tp!=""){
 
 if(tp=="skin"){
-ddloaded_listff={ class:"card", class_b:"page-link"};
+ddloaded_listff={ class:"card", class_b:"page-link", class_icon:"svg" };
 } else if (tp=="home" && lag && lag!=""){
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
