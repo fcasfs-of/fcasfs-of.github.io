@@ -244,7 +244,7 @@ if(op.itens){
          if (op.itens[is].links[i].type && op.itens[is].links[i].type!="" && op.itens[is].links[i].text && op.itens[is].links[i].text!=""){  
          var hredadd_itens_fradd="";  var hredadd_itens_ocul="";   var hredaiconns_ocul="";
 
-if(op.itens[is].links[i].icon && op.itens[is].links[i].icon!=""){   hredaiconns_ocul=""+op.itens[is].links[i].icon;  } 
+if(op.itens[is].links[i].icon && op.itens[is].links[i].icon!=""){   hredaiconns_ocul="<span class='icon "+op.itens[is].links[i].icon+"></span>";  } 
          if(op.itens[is].links[i].link && op.itens[is].links[i].link!=""){         hredadd_itens_fradd=" href='"+op.itens[is].links[i].link+"'";         }
          if(op.itens[is].links[i].id && op.itens[is].links[i].id!=""){         hredadd_itens_fradd=" id='"+op.itens[is].links[i].id+"'";         }
        
