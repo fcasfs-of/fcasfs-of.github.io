@@ -106,13 +106,12 @@ if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);
 }
 
 
-
 function share_btsD_all(){   
  share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","viber","vkontakte","whatsapp","separate","copy-url","email","print","separate","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
  if(Shareon){  Shareon.init();   }
 }
 
-
+function execr_runff(ff){   if (typeof ff === 'function') {  ff();  }   }
 
 
 var cokk_plu_esdnf="pt";
@@ -122,7 +121,7 @@ if(cokk_plu && cokk_plu==true){
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 	
   var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.setAttribute("onload", " document.body.onload=function(){ if(run_accessibility){ run_accessibility(); } };");
+    scripaddtfdmsfd.setAttribute("onload", "execr_runff(run_accessibility);");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
 document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
