@@ -51,7 +51,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
   var scripaddtfdmsfd = document.createElement("script");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
+document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
 
   var scriptfdmsfd = document.createElement("script");
@@ -129,10 +129,7 @@ if(cokk_plu && cokk_plu==true){
 
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
-
-
-if(CtxMenuManagerClass){   var ctxMenuManager = new CtxMenuManagerClass();   }     
-
+	
 	
    var dscr_menudkkied = document.createElement("script");
     dscr_menudkkied.setAttribute("type", "text/javascript");
