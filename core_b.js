@@ -111,7 +111,7 @@ function share_btsD_all(){
  if(Shareon){  Shareon.init();   }
 }
 
-function execr_runff(ff){    document.body.onload=function(){    if (typeof ff === 'function') {  ff();  }   };    }
+function execr_runff(ff){   if (typeof ff === 'function') {  ff();  }     }
 
 
 var cokk_plu_esdnf="pt";
@@ -121,7 +121,7 @@ if(cokk_plu && cokk_plu==true){
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 	
   var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.setAttribute("onload", "execr_runff(run_accessibility);");
+    scripaddtfdmsfd.onload=function(){  execr_runff(run_accessibility);  };
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
 document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
