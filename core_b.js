@@ -122,7 +122,7 @@ if(cokk_plu && cokk_plu==true){
 	
   var scripaddtfdmsfd = document.createElement("script");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
+document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
 
   var scriptfdmsfd = document.createElement("script");
     scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
@@ -347,11 +347,8 @@ body.oncontextmenu=function() { return false; };
 
 
 
-
-    // Tema claro/escuro
     const toggleThemeBtn = document.getElementById('toggle-theme');
     
-    // Verificar preferência do usuário
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     const currentTheme = localStorage.getItem('theme');
 	  var chech_darrk=false;     
@@ -378,16 +375,19 @@ body.oncontextmenu=function() { return false; };
       }
     });
     
-    // Executar função do seu script original
     if (typeof run_inruff === 'function') {
 
     }
 
 
-   document.body.onload=function(){   	  loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
+   document.body.onload=function(){   
+	if(cokk_plu_esdnf){    var micAccessTool = new MicAccessTool({      link: '',      contact: '',      buttonPosition: '',       forceLang: cokk_plu_esdnf     });     }
+	   
+	   loaded_maut();       showPage();   	  
+	   
+	if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
    };
 
-    // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
       document.body.style.opacity = '0';
       document.body.style.transition = 'opacity 0.5s';
