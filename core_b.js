@@ -125,7 +125,7 @@ if(cokk_plu && cokk_plu==true){
   var scripaddtfdmsfd = document.createElement("script");
     scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
+document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
 
   var scriptfdmsfd = document.createElement("script");
@@ -388,7 +388,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){      loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
+   document.body.onload=function(){    if(run_accessibility){   run_accessibility();   }     loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
    };
 
     // Adicionar efeito de carregamento suave
