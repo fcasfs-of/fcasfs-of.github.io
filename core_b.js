@@ -49,17 +49,6 @@ function showPage() {
 document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
-  var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
-    scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
-
-
-  var scriptfdmsfd = document.createElement("script");
-    scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
-document.getElementsByTagName("head")[0].appendChild(scriptfdmsfd);
-
-
 
   
 function share_btsD(att, listd, listdld, opti, id){
@@ -132,6 +121,18 @@ if(cokk_plu && cokk_plu==true){
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 	
+	
+  var scripaddtfdmsfd = document.createElement("script");
+    scripaddtfdmsfd.setAttribute("type", "text/javascript");
+    scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
+    scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
+document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
+
+
+  var scriptfdmsfd = document.createElement("script");
+    scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
+document.getElementsByTagName("head")[0].appendChild(scriptfdmsfd);
+
 	
    var dscr_menudkkied = document.createElement("script");
     dscr_menudkkied.setAttribute("type", "text/javascript");
