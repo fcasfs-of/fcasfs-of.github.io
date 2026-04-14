@@ -306,7 +306,6 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
  if (document.body.classList.contains('dark-mode')) {      document.documentElement.classList.add('cc--darkmode');     }
-
  
  CookieConsent.run({
     guiOptions: {
@@ -381,7 +380,7 @@ body.oncontextmenu=function() { return false; };
 
 
    document.body.onload=function(){   
-	if(cokk_plu_esdnf){    var micAccessTool = new MicAccessTool({      link: '',      contact: '',      buttonPosition: '',       forceLang: cokk_plu_esdnf     });     }
+	if(cokk_plu_esdnf && MicAccessTool){    var micAccessTool = new MicAccessTool({  link: '',  contact: '',   buttonPosition: '',  forceLang: cokk_plu_esdnf   });     }
 	   
 	   loaded_maut();       showPage();   	  
 	   
