@@ -51,11 +51,10 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
   var scripaddtfdmsfd = document.createElement("script");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
+document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
 
 
   var scriptfdmsfd = document.createElement("script");
-    scriptfdmsfd.setAttribute("onload", "var ctxMenuManager = new CtxMenuManagerClass();");
     scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
 document.getElementsByTagName("body")[0].appendChild(scriptfdmsfd);
 
@@ -386,7 +385,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){     loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
+   document.body.onload=function(){    if(CtxMenuManagerClass){   var ctxMenuManager = new CtxMenuManagerClass();   }       loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
    };
 
     // Adicionar efeito de carregamento suave
