@@ -121,7 +121,7 @@ if(cokk_plu && cokk_plu==true){
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 	
   var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.onload=function(){  execr_runff(run_accessibility);  };
+    scripaddtfdmsfd.addEventListener('load', run_accessibility);
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
 document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
