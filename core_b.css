@@ -311,9 +311,14 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
       transform: translateY(-3px);
     }
 
-    .page-link img, .page-link.svg .icon {
+    .page-link img {
       width: 24px;
       height: 24px;  top:-1px;   position:relative; 
+    }
+
+.page-link.svg .icon {
+      width: 20px;
+      height: 24px;  top:-2px;   position:relative; 
     }
 
 
