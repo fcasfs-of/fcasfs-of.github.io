@@ -50,6 +50,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
 
 
   var scripaddtfdmsfd = document.createElement("script");
+    scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
 document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
@@ -57,6 +58,7 @@ document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
   var scriptfdmsfd = document.createElement("script");
     scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
 document.getElementsByTagName("head")[0].appendChild(scriptfdmsfd);
+
 
 
   
