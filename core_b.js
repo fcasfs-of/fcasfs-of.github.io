@@ -121,12 +121,10 @@ if(cokk_plu && cokk_plu==true){
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 	
-	
   var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
+    //scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
 document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
-
 
   var scriptfdmsfd = document.createElement("script");
     scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
@@ -388,14 +386,16 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){    if(run_accessibility){   run_accessibility();   }     loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
+   document.body.onload=function(){     loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
    };
 
     // Adicionar efeito de carregamento suave
     window.addEventListener('load', function() {
       document.body.style.opacity = '0';
       document.body.style.transition = 'opacity 0.5s';
-      
+
+	 if(run_accessibility){   run_accessibility();   }    
+		
       setTimeout(function() {   
         document.body.style.opacity = '1';   
       }, 100);
