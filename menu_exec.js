@@ -267,3 +267,7 @@ function CtxCloseCurrentlyOpenedMenus(){
 }
 
 
+ var ctxMenuManager = new CtxMenuManagerClass(); 
+
+
+
