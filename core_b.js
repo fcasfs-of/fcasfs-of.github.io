@@ -56,7 +56,7 @@ document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
 
   var scriptfdmsfd = document.createElement("script");
     scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
-document.getElementsByTagName("body")[0].appendChild(scriptfdmsfd);
+document.getElementsByTagName("head")[0].appendChild(scriptfdmsfd);
 
 
   
@@ -130,6 +130,10 @@ if(cokk_plu && cokk_plu==true){
  var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 
+
+if(CtxMenuManagerClass){   var ctxMenuManager = new CtxMenuManagerClass();   }     
+
+	
    var dscr_menudkkied = document.createElement("script");
     dscr_menudkkied.setAttribute("type", "text/javascript");
     dscr_menudkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cmenu.js");
@@ -385,7 +389,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){    if(CtxMenuManagerClass){   var ctxMenuManager = new CtxMenuManagerClass();   }       loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
+   document.body.onload=function(){      loaded_maut();       showPage();   	  if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
    };
 
     // Adicionar efeito de carregamento suave
