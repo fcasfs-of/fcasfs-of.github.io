@@ -125,7 +125,7 @@ if(cokk_plu && cokk_plu==true){
 document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
 
   var scriptfdmsfd = document.createElement("script");
-    scriptfdmsfd.setAttribute('onload', "execr_runff(run_accessibility);");
+    scriptfdmsfd.setAttribute('onload', "run_accessibility();");
     scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
 document.getElementsByTagName("head")[0].appendChild(scriptfdmsfd);
 
