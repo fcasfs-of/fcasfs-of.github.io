@@ -111,6 +111,11 @@ function share_btsD_all(){
  if(Shareon){  Shareon.init();   }
 }
 
+function micAccessTool_run(cokk_plu_esdnf){ 
+	if(cokk_plu_esdnf && MicAccessTool){    var micAccessTool = new MicAccessTool({  link: '',  contact: '',   buttonPosition: '',  forceLang: cokk_plu_esdnf   });     }
+}
+
+
 function execr_runff(ff){   if (typeof ff === 'function') {  ff();  }     }
 
 
@@ -122,6 +127,7 @@ if(cokk_plu && cokk_plu==true){
 	
   var scripaddtfdmsfd = document.createElement("script");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
+	scripaddtfdmsfd.setAttribute("onload", "micAccessTool_run('"+cokk_plu_esdnf+"');");
 document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
 
   var scriptfdmsfd = document.createElement("script");
@@ -379,13 +385,7 @@ body.oncontextmenu=function() { return false; };
     }
 
 
-   document.body.onload=function(){   
-	if(cokk_plu_esdnf && MicAccessTool){    var micAccessTool = new MicAccessTool({  link: '',  contact: '',   buttonPosition: '',  forceLang: cokk_plu_esdnf   });     }
-	   
-	   loaded_maut();       showPage();   	  
-	   
-	if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }    
-   };
+   document.body.onload=function(){       loaded_maut();       showPage();   	  	if(MainContextMenu){   MainContextMenu.dark(chech_darrk);   }       };
 
     window.addEventListener('load', function() {
       document.body.style.opacity = '0';
