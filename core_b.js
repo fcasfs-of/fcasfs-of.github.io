@@ -123,10 +123,9 @@ if(cokk_plu && cokk_plu==true){
 	
 	
   var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.setAttribute("type", "text/javascript");
     scripaddtfdmsfd.setAttribute("onload", "run_accessibility();");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-document.getElementsByTagName("body")[0].appendChild(scripaddtfdmsfd);
+document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
 
 
   var scriptfdmsfd = document.createElement("script");
