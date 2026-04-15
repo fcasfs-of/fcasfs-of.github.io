@@ -134,7 +134,7 @@
     left: 8px;
     background-repeat: no-repeat;
     background-size: 20px 20px;
-    content: "";
+    content: "";    pointer-events:none;   
     vertical-align: bottom;
 }
    
