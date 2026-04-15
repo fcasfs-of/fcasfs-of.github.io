@@ -112,11 +112,11 @@ function renderCategories() {
 
           const titleDiv = document.createElement('div');
           titleDiv.className = 'title';
-          titleDiv.textContent = notif.title[currentLang];
+          titleDiv.innerHTML = notif.title[currentLang];
 
           const messageDiv = document.createElement('div');
           messageDiv.className = 'message';
-          messageDiv.textContent = notif.message[currentLang];
+          messageDiv.innerHTML = notif.message[currentLang];
 
           contentDiv.appendChild(titleDiv);
           contentDiv.appendChild(messageDiv);
