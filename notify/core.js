@@ -101,7 +101,10 @@ function renderCategories() {
       } else {
         filteredNotifs.forEach(notif => {
           const notifDiv = document.createElement('div');
-          notifDiv.className = 'notification';
+
+          var notfy_disdd="";
+          if(notif.disable==true){  notfy_disdd=" disabled";  }
+          notifDiv.className = 'notification'+notfy_disdd;
 
           const iconWrapper = document.createElement('div');
           iconWrapper.className = 'icon';
