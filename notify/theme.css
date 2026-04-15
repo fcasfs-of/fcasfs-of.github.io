@@ -159,6 +159,10 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
 
+
+.notification.disabled {   opacity: 0.6;    pointer-events: none;    background: #ccc;    }
+
+
   .icon {
     width: 2rem;
     height: 2rem;
