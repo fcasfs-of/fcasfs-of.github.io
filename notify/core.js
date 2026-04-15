@@ -50,8 +50,8 @@
   });
 
     
-    document.getElementById('dnotificationsTitle').textContent = translations[lang].notificationsTitle;
-    document.querySelector('h1 .notiis').textContent = translations[lang].notificationsTitle;
+    document.getElementById('dnotificationsTitle').innerHTML = translations[lang].notificationsTitle+"  <span id='totoaldeitrt'></span>";
+    document.querySelector('h1 .notiis').innerHTML = translations[lang].notificationsTitle;
     document.getElementById('search-input').setAttribute('placeholder', translations[lang].searchPlaceholder);
     renderCategories();
   }
@@ -63,9 +63,14 @@
   });
 
 
+function formatarValor(valor) {    return valor.toLocaleString('pt-BR');    }
+
+var count_liyr= 0;
+
 function renderCategories() {
     categoriesContainer.innerHTML = '';
-
+count_liyr= 0;
+  
     const categories = translations[currentLang].categories;
     const filteredNotifications = {};
 
@@ -85,7 +90,7 @@ function renderCategories() {
       categoryDiv.className = 'category';
       
       const categoryTitle = document.createElement('h2');
-      categoryTitle.textContent = cat.name;
+      categoryTitle.innerHTML = cat.name;
       categoryTitle.className = cat.id;
       categoryDiv.appendChild(categoryTitle);
 
@@ -101,7 +106,9 @@ function renderCategories() {
       } else {
         filteredNotifs.forEach(notif => {
           const notifDiv = document.createElement('div');
-
+          
+          count_liyr=count_liyr+1;
+          
           var notfy_disdd="";
           if(notif.disable==true){  notfy_disdd=" disabled";  }
           notifDiv.className = 'notification'+notfy_disdd;
@@ -133,6 +140,9 @@ function renderCategories() {
 
       categoryDiv.appendChild(notifContainer);
       categoriesContainer.appendChild(categoryDiv);
+
+        if(document.getElementById('totoaldeitrt')){  document.getElementById('totoaldeitrt').innerHTML="("+formatarValor(count_liyr)+")";  }
+
     });
   }
 
