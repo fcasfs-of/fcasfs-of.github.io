@@ -122,8 +122,9 @@ function execr_runff(ff){   if (typeof ff === 'function') {  ff();  }     }
 var cokk_plu_esdnf="pt";
 if(cokk_plu && cokk_plu==true){   
 
- var cokk_plu_enf="/en";  cokk_plu_esdnf="pt";
+ var cokk_plu_enf="/en";    var cokk_plu_enfdd="-en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
+ if (location.href.toUpperCase().indexOf(cokk_plu_enfdd.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 	
   var scripaddtfdmsfd = document.createElement("script");
     scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
