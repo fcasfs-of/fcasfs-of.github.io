@@ -1,11 +1,11 @@
-.sidebar .status-container, .status-container {   user-select:none; 
+.sidebar .sidebar-inner .sidebar-nav .status-container, .status-container {   user-select:none; 
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       width: 100%;
     }
 
-.sidebar .status-container .status-card, .status-container .status-card {  
+.sidebar .sidebar-inner .sidebar-nav .status-container .status-card, .status-container .status-card {  
       background-color: #fff;
       border-radius: 12px;
       padding: 20px;
@@ -16,34 +16,34 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-.sidebar .status-container .status-card:hover, .status-container .status-card:hover {
+.sidebar .sidebar-inner .sidebar-nav .status-container .status-card:hover, .status-container .status-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
-.sidebar .status-container .icon, .status-container .icon {
+.sidebar .sidebar-inner .sidebar-nav .status-container .icon, .status-container .icon {
       width: 24px;
       height: 24px;  fill: #000000;
       margin-bottom: 10px;
     }
 
-.sidebar .status-container .status-title, .status-container .status-title {
+.sidebar .sidebar-inner .sidebar-nav .status-container .status-title, .status-container .status-title {
       font-size: 1.2rem;
       margin-bottom: 10px;
       color: #555;  overflow:auto;
     }
 
-.sidebar .status-container .status, .status-container .status {
+.sidebar .sidebar-inner .sidebar-nav .status-container .status, .status-container .status {
       font-size: 1rem;
       font-weight: bold;
       color: #222;  overflow:auto;
     }
 
-.sidebar .status-container .online, .status-container .online {      color: #28a745;     }
+.sidebar .sidebar-inner .sidebar-nav .status-container .online, .status-container .online {      color: #28a745;     }
 
-.sidebar .status-container .offline, .status-container .offline {      color: #dc3545;     }
+.sidebar .sidebar-inner .sidebar-nav .status-container .offline, .status-container .offline {      color: #dc3545;     }
 
-.sidebar .status-container .maintenance, .status-container .maintenance {      color: #ffc107;     }
+.sidebar .sidebar-inner .sidebar-nav .status-container .maintenance, .status-container .maintenance {      color: #ffc107;     }
 
 
 
