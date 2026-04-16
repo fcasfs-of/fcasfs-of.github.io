@@ -1,11 +1,11 @@
-.sidebar-nav .status-container, .status-container {   user-select:none; 
+.sidebar .status-container, .status-container {   user-select:none; 
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       width: 100%;
     }
 
-.sidebar-nav .status-container .status-card, .status-container .status-card {  
+.sidebar .status-container .status-card, .status-container .status-card {  
       background-color: #fff;
       border-radius: 12px;
       padding: 20px;
@@ -16,40 +16,34 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-.sidebar-nav .status-container .status-card:hover, .status-container .status-card:hover {
+.sidebar .status-container .status-card:hover, .status-container .status-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
-.sidebar-nav .status-container .icon, .status-container .icon {
+.sidebar .status-container .icon, .status-container .icon {
       width: 24px;
       height: 24px;  fill: #000000;
       margin-bottom: 10px;
     }
 
-.sidebar-nav .status-container .status-title, .status-container .status-title {
+.sidebar .status-container .status-title, .status-container .status-title {
       font-size: 1.2rem;
       margin-bottom: 10px;
       color: #555;  overflow:auto;
     }
 
-.sidebar-nav .status-container .status, .status-container .status {
+.sidebar .status-container .status, .status-container .status {
       font-size: 1rem;
       font-weight: bold;
       color: #222;  overflow:auto;
     }
 
-.sidebar-nav .status-container .online, .status-container .online {
-      color: #28a745; /* verde */
-    }
+.sidebar .status-container .online, .status-container .online {      color: #28a745;     }
 
-.sidebar-nav .status-container .offline, .status-container .offline {
-      color: #dc3545; /* vermelho */
-    }
+.sidebar .status-container .offline, .status-container .offline {      color: #dc3545;     }
 
-.sidebar-nav .status-container .maintenance, .status-container .maintenance {
-      color: #ffc107; /* amarelo */
-    }
+.sidebar .status-container .maintenance, .status-container .maintenance {      color: #ffc107;     }
 
 
 
