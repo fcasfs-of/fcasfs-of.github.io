@@ -26,11 +26,11 @@
     color: #34495e;
   }
 
-  .links {
+  .sitemap .links {
     list-style: none;
   }
 
-  .links a {
+  .sitemap .links a {
     display: block;
     color: #2980b9;
     text-decoration: none;
@@ -39,9 +39,9 @@
     transition: background 0.2s, color 0.2s;
   }
 
-  .links a.disabled {  pointer-events:none;  }
+  .sitemap .links a.disabled {  pointer-events:none;  }
 
-  .links a:hover, .links a.disabled {
+  .sitemap .links a:hover, .sitemap .links a.disabled {
     background: #ecf0f1;
     color: #2c3e50;
   }
