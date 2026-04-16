@@ -594,13 +594,14 @@ body .loaderffs, .loaderffs {
 
 
 .sidebar {   user-select:none;
-    position: fixed; top: 0; left: 0; bottom: 0;
+    position: fixed; top: 0;  bottom: 0;
     width: 320px; z-index: 1000;
     transition: var(--transition-speed) var(--transition-curve);
     box-shadow: 15px 0 35px rgba(0,0,0,0.1);    overflow:auto;
 }
 
-.sidebar-closed { transform: translateX(-105%); }
+.left.sidebar-closed { transform: translateX(-105%); }
+.right.sidebar-closed { transform: translateX(105%); }
 
 .sidebar-inner { height: 100%; display: flex; flex-direction: column; }
 
