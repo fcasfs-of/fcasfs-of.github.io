@@ -68,7 +68,7 @@ function is_renderStatuses() {    var is_renderStatusesdf="";
         }
        is_renderStatusesdf=is_renderStatusesdf+'<div class="status '+statusesOptions[item.status]+'">'+statusLabel+'</div>';
         is_renderStatusesdf=is_renderStatusesdf+'</div>';
-     }  });    }
+     }  });     is_renderStatusesdf=is_renderStatusesdf+'<br/><br/>';   }
 return is_renderStatusesdf;    }
 
 
