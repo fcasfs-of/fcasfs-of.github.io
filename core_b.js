@@ -343,13 +343,14 @@ function initSidebar_theme(theme = 'light') {
     if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');  }     }
 }
 
-function setup_slidef(id, list=[], title="", theme = 'light', typ="left", callf){   var setup_slidefdsd="left";
+function setup_slidef(id, list=[], title="", icon="", theme = 'light', typ="left", callf){   var setup_slidefdsd="left";      var setupff_slidefdsd="";
 if(typ=="right"){  setup_slidefdsd="right";   }   if(typ=="center"){  setup_slidefdsd="center";   }
+if(icon && icon!=""){  setupff_slidefdsd='<div class="brand-logo">'+icon+'</div>';  }
 if(list && id && id!=""){
 var setup_slidefddf=document.getElementById(id);
 if(setup_slidefddf){   setup_slidefddf.innerHTML="";  
 
-setup_slidefddf.innerHTML='<aside id="main-sidebar" class="sidebar '+setup_slidefdsd+' sidebar-closed">    <div class="sidebar-inner">        <header class="sidebar-header">            <div class="brand">                <div class="brand-logo" style="display:none;"></div>                <span>'+title+'</span>          </div>            <button id="sidebar-close" class="close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button>        </header>        <nav id="sidebar-nav" class="sidebar-nav"></nav>    </div></aside><div id="sidebar-overlay" class="overlay"></div>';
+setup_slidefddf.innerHTML='<aside id="main-sidebar" class="sidebar '+setup_slidefdsd+' sidebar-closed">    <div class="sidebar-inner">        <header class="sidebar-header">            <div class="brand">                '+setupff_slidefdsd+'                <span>'+title+'</span>          </div>            <button id="sidebar-close" class="close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button>        </header>        <nav id="sidebar-nav" class="sidebar-nav"></nav>    </div></aside><div id="sidebar-overlay" class="overlay"></div>';
 
 const sidebar = document.getElementById('main-sidebar');
 const overlay = document.getElementById('sidebar-overlay');
