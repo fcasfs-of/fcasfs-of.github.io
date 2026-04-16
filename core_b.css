@@ -637,7 +637,8 @@ body .loaderffs, .loaderffs {
 .sidebar-trigger { position: fixed; top: 20px; left: 20px; background: #0f172a; color: white; border: none; padding: 12px; border-radius: 10px; cursor: pointer; }
 .close-x { background: none; border: none; font-size: 1.8rem; color: inherit; cursor: pointer; }
 .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: none; z-index: 999; }
-.overlay.active { display: block; }
+.overlay.activeleft, .overlay.active { display: block; }
+.overlay.activeright { display: block; }
 
 @media (max-width: 480px) { .sidebar { width: 85%; } }
 
