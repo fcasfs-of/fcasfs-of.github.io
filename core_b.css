@@ -645,6 +645,9 @@ body .loaderffs, .loaderffs {
 .overlay.activeleft, .overlay.active { display: block; }
 .overlay.activecenter, .overlay.activeright { display: block; }
 
+.close-x svg path {  fill:#444;   }    .close-x:hover svg path {  fill:#ccc;   }
+
+
 @media (max-width: 480px) { .sidebar { width: 85%; } }
 
 
