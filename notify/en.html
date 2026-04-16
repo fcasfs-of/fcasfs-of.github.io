@@ -97,7 +97,7 @@
 
     setLanguage(currentLang);
 
-    setup_slidef("slideinffof", [{ label: '<div class="status-container">'+is_renderStatuses()+'</div>', desc: "", icon: null, onClick: null }], "Status", 'light', 'right', function(obj){
+    setup_slidef("slideinffof", [{ label: '<div class="status-container">'+is_renderStatuses()+'</div>', desc: "", icon: null, onClick: null }], "Status", ''+localStorage.getItem('theme'), 'right', function(obj){
       if(obj){
         if(obj.getElementsByClassName("nav-item")[0]){   obj.getElementsByClassName("nav-item")[0].style.opacity="1";   }  
       }
