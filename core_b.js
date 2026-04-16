@@ -360,7 +360,7 @@ document.getElementById('sidebar-trigger').onclick = toggleSidebar;
 document.getElementById('sidebar-close').onclick = toggleSidebar;
 overlay.onclick = toggleSidebar;
 
-initSidebar(menuData, theme); 
+initSidebar(list, theme); 
 }   }   
 }
 
