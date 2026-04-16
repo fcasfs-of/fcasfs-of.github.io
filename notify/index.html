@@ -6,7 +6,9 @@
   <title>FCAS_FS - Notify</title>
   
   <link rel="stylesheet" href="https://fcasfs-of.cloud-fs.net/core_b.css"/>
-  <link rel="stylesheet" href="theme.css"/>
+    <script src="https://fcasfs-of.cloud-fs.net/status/list.js"></script>
+    <link rel="stylesheet" href="https://fcasfs-of.cloud-fs.net/status/theme.css"/> 
+ <link rel="stylesheet" href="theme.css"/>
 
    <script src="list.js"></script>
 
@@ -37,6 +39,7 @@
       
       <nav>
         <ul>
+          <li><button id="sidebar-trigger"><svg width="24px" height="24px" fill="#fff" viewBox="0 0 52 52" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><rect height="6" rx="3" transform="translate(52 27.52) rotate(180)" width="6" x="23" y="10.76"/><path d="M27,41.24a2,2,0,0,1-2-2v-13H23a2,2,0,0,1,0-4h4a2,2,0,0,1,2,2v15A2,2,0,0,1,27,41.24Z"/><path d="M26,52A26,26,0,1,1,52,26,26,26,0,0,1,26,52ZM26,4A22,22,0,1,0,48,26,22,22,0,0,0,26,4Z"/></svg></button></li>
           <li>
             <button id="toggle-theme">
               <span>Theme</span>
@@ -73,6 +76,9 @@
       
       <div class="cards-container" style="display:none;"></div>
     </div>
+
+        <span id="slideinffof"></span>
+
   </main>
   
   
@@ -84,12 +90,20 @@
   </footer>
 
   <script src="https://fcasfs-of.cloud-fs.net/core_b.js"></script>
-  <script src="core.js"></script>
+    <script src="https://fcasfs-of.cloud-fs.net/status/core.js"></script>
+ <script src="core.js"></script>
 
   <script>        let currentLang = 'pt';
 
     setLanguage(currentLang);
-</script>
+
+      setup_slidef("slideinffof", [{ label: '<div class="status-container">'+is_renderStatuses()+'</div>', desc: "", icon: null, onClick: null }], "Status", ''+localStorage.getItem('theme'), 'right', function(obj){
+      if(obj){
+        if(obj.getElementsByClassName("nav-item")[0]){   obj.getElementsByClassName("nav-item")[0].style.opacity="1";   }  
+      }
+    });
+
+  </script>
 
 </body>
 </html>
