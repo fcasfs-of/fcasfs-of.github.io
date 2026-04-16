@@ -358,7 +358,7 @@ function toggleSidebar() {
     sidebar.classList.toggle('sidebar-closed');
     overlay.classList.toggle('active'+setup_slidefdsd);
 }
-function toggleSidebarf() {    if (typeof callf === 'function') {  callf();  }    toggleSidebar();   }
+function toggleSidebarf() {    if (typeof callf === 'function') {  callf(document.getElementById('sidebar-nav'));  }    toggleSidebar();   }
 					
 document.getElementById('sidebar-trigger').onclick = toggleSidebarf;
 document.getElementById('sidebar-close').onclick = toggleSidebar;
