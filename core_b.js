@@ -309,6 +309,62 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
+function setup_slidef(id, list=[], title="", theme = 'light'){   
+if(list && id && id!=""){
+var setup_slidefddf=document.getElementById(id);
+if(setup_slidefddf){   setup_slidefddf.innerHTML="";  
+setup_slidefddf.innerHTML='<aside id="main-sidebar" class="sidebar sidebar-closed">    <div class="sidebar-inner">        <header class="sidebar-header">            <div class="brand">                <div class="brand-logo" style="display:none;"></div>                <span>'+title+'</span>          </div>            <button id="sidebar-close" class="close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button>        </header>        <nav id="sidebar-nav" class="sidebar-nav"></nav>    </div></aside><div id="sidebar-overlay" class="overlay"></div>';
+
+function initSidebar_theme(theme = 'light') {
+    const sidebar = document.getElementById('main-sidebar');
+    sidebar.classList.add('theme-light');  sidebar.classList.remove('theme-dark'); 
+    if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');  }
+}
+
+function initSidebar(menuData=[], theme = 'light') {
+    const sidebar = document.getElementById('main-sidebar');
+    const nav = document.getElementById('sidebar-nav');
+    nav.innerHTML="";
+    sidebar.classList.add('theme-light');  sidebar.classList.remove('theme-dark'); 
+    if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');  
+    menuData.forEach(item => {
+        const canClick = item.label && item.onClick;
+        const div = document.createElement('div');
+        div.className = `nav-item ${canClick ? 'is-clickable' : 'not-clickable'}`;
+        div.innerHTML = `
+            ${item.icon ? `<div class="item-icon">${item.icon}</div>` : ''}
+            <div class="item-content">
+                <span class="item-title">${item.label}</span>
+                ${item.desc ? `<span class="item-desc">${item.desc}</span>` : ''}
+            </div>
+        `;
+        if (canClick) {
+            div.addEventListener('click', () => {
+                item.onClick();
+                if(window.innerWidth < 1024) toggleSidebar();
+            });
+        }
+        nav.appendChild(div);
+    });
+}
+
+const sidebar = document.getElementById('main-sidebar');
+const overlay = document.getElementById('sidebar-overlay');
+
+function toggleSidebar() {
+    sidebar.classList.toggle('sidebar-closed');
+    overlay.classList.toggle('active');
+}
+
+document.getElementById('sidebar-trigger').onclick = toggleSidebar;
+document.getElementById('sidebar-close').onclick = toggleSidebar;
+overlay.onclick = toggleSidebar;
+
+initSidebar(menuData, theme); 
+}   }   
+}
+
+
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
@@ -379,6 +435,9 @@ body.oncontextmenu=function() { return false; };
         toggleThemeBtn.querySelector('span').textContent = 'Escuro';
         localStorage.setItem('theme', 'light');
       }
+
+		 if (typeof initSidebar_theme === 'function') {  	initSidebar_theme(localStorage.getItem('theme'));		}
+		
     });
     
     if (typeof run_inruff === 'function') {
