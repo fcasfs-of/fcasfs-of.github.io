@@ -7,7 +7,7 @@
     padding: 10px;
   }
 
-  .subdomain {  overflow:auto;
+  .sitemap .subdomain {  overflow:auto;
     background: #fff;
     border-radius: 8px;
     padding: 20px;  
@@ -15,22 +15,22 @@
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
-  .subdomain:hover {
+  .sitemap .subdomain:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   }
 
-  .subdomain h2 {  width:100%; 
+  .sitemap .subdomain h2 {  width:100%; 
     font-size: 1.2rem;overflow:auto;
     margin-bottom: 15px;
     color: #34495e;
   }
 
-  .sitemap .links {
+  .sitemap .subdomain .links {
     list-style: none;
   }
 
-  .sitemap .links a {
+  .sitemap .subdomain .links a {
     display: block;
     color: #2980b9;
     text-decoration: none;
@@ -39,9 +39,9 @@
     transition: background 0.2s, color 0.2s;
   }
 
-  .sitemap .links a.disabled {  pointer-events:none;  }
+  .sitemap .subdomain .links a.disabled {  pointer-events:none;  }
 
-  .sitemap .links a:hover, .sitemap .links a.disabled {
+  .sitemap .subdomain .links a:hover, .sitemap .subdomain .links a.disabled {
     background: #ecf0f1;
     color: #2c3e50;
   }
