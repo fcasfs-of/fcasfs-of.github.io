@@ -45,4 +45,33 @@
 
 
 
+function is_renderStatuses() {    var is_renderStatusesdf="";
+ if(statuses && statusesOptions){      
+      statuses.forEach((item) => {
+      if(item){
+        is_renderStatusesdf=is_renderStatusesdf+'<div class="status-card">';
+       is_renderStatusesdf=is_renderStatusesdf+'<div>'+ item.icon+'</div>';
+       is_renderStatusesdf=is_renderStatusesdf+'<div class="status-title">'+ item.title+'</div>';
+        let statusLabel = '';
+        switch (statusesOptions[item.status]) {
+          case 'online':
+            statusLabel = 'Online';
+            break;
+          case 'offline':
+            statusLabel = 'Offline';
+            break;
+          case 'maintenance':
+            statusLabel = 'Maintenance';
+            break;
+          default:
+            statusLabel = 'Unknown';
+        }
+       is_renderStatusesdf=is_renderStatusesdf+'<div class="status '+statusesOptions[item.status]+'">'+statusLabel+'</div>';
+        is_renderStatusesdf=is_renderStatusesdf+'</div>';
+     }  });    }
+return is_renderStatusesdf;    }
+
+
+
+
 
