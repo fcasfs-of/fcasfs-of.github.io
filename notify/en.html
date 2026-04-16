@@ -6,8 +6,11 @@
   <title>FCAS_FS - Notify</title>
 
   <link rel="stylesheet" href="https://fcasfs-of.cloud-fs.net/core_b.css"/>
+   <script src="https://fcasfs-of.cloud-fs.net/status/list.js"></script>
   <link rel="stylesheet" href="theme.css"/>
-
+  <script src="https://fcasfs-of.cloud-fs.net/status/core.js"></script>
+   <link rel="stylesheet" href="https://fcasfs-of.cloud-fs.net/status/theme.css"/> 
+  
    <script src="list.js"></script>
 
   <link rel="icon" href="https://fcasfs-of.cloud-fs.net/favicon.png" type="image/png"/>
@@ -92,6 +95,10 @@
   <script>        let currentLang = 'en';
 
     setLanguage(currentLang);
+
+    setup_slidef("slideinffof", [{ label: '<div class="status-container" id="statusContainer"></div>', desc: "", icon: null, onClick: null }], "status", 'light');
+     renderStatuses();   
+    
 </script>
 
 </body>
