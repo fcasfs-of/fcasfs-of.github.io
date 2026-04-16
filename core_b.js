@@ -326,7 +326,7 @@ function initSidebar(menuData=[], theme = 'light') {
     const nav = document.getElementById('sidebar-nav');
     nav.innerHTML="";
     sidebar.classList.add('theme-light');  sidebar.classList.remove('theme-dark'); 
-    if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');  
+    if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');   }
     menuData.forEach(item => {
         const canClick = item.label && item.onClick;
         const div = document.createElement('div');
