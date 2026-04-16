@@ -607,6 +607,8 @@ body .loaderffs, .loaderffs {
 .right.sidebar-closed { transform: translateX(105%); }
 .center.sidebar-closed {   display:none;  }
 
+.sidebar-nav, .sidebar-nav .nav-item {  padding:6px;  }
+
 .sidebar-inner { height: 100%; display: flex; flex-direction: column; }
 
 .theme-light { background: #ffffff; color: #1e293b; --accent: #4f46e5; --muted: #64748b; --hover: #f1f5f9; }
