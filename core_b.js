@@ -8,9 +8,7 @@ function carregarTudo(listaRecursos) {
         if (!elementoPai) {            return;        }
         const elemento = document.createElement(tag);
         for (const chave in atributos) {
-            if (atributos.hasOwnProperty(chave)) {
-                elemento.setAttribute(chave, atributos[chave]);
-            }
+            if (atributos.hasOwnProperty(chave)) {                elemento.setAttribute(chave, atributos[chave]);            }
         }
         elementoPai.appendChild(elemento);
     });
