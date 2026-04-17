@@ -3,6 +3,8 @@ initSidebar_stg.innerHTML='      :root {      --transition-speed: 0.4s;      --t
 document.getElementsByTagName("head")[0].appendChild(initSidebar_stg);
 
 
+function initSidebar_start(){
+ 
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
@@ -95,6 +97,10 @@ initSidebar(setup_slidef_objrc, list, theme);
 
 } } 
 }
+}
 
+
+initSidebar_start();
+document.addEventListener("DOMContentLoaded", function() {   initSidebar_start();  });
 
 
