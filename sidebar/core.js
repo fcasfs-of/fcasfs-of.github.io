@@ -20,7 +20,6 @@ if(overlay){ overlay.classList.add('active'); }
 }  }  
 
 
-
 function initSidebar(sidebar_obj, menuData=[], theme = 'light') {
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
@@ -29,18 +28,17 @@ if(sidebar && nav){
 nav.innerHTML=""; 
 sidebar.classList.add('theme-light'); sidebar.classList.remove('theme-dark');
 if(theme=="dark"){ sidebar.classList.add('theme-dark'); sidebar.classList.remove('theme-light'); } 
+var idex_itenf=0;
 menuData.forEach(item => { 
 const canClick = item.label && item.onClick; 
 const div = document.createElement('div'); 
-div.className = `nav-item ${canClick ? 'is-clickable' : 'not-clickable'}`; 
+idex_itenf=idex_itenf+1;
+div.className = `nav-item ${idex_itenf} iten${canClick ? 'is-clickable' : 'not-clickable'}`; 
 div.innerHTML = ` ${item.icon ? `<div class="item-icon">${item.icon}</div>` : ''} <div class="item-content"> <span class="item-title">${item.label}</span> ${item.desc ? `<span class="item-desc">${item.desc}</span>` : ''} </div> `; 
 if (canClick && div) { div.addEventListener('click', () => { item.onClick(); initSidebar_close(sidebar_obj); }); } 
 nav.appendChild(div); }); 
 } } 
 }
-
-
-
 
 function initSidebar_theme(sidebar_obj, theme = 'light') {
 if(sidebar_obj){ 
@@ -51,17 +49,14 @@ if(theme=="dark"){ sidebar.classList.add('theme-dark'); sidebar.classList.remove
 } } 
 
 
-
 function initSidebar_oac(sidebar_obj, id){ 
-if(sidebar_obj && id){ 
-const navItens = sidebar_obj.getElementsByClassName('sidebar-nav')[0];
-if(navItens.getElementsByClassName("nav-item")[id]){ 
-navItens.getElementsByClassName("nav-item")[id].style.pointerEvents="auto"; navItens.getElementsByClassName("nav-item")[id].style.opacity="1"; } 
+if(sidebar_obj && id && id!=""){ 
+sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !important;  pointerevents:auto !important;   } </style>";
 }    }
 
 
 function setup_slidef(btn, id, list=[], title="", icon="", theme = 'light', typ="left", callf){ 
-var setup_slide_style="left";  var setup_slidef_logo="";  
+var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
 if(typ=="center"){ setup_slide_style="center"; }
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
@@ -69,16 +64,21 @@ if(list && id && id!="" && btn && btn!=""){
 
 const setup_slidef_objrc=document.getElementById(id);
 if(setup_slidef_objrc){ 
-setup_slidef_objrc.innerHTML='<aside class="sidebar '+setup_slide_style+' sidebar-closed"> <div class="sidebar-inner"> <header class="sidebar-header"> <div class="brand"> '+setup_slidef_logo+' <span>'+title+'</span> </div> <button class="sidebar-close close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button> </header> <nav class="sidebar-nav"></nav> <br/><br/> </div></aside><div class="sidebar-overlay"></div>'; 
+var setup_slide_style_cog="#"+id+" .sidebar-nav .nav-item";  
+
+setup_slidef_objrc.innerHTML='<aside class="sidebar '+setup_slide_style+' sidebar-closed"> <div class="sidebar-inner"> <header class="sidebar-header"> <div class="brand"> '+setup_slidef_logo+' <span>'+title+'</span> </div> <button class="sidebar-close close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button> </header> <nav class="sidebar-nav"></nav> <br/><br/> </div></aside><span class="sidebar-config"></span><div class="sidebar-overlay"></div>'; 
 
 const overlay = setup_slidef_objrc.getElementsByClassName('sidebar-overlay')[0];
 const navItens = setup_slidef_objrc.getElementsByClassName('sidebar-nav')[0];
+
+const config_pp = setup_slidef_objrc.getElementsByClassName('sidebar-config')[0];
+config_pp.innerHTML="";
 
 const btn_copene = document.getElementById(btn);
 if(btn_copene){ 
 btn_copene.onclick = function(){ 
 if (typeof callf === 'function') { callf({ active: function(id){ 
- if(id){   initSidebar_oac(setup_slidef_objrc, id);   } 
+ if(id){   initSidebar_oac(config_pp, setup_slide_style_cog+" .iten"+(Number(id)+1)+"");   } 
 }, 
 close: function(){ initSidebar_close(setup_slidef_objrc); }, 
 open: function(){ initSidebar_open(setup_slidef_objrc); }, 
@@ -95,5 +95,6 @@ initSidebar(setup_slidef_objrc, list, theme);
 
 } } 
 }
+
 
 
