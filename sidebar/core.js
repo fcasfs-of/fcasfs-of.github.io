@@ -5,6 +5,8 @@ if(document.getElementsByTagName("head")[0]){  document.getElementsByTagName("he
 
 
 
+function initSidebar_start(inge){
+
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
@@ -100,6 +102,11 @@ initSidebar(setup_slidef_objrc, list, theme);
 } } 
 }
 
+
+if (typeof inge === 'function') {  inge();		}
+		
+
+}
 
 
 
