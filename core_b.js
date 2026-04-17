@@ -207,7 +207,8 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
 			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
-        }
+        },
+'onload': "initSidebar_start(loadedsiders);"
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
