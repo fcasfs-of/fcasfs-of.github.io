@@ -58,7 +58,6 @@ sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !import
 
 
 
-if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].onload=function(){ 
 
 function setup_slidef(btn, id, list=[], title="", icon="", theme = 'light', typ="left", callf){ 
 var setup_slide_style="left";  var setup_slidef_logo="";   
@@ -101,8 +100,8 @@ initSidebar(setup_slidef_objrc, list, theme);
 } } 
 }
 
-};
-}
+
+
 
 
 
