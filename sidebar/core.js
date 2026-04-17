@@ -5,7 +5,7 @@ if(document.getElementsByTagName("head")[0]){  document.getElementsByTagName("he
 
 
 
-function initSidebar_start(inge){
+function initSidebar_start(){
 
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
@@ -103,11 +103,13 @@ initSidebar(setup_slidef_objrc, list, theme);
 }
 
 
-if (typeof inge === 'function') {  inge();		}
+if (typeof initSidebar_onload === 'function') {  initSidebar_onload();		}
 		
 
 }
 
+
+initSidebar_start();
 
 
 
