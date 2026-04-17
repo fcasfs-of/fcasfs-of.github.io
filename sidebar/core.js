@@ -4,6 +4,7 @@ document.getElementsByTagName("head")[0].appendChild(initSidebar_stg);
 
 
 
+(function(){
 
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
@@ -99,6 +100,7 @@ initSidebar(setup_slidef_objrc, list, theme);
 }
 
 
+})();
 
 
 
