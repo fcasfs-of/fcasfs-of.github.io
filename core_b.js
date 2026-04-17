@@ -208,6 +208,8 @@ carregarTudo([
         atributos: {    
 			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
         },
+                    'defer': "",
+                    'init': "",
 'onload': "initSidebar_start(loadedsiders);"
     }, {
         destino: 'body',  tag: 'script',   
