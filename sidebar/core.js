@@ -5,9 +5,6 @@ if(document.getElementsByTagName("head")[0]){  document.getElementsByTagName("he
 
 
 
-function initSidebar_start(){
-
-
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
@@ -62,6 +59,8 @@ sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !import
 
 
 
+function initSidebar_start(){
+
 function initSidebar_creater(btn, id, list=[], title="", icon="", theme = 'light', typ="left", callf){ 
 var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
@@ -102,7 +101,6 @@ initSidebar(setup_slidef_objrc, list, theme);
 
 } } 
 }
-
 
 
 
