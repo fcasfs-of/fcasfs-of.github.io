@@ -4,7 +4,6 @@ if(document.getElementsByTagName("head")[0]){  document.getElementsByTagName("he
 
 
 
-(function(){
 
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
@@ -58,6 +57,9 @@ sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !import
 }    }
 
 
+
+if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].onload=function(){ 
+
 function setup_slidef(btn, id, list=[], title="", icon="", theme = 'light', typ="left", callf){ 
 var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
@@ -99,8 +101,11 @@ initSidebar(setup_slidef_objrc, list, theme);
 } } 
 }
 
+};
+}
 
-})();
+
+
 
 
 
