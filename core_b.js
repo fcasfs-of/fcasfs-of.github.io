@@ -1,5 +1,5 @@
 
-function carregarTudo(listaRecursos) {
+function carregarTudo(listaRecursos) {   if(listaRecursos){
     listaRecursos.forEach(item => {
         const destinoStr = item.destino; 
         const tag = item.tag;           
@@ -11,7 +11,7 @@ function carregarTudo(listaRecursos) {
             if (atributos.hasOwnProperty(chave)) {                elemento.setAttribute(chave, atributos[chave]);            }
         }
         elementoPai.appendChild(elemento);
-    });
+    });     }
 }
 
 
