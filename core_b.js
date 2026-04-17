@@ -1,4 +1,23 @@
 
+function carregarTudo(listaRecursos) {
+    listaRecursos.forEach(item => {
+        const destinoStr = item.destino; 
+        const tag = item.tag;           
+        const atributos = item.atributos; 
+        const elementoPai = document.getElementsByTagName(destinoStr)[0];
+        if (!elementoPai) {            return;        }
+        const elemento = document.createElement(tag);
+        for (const chave in atributos) {
+            if (atributos.hasOwnProperty(chave)) {
+                elemento.setAttribute(chave, atributos[chave]);
+            }
+        }
+        elementoPai.appendChild(elemento);
+    });
+}
+
+
+
 function check_utt(eww){    
  if(eww==true){
   if (location.href!="https://fcasfs-of.cloud-fs.net/maintenance"){   location.href="https://fcasfs-of.cloud-fs.net/maintenance";   }
@@ -41,14 +60,16 @@ function showPage() {
 
 
 
-
-  var scriptmsfd = document.createElement("script");
-    scriptmsfd.setAttribute("type", "text/javascript");
-    scriptmsfd.setAttribute("onload", "loaded_maut();");
-    scriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/av_man.js");
-document.getElementsByTagName("body")[0].appendChild(scriptmsfd);
-
-
+carregarTudo([
+    {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'type': 'text/javascript',
+            'onload': 'loaded_maut();',
+            'src': 'https://fcasfs-of.cloud-fs.net/av_man.js'
+        }
+    }
+]);
 
   
 function share_btsD(att, listd, listdld, opti, id){
@@ -125,94 +146,104 @@ if(cokk_plu && cokk_plu==true){
  var cokk_plu_enf="/en";    var cokk_plu_enfdd="-en";  cokk_plu_esdnf="pt";
  if (location.href.toUpperCase().indexOf(cokk_plu_enf.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
  if (location.href.toUpperCase().indexOf(cokk_plu_enfdd.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
-	
-  var scripaddtfdmsfd = document.createElement("script");
-    scripaddtfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/accessibility.js");
-	scripaddtfdmsfd.setAttribute("onload", "micAccessTool_run('"+cokk_plu_esdnf+"');");
-document.getElementsByTagName("head")[0].appendChild(scripaddtfdmsfd);
-
-  var scriptfdmsfd = document.createElement("script");
-    scriptfdmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/menu_exec.js");
-document.getElementsByTagName("head")[0].appendChild(scriptfdmsfd);
-
-	
-   var dscr_menudkkied = document.createElement("script");
-    dscr_menudkkied.setAttribute("type", "text/javascript");
-    dscr_menudkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cmenu.js");
-document.getElementsByTagName("body")[0].appendChild(dscr_menudkkied); 
-
-var dscr_fgdmenudkkied = document.createElement("script");
-    dscr_fgdmenudkkied.setAttribute("type", "text/javascript");
-    dscr_fgdmenudkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/core_ds.js");
-document.getElementsByTagName("body")[0].appendChild(dscr_fgdmenudkkied); 
- 
-var sccgfframdedsfd = document.createElement("link");
-    sccgfframdedsfd.setAttribute("rel", "stylesheet");
-    sccgfframdedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/notify/theme2.css");
-document.getElementsByTagName("head")[0].appendChild(sccgfframdedsfd);
- 
- var sccgfgdfframedsfd = document.createElement("link");
-    sccgfgdfframedsfd.setAttribute("rel", "stylesheet");
-    sccgfgdfframedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/core_l.css");
-document.getElementsByTagName("head")[0].appendChild(sccgfgdfframedsfd);
-	
-var sccgfframedsfd = document.createElement("link");
-    sccgfframedsfd.setAttribute("rel", "stylesheet");
-    sccgfframedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/share/theme.css");
-document.getElementsByTagName("head")[0].appendChild(sccgfframedsfd);
 
 
-   var sccgramedsfd = document.createElement("link");
-    sccgramedsfd.setAttribute("rel", "stylesheet");
-    sccgramedsfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/iframe/manager.css");
-document.getElementsByTagName("head")[0].appendChild(sccgramedsfd);
+carregarTudo([
+    {
+        destino: 'head',    tag: 'link',
+        atributos: {
+            'href': 'https://fcasfs-of.cloud-fs.net/notify/theme2.css',
+            'rel': 'stylesheet'
+        }
+    }, {
+        destino: 'head',    tag: 'link',
+        atributos: {
+            'href': 'https://fcasfs-of.cloud-fs.net/core_l.css',
+            'rel': 'stylesheet'
+        }
+    }, {
+        destino: 'head',    tag: 'link',
+        atributos: {
+            'href': 'https://fcasfs-of.cloud-fs.net/iframe/manager.css',
+            'rel': 'stylesheet'
+        }
+    }, {
+        destino: 'head',    tag: 'link',
+        atributos: {
+            'href': 'https://fcasfs-of.cloud-fs.net/share/theme.css',
+            'rel': 'stylesheet'
+        }
+    }, {
+        destino: 'head',    tag: 'link',
+        atributos: {
+            'href': 'https://fcasfs-of.cloud-fs.net/cookies/consent.css',
+            'rel': 'stylesheet'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/cookies/langs.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/iframe/langs.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/notify/core2.js'
+        }
+    }, {
+        destino: 'head',  tag: 'script',   
+        atributos: {    
+            'onload': "micAccessTool_run('"+cokk_plu_esdnf+"');",
+            'src': 'https://fcasfs-of.cloud-fs.net/accessibility.js'
+        }
+    }, {
+        destino: 'head',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/menu_exec.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/cmenu.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/core_ds.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+		    'onload': "setup_CookieBadr();",
+            'src': 'https://fcasfs-of.cloud-fs.net/cookies/consent.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+		    'onload': "loaded_menus();",
+            'src': 'https://fcasfs-of.cloud-fs.net/iframe/manager.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+		    'type': "text/javascript",
+		    'defer': "",
+		    'init': "",
+		    'onload': "share_btsD_all();",
+            'src': 'https://fcasfs-of.cloud-fs.net/share/core.js'
+        }
+    }
+]);
 
- var sccokkesfd = document.createElement("link");
-    sccokkesfd.setAttribute("rel", "stylesheet");
-    sccokkesfd.setAttribute("href", "https://fcasfs-of.cloud-fs.net/cookies/consent.css");
-document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
-
- 
-  var dscript_cokkied = document.createElement("script");
-    dscript_cokkied.setAttribute("type", "text/javascript");
-    dscript_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/langs.js");
-document.getElementsByTagName("body")[0].appendChild(dscript_cokkied); 
-
-var dscript_cofgfkkislidded = document.createElement("script");
-    dscript_cofgfkkislidded.setAttribute("src", "https://fcasfs-of.cloud-fs.net/sidebar/core.js");
-document.getElementsByTagName("head")[0].appendChild(dscript_cofgfkkislidded); 
- 
-
-  var dscript_cofgfkkied = document.createElement("script");
-    dscript_cofgfkkied.setAttribute("type", "text/javascript");
-    dscript_cofgfkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/notify/core2.js");
-document.getElementsByTagName("body")[0].appendChild(dscript_cofgfkkied); 
- 
-  var dscript_framedkied = document.createElement("script");
-    dscript_framedkied.setAttribute("type", "text/javascript");
-    dscript_framedkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/iframe/langs.js");
-document.getElementsByTagName("body")[0].appendChild(dscript_framedkied); 
- 
- 
-var scffriptmsfd = document.createElement("script");
-    scffriptmsfd.setAttribute("type", "text/javascript");
-    scffriptmsfd.setAttribute("onload", "share_btsD_all();");
-    scffriptmsfd.setAttribute("defer", "");       scffriptmsfd.setAttribute("init", "");
-    scffriptmsfd.setAttribute("src", "https://fcasfs-of.cloud-fs.net/share/core.js");
-document.getElementsByTagName("body")[0].appendChild(scffriptmsfd);
-
-
- var script_cokkied = document.createElement("script");
-    script_cokkied.setAttribute("type", "text/javascript");
-    script_cokkied.setAttribute("onload", "setup_CookieBadr();");
-    script_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/consent.js");
-document.getElementsByTagName("body")[0].appendChild(script_cokkied);          
-
-  var script_framercokkied = document.createElement("script");
-    script_framercokkied.setAttribute("type", "text/javascript");
-    script_framercokkied.setAttribute("onload", "loaded_menus();");
-    script_framercokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/iframe/manager.js");
-document.getElementsByTagName("body")[0].appendChild(script_framercokkied);   
 
 }
 
