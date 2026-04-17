@@ -100,7 +100,4 @@ initSidebar(setup_slidef_objrc, list, theme);
 }
 
 
-initSidebar_start();
-document.addEventListener("DOMContentLoaded", function() {   initSidebar_start();  });
-
 
