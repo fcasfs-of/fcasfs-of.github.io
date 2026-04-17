@@ -4,7 +4,7 @@ if(document.getElementsByTagName("head")[0]){  document.getElementsByTagName("he
 
 
 
-function initSidebar_oncreate(){
+function initSidebar_start(){
 
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
@@ -60,8 +60,6 @@ sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !import
 
 
 
-function initSidebar_start(){
-
 function initSidebar_creater(btn, id, list=[], title="", icon="", theme = 'light', typ="left", callf){ 
 var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
@@ -109,10 +107,8 @@ if (typeof initSidebar_onload === 'function') {  initSidebar_onload(initSidebar_
 }
 
 
-}
 
-
-initSidebar_oncreate();
+initSidebar_start();
 
 
 
