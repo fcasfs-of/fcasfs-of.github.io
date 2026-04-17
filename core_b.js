@@ -180,7 +180,7 @@ document.getElementsByTagName("body")[0].appendChild(dscript_cokkied);
 
 var dscript_cofgfkkislidded = document.createElement("script");
     dscript_cofgfkkislidded.setAttribute("src", "https://fcasfs-of.cloud-fs.net/sidebar/core.js");
-document.getElementsByTagName("body")[0].appendChild(dscript_cofgfkkislidded); 
+document.getElementsByTagName("head")[0].appendChild(dscript_cofgfkkislidded); 
  
 
   var dscript_cofgfkkied = document.createElement("script");
