@@ -100,7 +100,7 @@ initSidebar(setup_slidef_objrc, list, theme);
 }
 
 
-(function(){initSidebar_start();)()
+(function(){initSidebar_start();})();
 
 
 
