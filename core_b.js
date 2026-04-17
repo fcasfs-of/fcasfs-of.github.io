@@ -323,67 +323,6 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-function initSidebar(menuData=[], theme = 'light') {
-    const sidebar = document.getElementById('main-sidebar');
-    const nav = document.getElementById('sidebar-nav');
-	if(sidebar && nav){
-    nav.innerHTML="";
-    sidebar.classList.add('theme-light');  sidebar.classList.remove('theme-dark'); 
-    if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');   }
-    menuData.forEach(item => {
-        const canClick = item.label && item.onClick;
-        const div = document.createElement('div');
-        div.className = `nav-item ${canClick ? 'is-clickable' : 'not-clickable'}`;
-        div.innerHTML = `
-            ${item.icon ? `<div class="item-icon">${item.icon}</div>` : ''}
-            <div class="item-content">
-                <span class="item-title">${item.label}</span>
-                ${item.desc ? `<span class="item-desc">${item.desc}</span>` : ''}
-            </div>
-        `;
-        if (canClick) {
-            div.addEventListener('click', () => {
-                item.onClick();
-                if(window.innerWidth < 1024) toggleSidebar();
-            });
-        }
-        nav.appendChild(div);
-    });    }
-}
-
-function initSidebar_theme(theme = 'light') {
-    const sidebar = document.getElementById('main-sidebar');
-	if(sidebar){    sidebar.classList.add('theme-light');  sidebar.classList.remove('theme-dark'); 
-    if(theme=="dark"){  sidebar.classList.add('theme-dark');   sidebar.classList.remove('theme-light');  }     }
-}
-
-function setup_slidef(id, list=[], title="", icon="", theme = 'light', typ="left", callf){   var setup_slidefdsd="left";      var setupff_slidefdsd="";
-if(typ=="right"){  setup_slidefdsd="right";   }   if(typ=="center"){  setup_slidefdsd="center";   }
-if(icon && icon!=""){  setupff_slidefdsd='<div class="brand-logo">'+icon+'</div>';  }
-if(list && id && id!=""){
-var setup_slidefddf=document.getElementById(id);
-if(setup_slidefddf){   setup_slidefddf.innerHTML="";  
-
-setup_slidefddf.innerHTML='<aside id="main-sidebar" class="sidebar '+setup_slidefdsd+' sidebar-closed">    <div class="sidebar-inner">        <header class="sidebar-header">            <div class="brand">                '+setupff_slidefdsd+'                <span>'+title+'</span>          </div>            <button id="sidebar-close" class="close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button>        </header>        <nav id="sidebar-nav" class="sidebar-nav"></nav>   <br/><br/>   </div></aside><div id="sidebar-overlay" class="overlay"></div>';
-
-const sidebar = document.getElementById('main-sidebar');
-const overlay = document.getElementById('sidebar-overlay');
-
-function toggleSidebar() {
-    sidebar.classList.toggle('sidebar-closed');
-    overlay.classList.toggle('active'+setup_slidefdsd);
-}
-function toggleSidebarf() {    if (typeof callf === 'function') {  callf(document.getElementById('sidebar-nav'));  }    toggleSidebar();   }
-					
-document.getElementById('sidebar-trigger').onclick = toggleSidebarf;
-document.getElementById('sidebar-close').onclick = toggleSidebar;
-overlay.onclick = toggleSidebar;
-
-initSidebar(list, theme); 
-}   }   
-}
-
-
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
