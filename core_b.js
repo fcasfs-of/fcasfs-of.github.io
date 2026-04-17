@@ -450,7 +450,7 @@ body.oncontextmenu=function() { return false; };
         localStorage.setItem('theme', 'light');
       }
 
-		 if (typeof initSidebar_theme === 'function') {  	initSidebar_theme(localStorage.getItem('theme'));		}
+		 //if (typeof initSidebar_theme === 'function') {  		}
 		
     });
     
