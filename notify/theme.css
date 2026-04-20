@@ -84,7 +84,7 @@
   }
 
   .category h2 {
-    font-size: 1.2rem;
+    font-size: 1.2rem;  text-align:center;
     margin-bottom: 1rem;
     color: #444;       position: relative;
     border-bottom: 2px solid #ddd;
@@ -131,7 +131,7 @@
     height: 20px;
     width: 20px;
     top: 5px;
-    left: 8px;
+    left: 8px;   text-align:center;
     background-repeat: no-repeat;
     background-size: 20px 20px;
     content: "";    pointer-events:none;   
