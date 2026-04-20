@@ -127,7 +127,7 @@
 
  .category h2:before, .herod .header h1:before {
     display: inline-block;
-    position: relative;
+    position: absolute;
     height: 20px;
     width: 20px;
     top: 5px;
@@ -135,7 +135,7 @@
     background-repeat: no-repeat;
     background-size: 20px 20px;
     content: "";    pointer-events:none;   
-    vertical-align: bottom;
+    vertical-align: bottom;  margin-right:10px;
 }
    
   .notifications {  width:100%; 
