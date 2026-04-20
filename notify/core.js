@@ -90,7 +90,7 @@ count_liyr= 0;
       categoryDiv.className = 'category';
       
       const categoryTitle = document.createElement('h2');
-      categoryTitle.innerHTML = "<span class='img "+cat.id+"'></span>  "+cat.name+"";
+      categoryTitle.innerHTML = "<span class='img "+cat.id+"'></span>  <br/>"+cat.name+"";
       //categoryTitle.className = cat.id;
       categoryDiv.appendChild(categoryTitle);
 
