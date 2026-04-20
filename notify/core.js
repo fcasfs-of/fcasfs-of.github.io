@@ -90,8 +90,8 @@ count_liyr= 0;
       categoryDiv.className = 'category';
       
       const categoryTitle = document.createElement('h2');
-      categoryTitle.innerHTML = cat.name;
-      categoryTitle.className = cat.id;
+      categoryTitle.innerHTML = "<span class='img "+cat.id+"'></span>  "+cat.name+"";
+      //categoryTitle.className = cat.id;
       categoryDiv.appendChild(categoryTitle);
 
       const notifContainer = document.createElement('div');
