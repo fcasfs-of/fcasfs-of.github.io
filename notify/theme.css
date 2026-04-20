@@ -129,13 +129,13 @@
     display: block;
     position: absolute;
     height: 20px;
-    width: 20px;
+    width: 100%;
     top: 5px;
     left: 8px;   text-align:center;
     background-repeat: no-repeat;
     background-size: 20px 20px;
     content: "";    pointer-events:none;   
-    vertical-align: bottom;  margin-right:10px;
+    vertical-align: bottom;   margin:0 auto;  
 }
    
   .notifications {  width:100%; 
