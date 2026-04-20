@@ -127,7 +127,7 @@
 
  .category h2:before, .herod .header h1:before {
     display: inline-block;
-    position: absolute;
+    position: relative;
     height: 20px;
     width: 20px;
     top: 5px;
