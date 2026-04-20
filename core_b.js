@@ -204,11 +204,6 @@ carregarTudo([
             'src': 'https://fcasfs-of.cloud-fs.net/notify/core2.js'
         }
     }, {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/notify/core.js'
-        }
-    }, {
         destino: 'head',  tag: 'script',   
         atributos: {    
             'onload': "micAccessTool_run('"+cokk_plu_esdnf+"');",
