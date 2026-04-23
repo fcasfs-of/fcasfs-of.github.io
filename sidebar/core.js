@@ -103,7 +103,9 @@ const btn_copene = initSidebar_check(btnfs_initSideba,function(aa){
  var initSidedbar_crayteg = document.createElement("button");
   initSidedbar_crayteg.setAttribute("id", aa[1]); 
 initSidedbar_crayteg.className = "sidebar-trigger sidebar_al"; 
-if(option.btn && option.btn!=""){   var icon_btnssider="";  if(option.icon && option.icon!=""){   icon_btnssider=option.icon;  }   initSidedbar_crayteg.innerHTML = icon_btnssider+"  "+option.btn;    }
+  var icon_btnssider="";  if(option.icon && option.icon!=""){   icon_btnssider=option.icon;  }  
+initSidedbar_crayteg.innerHTML = icon_btnssider;
+if(option.btn && option.btn!=""){   initSidedbar_crayteg.innerHTML = initSidedbar_crayteg.innerHTML+"  "+option.btn;    }
 if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidedbar_crayteg);  }
 return document.getElementById(aa[1]);   }, function(aa){  return document.getElementById(aa[2]);  }, { [1]:initSidebar_gnerbrnt, [2]:btn });
 
