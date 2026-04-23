@@ -69,14 +69,17 @@ if(typ=="right"){ setup_slide_style="right"; }
 if(typ=="center"){ setup_slide_style="center"; }
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
 if(list && id && btn){
+
+ var setup_slidef_objrc;
+ var var btn_copene;
  
 if(id && id==""){  
  var initSidebar_gner= "SidebarFS_"+gerarIDSimples(6);
  var initSidebar_crayteg = document.createElement("div");
   initSidebar_crayteg.setAttribute("id", initSidebar_gner); 
 if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidebar_crayteg);  }
- var setup_slidef_objrc=document.getElementById(initSidebar_gner);    }
-if(id && id!=""){   var setup_slidef_objrc=document.getElementById(id);    } 
+  setup_slidef_objrc=document.getElementById(initSidebar_gner);    }
+else if(id && id!=""){    setup_slidef_objrc=document.getElementById(id);    } 
  
 if(setup_slidef_objrc){ 
 var setup_slide_style_cog="#"+id+" .sidebar-nav .nav-item";  
@@ -96,9 +99,9 @@ if(btn && btn==""){
 initSidedbar_crayteg.className = "sidebar-trigger"; 
 initSidedbar_crayteg.innerHTML = "Open SidebarFS"; 
 if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidedbar_crayteg);  }
- var btn_copene = document.getElementById(initSidebar_gnerbrnt);    
+ btn_copene = document.getElementById(initSidebar_gnerbrnt);    
 }
-if(btn && btn!=""){  var btn_copene = document.getElementById(btn);   }
+else if(btn && btn!=""){   btn_copene = document.getElementById(btn);   }
 
 if(btn_copene){ 
 btn_copene.onclick = function(){ 
