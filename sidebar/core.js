@@ -68,7 +68,7 @@ var setup_slide_style="left";  var setup_slidef_logo="";
 if(typ=="right"){ setup_slide_style="right"; } 
 if(typ=="center"){ setup_slide_style="center"; }
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
-if(list && id && id!="" && btn && btn!=""){
+if(list && id && btn){
  
 if(id==""){  
  var initSidebar_gner= "SidebarFS_"+gerarIDSimples(6);
