@@ -209,6 +209,11 @@ carregarTudo([
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/notify/list.js'
         }
+    },  {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/status/core.js'
+        }
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
@@ -242,11 +247,6 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/core_ds.js'
-        }
-    },  {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/status/core.js'
         }
     }, {
         destino: 'body',  tag: 'script',   
