@@ -71,7 +71,7 @@ if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'
 if(list && id && btn){
 
  var setup_slidef_objrc;
- var var btn_copene;
+ var btn_copene;
  
 if(id && id==""){  
  var initSidebar_gner= "SidebarFS_"+gerarIDSimples(6);
