@@ -68,12 +68,12 @@ sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !import
 
 
 
-function initSidebar_creater(btn="this", id="this", list=[], title="", icon="", theme = 'light', typ="left", callf){ 
+function initSidebar_creater(btn="this", id="this", list=[], title="", icon="", theme = 'light', typ="left", callf, option={ btn: "Open SidebarFS" }){ 
 var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
 if(typ=="center"){ setup_slide_style="center"; }
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
-if(list && id && btn){
+if(list && id && btn && option){
 
 var btnfs_initSideba=false;   var onjfs_initSideba=false;
 if(btn=="this"){  btnfs_initSideba=true;   }
@@ -104,7 +104,7 @@ const btn_copene = initSidebar_check(btnfs_initSideba,function(aa){
  var initSidedbar_crayteg = document.createElement("button");
   initSidedbar_crayteg.setAttribute("id", aa[1]); 
 initSidedbar_crayteg.className = "sidebar-trigger"; 
-initSidedbar_crayteg.innerHTML = "Open SidebarFS"; 
+if(option.btn && option.btn!=""){   initSidedbar_crayteg.innerHTML = option.btn;    }
 if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidedbar_crayteg);  }
 return document.getElementById(aa[1]);   }, function(aa){  return document.getElementById(aa[2]);  }, { [1]:initSidebar_gnerbrnt, [2]:btn });
 
