@@ -6,6 +6,9 @@ if(document.getElementsByTagName("head")[0]){  document.getElementsByTagName("he
 
 function initSidebar_start(){
 
+function gerarIDSimples(tamanho = 8) {  return Math.random().toString(36).substring(2, 2 + tamanho);   }
+
+ 
 function initSidebar_close(sidebar_obj){ 
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
@@ -60,14 +63,21 @@ sidebar_obj.innerHTML=sidebar_obj.innerHTML+"<style>  "+id+" { opacity:1 !import
 
 
 
-function initSidebar_creater(btn, id, list=[], title="", icon="", theme = 'light', typ="left", callf){ 
+function initSidebar_creater(btn="", id="", list=[], title="", icon="", theme = 'light', typ="left", callf){ 
 var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
 if(typ=="center"){ setup_slide_style="center"; }
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
 if(list && id && id!="" && btn && btn!=""){
-
-const setup_slidef_objrc=document.getElementById(id);
+ 
+if(id==""){  
+ var initSidebar_gner= "SidebarFS_"+gerarIDSimples(6);
+ var initSidebar_crayteg = document.createElement("div");
+  initSidebar_crayteg.setAttribute("id", initSidebar_gner); 
+if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidebar_crayteg);  }
+ var setup_slidef_objrc=document.getElementById(initSidebar_gner);    }
+if(id!=""){   var setup_slidef_objrc=document.getElementById(id);    } 
+ 
 if(setup_slidef_objrc){ 
 var setup_slide_style_cog="#"+id+" .sidebar-nav .nav-item";  
 
@@ -79,7 +89,17 @@ const navItens = setup_slidef_objrc.getElementsByClassName('sidebar-nav')[0];
 const config_pp = setup_slidef_objrc.getElementsByClassName('sidebar-config')[0];
 config_pp.innerHTML="";
 
-const btn_copene = document.getElementById(btn);
+if(btn==""){  
+ var initSidebar_gnerbrnt= "SidebarFS_"+gerarIDSimples(6);
+ var initSidedbar_crayteg = document.createElement("div");
+  initSidedbar_crayteg.setAttribute("id", initSidebar_gnerbrnt); 
+initSidedbar_crayteg.className = "sidebar-trigger"; 
+initSidedbar_crayteg.innerHTML = "Open SidebarFS"; 
+if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidedbar_crayteg);  }
+ var btn_copene = document.getElementById(initSidebar_gnerbrnt);    
+}
+if(btn!=""){  var btn_copene = document.getElementById(btn);   }
+
 if(btn_copene){ 
 btn_copene.onclick = function(){ 
 if (typeof callf === 'function') { callf({ active: function(id){ 
