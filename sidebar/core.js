@@ -70,13 +70,13 @@ if(typ=="center"){ setup_slide_style="center"; }
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
 if(list && id && btn){
  
-if(id==""){  
+if(id && id==""){  
  var initSidebar_gner= "SidebarFS_"+gerarIDSimples(6);
  var initSidebar_crayteg = document.createElement("div");
   initSidebar_crayteg.setAttribute("id", initSidebar_gner); 
 if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidebar_crayteg);  }
  var setup_slidef_objrc=document.getElementById(initSidebar_gner);    }
-if(id!=""){   var setup_slidef_objrc=document.getElementById(id);    } 
+if(id && id!=""){   var setup_slidef_objrc=document.getElementById(id);    } 
  
 if(setup_slidef_objrc){ 
 var setup_slide_style_cog="#"+id+" .sidebar-nav .nav-item";  
@@ -89,16 +89,16 @@ const navItens = setup_slidef_objrc.getElementsByClassName('sidebar-nav')[0];
 const config_pp = setup_slidef_objrc.getElementsByClassName('sidebar-config')[0];
 config_pp.innerHTML="";
 
-if(btn==""){  
+if(btn && btn==""){  
  var initSidebar_gnerbrnt= "SidebarFS_"+gerarIDSimples(6);
- var initSidedbar_crayteg = document.createElement("div");
+ var initSidedbar_crayteg = document.createElement("button");
   initSidedbar_crayteg.setAttribute("id", initSidebar_gnerbrnt); 
 initSidedbar_crayteg.className = "sidebar-trigger"; 
 initSidedbar_crayteg.innerHTML = "Open SidebarFS"; 
 if(document.getElementsByTagName("body")[0]){  document.getElementsByTagName("body")[0].appendChild(initSidedbar_crayteg);  }
  var btn_copene = document.getElementById(initSidebar_gnerbrnt);    
 }
-if(btn!=""){  var btn_copene = document.getElementById(btn);   }
+if(btn && btn!=""){  var btn_copene = document.getElementById(btn);   }
 
 if(btn_copene){ 
 btn_copene.onclick = function(){ 
