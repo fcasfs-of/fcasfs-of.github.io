@@ -180,6 +180,17 @@ carregarTudo([
     }, {
         destino: 'head',    tag: 'link',
         atributos: {
+            'href': 'https://fcasfs-of.cloud-fs.net/status/theme.css',
+            'rel': 'stylesheet'
+        }
+    }, {
+        destino: 'head',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/status/list.js'
+        }
+    }, {
+        destino: 'head',    tag: 'link',
+        atributos: {
             'href': 'https://fcasfs-of.cloud-fs.net/cookies/consent.css',
             'rel': 'stylesheet'
         }
@@ -231,6 +242,11 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/core_ds.js'
+        }
+    },  {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/status/core.js'
         }
     }, {
         destino: 'body',  tag: 'script',   
