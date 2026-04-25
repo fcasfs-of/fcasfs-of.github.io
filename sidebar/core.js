@@ -13,20 +13,22 @@ function gerarIDSimples(tamanho = 8) {  return Math.random().toString(36).substr
   }  return initSidebar_checkdf;  }
 
 
-function initSidebar_close(sidebar_obj){ 
+function initSidebar_close(sidebar_obj, cl){ 
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
 const overlay = sidebar_obj.getElementsByClassName('sidebar-overlay')[0];
 if(sidebar){ sidebar.classList.add('sidebar-closed'); }
-if(overlay){ overlay.classList.remove('active'); }  
+if(overlay){ overlay.classList.remove('active'); } 
+if (typeof cl === 'function') {  cl();  } 
 }   }   
 
-function initSidebar_open(sidebar_obj){ 
+function initSidebar_open(sidebar_obj, cl){ 
 if(sidebar_obj){ 
 const sidebar = sidebar_obj.getElementsByClassName('sidebar')[0]; 
 const overlay = sidebar_obj.getElementsByClassName('sidebar-overlay')[0];
 if(sidebar){ sidebar.classList.remove('sidebar-closed'); }
 if(overlay){ overlay.classList.add('active'); } 
+if (typeof cl === 'function') {  cl();  }
 }  }  
 
 
@@ -115,15 +117,15 @@ btn_copene.onclick = function(){
 if (typeof callf === 'function') { callf({ active: function(id){ 
  if(id){   initSidebar_oac(config_pp, setup_slide_style_cog+" .iten"+(Number(id)+1)+"");   } 
 }, 
-close: function(){ initSidebar_close(setup_slidef_objrc); }, 
-open: function(){ initSidebar_open(setup_slidef_objrc); }, 
+close: function(){ initSidebar_close(setup_slidef_objrc, option.close); }, 
+open: function(){ initSidebar_open(setup_slidef_objrc, option.open); }, 
 obj: navItens  }); } 
-initSidebar_open(setup_slidef_objrc); }; 
+initSidebar_open(setup_slidef_objrc, option.open); }; 
 }
 
 const btn_close = setup_slidef_objrc.getElementsByClassName('sidebar-close')[0];
-if(btn_close){ btn_close.onclick = function(){ initSidebar_close(setup_slidef_objrc); }; }
-if(overlay){ overlay.onclick = function(){ initSidebar_close(setup_slidef_objrc); }; }
+if(btn_close){ btn_close.onclick = function(){ initSidebar_close(setup_slidef_objrc, option.close); }; }
+if(overlay){ overlay.onclick = function(){ initSidebar_close(setup_slidef_objrc, option.close); }; }
 
 
 initSidebar(setup_slidef_objrc, list, theme); 
