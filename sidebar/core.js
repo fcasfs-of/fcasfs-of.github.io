@@ -138,6 +138,7 @@ if (typeof initSidebar_onload === 'function') {  initSidebar_onload(initSidebar_
 
 }
 
+function initSidebar_startEx(ff){  if (typeof ff === 'function') {  ff(initSidebar_creater);		}  }
 
 
 initSidebar_start();
