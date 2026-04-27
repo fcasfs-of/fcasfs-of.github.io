@@ -73,6 +73,8 @@ function initSidebar_creater(btn="this", id="this", list=[], title="", icon="", 
 var setup_slide_style="left";  var setup_slidef_logo="";   
 if(typ=="right"){ setup_slide_style="right"; } 
 if(typ=="center"){ setup_slide_style="center"; }
+if(typ=="fullscreen"){ setup_slide_style="fullscreen"; }
+
 if(icon && icon!=""){ setup_slidef_logo='<div class="brand-logo">'+icon+'</div>'; }
 if(list && id && btn && option){
 
@@ -94,7 +96,7 @@ if(setup_slidef_objrc){
 var setup_slide_style_cog="#"+id+" .sidebar-nav .nav-item";  
 
   var initSidebar_creater_closde='<button class="sidebar-close close-x"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path fill="#444" d="M15.1 3.1l-2.2-2.2-4.9 5-4.9-5-2.2 2.2 5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"></path></svg></button>';
-if(option.btn_close && option.btn_close===false){   initSidebar_creater_closde="";   }  
+if(option.btn_close && option.btn_close==false){   initSidebar_creater_closde="";   }  
 setup_slidef_objrc.innerHTML='<aside class="sidebar '+setup_slide_style+' sidebar-closed"> <div class="sidebar-inner"> <header class="sidebar-header"> <div class="brand"> '+setup_slidef_logo+' <span>'+title+'</span> </div> '+initSidebar_creater_closde+' </header> <nav class="sidebar-nav"></nav> <br/><br/> </div></aside><span class="sidebar-config"></span><div class="sidebar-overlay"></div>'; 
 
 const overlay = setup_slidef_objrc.getElementsByClassName('sidebar-overlay')[0];
