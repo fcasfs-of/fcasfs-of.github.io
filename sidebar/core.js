@@ -121,6 +121,7 @@ btn_copene.onclick = function(){
 if (typeof callf === 'function') { callf({ active: function(id){ 
  if(id){   initSidebar_oac(config_pp, setup_slide_style_cog+" .iten"+(Number(id)+1)+"");   } 
 }, 
+theme: function (theme = 'light'){  initSidebar_theme(setup_slidef_objrc, theme);  },
 btn_ooen: btn_copene.style,
 close: function(){ initSidebar_close(setup_slidef_objrc, option.close); }, 
 open: function(){ initSidebar_open(setup_slidef_objrc, option.open); }, 
