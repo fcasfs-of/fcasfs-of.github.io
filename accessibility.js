@@ -97,6 +97,8 @@ const fs_accessibility = (function() {
             .fs-acc-item svg { width: 24px; height: 24px; fill: currentColor; }
 
             .fs-acc-close { background: none; border: none; cursor: pointer; width: 24px; height: 24px; }
+            .fs-acc-close:active {  border: 1px solid #000;  }
+            .fs-acc-close:hover {  border: 2px solid #ccc;  }
 
             /* Classes Globais de Acessibilidade */
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
