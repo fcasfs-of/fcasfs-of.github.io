@@ -145,13 +145,25 @@ const fs_accessibility = (function() {
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', 10)">${icons.textPlus_1} ${lang.increaseText}</div>
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', -10)">${icons.textPlus_2} ${lang.decreaseText}</div>
                 <div class="fs-acc-item" data-key="fontReadable" onclick="fs_accessibility.update('fontReadable')">${icons.textPlus_3} ${lang.readableFont}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="contrast" onclick="fs_accessibility.update('contrast')">${icons.contrast_1} ${lang.highContrast}</div>
                 <div class="fs-acc-item" data-key="grayscale" onclick="fs_accessibility.update('grayscale')">${icons.contrast_2} ${lang.grayscale}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="linksHighlight" onclick="fs_accessibility.update('linksHighlight')">${icons.link_1} ${lang.linksHighlight}</div>
                 <div class="fs-acc-item" data-key="imagesHighlight" onclick="fs_accessibility.update('imagesHighlight')">${icons.link_2} ${lang.imagesHighlight}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="noAnim" onclick="fs_accessibility.update('noAnim')">${icons.animation} ${lang.stopAnimations}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="bigCursor" onclick="fs_accessibility.update('bigCursor')">${icons.cursor} ${lang.bigCursor}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
+            </div>
+            <div class="fs-acc-grid">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
             </div>
             <div style="padding: 20px; margin-top: auto;">
