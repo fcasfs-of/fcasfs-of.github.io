@@ -14,7 +14,8 @@ const fs_subdomains_pp = [
     {
      name: "",
      links: [
-       { title: "Search Files in Folders", url: "http://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", disable: true }
+       { title: "Search Files in Folders", url: "http://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/", disable: true },
+       { title: "TECH-SideBar", url: "http://fcasfs-of.cloud-fs.net/TECH-SideBar/" }
       ]
     }
   
