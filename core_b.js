@@ -131,7 +131,11 @@ function share_btsD_all(){
 }
 
 function micAccessTool_run(cokk_plu_esdnf){ 
-	if(cokk_plu_esdnf && MicAccessTool){    var micAccessTool = new MicAccessTool({  link: '',  contact: '',   buttonPosition: '',  forceLang: cokk_plu_esdnf   });     }
+	if(cokk_plu_esdnf && fs_accessibility){   fs_accessibility.init({ 
+    lang: cokk_plu_esdnf, 
+    position: 'left',  modalPos: 'full',
+    customButtons: []
+ });    }
 }
 
 
