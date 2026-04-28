@@ -128,6 +128,7 @@ const fs_accessibility = (function() {
         modal.className = `fs-acc-modal ${config.modalPos}`;
         modal.innerHTML = `
             <div class="fs-acc-header">
+                <svg viewBox="0 0 24 24" width="24px" heigh="24px" style="margin: 0;"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"></path></svg>
                 <strong>${lang.title}</strong>
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
             </div>
