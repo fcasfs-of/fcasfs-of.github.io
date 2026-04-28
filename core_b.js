@@ -233,7 +233,7 @@ carregarTudo([
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
-			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
+			  'src': 'https://fcasfs-of.cloud-fs.net/TECH-SideBar/app/api.js'
         },
                     'defer': "",
                     'init': "",
