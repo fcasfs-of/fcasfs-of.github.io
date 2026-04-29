@@ -470,9 +470,9 @@ if(state){  if(state.libras===true){
             <div class="fs-acc-grid">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
             </div>
-            <div style="padding: 20px; margin-top: auto;">
+            <hr/>  <div style="padding: 20px; margin-top: auto;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
-            </div>
+            </div>  <br/>  
         `;
         document.body.appendChild(modal);
     }
