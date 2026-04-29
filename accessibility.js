@@ -278,7 +278,7 @@ const LibrasInclusivo = (params) => {
         cursor: 'pointer',
         zIndex: '1000000'
     });
-    closeBtn.onclick = () => { overlay.style.display = 'none'; document.body.style.overflow = 'auto'; };
+    closeBtn.onclick = () => { overlay.style.display = 'none'; document.body.style.overflow = 'auto';   document.body.classList.remove('fs-acc-modal_scroll');   };
 
     const content = document.createElement('div');
     Object.assign(content.style, {
@@ -327,6 +327,7 @@ const LibrasInclusivo = (params) => {
 
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        document.body.classList.add('fs-acc-modal_scroll'); 
     };
 
     if (config.botao) {
@@ -386,6 +387,8 @@ if(state){  if(state.libras===true){
             .fs-acc-modal.active { display: flex; }
             
             /* Posições do Modal */
+            .fs-acc-modal_scroll{  overflow:hidden;  }
+            
             .fs-acc-modal.right { right: 0; }
             .fs-acc-modal.left { left: 0; }
             .fs-acc-modal.center { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -50%); height: 80vh; border-radius: 12px; }
