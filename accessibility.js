@@ -54,14 +54,14 @@ const AgeGate = {
             }
             .age-gate-card {
                 background: #121212; color: white; padding: 30px; border-radius: 20px;
-                width: 90%; height: 100%;  text-align: center; border: 1px solid #333;  overflow: auto;
+                width: 90%; height: 80%;  text-align: center; border: 1px solid #333;  overflow: auto;
                 box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             }
             .age-gate-card h2 { color: #e74c3c; margin-top: 0; }
             .age-gate-terms {
                 text-align: left; background: #1e1e1e; padding: 15px;
                 border-radius: 10px; font-size: 0.85rem; color: #bbb;
-                margin: 20px 0; max-height: 150px; overflow-y: auto; border: 1px solid #222;
+                margin: 20px 0; overflow: auto; border: 1px solid #222;
             }
             .age-gate-btns { display: flex; flex-direction: column; gap: 10px; }
             .btn-age-accept {
