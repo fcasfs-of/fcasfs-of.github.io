@@ -120,7 +120,9 @@ const fs_accessibility = (function() {
         position: 'right', // 'left' or 'right'
         modalPos: 'right', // 'left', 'right', 'center', 'full'
         storageKey: 'fs_acc_settings',
-        customButtons: []
+        customButtons: [],
+        open_call: function(){   },
+        close_call: function(){   }
     };
 
     const i18n = {
@@ -377,9 +379,10 @@ if(state){  if(state.libras===true){
         loadSettings();
         injectStyles();
         render();
-         LibrasInclusivo({ idioma: options.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
+         LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
-    }
+   }
+ 
 
     function injectStyles() {
         const css = `
@@ -507,8 +510,14 @@ if(state){  if(state.libras===true){
         document.getElementById('fs_acc_modal').classList.toggle('active');
         if (document.getElementById('fs_acc_modal').classList.contains('active')) {           
             document.body.classList.add("fs-acc-modal-scroll");     
+
+            if (typeof config.open_call === 'function') {  config.open_call(state);  }
+
         }  else {
            document.body.classList.remove("fs-acc-modal-scroll");
+            
+           if (typeof config.close_call === 'function') {  config.close_call(state);  }
+
         }
     }
 
