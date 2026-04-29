@@ -216,6 +216,7 @@ const fs_accessibility = (function() {
     };
 
     function init(options = {}) {
+         LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         Object.assign(config, options);
         loadSettings();
         injectStyles();
@@ -344,9 +345,6 @@ const fs_accessibility = (function() {
 
         // Ativar/Desativar
         if (state.libras) {
-            b.onmouseover = (e) => {
-                LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
-             };
         }
         if (state.speech) {
             b.onmouseover = (e) => {
