@@ -210,6 +210,8 @@ const fs_accessibility = (function() {
         fontReadable: false,
         contrast: false,
         grayscale: false,
+        lineSpace: false,
+        textlineSpace: false,
         titleHighlight: false,
         linksHighlight: false,
         imagesHighlight: false,
@@ -516,7 +518,9 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-tela_z', state.currentTela);
         b.classList.toggle('fs-acc-tela_d', state.currentTelaZ);
         b.classList.toggle('fs-acc-title', state.titleHighlight);
-        
+        b.classList.toggle('fs-acc-text_line', state.textlineSpace);
+        b.classList.toggle('fs-acc-text_space', state.lineSpace);
+
         // Ativar/Desativar
         
         if (state.speech) {
@@ -549,7 +553,7 @@ if(state){  if(state.libras===true){
     }
 
     function reset() {
-        state = { currentTela: false, currentTelaZ: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
+        state = { currentTela: false, currentTelaZ: false, lineSpace: false, textlineSpace: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
         saveSettings();
         applyAll();
     }
