@@ -408,7 +408,9 @@ if(state){  if(state.libras===true){
             .fs-acc-close:active {  border: 1px solid #000;  }
             .fs-acc-close:hover {  border: 2px solid #ccc;  }
 
-            /* Classes Globais de Acessibilidade */
+            body.fs-acc-tela_z .fs-acc-modal.active {  transform-origin: center;    transform: scale(0.6);    }
+            body.fs-acc-tela_d .fs-acc-modal.active {  transform-origin: bottom center;   transform: scale(0.7);   }
+            
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
             body.fs-acc-contrast { background: #000 !important; color: #fff !important; filter: contrast(150%); }
             body.fs-acc-grayscale { filter: grayscale(100%); }
