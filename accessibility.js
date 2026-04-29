@@ -278,9 +278,9 @@ const LibrasInclusivo = (params) => {
         cursor: 'pointer',
         zIndex: '1000000'
     });
-    closeBtn.onclick = function(){  overlay.style.display = 'none';  
-       document.body.classList.remove('fs-acc-modal_scroll');                            
-    };
+    closeBtn.onclick = function(){  
+        document.body.classList.remove('fs-acc-modal_scroll');                            
+    overlay.style.display = 'none';      }
 
     const content = document.createElement('div');
     Object.assign(content.style, {
@@ -327,8 +327,8 @@ const LibrasInclusivo = (params) => {
             content.appendChild(box);
         });
 
-        overlay.style.display = 'flex';
         document.body.classList.add('fs-acc-modal_scroll'); 
+        overlay.style.display = 'flex';
     }
 
     if (config.botao) {
@@ -543,7 +543,6 @@ if(state){  if(state.libras===true){
             b.onmouseover = null;
         }
 
-        // Marcar botões ativos no modal
         document.querySelectorAll('.fs-acc-item[data-key]').forEach(el => {
             const key = el.getAttribute('data-key');
             el.classList.toggle('active', state[key]);
