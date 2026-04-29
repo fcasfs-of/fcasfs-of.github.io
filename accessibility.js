@@ -146,7 +146,7 @@ const fs_accessibility = (function() {
             textToLibra: "Traduzir para Libras",
             textTitle: "Sublinhar Títulos",
             textToSpeech: "Voz (Hover)",
-            magnifier: "Lupa de Tela".
+            magnifier: "Lupa de Tela",
             line: "Altura da Linha",
             space: "Espaçamento de Texto"
         },
