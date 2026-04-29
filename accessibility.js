@@ -376,7 +376,7 @@ if(state){  if(state.libras===true){
         loadSettings();
         injectStyles();
         render();
-         LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
+         LibrasInclusivo({ idioma: options.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
     }
 
@@ -500,6 +500,11 @@ if(state){  if(state.libras===true){
 
     function toggleModal() {
         document.getElementById('fs_acc_modal').classList.toggle('active');
+        if (document.getElementById('fs_acc_modal').classList.contains('active')) {           
+            document.body.classList.add("fs-acc-modal-scroll");     
+        }  else {
+           document.body.classList.remove("fs-acc-modal-scroll");
+        }
     }
 
     function update(key, val) {
