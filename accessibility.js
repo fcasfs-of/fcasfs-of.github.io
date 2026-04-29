@@ -396,6 +396,7 @@ if(state){  if(state.libras===true){
             body.fs-acc-icons svg { outline: 4px solid #2563eb !important; opacity: 0.8; }
             body.fs-acc-buttons button { outline: 4px solid #2563eb !important; opacity: 0.8; }
             body.fs-acc-videos video { outline: 4px solid #2563eb !important; opacity: 0.8; }
+            body.fs-acc-tela {   transform: scale(1.4);    transform-origin: left top;   }
             body.fs-acc-cursor { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="48" height="48" viewBox="0 0 24 24"><path d="M7 2l12 11.2l-5.8.5l3.3 7.3l-2.2 1l-3.2-7.4L7 19z"/></svg>'), auto !important; }
         `;
         const style = document.createElement('style');
@@ -489,15 +490,9 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-buttons', state.buttonsHighlight);
         b.classList.toggle('fs-acc-icons', state.iconsHighlight);
         b.classList.toggle('fs-acc-cursor', state.bigCursor);
+        b.classList.toggle('fs-acc-tela', state.currentTela);
 
         // Ativar/Desativar
-        
-  let currentZoomTela = 1;
-    if (state.currentTela===true) {            currentZoomTela = 1.2;        }
-    document.body.style.transform = `scale(${currentZoomTela})`;
-    document.body.style.transformOrigin = 'top left';
-    document.body.style.width = currentZoomTela === 1 ? '100%' : `${100 / currentZoomTela}%`;
-
         
         if (state.speech) {
             b.onmouseover = (e) => {
