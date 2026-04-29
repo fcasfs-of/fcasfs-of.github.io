@@ -526,7 +526,6 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-text_space', state.lineSpace);
 
         // Ativar/Desativar
-        
         if (state.speech) {
             b.onmouseover = (e) => {
                 if (e.target.innerText && e.target.tagName !== 'BODY') {
