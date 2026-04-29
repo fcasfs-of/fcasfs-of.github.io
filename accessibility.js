@@ -172,7 +172,7 @@ const fs_accessibility = (function() {
             textToLibra: "Translate to Libras",
             textTitle: "Underline Headers",
             textToSpeech: "Speech (Hover)",
-            magnifier: "Screen Magnifier".
+            magnifier: "Screen Magnifier",
             line: "Line Height",
             space: "Text Spacing"
         }
