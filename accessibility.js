@@ -344,7 +344,9 @@ const fs_accessibility = (function() {
 
         // Ativar/Desativar
         if (state.libras) {
-            LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  });  
+            b.onmouseover = (e) => {
+                LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
+             };
         }
         if (state.speech) {
             b.onmouseover = (e) => {
