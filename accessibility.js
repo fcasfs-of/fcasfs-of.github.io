@@ -1,3 +1,117 @@
+const AgeGate = {
+    i18n: {
+        pt: {
+            title: "Conteúdo Restrito",
+            msg: "Este site contém material destinado exclusivamente a adultos.",
+            terms: `
+                <h3>Termos de Uso</h3>
+                <p>Ao clicar em confirmar, você declara estar ciente de:</p>
+                <ul>
+                    <li>Possuir 18 anos ou mais de idade.</li>
+                    <li>O conteúdo é de natureza adulta e explícita.</li>
+                    <li>A responsabilidade de acesso em locais públicos ou perto de menores é sua.</li>
+                </ul>`,
+            confirm: "Sou maior de idade",
+            exit: "Sair",
+        },
+        en: {
+            title: "Restricted Content",
+            msg: "This website contains material intended for adults only.",
+            terms: `
+                <h3>Terms of Use</h3>
+                <p>By clicking confirm, you declare that:</p>
+                <ul>
+                    <li>You are 18 years of age or older.</li>
+                    <li>The content is of an adult and explicit nature.</li>
+                    <li>Access responsibility near minors is entirely yours.</li>
+                </ul>`,
+            confirm: "I am 18 or older",
+            exit: "Exit",
+        }
+    },
+
+    init: function(lang = 'pt', onAccept, onDeny) {
+        if (localStorage.getItem('isAdultUser') === 'true') {
+            if(onAccept) onAccept();
+            return;
+        }
+
+        const text = this.i18n[lang] || this.i18n['pt'];
+        this.injectStyles();
+        this.renderModal(text, onAccept, onDeny);
+    },
+
+    injectStyles: function() {
+        if (document.getElementById('age-gate-styles')) return;
+        const style = document.createElement('style');
+        style.id = 'age-gate-styles';
+        style.textContent = `
+            #age-gate-wrapper {
+                position: fixed; top: 0; left: 0; bottom:0; right:0;  width: 100%; height: 100%;
+                background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+                z-index: 999999; display: flex; align-items: center; justify-content: center;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            }
+            .age-gate-card {
+                background: #121212; color: white; padding: 30px; border-radius: 20px;
+                width: 90%; height: 100%;  text-align: center; border: 1px solid #333;  overflow: auto;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            }
+            .age-gate-card h2 { color: #e74c3c; margin-top: 0; }
+            .age-gate-terms {
+                text-align: left; background: #1e1e1e; padding: 15px;
+                border-radius: 10px; font-size: 0.85rem; color: #bbb;
+                margin: 20px 0; max-height: 150px; overflow-y: auto; border: 1px solid #222;
+            }
+            .age-gate-btns { display: flex; flex-direction: column; gap: 10px; }
+            .btn-age-accept {
+                background: #e74c3c; color: white; border: none; padding: 15px;
+                border-radius: 10px; font-weight: bold; cursor: pointer; transition: 0.2s;
+            }
+            .btn-age-accept:hover { background: #c0392b; transform: translateY(-2px); }
+            .btn-age-deny {
+                 background: transparent; color: #777; border: none; cursor: pointer; text-decoration: underline;
+            }
+            body.age-gate-active { overflow: hidden; }
+        `;
+        document.head.appendChild(style);
+    },
+
+    renderModal: function(text, onAccept, onDeny) {
+        document.body.classList.add('age-gate-active');
+        const overlay = document.createElement('div');
+        overlay.id = 'age-gate-wrapper';
+
+        overlay.innerHTML = `
+            <div class="age-gate-card">  <br/><br/>
+                <h2>${text.title}</h2>
+                <p>${text.msg}</p>
+                <div class="age-gate-terms">${text.terms}</div>
+                <div class="age-gate-btns">
+                   <button class="btn-age-accept" id="age-accept">${text.confirm}</button>
+                    <button class="btn-age-deny" id="age-deny">${text.exit}</button>
+                </div>
+            <br/><br/>  </div>
+        `;
+
+        document.body.appendChild(overlay);
+
+       
+        document.getElementById('age-accept').onclick = () => {
+            localStorage.setItem('isAdultUser', 'true');
+            overlay.remove();
+            document.body.classList.remove('age-gate-active');
+            if (onAccept) onAccept();
+        };
+
+        document.getElementById('age-deny').onclick = () => {
+            if (onDeny) onDeny();
+            else window.location.href = "https://google.com";
+        };
+    }
+};
+
+
 const fs_accessibility = (function() {
     const config = {
         lang: 'pt',
