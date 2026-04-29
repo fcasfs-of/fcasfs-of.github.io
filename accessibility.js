@@ -278,7 +278,7 @@ const LibrasInclusivo = (params) => {
         cursor: 'pointer',
         zIndex: '1000000'
     });
-    closeBtn.onclick = () => { overlay.style.display = 'none'; document.body.style.overflow = 'auto';   document.body.classList.remove('fs-acc-modal_scroll');   };
+    closeBtn.onclick = () => { overlay.style.display = 'none';  document.body.classList.remove('fs-acc-modal_scroll');   };
 
     const content = document.createElement('div');
     Object.assign(content.style, {
@@ -326,7 +326,6 @@ const LibrasInclusivo = (params) => {
         });
 
         overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
         document.body.classList.add('fs-acc-modal_scroll'); 
     };
 
