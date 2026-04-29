@@ -555,7 +555,7 @@ if(state){  if(state.libras===true){
 
     function loadSettings() {
         const saved = localStorage.getItem(config.storageKey);
-        if (saved) state = JSON.parse(saved);
+        if (saved && saved!=""){  state = JSON.parse(saved);     }
     }
 
     function reset() {
