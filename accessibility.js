@@ -115,7 +115,7 @@ const AgeGate = {
 
 
 const fs_accessibility = (function() {
-    const config = {
+    const config = {   //customConfig
         lang: 'pt',
         position: 'right', // 'left' or 'right'
         modalPos: 'right', // 'left', 'right', 'center', 'full'
@@ -379,7 +379,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
     
     function init(options = {}) {
         Object.assign(config, options);
-        //state_appendObjeto();
+        state_appendObjeto(config.customConfig);
         loadSettings();
         injectStyles();
         render();
