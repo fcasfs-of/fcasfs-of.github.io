@@ -128,6 +128,7 @@ const fs_accessibility = (function() {
             title: "Acessibilidade",
             reset: "Resetar Configurações",
             close: "Fechar",
+            currentTela: "Ampliar Tela",
             increaseText: "Aumentar Texto",
             decreaseText: "Diminuir Texto",
             readableFont: "Fonte Legível",
@@ -149,6 +150,7 @@ const fs_accessibility = (function() {
             title: "Accessibility",
             reset: "Reset Settings",
             close: "Close",
+            currentTela: "Enlarge Screen",
             increaseText: "Increase Text",
             decreaseText: "Decrease Text",
             readableFont: "Readable Font",
@@ -169,6 +171,7 @@ const fs_accessibility = (function() {
     };
 
     const icons = {
+        tela: `<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">  <circle cx="11" cy="11" r="8"></circle>  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>  <line x1="11" y1="8" x2="11" y2="14"></line>  <line x1="8" y1="11" x2="14" y2="11"></line></svg>`,
         main: `<svg viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>`,
         close: `<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
         textPlus_1: `<svg width="24px" height="24px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><path d="M 16 0 L 16 3 L 13 3 L 13 4 L 16 4 L 16 7 L 17 7 L 17 4 L 20 4 L 20 3 L 17 3 L 17 0 L 16 0 z M 5.6523438 6 L 1.03125 18.324219 L 1.96875 18.675781 L 3.3476562 15 L 9.6523438 15 L 11.03125 18.675781 L 11.96875 18.324219 L 7.3476562 6 L 5.6523438 6 z M 6.3476562 7.0019531 L 6.6523438 7.0019531 L 9.2773438 14 L 3.7226562 14 L 6.3476562 7.0019531 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/></g></svg>`,
@@ -190,6 +193,7 @@ const fs_accessibility = (function() {
 
     let state = {
         zoom: 100,
+        currentTela: false,
         fontReadable: false,
         contrast: false,
         grayscale: false,
@@ -420,6 +424,9 @@ if(state){  if(state.libras===true){
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
             </div>
             <div class="fs-acc-grid">
+                <div class="fs-acc-item" data-key="currentTela" onclick="fs_accessibility.update('currentTela')">${icons.tela} ${lang.currentTela}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', 10)">${icons.textPlus_1} ${lang.increaseText}</div>
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', -10)">${icons.textPlus_2} ${lang.decreaseText}</div>
                 <div class="fs-acc-item" data-key="fontReadable" onclick="fs_accessibility.update('fontReadable')">${icons.textPlus_3} ${lang.readableFont}</div>
@@ -484,8 +491,14 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-cursor', state.bigCursor);
 
         // Ativar/Desativar
-        if (state.libras) {
-        }
+        
+  let currentZoomTela = 1;
+    if (state.currentTela===true) {            currentZoomTela = 1.2;        }
+    document.body.style.transform = `scale(${currentZoomTela})`;
+    document.body.style.transformOrigin = 'top left';
+    document.body.style.width = currentZoomTela === 1 ? '100%' : `${100 / currentZoomTela}%`;
+
+        
         if (state.speech) {
             b.onmouseover = (e) => {
                 if (e.target.innerText && e.target.tagName !== 'BODY') {
@@ -516,7 +529,7 @@ if(state){  if(state.libras===true){
     }
 
     function reset() {
-        state = { zoom: 100, fontReadable: false, contrast: false, grayscale: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
+        state = { currentTela: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
         saveSettings();
         applyAll();
     }
