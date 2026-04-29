@@ -375,6 +375,9 @@ if(state){  if(state.libras===true){
             body.fs-acc-no-anim * { animation: none !important; transition: none !important; }
             body.fs-acc-links a { background: yellow !important; color: black !important; outline: 2px solid red !important; }
             body.fs-acc-images img { outline: 4px solid #2563eb !important; opacity: 0.8; }
+            body.fs-acc-icons svg { outline: 4px solid #2563eb !important; opacity: 0.8; }
+            body.fs-acc-buttons button { outline: 4px solid #2563eb !important; opacity: 0.8; }
+            body.fs-acc-videos video { outline: 4px solid #2563eb !important; opacity: 0.8; }
             body.fs-acc-cursor { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="48" height="48" viewBox="0 0 24 24"><path d="M7 2l12 11.2l-5.8.5l3.3 7.3l-2.2 1l-3.2-7.4L7 19z"/></svg>'), auto !important; }
         `;
         const style = document.createElement('style');
