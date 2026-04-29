@@ -278,7 +278,9 @@ const LibrasInclusivo = (params) => {
         cursor: 'pointer',
         zIndex: '1000000'
     });
-    closeBtn.onclick = () => { overlay.style.display = 'none';  document.body.classList.remove('fs-acc-modal_scroll');   };
+    closeBtn.onclick = () => { overlay.style.display = 'none';  
+       document.getElementsByTagName("body")[0].classList.remove('fs-acc-modal_scroll');                            
+    };
 
     const content = document.createElement('div');
     Object.assign(content.style, {
@@ -326,7 +328,7 @@ const LibrasInclusivo = (params) => {
         });
 
         overlay.style.display = 'flex';
-        document.body.classList.add('fs-acc-modal_scroll'); 
+        document.getElementsByTagName("body")[0].classList.add('fs-acc-modal_scroll'); 
     };
 
     if (config.botao) {
