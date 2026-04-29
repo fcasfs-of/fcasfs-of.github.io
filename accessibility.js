@@ -184,6 +184,9 @@ const fs_accessibility = (function() {
         grayscale: false,
         linksHighlight: false,
         imagesHighlight: false,
+        videosHighlight: false,
+        iconsHighlight: false,
+        buttonsHighlight: false,
         noAnim: false,
         bigCursor: false,
         speech: false,
@@ -461,6 +464,9 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-no-anim', state.noAnim);
         b.classList.toggle('fs-acc-links', state.linksHighlight);
         b.classList.toggle('fs-acc-images', state.imagesHighlight);
+        b.classList.toggle('fs-acc-videos', state.videosHighlight);
+        b.classList.toggle('fs-acc-buttons', state.buttonsHighlight);
+        b.classList.toggle('fs-acc-icons', state.iconsHighlight);
         b.classList.toggle('fs-acc-cursor', state.bigCursor);
 
         // Ativar/Desativar
