@@ -205,6 +205,7 @@ const fs_accessibility = (function() {
 
     let state = {
         zoom: 100,
+        darkTheme: false, 
         currentTela: false,
         currentTelaZ: false,
         fontReadable: false,
@@ -383,6 +384,8 @@ if(state){  if(state.libras===true){
     function injectStyles() {
         const css = `
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
+            .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
+            
             .fs-acc-btn { position: fixed; bottom: 20px; ${config.position}: 20px; width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
             .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
@@ -449,7 +452,7 @@ if(state){  if(state.libras===true){
         modal.className = `fs-acc-modal ${config.modalPos}`;
         modal.innerHTML = `
             <div class="fs-acc-header">
-                <svg viewBox="0 0 24 24" width="24px" heigh="24px" style="margin: 0;"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"></path></svg>
+                <span onclick="fs_accessibility.update('darkTheme')"> <svg viewBox="0 0 24 24" width="24px" heigh="24px" style="margin: 0;"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"></path></svg> </span>
                 <strong>${lang.title}</strong>
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
             </div>
@@ -538,6 +541,9 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-text_line', state.textlineSpace);
         b.classList.toggle('fs-acc-text_space', state.lineSpace);
 
+        document.getElementById('fs_acc_modal').classList.toggle('fs-acc-theme_dark', state.darkTheme);
+
+        
         // Ativar/Desativar
         if (state.speech) {
             b.onmouseover = (e) => {
@@ -568,7 +574,7 @@ if(state){  if(state.libras===true){
     }
 
     function reset() {
-        state = { currentTela: false, currentTelaZ: false, lineSpace: false, textlineSpace: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
+        state = { darkTheme: false, currentTela: false, currentTelaZ: false, lineSpace: false, textlineSpace: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
         saveSettings();
         applyAll();
     }
