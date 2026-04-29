@@ -280,7 +280,9 @@ const LibrasInclusivo = (params) => {
     });
     closeBtn.onclick = function(){  
         document.body.style.overflow="auto"; 
-    overlay.style.display = 'none';      }
+    overlay.style.display = 'none';      
+     document.body.classList.remove("fs-acc-modal-scroll");
+    }
 
     const content = document.createElement('div');
     Object.assign(content.style, {
@@ -329,6 +331,7 @@ const LibrasInclusivo = (params) => {
 
         document.body.style.overflow="hidden"; 
         overlay.style.display = 'flex';
+        document.body.classList.add("fs-acc-modal-scroll");
     }
 
     if (config.botao) {
@@ -387,8 +390,7 @@ if(state){  if(state.libras===true){
             .fs-acc-modal { position: fixed; top: 0; bottom: 0; width: 320px; background: var(--fs-acc-bg); z-index: 10000; box-shadow: 0 0 20px rgba(0,0,0,0.1); display: none; flex-direction: column; font-family: sans-serif; color: var(--fs-acc-text); overflow-y: auto; transition: all 0.3s ease; }
             .fs-acc-modal.active { display: flex; }
             
-            /* Posições do Modal */
-            .fs-acc-modal_scroll{  overflow:hidden;  }
+            .fs-acc-modal-scroll {  overflow:hidden;  }
             
             .fs-acc-modal.right { right: 0; }
             .fs-acc-modal.left { left: 0; }
