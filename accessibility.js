@@ -209,8 +209,8 @@ const LibrasInclusivo = (params) => {
 
     document.querySelector(config.seletor).addEventListener('mouseup', (e) => {
 if(state){  if(state.libras===true){   
-       if (e.target.innerText && e.target.tagName !== 'BODY') {
-        const sel = e.target.innerText;  //window.getSelection().toString();
+       if (window.getSelection().toString() && window.getSelection().toString() !== '') {
+        const sel = window.getSelection().toString();
         if(sel.length > 0 && !config.botao) processar(sel);      }
  }   }
     });
