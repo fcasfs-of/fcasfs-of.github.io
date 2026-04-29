@@ -378,7 +378,7 @@ const fs_accessibility = (function() {
     }
 
     function reset() {
-        state = { zoom: 100, fontReadable: false, contrast: false, grayscale: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false };
+        state = { zoom: 100, fontReadable: false, contrast: false, grayscale: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false };
         saveSettings();
         applyAll();
     }
