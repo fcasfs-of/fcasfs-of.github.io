@@ -278,8 +278,8 @@ const LibrasInclusivo = (params) => {
         cursor: 'pointer',
         zIndex: '1000000'
     });
-    closeBtn.onclick = () => { overlay.style.display = 'none';  
-       document.getElementsByTagName("body")[0].classList.remove('fs-acc-modal_scroll');                            
+    closeBtn.onclick = function(){  overlay.style.display = 'none';  
+       document.body.classList.remove('fs-acc-modal_scroll');                            
     };
 
     const content = document.createElement('div');
@@ -296,7 +296,7 @@ const LibrasInclusivo = (params) => {
     overlay.appendChild(content);
     document.body.appendChild(overlay);
 
-    const processar = (texto) => {
+    function processar(texto) {
         content.innerHTML = '';
         if (!texto) return;
         
@@ -328,8 +328,8 @@ const LibrasInclusivo = (params) => {
         });
 
         overlay.style.display = 'flex';
-        document.getElementsByTagName("body")[0].classList.add('fs-acc-modal_scroll'); 
-    };
+        document.body.classList.add('fs-acc-modal_scroll'); 
+    }
 
     if (config.botao) {
         const floatBtn = document.createElement('button');
