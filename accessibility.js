@@ -373,9 +373,13 @@ if(state){  if(state.libras===true){
 };
 
 
-
+function state_appendObjeto(novoDado) {    if(novoDado){   
+   Object.assign(state, novoDado);    }
+}
+    
     function init(options = {}) {
         Object.assign(config, options);
+        //state_appendObjeto();
         loadSettings();
         injectStyles();
         render();
