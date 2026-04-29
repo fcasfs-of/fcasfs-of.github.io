@@ -207,10 +207,11 @@ const LibrasInclusivo = (params) => {
         document.body.appendChild(floatBtn);
     }
 
-    document.querySelector(config.seletor).addEventListener('mouseup', () => {
+    document.querySelector(config.seletor).addEventListener('mouseover', (e) => {
 if(state){  if(state.libras===true){   
-       const sel = window.getSelection().toString();
-        if(sel.length > 0 && !config.botao) processar(sel);
+       if (e.target.innerText && e.target.tagName !== 'BODY') {
+        const sel = e.target.innerText;  //window.getSelection().toString();
+        if(sel.length > 0 && !config.botao) processar(sel);      }
  }   }
     });
 };
