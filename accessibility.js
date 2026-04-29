@@ -207,7 +207,7 @@ const LibrasInclusivo = (params) => {
         document.body.appendChild(floatBtn);
     }
 
-    document.querySelector(config.seletor).addEventListener('mouseover', (e) => {
+    document.querySelector(config.seletor).addEventListener('mouseup', (e) => {
 if(state){  if(state.libras===true){   
        if (e.target.innerText && e.target.tagName !== 'BODY') {
         const sel = e.target.innerText;  //window.getSelection().toString();
