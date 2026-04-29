@@ -279,7 +279,7 @@ const LibrasInclusivo = (params) => {
         zIndex: '1000000'
     });
     closeBtn.onclick = function(){  
-        document.body.classList.remove('fs-acc-modal_scroll');                            
+        document.body.style.overflow="auto"; 
     overlay.style.display = 'none';      }
 
     const content = document.createElement('div');
@@ -327,7 +327,7 @@ const LibrasInclusivo = (params) => {
             content.appendChild(box);
         });
 
-        document.body.classList.add('fs-acc-modal_scroll'); 
+        document.body.style.overflow="hidden"; 
         overlay.style.display = 'flex';
     }
 
@@ -369,11 +369,11 @@ if(state){  if(state.libras===true){
 
 
     function init(options = {}) {
-         LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         Object.assign(config, options);
         loadSettings();
         injectStyles();
         render();
+         LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
     }
 
