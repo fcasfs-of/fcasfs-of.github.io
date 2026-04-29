@@ -441,7 +441,10 @@ if(state){  if(state.libras===true){
             <div class="fs-acc-grid">
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', 10)">${icons.textPlus_1} ${lang.increaseText}</div>
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', -10)">${icons.textPlus_2} ${lang.decreaseText}</div>
+            </div>
+            <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="fontReadable" onclick="fs_accessibility.update('fontReadable')">${icons.textPlus_3} ${lang.readableFont}</div>
+                <div class="fs-acc-item" data-key="titleHighlight" onclick="fs_accessibility.update('titleHighlight')">${icons.title} ${lang.titleHighlight}</div>
             </div>
             <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="contrast" onclick="fs_accessibility.update('contrast')">${icons.contrast_1} ${lang.highContrast}</div>
