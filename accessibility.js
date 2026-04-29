@@ -1,3 +1,142 @@
+const LibrasInclusivo = (params) => {
+    const config = {
+        idioma: params.idioma || 'pt',
+        tema: params.tema || 'light',
+        botao: params.botao !== false,
+        posicao: params.posicao || 'bottom-right',
+        seletor: params.seletor || 'body'
+    };
+
+    const dicionario = {
+        'A': '✊', 'B': '✋', 'C': '🤟', 'D': '☝️', 'E': '✊', 'F': '🖐️', 'G': '🤏', 'H': '✌️',
+        'I': '🤙', 'J': '☝️', 'K': '✌️', 'L': '☝️', 'M': '✋', 'N': '✋', 'O': '👌', 'P': '✌️',
+        'Q': '🤏', 'R': '🤞', 'S': '✊', 'T': '✊', 'U': '✌️', 'V': '✌️', 'W': '🖖', 'X': '☝️',
+        'Y': '🤙', 'Z': '☝️', ' ': ' '
+    };
+
+    const i18n = {
+        pt: { label: 'Traduzir Seleção', aviso: 'Selecione um texto para traduzir' },
+        en: { label: 'Translate Selection', aviso: 'Select text to translate' }
+    };
+
+    const lang = i18n[config.idioma] || i18n.pt;
+
+    const overlay = document.createElement('div');
+    Object.assign(overlay.style, {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        display: 'none',
+        userSelect: "none",
+        flexDirection: 'column',
+        pointerEvent:"none",
+        alignItems: 'center',
+        justifyContent: 'center',
+        zIndex: '999999',
+        padding: '40px',
+        boxSizing: 'border-box',
+        overflow: 'auto',
+        backgroundColor: config.tema === 'dark' ? '#000' : '#fff',
+        color: config.tema === 'dark' ? '#fff' : '#000'
+    });
+
+    const closeBtn = document.createElement('div');
+    closeBtn.innerHTML = `<svg viewBox="0 0 24 24" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
+    Object.assign(closeBtn.style, {
+        position: 'fixed',
+        top: '20px',
+        right: '20px',
+        cursor: 'pointer',
+        zIndex: '1000000'
+    });
+    closeBtn.onclick = () => { overlay.style.display = 'none'; document.body.style.overflow = 'auto'; };
+
+    const content = document.createElement('div');
+    Object.assign(content.style, {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: '20px',
+        width: '100%',
+        height: '100%'
+    });
+
+    overlay.appendChild(closeBtn);
+    overlay.appendChild(content);
+    document.body.appendChild(overlay);
+
+    const processar = (texto) => {
+        content.innerHTML = '';
+        if (!texto) return;
+        
+        const chars = texto.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split("");
+        
+        chars.forEach(char => {
+            const box = document.createElement('div');
+            Object.assign(box.style, {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '5px'
+            });
+
+            const sign = document.createElement('span');
+            sign.innerText = dicionario[char] || char;
+            sign.style.fontSize = 'min(26px, 42px)';
+
+            const label = document.createElement('span');
+            label.innerText = char;
+            label.style.fontSize = '14px';
+            label.style.marginTop = '5px';
+            label.style.fontWeight = 'bold';
+
+            box.appendChild(sign);
+            box.appendChild(label);
+            content.appendChild(box);
+        });
+
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    };
+
+    if (config.botao) {
+        const floatBtn = document.createElement('button');
+        floatBtn.innerText = lang.label;
+        Object.assign(floatBtn.style, {
+            position: 'fixed',
+            zIndex: '999998',
+            padding: '12px 20px',
+            border: 'none',
+            borderRadius: '50px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            backgroundColor: '#007bff',
+            color: '#fff',
+            boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
+            bottom: config.posicao.includes('bottom') ? '30px' : 'auto',
+            top: config.posicao.includes('top') ? '30px' : 'auto',
+            left: config.posicao.includes('left') ? '30px' : 'auto',
+            right: config.posicao.includes('right') ? '30px' : 'auto'
+        });
+        floatBtn.onclick = () => {
+            const sel = window.getSelection().toString();
+            sel ? processar(sel) : function(){alert(lang.aviso);};
+        };
+        document.body.appendChild(floatBtn);
+    }
+
+    document.querySelector(config.seletor).addEventListener('mouseup', () => {
+if(state){  if(state.libras===true){   
+       const sel = window.getSelection().toString();
+        if(sel.length > 0 && !config.botao) processar(sel);
+ }   }
+    });
+};
+
+
 const fs_accessibility = (function() {
     const config = {
         lang: 'pt',
@@ -22,6 +161,7 @@ const fs_accessibility = (function() {
             stopAnimations: "Parar Animações",
             bigCursor: "Cursor Grande",
             readingLine: "Linha de Leitura",
+            textToLibra: "Traduzir para Libras",
             textToSpeech: "Voz (Hover)",
             magnifier: "Lupa de Tela"
         },
@@ -39,6 +179,7 @@ const fs_accessibility = (function() {
             stopAnimations: "Stop Animations",
             bigCursor: "Big Cursor",
             readingLine: "Reading Line",
+            textToLibra: "Translate to Libras",
             textToSpeech: "Speech (Hover)",
             magnifier: "Screen Magnifier"
         }
@@ -57,6 +198,7 @@ const fs_accessibility = (function() {
         reset: `<svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>`,
         voice: `<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.2857C13.4229 14.2857 14.5714 13.1371 14.5714 11.7143V6.57143C14.5714 5.14857 13.4229 4 12 4C10.5771 4 9.42857 5.14857 9.42857 6.57143V11.7143C9.42857 13.1371 10.5771 14.2857 12 14.2857ZM11.1429 6.57143C11.1429 6.1 11.5286 5.71429 12 5.71429C12.4714 5.71429 12.8571 6.1 12.8571 6.57143V11.7143C12.8571 12.1943 12.48 12.5714 12 12.5714C11.5286 12.5714 11.1429 12.1857 11.1429 11.7143V6.57143ZM16.5429 11.7143H18C18 14.6371 15.6686 17.0543 12.8571 17.4743V20.2857H11.1429V17.4743C8.33143 17.0543 6 14.6371 6 11.7143H7.45714C7.45714 14.2857 9.63429 16.0857 12 16.0857C14.3657 16.0857 16.5429 14.2857 16.5429 11.7143Z"/></svg>`,
         cursor: `<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">  <path d="M8.85355339,19.8535534 C8.58780599,20.1193008 8.13485879,20.0078536 8.02276001,19.6491375 L3.02276001,3.6491375 C2.90244119,3.26411727 3.26411727,2.90244119 3.6491375,3.02276001 L19.6491375,8.02276001 C20.0078536,8.13485879 20.1193008,8.58780599 19.8535534,8.85355339 L16.2071068,12.5 L20.8535534,17.1464466 C21.0488155,17.3417088 21.0488155,17.6582912 20.8535534,17.8535534 L17.8535534,20.8535534 C17.6582912,21.0488155 17.3417088,21.0488155 17.1464466,20.8535534 L12.5,16.2071068 L8.85355339,19.8535534 Z M4.26195703,4.26195703 L8.73076159,18.5621316 L12.1464466,15.1464466 C12.3417088,14.9511845 12.6582912,14.9511845 12.8535534,15.1464466 L17.5,19.7928932 L19.7928932,17.5 L15.1464466,12.8535534 C14.9511845,12.6582912 14.9511845,12.3417088 15.1464466,12.1464466 L18.5621316,8.73076159 L4.26195703,4.26195703 Z"/></svg>`,
+        libra: `<svg width="24px" height="24px" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.46088 12.8405L22.2354 9.06243C22.7542 8.95215 23.2956 9.05249 23.7405 9.34139L31.8394 14.6009C32.2842 14.8898 32.8256 14.9901 33.3445 14.8798L37.4249 14.0125C38.5053 13.7829 39.5674 14.4726 39.797 15.553L40.4207 18.4874C40.6504 19.5679 39.9607 20.6299 38.8803 20.8596L31.8654 22.3506C31.3466 22.4609 30.8052 22.3605 30.3603 22.0717L22.2614 16.8122C21.8165 16.5233 21.2751 16.4229 20.7563 16.5332L17.654 17.1926" stroke="none" stroke-width="4" stroke-linecap="round"/><path d="M43.5393 33.1596L25.7648 36.9377C25.246 37.048 24.7046 36.9476 24.2597 36.6587L16.1608 31.3992C15.7159 31.1103 15.1745 31.01 14.6557 31.1203L10.5753 31.9876C9.49486 32.2173 8.43282 31.5276 8.20317 30.4471L7.57943 27.5127C7.34978 26.4323 8.03947 25.3702 9.11991 25.1406L16.1348 23.6495C16.6536 23.5392 17.195 23.6396 17.6399 23.9285L25.7388 29.188C26.1836 29.4769 26.725 29.5772 27.2439 29.4669L30.3462 28.8075" stroke="none" stroke-width="4" stroke-linecap="round"/></svg>`,
         animation: `<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22,13v8a1,1,0,0,1-1,1H13a1,1,0,0,1-1-1V13a1,1,0,0,1,1-1h8A1,1,0,0,1,22,13ZM7,6A1,1,0,0,0,6,7v9a1,1,0,0,0,1,1h3V10.5a.5.5,0,0,1,.5-.5H17V7a1,1,0,0,0-1-1ZM3,13H4V4.5A.5.5,0,0,1,4.5,4H13V3a1,1,0,0,0-1-1H3A1,1,0,0,0,2,3v9A1,1,0,0,0,3,13Z"/></svg>`
     };
 
@@ -69,7 +211,8 @@ const fs_accessibility = (function() {
         imagesHighlight: false,
         noAnim: false,
         bigCursor: false,
-        speech: false
+        speech: false,
+        libras: false
     };
 
     function init(options = {}) {
@@ -162,6 +305,7 @@ const fs_accessibility = (function() {
             </div>
             <div class="fs-acc-grid">
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
+                <div class="fs-acc-item" data-key="libra" onclick="fs_accessibility.update('libra')">${icons.libra} ${lang.textToSpeech}</div>
             </div>
             <div class="fs-acc-grid">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
@@ -198,7 +342,10 @@ const fs_accessibility = (function() {
         b.classList.toggle('fs-acc-images', state.imagesHighlight);
         b.classList.toggle('fs-acc-cursor', state.bigCursor);
 
-        // Ativar/Desativar Voz
+        // Ativar/Desativar
+        if (state.libras) {
+            LibrasInclusivo({ idioma: 'pt', tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  });  
+        }
         if (state.speech) {
             b.onmouseover = (e) => {
                 if (e.target.innerText && e.target.tagName !== 'BODY') {
