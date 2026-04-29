@@ -129,6 +129,7 @@ const fs_accessibility = (function() {
             reset: "Resetar Configurações",
             close: "Fechar",
             currentTela: "Ampliar Tela",
+            currentTelaZ: "Reduzir Tela",
             increaseText: "Aumentar Texto",
             decreaseText: "Diminuir Texto",
             readableFont: "Fonte Legível",
@@ -151,6 +152,7 @@ const fs_accessibility = (function() {
             reset: "Reset Settings",
             close: "Close",
             currentTela: "Enlarge Screen",
+            currentTelaZ: "Reduce Screen",
             increaseText: "Increase Text",
             decreaseText: "Decrease Text",
             readableFont: "Readable Font",
@@ -171,7 +173,8 @@ const fs_accessibility = (function() {
     };
 
     const icons = {
-        tela: `<svg width="24px" height="24px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><g><path d="M54,0A42.051,42.051,0,0,0,12,42a41.5989,41.5989,0,0,0,8.48,25.0356L1.7578,85.7578a5.9994,5.9994,0,1,0,8.4844,8.4844L28.9644,75.52A41.5989,41.5989,0,0,0,54,84,42,42,0,0,0,54,0Zm0,72A30,30,0,1,1,84,42,30.0315,30.0315,0,0,1,54,72Z"/><path d="M66,36H60V30a6,6,0,0,0-12,0v6H42a6,6,0,0,0,0,12h6v6a6,6,0,0,0,12,0V48h6a6,6,0,0,0,0-12Z"/></g></svg>`,
+        tela_1: `<svg width="24px" height="24px" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><g><path d="M54,0A42.051,42.051,0,0,0,12,42a41.5989,41.5989,0,0,0,8.48,25.0356L1.7578,85.7578a5.9994,5.9994,0,1,0,8.4844,8.4844L28.9644,75.52A41.5989,41.5989,0,0,0,54,84,42,42,0,0,0,54,0Zm0,72A30,30,0,1,1,84,42,30.0315,30.0315,0,0,1,54,72Z"/><path d="M66,36H60V30a6,6,0,0,0-12,0v6H42a6,6,0,0,0,0,12h6v6a6,6,0,0,0,12,0V48h6a6,6,0,0,0,0-12Z"/></g></svg>`,
+        tela_2: `<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 10L21 3M14 10H20M14 10V4M3 21L10 14M10 14V20M10 14H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
         main: `<svg viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>`,
         close: `<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
         textPlus_1: `<svg width="24px" height="24px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><path d="M 16 0 L 16 3 L 13 3 L 13 4 L 16 4 L 16 7 L 17 7 L 17 4 L 20 4 L 20 3 L 17 3 L 17 0 L 16 0 z M 5.6523438 6 L 1.03125 18.324219 L 1.96875 18.675781 L 3.3476562 15 L 9.6523438 15 L 11.03125 18.675781 L 11.96875 18.324219 L 7.3476562 6 L 5.6523438 6 z M 6.3476562 7.0019531 L 6.6523438 7.0019531 L 9.2773438 14 L 3.7226562 14 L 6.3476562 7.0019531 z " style="fill-opacity:1; stroke:none; stroke-width:0px;"/></g></svg>`,
@@ -194,6 +197,7 @@ const fs_accessibility = (function() {
     let state = {
         zoom: 100,
         currentTela: false,
+        currentTelaZ: false,
         fontReadable: false,
         contrast: false,
         grayscale: false,
@@ -396,7 +400,7 @@ if(state){  if(state.libras===true){
             body.fs-acc-icons svg { outline: 4px solid #2563eb !important; opacity: 0.8; }
             body.fs-acc-buttons button { outline: 4px solid #2563eb !important; opacity: 0.8; }
             body.fs-acc-videos video { outline: 4px solid #2563eb !important; opacity: 0.8; }
-            body.fs-acc-tela {   transform: scale(1.2);    transform-origin: left top;   }
+            body.fs-acc-tela_z {   transform: scale(1.2);    transform-origin: left top;   }
             body.fs-acc-cursor { cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="48" height="48" viewBox="0 0 24 24"><path d="M7 2l12 11.2l-5.8.5l3.3 7.3l-2.2 1l-3.2-7.4L7 19z"/></svg>'), auto !important; }
         `;
         const style = document.createElement('style');
@@ -425,7 +429,8 @@ if(state){  if(state.libras===true){
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
             </div>
             <div class="fs-acc-grid">
-                <div class="fs-acc-item" data-key="currentTela" onclick="fs_accessibility.update('currentTela')">${icons.tela} ${lang.currentTela}</div>
+                <div class="fs-acc-item" data-key="currentTela" onclick="fs_accessibility.update('currentTela')">${icons.tela_1} ${lang.currentTela}</div>
+                <div class="fs-acc-item" data-key="currentTelaZ" onclick="fs_accessibility.update('currentTelaZ')">${icons.tela_2} ${lang.currentTelaZ}</div>
             </div>
             <div class="fs-acc-grid">
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', 10)">${icons.textPlus_1} ${lang.increaseText}</div>
@@ -490,7 +495,8 @@ if(state){  if(state.libras===true){
         b.classList.toggle('fs-acc-buttons', state.buttonsHighlight);
         b.classList.toggle('fs-acc-icons', state.iconsHighlight);
         b.classList.toggle('fs-acc-cursor', state.bigCursor);
-        b.classList.toggle('fs-acc-tela', state.currentTela);
+        b.classList.toggle('fs-acc-tela_z', state.currentTela);
+        b.classList.toggle('fs-acc-tela_d', state.currentTelaZ);
 
         // Ativar/Desativar
         
@@ -524,7 +530,7 @@ if(state){  if(state.libras===true){
     }
 
     function reset() {
-        state = { currentTela: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
+        state = { currentTela: false, currentTelaZ: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
         saveSettings();
         applyAll();
     }
