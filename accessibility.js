@@ -391,16 +391,10 @@ if(state){  if(state.libras===true){
 function summary_accAdd(val, tet, titler) {  if(val && tet && tet!=""){     var summary_accAdd_oo="";
 if(val==true){  
 if(titler && titler!=""){  
-for(var j=0; j<iye.length; j++){
-if(iye[j].txt && iye[j].txt!="" && iye[j].name && iye[j].name!=""){ 
 summary_accAdd_oo=summary_accAdd_oo+'<details class="acc-item">    <summary>      <span>'+titler+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+tet+'</div>    </div>  </details>';
-}
-   }
 }   }   else  {
 summary_accAdd_oo=tet;
-}
-
-}
+}   }
 return summary_accAdd_oo;   }
 
 
