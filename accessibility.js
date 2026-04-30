@@ -421,10 +421,10 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
 
-            .js-divider {                display: flex;                align-items: center;                width: 100%;                margin: 2.5rem 0;                gap: 15px;            }
+            .js-divider {      user-select:none;  pointer-events:none;             display: flex;                align-items: center;                width: 100%;                margin: 2.5rem 0;                gap: 15px;            }
             .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
-            .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                   color: #4b5563;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
-            .js-divider-content svg {   fill: #4b5563;   }
+            .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                   color: #000;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
+            .js-divider-content svg {   fill: #000;   }
 			.js-divider-icon {                width: 18px;                height: 18px;                display: flex;                align-items: center;                color: #6366f1;         }
             .js-divider-text {                font-size: clamp(11px, 2.5vw, 13px);                font-weight: 700;                text-transform: uppercase;                letter-spacing: 0.1em;            }
 			.fs-acc-theme_dark .js-divider-content{   color: #fff;   }
