@@ -469,6 +469,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 
             .fs-acc-modal .separate {  margin-top: 6px;    padding: 5px;    border-top: 1px solid #ccc;    width: 100%;    pointer-events: none;   }
             .fs-acc-theme_dark .separate {   border-top: 1px solid #fff;  }
+			.fs-acc-modal .separatep {  margin-top: 7px;    padding: 5px;   width: 100%;    pointer-events: none;   }
 
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
             body.fs-acc-contrast { background: #000 !important; color: #fff !important; filter: contrast(150%); }
@@ -520,7 +521,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <span onclick="fs_accessibility.update('darkTheme')"> <svg viewBox="0 0 24 24" width="24px" heigh="24px" style="margin: 0;"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"></path></svg> </span>
                 <strong>${lang.title}</strong>
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
-            </div>  <br/>
+            </div>  
+			 <div class="separatep"></div>
             ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="currentTela" onclick="fs_accessibility.update('currentTela')">${icons.tela_1} ${lang.currentTela}</div>
                 <div class="fs-acc-item" data-key="currentTelaZ" onclick="fs_accessibility.update('currentTelaZ')">${icons.tela_2} ${lang.currentTelaZ}</div>
