@@ -395,7 +395,7 @@ if(val==true){
 if(titler && titler!=""){  	
   if(icons && icons!=""){   summary_acciconsAdd_oo='<div class="js-divider-icon">'+icons+'</div>';    }
 summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>   <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   <span class="js-divider-text">'+titler+'</span>    </div>   <div class="js-divider-line"></div>   </div>   '+tet+'';
-if(tet==`<div class="fs-acc-grid full"></div>`){   summary_accAdd_oo="";   }
+if(tet.replaceAll(" ", "")==`<div class="fs-acc-grid full"><br/></div>`){   summary_accAdd_oo="";   }
 }   }   else  {
 summary_accAdd_oo=tet;
 }   }
