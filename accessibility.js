@@ -108,7 +108,7 @@ const AgeGate = {
 
         document.getElementById('age-deny').onclick = () => {
             if (onDeny) onDeny();
-            else window.location.href = "https://google.com";
+            else window.location.href = "";
         };
     }
 };
@@ -121,6 +121,7 @@ const fs_accessibility = (function() {
         modalPos: 'right', // 'left', 'right', 'center', 'full'
         storageKey: 'fs_acc_settings',
         customButtons: [],
+        disable: [],
         open_call: function(){   },
         close_call: function(){   }
     };
