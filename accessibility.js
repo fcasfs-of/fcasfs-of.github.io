@@ -392,7 +392,7 @@ function summary_accAdd(val, tet, titler, icons) {  if(val && tet && tet!=""){  
 if(val==true){  
 if(titler && titler!=""){  	
   if(icons && icons!=""){   summary_acciconsAdd_oo='<div class="js-divider-icon">'+icons+'</div>';    }
-summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>  <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   </div>    <span class="js-divider-text">'+titler+'</span>   <div class="js-divider-line"></div>   </div>   '+tet+'';
+summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>   <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   <span class="js-divider-text">'+titler+'</span>    </div>   <div class="js-divider-line"></div>   </div>   '+tet+'';
 }   }   else  {
 summary_accAdd_oo=tet;
 }   }
@@ -426,6 +426,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                color: #4b5563;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
             .js-divider-icon {                width: 18px;                height: 18px;                display: flex;                align-items: center;                color: #6366f1;         }
             .js-divider-text {                font-size: clamp(11px, 2.5vw, 13px);                font-weight: 700;                text-transform: uppercase;                letter-spacing: 0.1em;            }
+			.fs-acc-theme_dark .js-divider-content{   color: #fff;   }
 			
             @media (max-width: 480px) {
                 .js-divider { gap: 8px; }
