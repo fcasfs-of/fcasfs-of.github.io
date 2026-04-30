@@ -374,11 +374,28 @@ if(state){  if(state.libras===true){
     });
 };
 
+	
+function summary_accAdd(val, tet, titler) {  if(val && tet && tet!=""){     var summary_accAdd_oo="";
+if(val==true){  
+if(titler && titler!=""){  
+for(var j=0; j<iye.length; j++){
+if(iye[j].txt && iye[j].txt!="" && iye[j].name && iye[j].name!=""){ 
+summary_accAdd_oo=summary_accAdd_oo+'<details class="acc-item">    <summary>      <span>'+titler+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+tet+'</div>    </div>  </details>';
+}
+   }
+}   }   else  {
+summary_accAdd_oo=tet;
+}
+
+}
+return summary_accAdd_oo;   }
+
 
 function state_appendObjeto(novoDado) {    if(novoDado){   
    Object.assign(state, novoDado);    }
 }
-    
+
+	
     function init(options = {}) {
         Object.assign(config, options);
         state_appendObjeto(config.customConfig);
@@ -402,7 +419,7 @@ document.querySelectorAll('.fs-acc-modal .acc-item').forEach(el => {
 	  wrapper.style.height = '0px';
 	  setTimeout(() => el.open = false, 310);
 	} else {
-	  if (autoClose) {
+	  if (config.autoClose) {
 		document.querySelectorAll('.acc-item.is-open').forEach(openItem => {
 		  openItem.classList.remove('is-open');
 		  openItem.querySelector('.content-wrapper').style.height = '0px';
