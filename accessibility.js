@@ -545,7 +545,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             </div>
             <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="bigCursor" onclick="fs_accessibility.update('bigCursor')">${icons.cursor} ${lang.bigCursor}</div>
-            </div>`, lang.arc_a)}
+            </div>`, lang.arc_e)}
             ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
