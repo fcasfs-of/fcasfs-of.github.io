@@ -388,11 +388,11 @@ if(state){  if(state.libras===true){
 };
 
 	
-function summary_accAdd(val, tet, titler) {  if(val && tet && tet!=""){     var summary_accAdd_oo="";
+function summary_accAdd(val, tet, titler, icons) {  if(val && tet && tet!=""){     var summary_accAdd_oo="";    var summary_acciconsAdd_oo="";
 if(val==true){  
-if(titler && titler!=""){  
-	summary_accAdd_oo=tet;
-//summary_accAdd_oo=summary_accAdd_oo+'<details class="acc-item">    <summary>      <span>'+titler+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+tet+'</div>    </div>  </details>';
+if(titler && titler!=""){  	
+  if(icons && icons!=""){   summary_acciconsAdd_oo='<div class="js-divider-icon">'+icons+'</div>';    }
+summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>  <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   </div>    <span class="js-divider-text">'+titler+'</span>   <div class="js-divider-line"></div>   </div>   <<br/> <br/>'+tet+'';
 }   }   else  {
 summary_accAdd_oo=tet;
 }   }
@@ -420,7 +420,17 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         const css = `
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
-  
+
+            .js-divider {                display: flex;                align-items: center;                width: 100%;                margin: 2.5rem 0;  overflow: auto;                gap: 15px;            }
+            .js-divider .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
+            .js-divider .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                color: #4b5563;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
+            .js-divider .js-divider-icon {                width: 18px;                height: 18px;                display: flex;                align-items: center;                color: #6366f1;         }
+            .js-divider .js-divider-text {                font-size: clamp(11px, 2.5vw, 13px);                font-weight: 700;                text-transform: uppercase;                letter-spacing: 0.1em;            }
+			
+            @media (max-width: 480px) {
+                .js-divider { gap: 8px; }
+            }
+			
             .fs-acc-btn { position: fixed; bottom: 20px; ${config.position}: 20px; width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
             .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
@@ -497,43 +507,43 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <strong>${lang.title}</strong>
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
             </div>  <br/>
-            <div class="fs-acc-grid full">
+            ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="currentTela" onclick="fs_accessibility.update('currentTela')">${icons.tela_1} ${lang.currentTela}</div>
                 <div class="fs-acc-item" data-key="currentTelaZ" onclick="fs_accessibility.update('currentTelaZ')">${icons.tela_2} ${lang.currentTelaZ}</div>
             </div>
-            <div class="fs-acc-grid full">
+			<div class="fs-acc-grid full">
+                <div class="fs-acc-item" data-key="contrast" onclick="fs_accessibility.update('contrast')">${icons.contrast_1} ${lang.highContrast}</div>
+                <div class="fs-acc-item" data-key="grayscale" onclick="fs_accessibility.update('grayscale')">${icons.contrast_2} ${lang.grayscale}</div>
+            </div>`, lang.arc_b)}  
+            ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', 10)">${icons.textPlus_1} ${lang.increaseText}</div>
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', -10)">${icons.textPlus_2} ${lang.decreaseText}</div>
-            </div>
-            <div class="fs-acc-grid full">
+            </div>            
+			<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="lineSpace" onclick="fs_accessibility.update('lineSpace')">${icons.space} ${lang.space}</div>
                 <div class="fs-acc-item" data-key="textlineSpace" onclick="fs_accessibility.update('textlineSpace')">${icons.line} ${lang.line}</div>
             </div>
             <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="fontReadable" onclick="fs_accessibility.update('fontReadable')">${icons.textPlus_3} ${lang.readableFont}</div>
                 <div class="fs-acc-item" data-key="titleHighlight" onclick="fs_accessibility.update('titleHighlight')">${icons.title} ${lang.textTitle}</div>
-            </div>
-            <div class="fs-acc-grid full">
-                <div class="fs-acc-item" data-key="contrast" onclick="fs_accessibility.update('contrast')">${icons.contrast_1} ${lang.highContrast}</div>
-                <div class="fs-acc-item" data-key="grayscale" onclick="fs_accessibility.update('grayscale')">${icons.contrast_2} ${lang.grayscale}</div>
-            </div>
-            <div class="fs-acc-grid full">
+            </div>`, lang.arc_t)}  
+            ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="linksHighlight" onclick="fs_accessibility.update('linksHighlight')">${icons.link_1} ${lang.linksHighlight}</div>
                 <div class="fs-acc-item" data-key="imagesHighlight" onclick="fs_accessibility.update('imagesHighlight')">${icons.link_2} ${lang.imagesHighlight}</div>
                 <div class="fs-acc-item" data-key="videosHighlight" onclick="fs_accessibility.update('videosHighlight')">${icons.videos} ${lang.videosHighlight}</div>
                 <div class="fs-acc-item" data-key="iconsHighlight" onclick="fs_accessibility.update('iconsHighlight')">${icons.icon} ${lang.iconsHighlight}</div>
                 <div class="fs-acc-item" data-key="buttonsHighlight" onclick="fs_accessibility.update('buttonsHighlight')">${icons.button} ${lang.buttonsHighlight}</div>
-            </div>
+            </div>`, lang.arc_p)} 
              ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="noAnim" onclick="fs_accessibility.update('noAnim')">${icons.animation} ${lang.stopAnimations}</div>
             </div>
             <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="bigCursor" onclick="fs_accessibility.update('bigCursor')">${icons.cursor} ${lang.bigCursor}</div>
             </div>`, lang.arc_a)}
-            <div class="fs-acc-grid full">
+            ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
-            </div>
+            </div>`, lang.arc_a)}    
             ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
             </div>`, lang.arc_o)}
