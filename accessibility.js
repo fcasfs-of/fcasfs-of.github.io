@@ -423,7 +423,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
 
-            .js-divider {      user-select:none;  pointer-events:none;             display: flex;                align-items: center;                width: 100%;                margin: 2.5rem 0;                gap: 15px;            }
+            .js-divider {      user-select:none;  pointer-events:none;             display: flex;                align-items: center;                width: 100%;                margin: 7px 0;                gap: 15px;            }
             .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
             .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                   color: #000;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
             .js-divider-content svg {   fill: #000;   }
@@ -467,7 +467,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             body.fs-acc-tela_z .fs-acc-modal.active {  transform-origin: center;    transform: scale(0.6);    }
             body.fs-acc-tela_d .fs-acc-modal.active {  transform-origin: bottom center;   transform: scale(0.7);   }
 
-            .fs-acc-modal .separate {  padding: 5px;    border-top: 1px solid #ccc;    width: 100%;    pointer-events: none;   }
+            .fs-acc-modal .separate {  margin-top: 6px;    padding: 5px;    border-top: 1px solid #ccc;    width: 100%;    pointer-events: none;   }
             .fs-acc-theme_dark .separate {   border-top: 1px solid #fff;  }
 
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
@@ -559,7 +559,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
             </div>`, lang.arc_a, icons.pAdv)}    
 			${custom_btnsaction_div}
-            <br/>  <span class="separate"></span>  
+             <div class="separate"></div>  
             <div style="padding: 8px 20px;    margin-top: 4px;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
             </div>  <br/>  <br/> 
