@@ -409,7 +409,10 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-modal.full { left: 0; right: 0; width: 100%; height: 100%; }
 
             .fs-acc-header { padding: 20px; background: #f3f4f6; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; }
+            
             .fs-acc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
+            .fs-acc-grid.full {  width: 90%;    margin: 0 auto;    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));   }
+            
             .fs-acc-item { background: #f9fafb; border: 1px solid #e5e7eb; padding: 15px 10px; border-radius: 8px; cursor: pointer; text-align: center; font-size: 12px; transition: 0.2s; display: flex; flex-direction: column; align-items: center; gap: 8px; }
             .fs-acc-item:hover { border-color: var(--fs-acc-primary); background: #eff6ff; }
             .fs-acc-item.active { background: var(--fs-acc-primary); color: white; border-color: var(--fs-acc-primary); }
@@ -467,44 +470,44 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <strong>${lang.title}</strong>
                 <button class="fs-acc-close" onclick="fs_accessibility.toggleModal()">${icons.close}</button>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="currentTela" onclick="fs_accessibility.update('currentTela')">${icons.tela_1} ${lang.currentTela}</div>
                 <div class="fs-acc-item" data-key="currentTelaZ" onclick="fs_accessibility.update('currentTelaZ')">${icons.tela_2} ${lang.currentTelaZ}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', 10)">${icons.textPlus_1} ${lang.increaseText}</div>
                 <div class="fs-acc-item" onclick="fs_accessibility.update('zoom', -10)">${icons.textPlus_2} ${lang.decreaseText}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="lineSpace" onclick="fs_accessibility.update('lineSpace')">${icons.space} ${lang.space}</div>
                 <div class="fs-acc-item" data-key="textlineSpace" onclick="fs_accessibility.update('textlineSpace')">${icons.line} ${lang.line}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="fontReadable" onclick="fs_accessibility.update('fontReadable')">${icons.textPlus_3} ${lang.readableFont}</div>
                 <div class="fs-acc-item" data-key="titleHighlight" onclick="fs_accessibility.update('titleHighlight')">${icons.title} ${lang.textTitle}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="contrast" onclick="fs_accessibility.update('contrast')">${icons.contrast_1} ${lang.highContrast}</div>
                 <div class="fs-acc-item" data-key="grayscale" onclick="fs_accessibility.update('grayscale')">${icons.contrast_2} ${lang.grayscale}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="linksHighlight" onclick="fs_accessibility.update('linksHighlight')">${icons.link_1} ${lang.linksHighlight}</div>
                 <div class="fs-acc-item" data-key="imagesHighlight" onclick="fs_accessibility.update('imagesHighlight')">${icons.link_2} ${lang.imagesHighlight}</div>
                 <div class="fs-acc-item" data-key="videosHighlight" onclick="fs_accessibility.update('videosHighlight')">${icons.videos} ${lang.videosHighlight}</div>
                 <div class="fs-acc-item" data-key="iconsHighlight" onclick="fs_accessibility.update('iconsHighlight')">${icons.icon} ${lang.iconsHighlight}</div>
                 <div class="fs-acc-item" data-key="buttonsHighlight" onclick="fs_accessibility.update('buttonsHighlight')">${icons.button} ${lang.buttonsHighlight}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="noAnim" onclick="fs_accessibility.update('noAnim')">${icons.animation} ${lang.stopAnimations}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="bigCursor" onclick="fs_accessibility.update('bigCursor')">${icons.cursor} ${lang.bigCursor}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
             </div>
-            <div class="fs-acc-grid">
+            <div class="fs-acc-grid full">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
             </div>
             <span class="separate"></span>  
