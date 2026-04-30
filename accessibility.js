@@ -152,7 +152,13 @@ const fs_accessibility = (function() {
             textToSpeech: "Voz (Hover)",
             magnifier: "Lupa de Tela",
             line: "Altura da Linha",
-            space: "Espaçamento de Texto"
+            space: "Espaçamento de Texto",
+			arc_b: "Básico",
+			arc_p: "Conteúdo da Página",
+			arc_a: "Avançado",
+			arc_t: "Texto",
+			arc_e: "Extras",
+			arc_o: "Outros"
         },
         en: {
             title: "Accessibility",
@@ -178,7 +184,13 @@ const fs_accessibility = (function() {
             textToSpeech: "Speech (Hover)",
             magnifier: "Screen Magnifier",
             line: "Line Height",
-            space: "Text Spacing"
+            space: "Text Spacing",
+			arc_b: "Basic",
+			arc_p: "Page Content",
+			arc_a: "Advanced",
+			arc_t: "Text",
+			arc_e: "Extras",
+			arc_o: "Other"
         }
     };
 
