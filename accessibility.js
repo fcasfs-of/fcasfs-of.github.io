@@ -559,7 +559,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
             </div>`, lang.arc_a, icons.pAdv)}    
 			${custom_btnsaction_div}
-            <span class="separate"></span>  
+            <br/>  <span class="separate"></span>  
             <div style="padding: 8px 20px;    margin-top: 4px;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
             </div>  <br/>  <br/> 
