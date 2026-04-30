@@ -395,7 +395,6 @@ if(val==true){
 if(titler && titler!=""){  	
   if(icons && icons!=""){   summary_acciconsAdd_oo='<div class="js-divider-icon">'+icons+'</div>';    }
 summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>   <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   <span class="js-divider-text">'+titler+'</span>    </div>   <div class="js-divider-line"></div>   </div>   '+tet+'';
-if(tet==`<div class="fs-acc-grid full">                <br/>            </div>`){   summary_accAdd_oo="";   }
 }   }   else  {
 summary_accAdd_oo=tet;
 }   }
@@ -507,6 +506,15 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         const modal = document.createElement('div');
         modal.id = 'fs_acc_modal';
         modal.className = `fs-acc-modal ${config.modalPos}`;
+
+		var custom_btnsaction_div='';
+		var custom_btnsaction=`${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}`; 
+		if(custom_btnsaction!=""){
+			custom_btnsaction_div=`${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
+             ${custom_btnsaction}   
+            </div>`, lang.arc_o)}`;
+		}
+		
         modal.innerHTML = `
             <div class="fs-acc-header">
                 <span onclick="fs_accessibility.update('darkTheme')"> <svg viewBox="0 0 24 24" width="24px" heigh="24px" style="margin: 0;"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"></path></svg> </span>
@@ -550,9 +558,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
             </div>`, lang.arc_a, icons.pAdv)}    
-            ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
-                ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
-            </div>`, lang.arc_o)}
+			${custom_btnsaction_div}
             <span class="separate"></span>  
             <div style="padding: 8px 20px;    margin-top: 4px;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
