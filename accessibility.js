@@ -391,7 +391,8 @@ if(state){  if(state.libras===true){
 function summary_accAdd(val, tet, titler) {  if(val && tet && tet!=""){     var summary_accAdd_oo="";
 if(val==true){  
 if(titler && titler!=""){  
-summary_accAdd_oo=summary_accAdd_oo+'<details class="acc-item">    <summary>      <span>'+titler+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+tet+'</div>    </div>  </details>';
+	summary_accAdd_oo=tet;
+//summary_accAdd_oo=summary_accAdd_oo+'<details class="acc-item">    <summary>      <span>'+titler+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+tet+'</div>    </div>  </details>';
 }   }   else  {
 summary_accAdd_oo=tet;
 }   }
@@ -411,35 +412,6 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         render();
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
-
-
-document.querySelectorAll('.fs-acc-modal .acc-item').forEach(el => {
-  const summary = el.querySelector('summary');
-  const wrapper = el.querySelector('.content-wrapper');
-
-  summary.onclick = (e) => {
-    e.preventDefault();
-    const isOpen = el.classList.contains('is-open');
-
-	if (isOpen) {
-	  el.classList.remove('is-open');
-	  wrapper.style.height = '0px';
-	  setTimeout(() => el.open = false, 310);
-	} else {
-	  if (config.autoClose) {
-		document.querySelectorAll('.acc-item.is-open').forEach(openItem => {
-		  openItem.classList.remove('is-open');
-		  openItem.querySelector('.content-wrapper').style.height = '0px';
-		  setTimeout(() => openItem.open = false, 310);
-		});
-	  }
-	  el.open = true;
-      el.classList.add('is-open');
-      wrapper.style.height = wrapper.querySelector('.content-body').scrollHeight + 'px';
-	}
-  };
-});
-
         
    }
  
@@ -448,9 +420,7 @@ document.querySelectorAll('.fs-acc-modal .acc-item').forEach(el => {
         const css = `
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
-
-             .accordion-group {   width: 100%;   box-sizing: border-box;   font-size: 14px;  }  .acc-item {   background: #ffffff;   border: 1px solid #e2e8f0;   overflow: hidden;  box-shadow: 0 4px calc(4px * 2) rgba(0, 0, 0, 0.15);  transition: all 0.3s ease; }  .acc-item {  border-radius: 12px;   margin-bottom: 12px;  }  .acc-item:last-child {   margin-bottom: 0;   }  .accordion-group .acc-item summary {   padding: 16px;   display: flex;   justify-content: space-between;   align-items: center;  cursor: pointer;  list-style: none;   font-weight: 600;  color: #1e293b;   transition: background 0.2s ease;   }  .accordion-group .acc-item summary:hover {   background: #f8fafc; }  .accordion-group .acc-item summary::-webkit-details-marker {   display: none;  }  .acc-icon {   color: #2563eb;   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }  .content-wrapper {   height: 0;   overflow: hidden;   transition: height 0.3s ease;   background: #ffffff;  }.content-body {   padding: 20px;   color: #64748b;   line-height: 1.6;   }  .acc-item.is-open .acc-icon {   transform: rotate(180deg);  }  .acc-item.is-open summary {   text-align: center;background:#f8fafc; }  .acc-item.is-open:active summary {  background:#f8fafc;  } 
-               
+  
             .fs-acc-btn { position: fixed; bottom: 20px; ${config.position}: 20px; width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
             .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
