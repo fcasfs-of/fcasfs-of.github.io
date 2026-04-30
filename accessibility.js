@@ -411,7 +411,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-header { padding: 20px; background: #f3f4f6; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; }
             
             .fs-acc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
-            .fs-acc-grid.full {  width: 90%;    margin: 0 auto;    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));   }
+            .fs-acc-grid.full {   padding: 10px;    width: 90%;    margin: 4px auto;    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));   }
             
             .fs-acc-item { background: #f9fafb; border: 1px solid #e5e7eb; padding: 15px 10px; border-radius: 8px; cursor: pointer; text-align: center; font-size: 12px; transition: 0.2s; display: flex; flex-direction: column; align-items: center; gap: 8px; }
             .fs-acc-item:hover { border-color: var(--fs-acc-primary); background: #eff6ff; }
@@ -511,9 +511,9 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
             </div>
             <span class="separate"></span>  
-            <div style="padding: 20px; margin-top: auto;">
+            <div style="padding: 8px 20px;    margin-top: 4px;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
-            </div>  <br/>  
+            </div>  <br/>  <br/> 
         `;
         document.body.appendChild(modal);
     }
