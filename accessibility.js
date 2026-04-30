@@ -421,7 +421,10 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 
             body.fs-acc-tela_z .fs-acc-modal.active {  transform-origin: center;    transform: scale(0.6);    }
             body.fs-acc-tela_d .fs-acc-modal.active {  transform-origin: bottom center;   transform: scale(0.7);   }
-            
+
+            .fs-acc-modal .separate {  padding: 5px;    border-top: 1px solid #ccc;    width: 100%;    pointer-events: none;   }
+            .fs-acc-theme_dark .separate {   border-top: 1px solid #fff;  }
+
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
             body.fs-acc-contrast { background: #000 !important; color: #fff !important; filter: contrast(150%); }
             body.fs-acc-grayscale { filter: grayscale(100%); }
@@ -504,7 +507,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             <div class="fs-acc-grid">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
             </div>
-            <hr/>  <div style="padding: 20px; margin-top: auto;">
+            <span class="separate"></span>  
+            <div style="padding: 20px; margin-top: auto;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
             </div>  <br/>  
         `;
