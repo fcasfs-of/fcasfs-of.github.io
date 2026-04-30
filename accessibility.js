@@ -117,7 +117,8 @@ const AgeGate = {
 const fs_accessibility = (function() {
     const config = {   //customConfig
         lang: 'pt',
-        autoClose: false,
+        autoClose: false, 
+		menu: true, 
         position: 'right', // 'left' or 'right'
         modalPos: 'right', // 'left', 'right', 'center', 'full'
         storageKey: 'fs_acc_settings',
@@ -559,19 +560,19 @@ document.querySelectorAll('.fs-acc-modal .acc-item').forEach(el => {
                 <div class="fs-acc-item" data-key="iconsHighlight" onclick="fs_accessibility.update('iconsHighlight')">${icons.icon} ${lang.iconsHighlight}</div>
                 <div class="fs-acc-item" data-key="buttonsHighlight" onclick="fs_accessibility.update('buttonsHighlight')">${icons.button} ${lang.buttonsHighlight}</div>
             </div>
-            <div class="fs-acc-grid full">
+             ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="noAnim" onclick="fs_accessibility.update('noAnim')">${icons.animation} ${lang.stopAnimations}</div>
             </div>
             <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="bigCursor" onclick="fs_accessibility.update('bigCursor')">${icons.cursor} ${lang.bigCursor}</div>
-            </div>
+            </div>`, lang.arc_a)}
             <div class="fs-acc-grid full">
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
             </div>
-            <div class="fs-acc-grid full">
+            ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
                 ${config.customButtons.map(btn => `<div class="fs-acc-item" onclick="${btn.action}">${btn.icon} ${btn.label}</div>`).join('')}
-            </div>
+            </div>`, lang.arc_o)}
             <span class="separate"></span>  
             <div style="padding: 8px 20px;    margin-top: 4px;">
                 <button class="fs-acc-item" style="width: 100%" onclick="fs_accessibility.reset()"> ${icons.reset} ${lang.reset} </button>
