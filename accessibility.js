@@ -392,7 +392,7 @@ function summary_accAdd(val, tet, titler, icons) {  if(val && tet && tet!=""){  
 if(val==true){  
 if(titler && titler!=""){  	
   if(icons && icons!=""){   summary_acciconsAdd_oo='<div class="js-divider-icon">'+icons+'</div>';    }
-summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>  <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   </div>    <span class="js-divider-text">'+titler+'</span>   <div class="js-divider-line"></div>   </div>   <<br/> <br/>'+tet+'';
+summary_accAdd_oo=summary_accAdd_oo+'<div class="js-divider">  <div class="js-divider-line"></div>  <div class="js-divider-content">   '+summary_acciconsAdd_oo+'   </div>    <span class="js-divider-text">'+titler+'</span>   <div class="js-divider-line"></div>   </div>   <br/> <br/>'+tet+'';
 }   }   else  {
 summary_accAdd_oo=tet;
 }   }
@@ -422,10 +422,10 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
 
             .js-divider {                display: flex;                align-items: center;                width: 100%;                margin: 2.5rem 0;  overflow: auto;                gap: 15px;            }
-            .js-divider .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
-            .js-divider .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                color: #4b5563;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
-            .js-divider .js-divider-icon {                width: 18px;                height: 18px;                display: flex;                align-items: center;                color: #6366f1;         }
-            .js-divider .js-divider-text {                font-size: clamp(11px, 2.5vw, 13px);                font-weight: 700;                text-transform: uppercase;                letter-spacing: 0.1em;            }
+            .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
+            .js-divider-content {                display: flex;                align-items: center;                gap: 8px;                color: #4b5563;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
+            .js-divider-icon {                width: 18px;                height: 18px;                display: flex;                align-items: center;                color: #6366f1;         }
+            .js-divider-text {                font-size: clamp(11px, 2.5vw, 13px);                font-weight: 700;                text-transform: uppercase;                letter-spacing: 0.1em;            }
 			
             @media (max-width: 480px) {
                 .js-divider { gap: 8px; }
