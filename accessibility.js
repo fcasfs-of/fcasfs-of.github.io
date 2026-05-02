@@ -57,7 +57,7 @@ const FToast = {
         t.addEventListener('animationend', () => t.remove());
     };
 
-    t.querySelector('.toast-close').onclick = dismiss;
+    t.querySelector('.toast-close').onclick = function(){   dismiss();  t.remove();  };
     setTimeout(dismiss, duration);
   },
 
