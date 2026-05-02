@@ -1,6 +1,6 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
-const Toast = {
+const FToast = {
   constructor: function (pos = 'tc', maxStack = 1) {
     this.maxStack = maxStack;
     this.container = document.querySelector(`.toast-container[data-position="${pos}"]`);
@@ -10,7 +10,7 @@ const Toast = {
       this.container.dataset.position = pos;
       document.body.appendChild(this.container);
     }
-  return this; },
+ },
 
   show: function (type, title, msg, duration = 3000) {
     const activeToasts = this.container.querySelectorAll('.toast');
@@ -482,13 +482,11 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 
 	
     function init(options = {}) {
-		var toast_acc;
-		
         Object.assign(config, options);
         injectStyles();
         state_appendObjeto(config.customConfig);
         loadSettings();
-		if(config.status==true){   toast_acc = Toast.constructor();    }
+		if(config.status==true){  FToast.constructor();    }
         render();
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
@@ -753,7 +751,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         });
 
       var lang_u = i18n[config.lang];
-	   if(toast_acc && config.status==true){  toast_acc.show('success', lang_u.title+'', lang_u.applyAll+'');    } 
+	   if(config.status==true){  FToast.show('success', lang_u.title+'', lang_u.applyAll+'');    } 
     }
 
     function saveSettings() {
@@ -771,7 +769,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         applyAll();
 		
       var lang_u = i18n[config.lang];
-	   if(toast_acc && config.status==true){  toast_acc.show('success', lang_u.title+'', lang_u.resetAll+'');    } 
+	   if(config.status==true){  FToast.show('success', lang_u.title+'', lang_u.resetAll+'');    } 
     }
 
     return { init, toggleModal, update, reset };
