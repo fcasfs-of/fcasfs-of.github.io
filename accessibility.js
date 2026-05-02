@@ -483,7 +483,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 	
     function init(options = {}) {
         Object.assign(config, options);
-		if(config.status===true){  const toast_acc = Toast.constructor();    }
+		if(config.status==true){  const toast_acc = Toast.constructor();    }
         state_appendObjeto(config.customConfig);
         loadSettings();
         injectStyles();
