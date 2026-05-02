@@ -10,7 +10,7 @@ const Toast = {
       this.container.dataset.position = pos;
       document.body.appendChild(this.container);
     }
-  return Toast; },
+  return this; },
 
   show: function (type, title, msg, duration = 3000) {
     const activeToasts = this.container.querySelectorAll('.toast');
@@ -483,10 +483,10 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 	
     function init(options = {}) {
         Object.assign(config, options);
-		if(config.status==true){  const toast_acc = Toast.constructor();    }
+        injectStyles();
         state_appendObjeto(config.customConfig);
         loadSettings();
-        injectStyles();
+		if(config.status==true){  const toast_acc = Toast.constructor();    }
         render();
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
