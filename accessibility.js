@@ -486,7 +486,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         injectStyles();
         state_appendObjeto(config.customConfig);
         loadSettings();
-		if(config.status==true){  const toast_acc = Toast.constructor();    }
+		if(config.status==true){   var toast_acc = Toast.constructor();    }
         render();
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
@@ -750,7 +750,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             el.classList.toggle('active', state[key]);
         });
 
-	   if(toast_acc){  toast_acc.show('success', lang.title+'', lang.applyAll+'');    } 
+      var lang_u = i18n[config.lang];
+	   if(toast_acc && config.status==true){  toast_acc.show('success', lang_u.title+'', lang_u.applyAll+'');    } 
     }
 
     function saveSettings() {
@@ -767,7 +768,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         saveSettings();
         applyAll();
 		
-	   if(toast_acc){  toast_acc.show('success', lang.title+'', lang.resetAll+'');    } 
+      var lang_u = i18n[config.lang];
+	   if(toast_acc && config.status==true){  toast_acc.show('success', lang_u.title+'', lang_u.resetAll+'');    } 
     }
 
     return { init, toggleModal, update, reset };
