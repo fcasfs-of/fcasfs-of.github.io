@@ -498,7 +498,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
 
 
-.toast-container { position: fixed; z-index: 9999; padding: 20px; display: flex; flex-direction: column; gap: 10px; width: 90%; pointer-events: none; }
+.toast-container {  font-size: 14px;  position: fixed; z-index: 9999; padding: 20px; display: flex; flex-direction: column; gap: 10px; width: 95%; pointer-events: none; }
 [data-position="tr"] { top: 0; right: 0; align-items: flex-end; }
 [data-position="tc"] { top: 0; left: 50%; transform: translateX(-50%); align-items: center; }
 [data-position="tl"] { top: 0; left: 0; align-items: flex-start; }
@@ -506,7 +506,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 [data-position="bc"] { bottom: 0; left: 50%; transform: translateX(-50%); align-items: center; flex-direction: column-reverse; }
 [data-position="bl"] { bottom: 0; left: 0; align-items: flex-start; flex-direction: column-reverse; }
 
-.toast {   font-size: 14px;  position: relative; overflow: auto; display: flex; gap: 12px; width: 80%;     padding: 16px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);    pointer-events: auto;}
+.toast {  position: relative; overflow: auto; display: flex; gap: 12px; width: 90%;     padding: 16px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);    pointer-events: auto;}
 
 .toast.toast-success {     --toast-accent-color: #16a34a;     background: #ffffff !important;     color: #1e293b !important; }
 .toast.toast-error {     --toast-accent-color: #dc2626;     background: #ffffff !important;     color: #1e293b !important; }
