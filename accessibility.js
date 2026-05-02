@@ -10,7 +10,7 @@ const Toast = {
       this.container.dataset.position = pos;
       document.body.appendChild(this.container);
     }
-  return Toast; },
+  return this; },
 
   show: function (type, title, msg, duration = 3000) {
     const activeToasts = this.container.querySelectorAll('.toast');
