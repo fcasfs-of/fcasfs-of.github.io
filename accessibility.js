@@ -1,5 +1,74 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
+const Toast = {
+  constructor: function (pos = 'tc', maxStack = 1) {
+    this.maxStack = maxStack;
+    this.container = document.querySelector(`.toast-container[data-position="${pos}"]`);
+    if (!this.container) {
+      this.container = document.createElement('div');
+      this.container.className = 'toast-container';
+      this.container.dataset.position = pos;
+      document.body.appendChild(this.container);
+    }
+  return Toast; },
+
+  show: function (type, title, msg, duration = 3000) {
+    const activeToasts = this.container.querySelectorAll('.toast');
+    if (activeToasts.length >= this.maxStack) {
+        activeToasts[0].remove();
+    }
+
+    const t = document.createElement('div');
+    t.className = `toast style-accent toast-${type}`;
+    t.innerHTML = `
+      <div class="toast-icon">${this.getIcon(type)}</div>
+      <div class="toast-content"><b>${title}</b><div>${msg}</div></div>
+      <button class="toast-close">&times;</button>
+      <div class="toast-progress"></div>`;
+	  
+    const animMode = 'zoom';
+    const baseEntry = 'slideInDown';
+    
+    if (animMode === 'zoom') {
+        t.style.animation = 'zoomIn 0.4s forwards';
+    } else if (animMode === 'shake') {
+        t.style.animation = `${baseEntry} 0.4s forwards, shake 0.4s 0.4s`;
+    } else {
+        t.style.animation = `${baseEntry} 0.4s forwards`;
+    }	  
+    
+    this.container.appendChild(t);
+
+    const currentPos = this.container.dataset.position;
+    let animOut = currentPos.includes('r') ? 'slideOutRight' : 'slideOutLeft';
+    if(currentPos === 'tc') animOut = 'slideOutUp';
+    if(currentPos === 'bc') animOut = 'slideOutDown';
+
+    const bar = t.querySelector('.toast-progress');
+    if(bar) {
+        bar.style.transform = 'scaleX(1)';
+        setTimeout(() => {
+          bar.style.transition = `transform ${duration}ms linear`;
+          bar.style.transform = 'scaleX(0)';
+        }, 50);
+    }
+
+    const dismiss = () => {
+        t.style.animation = `${animOut} 0.3s forwards`;
+        t.addEventListener('animationend', () => t.remove());
+    };
+
+    t.querySelector('.toast-close').onclick = dismiss;
+    setTimeout(dismiss, duration);
+  },
+
+  getIcon: function (type) {
+    const icons = {"success":"<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 6 9 17l-5-5\"/></svg>","error":"<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m15 9-6 6\"/><path d=\"m9 9 6 6\"/></svg>","warning":"<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/></svg>","info":"<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4\"/><path d=\"M12 8h.01\"/></svg>"};
+    return icons[type];
+  }
+};
+
+
 const AgeGate = {
     i18n: {
         pt: {
@@ -115,8 +184,10 @@ const AgeGate = {
 
 
 const fs_accessibility = (function() {
-    const config = {   //customConfig
+    const config = {   
         lang: 'pt',
+		status: false,
+		customConfig:{},
         autoClose: false, 
 		menu: true, 
         position: 'right', // 'left' or 'right'
@@ -408,6 +479,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 	
     function init(options = {}) {
         Object.assign(config, options);
+		if(config.status===true){  const toast_acc = Toast.constructor();    }
         state_appendObjeto(config.customConfig);
         loadSettings();
         injectStyles();
@@ -422,6 +494,46 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         const css = `
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
+
+
+.toast-container { position: fixed; z-index: 9999; padding: 20px; display: flex; flex-direction: column; gap: 10px; width: 90%; pointer-events: none; }
+[data-position="tr"] { top: 0; right: 0; align-items: flex-end; }
+[data-position="tc"] { top: 0; left: 50%; transform: translateX(-50%); align-items: center; }
+[data-position="tl"] { top: 0; left: 0; align-items: flex-start; }
+[data-position="br"] { bottom: 0; right: 0; align-items: flex-end; flex-direction: column-reverse; }
+[data-position="bc"] { bottom: 0; left: 50%; transform: translateX(-50%); align-items: center; flex-direction: column-reverse; }
+[data-position="bl"] { bottom: 0; left: 0; align-items: flex-start; flex-direction: column-reverse; }
+
+.toast {     position: relative; overflow: auto; display: flex; gap: 12px; width: 80%;     padding: 16px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);    pointer-events: auto;}
+
+.toast.toast-success {     --toast-accent-color: #16a34a;     background: #ffffff !important;     color: #1e293b !important; }
+.toast.toast-error {     --toast-accent-color: #dc2626;     background: #ffffff !important;     color: #1e293b !important; }
+.toast.toast-warning {     --toast-accent-color: #f59e0b;     background: #ffffff !important;     color: #1e293b !important; }
+.toast.toast-info {     --toast-accent-color: #3b82f6;     background: #ffffff !important;     color: #1e293b !important; }
+
+.toast-icon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.style-accent .toast-icon, .style-bordered .toast-icon, .style-minimal .toast-icon { color: var(--toast-accent-color); }
+
+.toast-close { background: none; border: none; color: inherit; cursor: pointer; font-size: 1.4rem; opacity: 0.4; line-height: 1; padding: 0; margin-left: auto; transition: opacity 0.2s; align-self: flex-start; }
+.toast-close:hover { opacity: 1; }
+
+.style-accent { border: 1px solid var(--toast-accent-color); border-left: 6px solid var(--toast-accent-color); }
+.style-bordered { border: 2px solid var(--toast-accent-color); }
+
+.toast-progress { position: absolute; bottom: 0; left: 0; height: 5px; width: 100%; background: var(--toast-accent-color); opacity: 0.3; transform-origin: left; z-index: 10; transform: scaleX(1); }
+.style-solid .toast-progress { background: rgba(255,255,255,0.7); opacity: 1; }
+
+@keyframes slideInRight { from { transform: translateX(120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideOutRight { to { transform: translateX(120%); opacity: 0; } }
+@keyframes slideInLeft { from { transform: translateX(-120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+@keyframes slideOutLeft { to { transform: translateX(-120%); opacity: 0; } }
+@keyframes slideInDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideOutUp { to { transform: translateY(-100%); opacity: 0; } }
+@keyframes slideInUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideOutDown { to { transform: translateY(100%); opacity: 0; } }
+@keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+@keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
 
             .js-divider {      user-select:none;  pointer-events:none;             display: flex;                align-items: center;                width: 100%;                margin: 7px 0;                gap: 15px;            }
             .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
