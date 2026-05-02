@@ -186,7 +186,7 @@ const AgeGate = {
 const fs_accessibility = (function() {
     const config = {   
         lang: 'pt',
-		status: false,
+		status: true,
 		customConfig:{},
         autoClose: false, 
 		menu: true, 
