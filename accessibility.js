@@ -22,7 +22,7 @@ const FToast = {
     t.innerHTML = `
       <div class="toast-icon">${this.getIcon(type)}</div>
       <div class="toast-content"><b>${title}</b><div>${msg}</div></div>
-      <button class="toast-close">&times;</button>
+      <button class="toast-close"><svg viewBox="0 0 24 24" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
       <div class="toast-progress"></div>`;
 	  
     const animMode = 'zoom';
@@ -497,8 +497,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             :root { --fs-acc-primary: #2563eb; --fs-acc-bg: #ffffff; --fs-acc-text: #1f2937; }
             .fs-acc-theme_dark {  --fs-acc-bg: #111;    }
 
-
-.toast-container {  font-size: 14px;  position: fixed; z-index: 9999; padding: 20px; display: flex; flex-direction: column; gap: 10px; width: 95%; pointer-events: none; }
+.toast-container {  user-select:none;   font-size: 14px;  position: fixed; z-index: 9999; padding: 20px; display: flex; flex-direction: column; gap: 10px; width: 95%; pointer-events: none; }
 [data-position="tr"] { top: 0; right: 0; align-items: flex-end; }
 [data-position="tc"] { top: 0; left: 50%; transform: translateX(-50%); align-items: center; }
 [data-position="tl"] { top: 0; left: 0; align-items: flex-start; }
@@ -506,23 +505,25 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 [data-position="bc"] { bottom: 0; left: 50%; transform: translateX(-50%); align-items: center; flex-direction: column-reverse; }
 [data-position="bl"] { bottom: 0; left: 0; align-items: flex-start; flex-direction: column-reverse; }
 
-.toast {  position: relative; overflow: auto; display: flex; gap: 12px; width: 90%;     padding: 16px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);    pointer-events: auto;}
+.toast {  user-select:none;   position: relative; overflow: auto; display: flex; gap: 12px; width: 90%;     padding: 16px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);    pointer-events: auto;  }
 
+.toast-content {  pointer-events:none;  }
+ 
 .toast.toast-success {     --toast-accent-color: #16a34a;     background: #ffffff !important;     color: #1e293b !important; }
 .toast.toast-error {     --toast-accent-color: #dc2626;     background: #ffffff !important;     color: #1e293b !important; }
 .toast.toast-warning {     --toast-accent-color: #f59e0b;     background: #ffffff !important;     color: #1e293b !important; }
 .toast.toast-info {     --toast-accent-color: #3b82f6;     background: #ffffff !important;     color: #1e293b !important; }
 
-.toast-icon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.toast-icon {  pointer-events:none;  display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .style-accent .toast-icon, .style-bordered .toast-icon, .style-minimal .toast-icon { color: var(--toast-accent-color); }
 
-.toast-close { background: none; border: none; color: inherit; cursor: pointer; font-size: 1.4rem; opacity: 0.4; line-height: 1; padding: 0; margin-left: auto; transition: opacity 0.2s; align-self: flex-start; }
+.toast-close { background: none; border: none; color: inherit; cursor: pointer; font-size: 1.4rem; opacity: 0.4; line-height: 1; padding: 0; margin-left: auto; transition: opacity 0.2s; align-self: flex-start;   }
 .toast-close:hover { opacity: 1; }
 
 .style-accent { border: 1px solid var(--toast-accent-color); border-left: 6px solid var(--toast-accent-color); }
 .style-bordered { border: 2px solid var(--toast-accent-color); }
 
-.toast-progress { position: absolute; bottom: 0; left: 0; height: 5px; width: 100%; background: var(--toast-accent-color); opacity: 0.3; transform-origin: left; z-index: 10; transform: scaleX(1); }
+.toast-progress {   pointer-events:none;  position: absolute; bottom: 0; left: 0; height: 5px; width: 100%; background: var(--toast-accent-color); opacity: 0.3; transform-origin: left; z-index: 10; transform: scaleX(1); }
 .style-solid .toast-progress { background: rgba(255,255,255,0.7); opacity: 1; }
 
 @keyframes slideInRight { from { transform: translateX(120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
@@ -535,7 +536,6 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 @keyframes slideOutDown { to { transform: translateY(100%); opacity: 0; } }
 @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
 @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
 
             .js-divider {      user-select:none;  pointer-events:none;             display: flex;                align-items: center;                width: 100%;                margin: 7px 0;                gap: 15px;            }
             .js-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
