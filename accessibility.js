@@ -482,11 +482,13 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 
 	
     function init(options = {}) {
+		var toast_acc;
+		
         Object.assign(config, options);
         injectStyles();
         state_appendObjeto(config.customConfig);
         loadSettings();
-		if(config.status==true){   var toast_acc = Toast.constructor();    }
+		if(config.status==true){   toast_acc = Toast.constructor();    }
         render();
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
