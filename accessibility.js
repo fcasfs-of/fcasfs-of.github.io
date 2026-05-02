@@ -230,7 +230,9 @@ const fs_accessibility = (function() {
 			arc_a: "Avançado",
 			arc_t: "Texto",
 			arc_e: "Extras",
-			arc_o: "Outros"
+			arc_o: "Outros",
+			applyAll: "Suas Configurações foram Aplicadas com Sucesso.",
+			resetAll: "Suas Configurações foram Redefinidas com Sucesso."
         },
         en: {
             title: "Accessibility",
@@ -262,7 +264,9 @@ const fs_accessibility = (function() {
 			arc_a: "Advanced",
 			arc_t: "Text",
 			arc_e: "Extras",
-			arc_o: "Other"
+			arc_o: "Other",
+			applyAll: "Your Settings have been Successfully Applied.",
+			resetAll: "Your Settings have been Successfully Reset."
         }
     };
 
@@ -727,7 +731,6 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 
         document.getElementById('fs_acc_modal').classList.toggle('fs-acc-theme_dark', state.darkTheme);
 
-        
         // Ativar/Desativar
         if (state.speech) {
             b.onmouseover = (e) => {
@@ -746,6 +749,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             const key = el.getAttribute('data-key');
             el.classList.toggle('active', state[key]);
         });
+
+	   if(toast_acc){  toast_acc.show('success', lang.title+'', lang.applyAll+'');    } 
     }
 
     function saveSettings() {
@@ -761,6 +766,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         state = { darkTheme: false, currentTela: false, currentTelaZ: false, lineSpace: false, textlineSpace: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
         saveSettings();
         applyAll();
+		
+	   if(toast_acc){  toast_acc.show('success', lang.title+'', lang.resetAll+'');    } 
     }
 
     return { init, toggleModal, update, reset };
