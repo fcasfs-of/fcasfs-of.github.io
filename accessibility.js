@@ -8,9 +8,8 @@ const FToast = {
       this.container = document.createElement('div');
       this.container.className = 'toast-container';
       this.container.dataset.position = pos;
-      document.body.appendChild(this.container);
     }
- },
+ return this.container;  },
 
   show: function (type, title, msg, duration = 3000) {
     const activeToasts = this.container.querySelectorAll('.toast');
@@ -486,7 +485,6 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         injectStyles();
         state_appendObjeto(config.customConfig);
         loadSettings();
-		if(config.status==true){  FToast.constructor();    }
         render();
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
@@ -683,6 +681,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             </div>  <br/>  <br/> 
         `;
         document.body.appendChild(modal);
+
+		if(config.status==true){  var obj_osd = FToast.constructor();          if(obj_osd){   document.getElementById("fs_acc_modal").appendChild(obj_osd);   }    }
     }
 
     function toggleModal() {
