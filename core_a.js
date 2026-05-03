@@ -10,6 +10,10 @@ pt:[
 { separate:true, icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem e Video ',desc:"Nosso player inovador reconhece seus arquivos PDF, vídeos, áudios e imagens. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"https://player.fcasfs-of.cloud-fs.net/downloads/TechPlayer-Portugues.zip",text:"Windows", icon:'windows', disable:true }  ]}
 ]
 },
+sidebar:{
+en:[],
+pt:[]
+},
 project:{
 en:[
 { separate:true, icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video  <span id="versionplayer"></span>',desc:"Our player offers an immersive and intuitive media experience designed to meet all your digital entertainment needs. <br/>With a modern and functional design, it allows you to play, pause and control your favorite tracks and videos with ease. ", links:[{type:"a",link:"https://fcasfs-of.cloud-fs.net/player/search",text:"Search Page"}, {type:"a",link:"https://player.fcasfs-of.cloud-fs.net/en",text:"Access Website"},{type:"a",link:"https://player.fcasfs-of.cloud-fs.net/support-en",text:"Visit the Support Page"},{type:"button",id:"prev2",text:"View Preview"} ]},
@@ -47,6 +51,11 @@ if(tp && tp!=""){
 if(tp=="skin"){
 ddloaded_listff={ class:"card", class_b:"page-link", class_icon:"svg" };
 } else if (tp=="home" && lag && lag!=""){
+if(set_itend_cd[tp]){
+if(set_itend_cd[tp][lag]){
+ddloaded_listff=set_itend_cd[tp][lag]; 
+}  }
+} else if (tp=="sidebar" && lag && lag!=""){
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
