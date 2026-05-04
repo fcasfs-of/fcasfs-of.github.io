@@ -542,6 +542,40 @@ contdstItems.innerHTML="Lista de \"Histórico\" está Vazia.";
 }
 
 
+const criarRating = (containerId, dados) => {
+if(containerId && dados){
+  const container = document.getElementById(containerId);
+  const lang = dados.idioma === 'en' ? { t: 'Total:', p: 'people' } : { t: 'Total:', p: 'pessoas' };
+  
+  const totalPessoas = Object.values(dados.estrelas).reduce((a, b) => a + b, 0);
+
+  const style = document.createElement('style');
+  style.textContent = `
+    #${containerId} .rating {  font-family: sans-serif;  width: 95%;  margin:0 auto;  padding: 10px;  overflow: auto;   }
+    #${containerId} .rating .row {   display: flex; align-items: center; margin-bottom: 5px; }
+    #${containerId} .rating .row span {  margin-right:3px;  }
+    #${containerId} .rating .bar-bg { flex-grow: 1; background: #eee; height: 10px; margin: 0 10px; border-radius: 5px; overflow: hidden; }
+    #${containerId} .rating .bar-fill { background: #fbc02d; height: 100%; }
+    #${containerId} .rating .count { width: 30px; text-align: right; font-size: 14px; }
+    #${containerId} .rating .total { text-align:center;  margin-top: 15px; font-weight: bold; border-top: 1px solid #ddd; pt-10px; }
+     #${containerId} .rating svg { width: 16px; height: 16px; fill: #fbc02d; }
+  `;
+  document.head.appendChild(style);
+
+  const iconRating = `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+
+  const htmlRatin = Object.entries(dados.estrelas).reverse().map(([estrela, qtd]) => {
+    const percRatin = (qtd / totalPessoas) * 100;
+    return `  <div class="row">
+        <span>${estrela} </span> ${iconRating}
+        <div class="bar-bg"><div class="bar-fill" style="width: ${percRatin}%"></div></div>
+        <span class="count">${qtd}</span>
+      </div>`;
+  }).join('');
+
+  if(container){   container.innerHTML = `<div class="rating">  ` + htmlRatin + `  <div class="total"><br/> ${lang.t} ${totalPessoas} ${lang.p}</div>  <br/>  </div>  `;   }  
+  }
+};
 
 
 const body = document.body;
