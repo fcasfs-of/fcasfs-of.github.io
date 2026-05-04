@@ -1,7 +1,7 @@
 
 function filtrarListda() {
   var input, filter, ul, li, a, i;
-  input = document.getElementById("filtroInput");
+  input = document.getElementById("filtroInputB");
   filter = input.value.toUpperCase();
   ul = document.getElementById("listr");
   li = ul.querySelectorAll(".card");
