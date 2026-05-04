@@ -1,4 +1,18 @@
 
+function filtrarListda() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("filtroInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("listr");
+  li = ul.querySelectorAll(".card");
+  for (i = 0; i < li.length; i++) {
+    if (li[i].innerText.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {      li[i].style.display = "none";    }
+  }
+}
+
+
 function carregarTudo(listaRecursos) {   if(listaRecursos){
     listaRecursos.forEach(item => {
         const destinoStr = item.destino; 
