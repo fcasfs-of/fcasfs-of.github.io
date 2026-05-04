@@ -607,6 +607,8 @@ body .loaderffs, .loaderffs {
 .pagination-number.active{   border: none; transition: all .1s linear;  }
 .pagination-number:hover,.pagination-button:not(.disabled):hover {  background: #fff; transition: all .1s linear; }
 .pagination-button.disabled {  color: #ccc; background: #fff;transition: all .1s linear;  }
+.pagination-button.disabled svg {  fill:#ccc;  }
+.pagination-button svg {  fill:#000;  }
 .pagination-button {     font-weight: bold;transition: all .1s linear;  }
 .pagination-number.active {  color: #fff;  background: #0085b6;transition: all .1s linear; }
 
