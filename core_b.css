@@ -588,6 +588,17 @@ body .loaderffs, .loaderffs {
 }
 
 
+.busca input[type=text] {  padding: 10px;  font-size: 17px;  border: 1px solid grey;  float: left;  width: 80%;  background: #f1f1f1;   }
+.busca button {  float: left;  width: 20%;  padding: 10px;  background: #2196F3;  color: white;  font-size: 17px;  border: 1px solid grey;  border-left: none;  cursor: pointer;  }
+.busca button:hover {  background: #0b7dda;   }
+.busca::after {  content: "";  clear: both;  display: table;   }
+.busca {  margin: 0 auto;  }
+.busca button, .busca input[type=text]{  height:45px;  }
+
+.busca button svg {  position: relative;    top: 1px;   }
+
+  .hidden { display:none;  }
+
 
 .pagination-container {       border-radius: 8px;    width: 100%;      background-color: #f1f1f1;   color: #000;    display: flex;  align-items: center;  position: relative;  bottom: 0;  padding: 1rem 0;  justify-content: center;transition: all .1s linear; }
 
