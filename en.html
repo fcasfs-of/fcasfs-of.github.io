@@ -66,7 +66,19 @@
   
 
 <script>
-function initSidebar_onload(api){       if(api){
+  
+function initAvisos_onload(){ 
+  Avisos.exibir({
+  alvo: '.container .hero',
+  mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",
+  tipo: 'importante',
+  exibirBotaoFechar:false,
+  fixo: true, duration: 1400
+});  
+  }   
+
+  
+  function initSidebar_onload(api){       if(api){
 
    api("fmenubar", "this", loaded_listff("sidebar","en"), "Menu", '<svg width="24px" height="24px" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M4 7a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg>', 
     'light', 'fullscreen', function(api){
@@ -138,23 +150,10 @@ document.getElementsByTagName("body")[0].appendChild(dscghfr_menudkkied);
   <script src="core_b.js"></script>
   
 <script>
-  
-function initAvisos_onload(){ 
-  Avisos.exibir({
-  alvo: '.container .hero',
-  mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",
-  tipo: 'importante',
-  exibirBotaoFechar:false,
-  fixo: true, duration: 1400
-});  
-  }   
-
-  
 add_itens_fr("listr", {
 config:loaded_listff("skin"),
 itens:loaded_listff("home","en")
 }, "");
-
 
 
 </script>
