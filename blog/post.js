@@ -3,6 +3,48 @@ const blogPosts = [
                 category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
                 custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
                 name: {
+                    pt: "Sidebar Navigation", 
+                    en: "Sidebar Navigation"
+                },
+                title: { 
+                    pt: "Nova versão do Sidebar Navigation: '1.0.0.4'", 
+                    en: "New Sidebar Navigation Version: '1.0.0.4'" 
+                },
+                excerpt: { 
+                    pt: "A nova versão inclui:  <br/><br/>  Design e desempenho aprimorado.<br/> Correções de bugs e erros. ", 
+                    en: "The new version includes: <br/><br/>  Improved design and performance.<br/> Bug and error fixes. " 
+                },
+                date: "05/05/2026",
+                author: "FCASFS-OF",
+                more: true,
+                link: { pt: "https://fcasfs-of.cloud-fs.net/TECH-SideBar/", en: "https://fcasfs-of.cloud-fs.net/TECH-SideBar/" },
+                lbox:false,
+                image: ""
+            },   {
+                category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
+                custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
+                name: {
+                    pt: "LightBox", 
+                    en: "LightBox"
+                },
+                title: { 
+                    pt: "Nova versão do LightBox: '1.0.0.8'", 
+                    en: "New LightBox Version: '1.0.0.8'" 
+                },
+                excerpt: { 
+                    pt: "A nova versão inclui:  <br/><br/>  Design e desempenho aprimorado.<br/> Correções de bugs e erros. ", 
+                    en: "The new version includes: <br/><br/>  Improved design and performance.<br/> Bug and error fixes. " 
+                },
+                date: "04/05/2026",
+                author: "FCASFS-OF",
+                more: true,
+                link: { pt: "https://lightbox.fcasfs-of.cloud-fs.net/", en: "https://lightbox.fcasfs-of.cloud-fs.net/en" },
+                lbox:false,
+                image: ""
+            },  {
+                category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
+                custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
+                name: {
                     pt: "Tech Player", 
                     en: "Tech Player"
                 },
