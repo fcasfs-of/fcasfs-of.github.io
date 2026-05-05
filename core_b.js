@@ -72,11 +72,13 @@ function showPage() {
 
 
 
+function laoded_call_ff(){   loaded_maut();   initAvisos(initAvisos_onload);    }
+
 carregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
-            'onload': 'loaded_maut();  initAvisos(); ',
+            'onload': 'laoded_call_ff(); ',
             'src': 'https://fcasfs-of.cloud-fs.net/av_man.js'
         }
     }
