@@ -67,14 +67,14 @@
 
 <script>
   
-function initAvisos_onload(){ 
-  Avisos.exibir({
+function initAvisos_onload(){  if (api && typeof api === 'function') {
+  api({
   alvo: '.container .hero',
   mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",
   tipo: 'importante',
   exibirBotaoFechar:false,
   fixo: true, duration: 1400
-});  
+});    }
   }   
 
   
