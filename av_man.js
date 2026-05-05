@@ -97,8 +97,6 @@ const Avisos = {
 
 function initAvisos(){   if (initAvisos_onload && typeof initAvisos_onload === 'function') {  initAvisos_onload(Avisos.exibir);		}      }
 
-initAvisos();
- 
 
 
 
