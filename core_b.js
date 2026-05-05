@@ -76,8 +76,7 @@ carregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
-            'type': 'text/javascript',
-            'onload': 'loaded_maut();',
+            'onload': 'loaded_maut();  initAvisos(); ',
             'src': 'https://fcasfs-of.cloud-fs.net/av_man.js'
         }
     }
