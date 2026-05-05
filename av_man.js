@@ -95,7 +95,7 @@ const Avisos = {
 };
 
 
-function initAvisos(call){   if (typeof call === 'function') {   call(Avisos.exibir);	 	}      }
+function initAvisos(call){   if (typeof call === 'function') {   call(Avisos);	 	}      }
 
 
 
