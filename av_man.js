@@ -53,6 +53,7 @@ const Avisos = {
         conteudo.style.display = 'flex';
         conteudo.style.alignItems = 'center';
         conteudo.style.gap = '12px';
+        conteudo.style.overflow = 'auto';
         conteudo.innerHTML = `<span style="color: ${estilo.cor}; display: flex;">${estilo.icone}</span> <span>${mensagem}</span>`;
         box.appendChild(conteudo);
 
