@@ -94,8 +94,11 @@ const Avisos = {
     }
 };
 
-if (typeof initAvisos_onload === 'function') {  initAvisos_onload(Avisos.exibir);		}  
 
+function initAvisos(){   if (initAvisos_onload && typeof initAvisos_onload === 'function') {  initAvisos_onload(Avisos.exibir);		}      }
+
+initAvisos();
+ 
 
 
 
