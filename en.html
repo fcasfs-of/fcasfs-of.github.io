@@ -67,8 +67,8 @@
 
 <script>
   
-function initAvisos_onload(api){  if (typeof api === 'function') {
-  api({
+function initAvisos_onload(api){  if (api) {
+  api.exibir({
   alvo: '.container .hero',
   mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",
   tipo: 'importante',
