@@ -94,6 +94,7 @@ const Avisos = {
     }
 };
 
+if (typeof initAvisos_onload === 'function') {  initAvisos_onload(Avisos.exibir);		}  
 
 
 
