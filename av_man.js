@@ -56,7 +56,7 @@ const Avisos = {
         conteudo.style.gap = '12px';
         conteudo.style.overflow = 'auto';
         conteudo.style.width = '100%';
-        conteudo.innerHTML = `<span style="color: ${estilo.cor}; display: flex;">${estilo.icone}</span> <span>${mensagem}</span>`;
+        conteudo.innerHTML = `<span style="color: ${estilo.cor}; display: flex;">${estilo.icone}</span> <span style="width: 100%;">${mensagem}</span>`;
         box.appendChild(conteudo);
 
         if (exibirBotaoFechar) {
