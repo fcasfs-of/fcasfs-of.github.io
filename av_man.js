@@ -45,7 +45,7 @@ const Avisos = {
             borderLeft: `6px solid ${estilo.cor}`,
             boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
             transition: 'all 0.4s ease',
-            opacity: '0',
+            opacity: '0', pointerEvents: "none", 
             transform: 'translateY(-10px)'
         });
 
@@ -54,6 +54,7 @@ const Avisos = {
         conteudo.style.alignItems = 'center';
         conteudo.style.gap = '12px';
         conteudo.style.overflow = 'auto';
+        conteudo.style.pointerEvents = 'none';
         conteudo.innerHTML = `<span style="color: ${estilo.cor}; display: flex;">${estilo.icone}</span> <span>${mensagem}</span>`;
         box.appendChild(conteudo);
 
@@ -66,7 +67,7 @@ const Avisos = {
                 cursor: 'pointer',
                 color: '#9ca3af',
                 marginLeft: '15px',
-                display: 'flex',
+                display: 'flex', pointerEvents: "none", 
                 transition: 'color 0.2s'
             });
             btnFechar.onmouseover = () => btnFechar.style.color = estilo.cor;
