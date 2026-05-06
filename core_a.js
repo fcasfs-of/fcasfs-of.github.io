@@ -2,6 +2,14 @@
 
 var set_itend_cd={
 
+mural:{
+en:[
+{  alvo: '.container .hero',  mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",  tipo: 'info',  exibirBotaoFechar:false,  fixo: true, duration: 1400 }
+],
+pt:[
+{  alvo: '.container .hero',  mensagem: "Novo visual, mesma essência. <br/> Redesenhei meu espaço digital para destacar o que realmente importa: projetos de impacto. <br/> Explore a nova experiência.",  tipo: 'info',  exibirBotaoFechar:false,  fixo: true, duration: 1400  }
+]
+},
 download:{
 en:[
 { separate:true, icon:'<img src="https://fcasfs-of.cloud-fs.net/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video ',desc:"Our innovative player recognizes your PDF files, videos, audio, and images. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"https://player.fcasfs-of.cloud-fs.net/downloads/TechPlayer-English.zip",text:"Windows", icon:'windows', disable: true }  ]}
@@ -61,6 +69,11 @@ if(tp && tp!=""){
 if(tp=="skin"){
 ddloaded_listff={ class:"card", class_b:"page-link", class_icon:"svg" };
 } else if (tp=="home" && lag && lag!=""){
+if(set_itend_cd[tp]){
+if(set_itend_cd[tp][lag]){
+ddloaded_listff=set_itend_cd[tp][lag]; 
+}  }
+} else if (tp=="mural" && lag && lag!=""){
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
