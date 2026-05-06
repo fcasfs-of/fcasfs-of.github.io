@@ -39,7 +39,8 @@ const Avisos = {
             fontFamily: 'system-ui, -apple-system, sans-serif',
             fontSize: '14px',
             fontWeight: '500',
-            color: '#1f2937',
+            color: '#1f2937', 
+            width: "100%", 
             backgroundColor: estilo.fundo,
             border: `1px solid ${estilo.cor}`,
             borderLeft: `6px solid ${estilo.cor}`,
@@ -54,6 +55,7 @@ const Avisos = {
         conteudo.style.alignItems = 'center';
         conteudo.style.gap = '12px';
         conteudo.style.overflow = 'auto';
+        conteudo.style.width = '100%';
         conteudo.innerHTML = `<span style="color: ${estilo.cor}; display: flex;">${estilo.icone}</span> <span>${mensagem}</span>`;
         box.appendChild(conteudo);
 
