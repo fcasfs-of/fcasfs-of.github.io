@@ -68,13 +68,11 @@
 <script>
   
 function initAvisos_onload(api){  if (api) {
-  api.exibir({
-  alvo: '.container .hero',
-  mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",
-  tipo: 'info',
-  exibirBotaoFechar:false,
-  fixo: true, duration: 1400
-});    }
+initAvisos_onload_mural=loaded_listff("mural","en");
+  if(initAvisos_onload_mural){
+  for (var i_obj = 0; i_obj < initAvisos_onload_mural.length; i_obj++) {
+  api.exibir(initAvisos_onload_mural[i_obj]);    }
+}   }
   }   
 
   
