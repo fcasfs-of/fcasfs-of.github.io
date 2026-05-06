@@ -4,5 +4,5 @@
 .shareon, .shareon a {  text-align: center;   }   .shareon a {  cursor: pointer;   }     .shareon a:hover {border:0;cursor:pointer;opacity:0.7;}
 .shareon a.icon_none:before{  display:none;   }
 
-.shareon .separte {  margin: 3px;    box-sizing: content-box;    line-height: 1.5;    vertical-align: middle;   }
+.shareon .separte {  margin: 3px;    box-sizing: content-box;    line-height: 1.5;    vertical-align: middle;        background: none;    width: 2px !important;    padding: 2px;    min-width: 2px !important;  }
 
