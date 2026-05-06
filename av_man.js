@@ -54,7 +54,6 @@ const Avisos = {
         conteudo.style.alignItems = 'center';
         conteudo.style.gap = '12px';
         conteudo.style.overflow = 'auto';
-        conteudo.style.pointerEvents = 'none';
         conteudo.innerHTML = `<span style="color: ${estilo.cor}; display: flex;">${estilo.icone}</span> <span>${mensagem}</span>`;
         box.appendChild(conteudo);
 
@@ -67,13 +66,14 @@ const Avisos = {
                 cursor: 'pointer',
                 color: '#9ca3af',
                 marginLeft: '15px',
-                display: 'flex', pointerEvents: "none", 
+                display: 'flex',
                 transition: 'color 0.2s'
             });
             btnFechar.onmouseover = () => btnFechar.style.color = estilo.cor;
             btnFechar.onmouseout = () => btnFechar.style.color = '#9ca3af';
             btnFechar.onclick = () => fecharAviso();
             box.appendChild(btnFechar);
+            box.style.pointerEvents = 'auto';
         }
 
         const fecharAviso = () => {
