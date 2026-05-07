@@ -7,10 +7,10 @@ function iniciarNavegacaoTeclado(ativar = false) {
 if (ativar===true){
         const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
         document.addEventListener('keydown', (e) => {
-if(state){  if(state.teclado===true){              
 	const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
             if (itens.length === 0) return;
 
+if(state){  if(state.teclado===true){              
             const indexAtual = itens.indexOf(document.activeElement);
 
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
