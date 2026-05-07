@@ -1,8 +1,9 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
-function NavegacaoTeclado(state, e, seletores_pp){
-		const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
+function NavegacaoTeclado(e){
+const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
+	const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
             if (itens.length === 0) return;
            
             const indexAtual = itens.indexOf(document.activeElement);
@@ -25,15 +26,8 @@ function NavegacaoTeclado(state, e, seletores_pp){
 }
 
 function iniciarNavegacaoTeclado(ativar = false) {
-    if (!ativar) return;
-	
-        const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
-	
-if (ativar===true){
-        document.addEventListener('keydown', (e) => {
-		NavegacaoTeclado(state, e, seletores_pp);	
-		});
-}	
+    if (!ativar)    document.removeEventListener('mouseover', NavegacaoTeclado);    return;
+if (ativar===true){        document.addEventListener('keydown', NavegacaoTeclado);     }	
 }
 
 
