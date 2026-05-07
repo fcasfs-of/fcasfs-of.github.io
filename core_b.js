@@ -81,6 +81,12 @@ carregarTudo([
             'onload': 'laoded_call_ff(); ',
             'src': 'https://fcasfs-of.cloud-fs.net/av_man.js'
         }
+    },
+	{
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/btn_top.js'
+        }
     }
 ]);
 
@@ -242,7 +248,7 @@ carregarTudo([
         destino: 'head',  tag: 'script',   
         atributos: {    
             'onload': "micAccessTool_run('"+cokk_plu_esdnf+"');",
-            'src': 'https://fcasfs-of.cloud-fs.net/accessibility.js'
+            'src': 'https://fcasfs-of.cloud-fs.net/accessibility/core.js'
         }
     }, {
         destino: 'head',  tag: 'script',   
