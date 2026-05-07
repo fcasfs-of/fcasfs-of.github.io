@@ -482,7 +482,8 @@ const fs_accessibility = (function() {
         noAnim: false,
         bigCursor: false,
         speech: false,
-        libras: false
+        libras: false,
+		teclado: false
     };
 
 
@@ -844,6 +845,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
                 <div class="fs-acc-item" data-key="legendas" onclick="fs_accessibility.update('legendas')">${icons.legenda} ${lang.legenda}</div>
+                <div class="fs-acc-item" data-key="teclado" onclick="fs_accessibility.update('teclado')">${icons.keyB} ${lang.keyB}</div>
             </div>`, lang.arc_a, icons.pAdv)}    
 			${custom_btnsaction_div}
              <div class="separate"></div>  
@@ -904,7 +906,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         document.getElementById('fs_acc_modal').classList.toggle('fs-acc-theme_dark', state.darkTheme);
 
         // Ativar/Desativar
-		toggleLegendas(state.legendas);
+		toggleLegendas(state.legendas);    iniciarNavegacaoTeclado(state.teclado);
 		
         if (state.speech) {
             b.onmouseover = (e) => {
@@ -938,7 +940,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
     }
 
     function reset() {
-        state = { darkTheme: false, legendas: false, lupa: false, currentTela: false, currentTelaZ: false, lineSpace: false, textlineSpace: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
+        state = { darkTheme: false, teclado: false, legendas: false, lupa: false, currentTela: false, currentTelaZ: false, lineSpace: false, textlineSpace: false, zoom: 100, fontReadable: false, contrast: false, grayscale: false, titleHighlight: false, linksHighlight: false, imagesHighlight: false, noAnim: false, bigCursor: false, speech: false, libras: false, videosHighlight: false, iconsHighlight: false, buttonsHighlight: false };
         saveSettings();
         applyAll();
 		
