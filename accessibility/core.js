@@ -608,6 +608,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-theme_dark .separate {   border-top: 1px solid #fff;  }
 			.fs-acc-modal .separatep {  margin-top: 7px;    padding: 5px;   width: 100%;    pointer-events: none;   }
 
+			body.fs-acc-lupa {  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.4s;    transform-origin: left top;    transform: scale(1.4);    width: 83.33%;   font-size: 100%;  }
+
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
             body.fs-acc-contrast { background: #000 !important; color: #fff !important; filter: contrast(150%); }
             body.fs-acc-grayscale { filter: grayscale(100%); }
@@ -694,7 +696,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <div class="fs-acc-item" data-key="bigCursor" onclick="fs_accessibility.update('bigCursor')">${icons.cursor} ${lang.bigCursor}</div>
             </div>`, lang.arc_e, icons.pExtras)}
             ${summary_accAdd(config.menu, `<div class="fs-acc-grid full">
-                <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('lupa')">${icons.lupa} ${lang.lupa}</div>
+                <div class="fs-acc-item" data-key="lupa" onclick="fs_accessibility.update('lupa')">${icons.lupa} ${lang.lupa}</div>
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
             </div>`, lang.arc_a, icons.pAdv)}    
@@ -752,12 +754,11 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         b.classList.toggle('fs-acc-title', state.titleHighlight);
         b.classList.toggle('fs-acc-text_line', state.textlineSpace);
         b.classList.toggle('fs-acc-text_space', state.lineSpace);
+        b.classList.toggle('fs-acc-lupa', state.lupa);
 
         document.getElementById('fs_acc_modal').classList.toggle('fs-acc-theme_dark', state.darkTheme);
 
         // Ativar/Desativar
-        controlarZoomSite(state.lupa);  
-
         if (state.speech) {
             b.onmouseover = (e) => {
                 if (e.target.innerText && e.target.tagName !== 'BODY') {
