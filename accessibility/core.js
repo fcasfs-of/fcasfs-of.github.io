@@ -6,9 +6,9 @@ function iniciarNavegacaoTeclado(ativar = false) {
 
 if (ativar===true){
         const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
-
         document.addEventListener('keydown', (e) => {
-            const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
+if(state){  if(state.teclado===true){              
+	const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
             if (itens.length === 0) return;
 
             const indexAtual = itens.indexOf(document.activeElement);
@@ -28,6 +28,7 @@ if (ativar===true){
                     document.activeElement.click();
                 }
             }
+}       }
         });
 }	
 }
