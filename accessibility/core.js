@@ -1,23 +1,20 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
-function iniciarNavegacaoTeclado(ativar = false) {
-    if (!ativar) return;
-
-if (ativar===true){
-        const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
-        document.addEventListener('keydown', (e) => {
-	const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
+function NavegacaoTeclado(state, e, seletores_pp){
+		const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
             if (itens.length === 0) return;
            
             const indexAtual = itens.indexOf(document.activeElement);
-
+	
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-               if(state){  if(state.teclado===true){    e.preventDefault();   const proximo = (indexAtual + 1) % itens.length;
+               if(state){  if(state.teclado===true){    e.preventDefault();   
+			   const proximo = (indexAtual + 1) % itens.length;
                 itens[proximo].focus();    }   }
             } 
             else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                if(state){  if(state.teclado===true){     e.preventDefault();     const anterior = (indexAtual - 1 + itens.length) % itens.length;
+                if(state){  if(state.teclado===true){     e.preventDefault();     
+				const anterior = (indexAtual - 1 + itens.length) % itens.length;
                 itens[anterior].focus();   }  }
             }
             else if (e.key === 'Enter' && indexAtual !== -1) {
@@ -25,7 +22,16 @@ if (ativar===true){
                    if(state){  if(state.teclado===true){    document.activeElement.click();   }  }
                 }
             }
+}
 
+function iniciarNavegacaoTeclado(ativar = false) {
+    if (!ativar) return;
+	
+        const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
+	
+if (ativar===true){
+        document.addEventListener('keydown', (e) => {
+		NavegacaoTeclado(state, e, seletores_pp);	
 		});
 }	
 }
