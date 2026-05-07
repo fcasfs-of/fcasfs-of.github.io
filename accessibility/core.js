@@ -55,10 +55,8 @@ const toggleLegendas = function (status=false) {
 
     const btnFechar = document.createElement('button');
     btnFechar.style.pointerEvents = 'auto'; 
-    btnFechar.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
+    btnFechar.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>`;
     
     Object.assign(btnFechar.style, {
@@ -697,7 +695,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-header { padding: 20px; background: #f3f4f6; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; }
             
             .fs-acc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
-            .fs-acc-grid.full {   padding: 10px;    width: 90%;    margin: 4px auto;    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));   }
+            .fs-acc-grid.full {   padding: 10px;    width: 95%;    margin: 4px auto;    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));   }
             
             .fs-acc-item { background: #f9fafb; border: 1px solid #e5e7eb; padding: 15px 10px; border-radius: 8px; cursor: pointer; text-align: center; font-size: 12px; transition: 0.2s; display: flex; flex-direction: column; align-items: center; gap: 8px; }
             .fs-acc-item:hover { border-color: var(--fs-acc-primary); background: #eff6ff; }
