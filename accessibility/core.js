@@ -1,5 +1,6 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
+
 function iniciarNavegacaoTeclado(ativar = false) {
     if (!ativar) return;
 
@@ -28,12 +29,7 @@ if (ativar===true){
                 }
             }
         });
-
-        const stsyled = document.createElement('style');
-        stsyled.textContent = '*:focus { outline: 5px solid #2ecc71 !important; outline-offset: 3px; transition: outline 0.1s; }';
-        document.head.appendChild(stsyled);
-}
-	
+}	
 }
 
 
@@ -754,6 +750,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 			.fs-acc-modal .separatep {  margin-top: 7px;    padding: 5px;   width: 100%;    pointer-events: none;   }
 
 			body.fs-acc-lupa {  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.4s;    transform-origin: left top;    transform: scale(1.3);    width: 83.33%;    overflow: auto;  }
+			body.fs-acc-teclado *:focus { outline: 5px solid #2ecc71 !important; outline-offset: 3px; transition: outline 0.1s; }
 
             body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
             body.fs-acc-contrast { background: #000 !important; color: #fff !important; filter: contrast(150%); }
@@ -902,6 +899,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         b.classList.toggle('fs-acc-text_line', state.textlineSpace);
         b.classList.toggle('fs-acc-text_space', state.lineSpace);
         b.classList.toggle('fs-acc-lupa', state.lupa);
+        b.classList.toggle('fs-acc-teclado', state.teclado);
 
         document.getElementById('fs_acc_modal').classList.toggle('fs-acc-theme_dark', state.darkTheme);
 
