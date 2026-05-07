@@ -26,8 +26,8 @@ const seletores_pp = 'a[href], button, input, textarea, select, details, [tabind
 }
 
 function iniciarNavegacaoTeclado(ativar = false) {
-    if (!ativar)    document.removeEventListener('keydown', NavegacaoTeclado);    return;
-if (ativar===true){        document.addEventListener('keydown', NavegacaoTeclado);     }	
+if (ativar===true){        document.addEventListener('keydown', NavegacaoTeclado);     }	else {
+	document.removeEventListener('keydown', NavegacaoTeclado);     }
 }
 
 
