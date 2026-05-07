@@ -9,18 +9,18 @@ const seletores_pp = 'a[href], button, input, textarea, select, details, [tabind
             const indexAtual = itens.indexOf(document.activeElement);
 	
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-               if(state){  if(state.teclado===true){    e.preventDefault();   
+                  e.preventDefault();   
 			   const proximo = (indexAtual + 1) % itens.length;
-                itens[proximo].focus();    }   }
+                itens[proximo].focus();   
             } 
             else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                if(state){  if(state.teclado===true){     e.preventDefault();     
+                 e.preventDefault();     
 				const anterior = (indexAtual - 1 + itens.length) % itens.length;
-                itens[anterior].focus();   }  }
+                itens[anterior].focus();   
             }
             else if (e.key === 'Enter' && indexAtual !== -1) {
                 if (document.activeElement.tagName !== 'BUTTON' && document.activeElement.tagName !== 'A') {
-                   if(state){  if(state.teclado===true){    document.activeElement.click();   }  }
+                    document.activeElement.click();   }
                 }
             }
 }
