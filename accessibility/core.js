@@ -20,7 +20,7 @@ const seletores_pp = 'a[href], button, input, textarea, select, details, [tabind
             }
             else if (e.key === 'Enter' && indexAtual !== -1) {
                 if (document.activeElement.tagName !== 'BUTTON' && document.activeElement.tagName !== 'A') {
-                    document.activeElement.click();   }
+                    document.activeElement.click();   
                 }
             }
 }
