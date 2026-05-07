@@ -13,13 +13,11 @@ if (ativar===true){
             const indexAtual = itens.indexOf(document.activeElement);
 
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                e.preventDefault();
-               if(state){  if(state.teclado===true){    const proximo = (indexAtual + 1) % itens.length;
+               if(state){  if(state.teclado===true){    e.preventDefault();   const proximo = (indexAtual + 1) % itens.length;
                 itens[proximo].focus();    }   }
             } 
             else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                e.preventDefault();
-                if(state){  if(state.teclado===true){   const anterior = (indexAtual - 1 + itens.length) % itens.length;
+                if(state){  if(state.teclado===true){     e.preventDefault();     const anterior = (indexAtual - 1 + itens.length) % itens.length;
                 itens[anterior].focus();   }  }
             }
             else if (e.key === 'Enter' && indexAtual !== -1) {
