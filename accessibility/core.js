@@ -806,6 +806,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 <div class="fs-acc-item" data-key="lupa" onclick="fs_accessibility.update('lupa')">${icons.lupa} ${lang.lupa}</div>
                 <div class="fs-acc-item" data-key="speech" onclick="fs_accessibility.update('speech')">${icons.voice} ${lang.textToSpeech}</div>
                 <div class="fs-acc-item" data-key="libras" onclick="fs_accessibility.update('libras')">${icons.libra} ${lang.textToLibra}</div>
+                <div class="fs-acc-item" data-key="legendas" onclick="fs_accessibility.update('legendas')">${icons.legenda} ${lang.legenda}</div>
             </div>`, lang.arc_a, icons.pAdv)}    
 			${custom_btnsaction_div}
              <div class="separate"></div>  
