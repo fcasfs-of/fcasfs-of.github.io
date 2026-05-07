@@ -1,6 +1,109 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
+const toggleLegendas = function (status=false) {
+    const idUnico = 'container-legendas-dinamico';
+    let container = document.getElementById(idUnico);
+
+    if (status === false || container) {
+        if (container) container.remove();
+        document.removeEventListener('mouseover', window._capturarTextoLegenda);
+        return;
+    }
+
+    container = document.createElement('div');
+    container.id = idUnico;
+    
+    Object.assign(container.style, {
+        position: 'fixed',
+        bottom: '20px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        width: '90%',
+        maxWidth: '95%',
+        minHeight: '70px',
+        backgroundColor: 'rgba(15, 15, 15, 0.8)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderRadius: '12px',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+        zIndex: '10000',
+        display: 'flex',
+        alignItems: 'center',
+        padding: '15px 20px',
+        color: '#fff',
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+        opacity: '0',
+        transition: 'opacity 0.4s, transform 0.4s',
+        pointerEvents: 'none', overflow: "auto"
+    });
+
+    const textoElemento = document.createElement('p');
+    textoElemento.innerText = "Passe o mouse sobre o conteúdo...";
+    Object.assign(textoElemento.style, {
+        margin: '0',
+        flex: '1',
+        fontSize: '16px',
+        lineHeight: '1.5',
+        fontWeight: '400',
+        overflow: 'hidden',
+        display: '-webkit-box',
+        webkitLineClamp: '2',
+        webkitBoxOrient: 'vertical'
+    });
+
+    const btnFechar = document.createElement('button');
+    btnFechar.style.pointerEvents = 'auto'; 
+    btnFechar.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>`;
+    
+    Object.assign(btnFechar.style, {
+        background: 'rgba(255,255,255,0.1)',
+        border: 'none',
+        borderRadius: '50%',
+        color: '#fff',
+        cursor: 'pointer',
+        width: '32px',
+        height: '32px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: '15px',
+        transition: 'background 0.2s'
+    });
+    btnFechar.onclick = () => toggleLegendas(false);
+    btnFechar.onmouseover = () => btnFechar.style.backgroundColor = 'rgba(255,50,50,0.5)';
+    btnFechar.onmouseout = () => btnFechar.style.backgroundColor = 'rgba(255,255,255,0.1)';
+
+    window._capturarTextoLegenda = (e) => {
+        const el = e.target;
+        if (container.contains(el) || el.innerText === undefined) return;
+
+        const textoLimpo = el.innerText.trim();
+        if (textoLimpo.length > 5 && textoLimpo.length < 800) {
+            textoElemento.innerText = textoLimpo;
+            container.style.opacity = '1';
+            container.style.transform = 'translateX(-50%) translateY(0)';
+        }
+    };
+
+    document.addEventListener('mouseover', window._capturarTextoLegenda);
+
+    container.appendChild(textoElemento);
+    container.appendChild(btnFechar);
+    document.body.appendChild(container);
+
+    setTimeout(() => {
+        container.style.transform = 'translateX(-50%) translateY(-10px)';
+    }, 50);
+};
+
+
+
 const controlarZoomSite = function (ativar = false) {
     const body_pg = document.body;
     const nivelZoom = ativar ? '1.2' : '1';
