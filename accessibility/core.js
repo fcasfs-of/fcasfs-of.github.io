@@ -9,27 +9,26 @@ if (ativar===true){
         document.addEventListener('keydown', (e) => {
 	const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
             if (itens.length === 0) return;
-
-if(state){  if(state.teclado===true){              
+           
             const indexAtual = itens.indexOf(document.activeElement);
 
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
                 e.preventDefault();
-                const proximo = (indexAtual + 1) % itens.length;
-                itens[proximo].focus();
+               if(state){  if(state.teclado===true){    const proximo = (indexAtual + 1) % itens.length;
+                itens[proximo].focus();    }   }
             } 
             else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
                 e.preventDefault();
-                const anterior = (indexAtual - 1 + itens.length) % itens.length;
-                itens[anterior].focus();
+                if(state){  if(state.teclado===true){   const anterior = (indexAtual - 1 + itens.length) % itens.length;
+                itens[anterior].focus();   }  }
             }
             else if (e.key === 'Enter' && indexAtual !== -1) {
                 if (document.activeElement.tagName !== 'BUTTON' && document.activeElement.tagName !== 'A') {
-                    document.activeElement.click();
+                   if(state){  if(state.teclado===true){    document.activeElement.click();   }  }
                 }
             }
-}       }
-        });
+
+		});
 }	
 }
 
