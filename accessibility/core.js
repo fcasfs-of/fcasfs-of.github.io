@@ -26,7 +26,7 @@ const seletores_pp = 'a[href], button, input, textarea, select, details, [tabind
 }
 
 function iniciarNavegacaoTeclado(ativar = false) {
-    if (!ativar)    document.removeEventListener('mouseover', NavegacaoTeclado);    return;
+    if (!ativar)    document.removeEventListener('keydown', NavegacaoTeclado);    return;
 if (ativar===true){        document.addEventListener('keydown', NavegacaoTeclado);     }	
 }
 
