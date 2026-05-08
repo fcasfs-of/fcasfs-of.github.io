@@ -354,7 +354,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     const dict = i18n[lang] || i18n['pt'];
 
     const getPageContext = () => {
-        const tags = ['p', 'h1', 'h2', 'h3', 'li', 'ul', 'span', 'div', 'article', 'section'];
+        const tags = ['p', 'button', 'a', 'h1', 'h2', 'h3', 'li', 'ul', 'span', 'div', 'article', 'section'];
         let content = "";
         tags.forEach(tag => {
             document.querySelectorAll(tag).forEach(el => {
