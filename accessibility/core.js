@@ -712,7 +712,9 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 .js-divider { gap: 8px; }
             }
 			
-            .fs-acc-btn { position: fixed; bottom: 20px; ${config.position}: 20px; width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+            .fs-acc-area { position: fixed; bottom: 20px; ${config.position}: 20px;  z-index: 9999; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+			
+            .fs-acc-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
             .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
 
@@ -776,12 +778,18 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 
     function render() {
         const lang = i18n[config.lang];
-        
+
+        const trigger_ares = document.createElement('div');
+        trigger_ares.className = 'fs-acc-area';
+        trigger_ares.innerHTML = "";
+		
         const trigger = document.createElement('button');
         trigger.className = 'fs-acc-btn';
         trigger.innerHTML = icons.main;
         trigger.onclick = toggleModal;
-        document.body.appendChild(trigger);
+
+		trigger_ares.appendChild(trigger);
+        document.body.appendChild(trigger_ares);
 
         const modal = document.createElement('div');
         modal.id = 'fs_acc_modal';
