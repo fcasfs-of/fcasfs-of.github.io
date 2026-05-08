@@ -4,16 +4,14 @@ function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === 
 function imprimirPorId(idElemento) {
     const elemento = document.getElementById(idElemento);
     
-    if (!elemento) {
-        return;
-    }
+    if (!elemento) {        return;    }
 
     const janela = window.open('', '_blank', 'width=900,height=700');
 
     const urlSite = window.location.href;
     const dataHora = new Date().toLocaleString('pt-BR');
 
-   let estilosCss = '';
+    let estilosCss = '';
     const folhasEstilo = document.styleSheets;
     
     for (let i = 0; i < folhasEstilo.length; i++) {
@@ -42,9 +40,7 @@ function imprimirPorId(idElemento) {
 
     janela.document.close();
       
-        janela.print();
-        janela.close();
-
+        janela.print();        janela.close();
 }
 
 
