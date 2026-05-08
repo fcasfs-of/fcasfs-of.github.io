@@ -386,7 +386,8 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     const chatBtn = document.createElement('button');
     const chatBox = document.createElement('div');
 
-	mainContainer.style.marginLeft="3px";
+	mainContainer.style.marginLeft="5px";
+	mainContainer.style.marginRight="5px";
 
     Object.assign(chatBtn.style, {
         width: '56px', height: '56px', borderRadius: '50%',
