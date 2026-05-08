@@ -328,6 +328,179 @@ const AgeGate = {
 };
 
 
+const SmartChatAI = (isOpen = false, lang = 'pt') => {
+    
+    const i18n = {
+        pt: {
+            welcome: "Olá! Como posso ajudar você hoje?",
+            placeholder: "Pergunte algo sobre esta página...",
+            emptyMsg: "O chat está vazio. Inicie uma conversa profissional agora mesmo.",
+            backupBtn: "Backup",
+            clearBtn: "Limpar Chat",
+            aiThinking: "Analisando conteúdo...",
+            noContext: "Desculpe, não encontrei essa informação no texto desta página."
+        },
+        en: {
+            welcome: "Hello! How can I help you today?",
+            placeholder: "Ask something about this page...",
+            emptyMsg: "The chat is empty. Start a professional conversation now.",
+            backupBtn: "Backup",
+            clearBtn: "Clear Chat",
+            aiThinking: "Analyzing content...",
+            noContext: "Sorry, I couldn't find that information in the text of this page."
+        }
+    };
+
+    const dict = i18n[lang] || i18n['pt'];
+
+    const getPageContext = () => {
+        const tags = ['p', 'h1', 'h2', 'h3', 'li', 'ul', 'span', 'div', 'article', 'section'];
+        let content = "";
+        tags.forEach(tag => {
+            document.querySelectorAll(tag).forEach(el => {
+                if (el.innerText.length > 6) content += el.innerText + " ";
+            });
+        });
+        return content.toLowerCase();
+    };
+
+    const pageKnowledge = getPageContext();
+
+    let chatHistory = JSON.parse(localStorage.getItem('smart_chat_data')) || [];
+
+    const saveHistory = () => {
+        localStorage.setItem('smart_chat_data', JSON.stringify(chatHistory));
+    };
+
+    const icons = {
+        chat: `<svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
+        close: `<svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
+        send: `<svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`
+    };
+
+    const mainContainer = document.createElement('div');
+    const chatBtn = document.createElement('button');
+    const chatBox = document.createElement('div');
+
+    Object.assign(chatBtn.style, {
+        width: '60px', height: '60px', borderRadius: '50%',
+        backgroundColor: '#0056b3', border: 'none', cursor: 'pointer',
+        boxShadow: '0 4px 15px rgba(0,0,0,0.2)', display: 'flex',
+        alignItems: 'center', justifyContent: 'center', zIndex: '9999'
+    });
+    chatBtn.innerHTML = icons.chat;
+
+    Object.assign(chatBox.style, {
+        position: 'fixed', bottom: '90px', left: '20px',
+        width: 'min(400px, 90vw)', height: '500px', backgroundColor: '#fff',
+        borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+        display: isOpen ? 'flex' : 'none', flexDirection: 'column',
+        overflow: 'hidden', zIndex: '9999', fontFamily: 'sans-serif'
+    });
+
+    chatBox.innerHTML = `
+        <div style="background:#0056b3; padding:15px; color:white; display:flex; justify-content:space-between; align-items:center">
+            <strong style="font-size:1.1rem">Smart Support</strong>
+            <div style="display:flex; gap:10px">
+                <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px">${dict.backupBtn}</button>
+                <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px">${dict.clearBtn}</button>
+                <span id="close-chat" style="cursor:pointer; margin-left:10px">${icons.close}</span>
+            </div>
+        </div>
+        <div id="messages-flow" style="flex:1; padding:15px; overflow-y:auto; background:#f8f9fa; display:flex; flex-direction:column; gap:12px"></div>
+        <div style="padding:15px; border-top:1px solid #eee; display:flex; gap:10px">
+            <input id="user-input" type="text" placeholder="${dict.placeholder}" style="flex:1; padding:10px; border:1px solid #ddd; border-radius:20px; outline:none">
+            <button id="send-btn" style="background:#0056b3; border:none; width:40px; height:40px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center">${icons.send}</button>
+        </div>
+    `;
+
+    trigger_ares.appendChild(mainContainer);
+    mainContainer.appendChild(chatBtn);
+    mainContainer.appendChild(chatBox);
+
+    const msgFlow = chatBox.querySelector('#messages-flow');
+    const inputField = chatBox.querySelector('#user-input');
+
+    const renderMessage = (text, sender = 'bot') => {
+        const msg = document.createElement('div');
+        Object.assign(msg.style, {
+            padding: '10px 15px', borderRadius: '15px', maxWidth: '85%',
+            fontSize: '14px', lineHeight: '1.4',
+            alignSelf: sender === 'user' ? 'flex-end' : 'flex-start',
+            backgroundColor: sender === 'user' ? '#0056b3' : '#e9ecef',
+            color: sender === 'user' ? '#fff' : '#333'
+        });
+        msg.innerText = text;
+        msgFlow.appendChild(msg);
+        msgFlow.scrollTop = msgFlow.scrollHeight;
+    };
+
+    const loadHistory = () => {
+        msgFlow.innerHTML = "";
+        if (chatHistory.length === 0) {
+            msgFlow.innerHTML = `<div style="color:#999; text-align:center; margin-top:50%; font-size:13px">${dict.emptyMsg}</div>`;
+        } else {
+            chatHistory.forEach(m => renderMessage(m.text, m.type));
+        }
+    };
+
+    const getAiResponse = (query) => {
+        const q = query.toLowerCase();
+        if (pageKnowledge.includes(q) && q.length > 3) {
+            const sentences = pageKnowledge.split(/[.!?]/);
+            const match = sentences.find(s => s.includes(q));
+            return match ? match.trim() : dict.welcome;
+        }
+        return dict.noContext;
+    };
+
+    const handleSend = () => {
+        const val = inputField.value.trim();
+        if (!val) return;
+
+        chatHistory.push({ type: 'user', text: val });
+        renderMessage(val, 'user');
+        inputField.value = "";
+
+        setTimeout(() => {
+            const reply = getAiResponse(val);
+            chatHistory.push({ type: 'bot', text: reply });
+            renderMessage(reply, 'bot');
+            saveHistory();
+        }, 800);
+    };
+
+    chatBtn.onclick = () => {
+        chatBox.style.display = chatBox.style.display === 'none' ? 'flex' : 'none';
+        if(chatBox.style.display === 'flex') loadHistory();
+    };
+
+    chatBox.querySelector('#close-chat').onclick = () => chatBox.style.display = 'none';
+
+    chatBox.querySelector('#send-btn').onclick = handleSend;
+
+    inputField.onkeypress = (e) => { if (e.key === 'Enter') handleSend(); };
+
+    chatBox.querySelector('#btn-cls').onclick = () => {
+            chatHistory = [];
+            saveHistory();
+            loadHistory();
+    };
+
+    chatBox.querySelector('#btn-bkp').onclick = () => {
+        const blob = new Blob([JSON.stringify(chatHistory, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'chat-history.json';
+        a.click();
+    };
+
+    loadHistory();
+};
+
+
+
 const fs_accessibility = (function() {
     const config = {   
         lang: 'pt',
@@ -789,6 +962,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         trigger.onclick = toggleModal;
 
 		trigger_ares.appendChild(trigger);
+		SmartChatAI(false, config.lang);
+		
         document.body.appendChild(trigger_ares);
 
         const modal = document.createElement('div');
