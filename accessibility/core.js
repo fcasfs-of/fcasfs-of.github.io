@@ -27,7 +27,9 @@ function imprimirPorId(idElemento) {
     }
 
     janela.document.write('<html><head><title></title>');
-    janela.document.write(`<style>${estilosCss}
+    janela.document.write(`<style>
+	* {        -webkit-print-color-adjust: exact !important;        print-color-adjust: exact !important;        color-adjust: exact !important;    }
+	${estilosCss}
          body { font-family: sans-serif; margin: 0; padding: 20px; }
         #header-print { border-bottom: 1px solid #ccc; margin-bottom: 20px; font-size: 12px; color: #666; }
         #footer-print { border-top: 1px solid #ccc; margin-top: 20px; font-size: 12px; color: #666; text-align: right; }
