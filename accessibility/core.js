@@ -1,6 +1,53 @@
 function check_stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
+function imprimirPorId(idElemento) {
+    const elemento = document.getElementById(idElemento);
+    
+    if (!elemento) {
+        return;
+    }
+
+    const janela = window.open('', '_blank', 'width=900,height=700');
+
+    const urlSite = window.location.href;
+    const dataHora = new Date().toLocaleString('pt-BR');
+
+   let estilosCss = '';
+    const folhasEstilo = document.styleSheets;
+    
+    for (let i = 0; i < folhasEstilo.length; i++) {
+        try {
+            const regras = folhasEstilo[i].cssRules || folhasEstilo[i].rules;
+            for (let j = 0; j < regras.length; j++) {
+                if (regras[j].selectorText && regras[j].selectorText.includes(`#${idElemento}`)) {
+                    estilosCss += regras[j].cssText;
+                }
+            }
+        } catch (e) {
+        }
+    }
+
+    janela.document.write('<html><head><title></title>');
+    janela.document.write(`<style>${estilosCss}
+         body { font-family: sans-serif; margin: 0; padding: 20px; }
+        #header-print { border-bottom: 1px solid #ccc; margin-bottom: 20px; font-size: 12px; color: #666; }
+        #footer-print { border-top: 1px solid #ccc; margin-top: 20px; font-size: 12px; color: #666; text-align: right; }
+      </style>`);
+    janela.document.write('</head><body>');
+    janela.document.write(`<div id="header-print">Documento extraído de: ${urlSite}</div><br/>`);
+    janela.document.write(elemento.outerHTML); 
+    janela.document.write(`<br/><div id="footer-print">Impresso em: ${dataHora}</div>`);
+    janela.document.write('</body></html>');
+
+    janela.document.close();
+      
+        janela.print();
+        janela.close();
+
+}
+
+
 function NavegacaoTeclado(e){
 const seletores_pp = 'a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])';
 	const itens = Array.from(document.querySelectorAll(seletores_pp)).filter(el => el.offsetWidth > 0 && el.offsetHeight > 0); 
