@@ -535,7 +535,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
 
     chatBox.querySelector('#close-chat').onclick = () => {  chatBtn.classList.remove("show");  chatBox.style.display = 'none';   };
 
-    chatBox.querySelector('#btn-bkpint').onclick = () => {  if (chatHistory.length === 0) {   }   else {   imprimirPorId("messages-flow");  }    };
+    chatBox.querySelector('#btn-bkpint').onclick = () => {  if (chatHistory.length>=1) {   imprimirPorId("messages-flow");  }    };
 	
     chatBox.querySelector('#send-btn').onclick = handleSend;
 
@@ -548,7 +548,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     };
 
     chatBox.querySelector('#btn-bkp').onclick = () => {
-if (chatHistory.length === 0) {   }   else {         
+if (chatHistory.length>=1) {         
 	const blob = new Blob([JSON.stringify(chatHistory, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
