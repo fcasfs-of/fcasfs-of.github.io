@@ -478,10 +478,10 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     chatBtn.onclick = () => {
 		chatBtn.classList.remove("show");
         chatBox.style.display = chatBox.style.display === 'none' ? 'flex' : 'none';
-        if(chatBox.style.display === 'flex') chatBtn.classList.add("show");   loadHistory();
+        if(chatBox.style.display === 'flex'){ chatBtn.classList.add("show");   loadHistory();    }
     };
 
-    chatBox.querySelector('#close-chat').onclick = () => chatBtn.classList.remove("show");  chatBox.style.display = 'none';
+    chatBox.querySelector('#close-chat').onclick = () => { chatBtn.classList.remove("show");  chatBox.style.display = 'none';   };
 
     chatBox.querySelector('#send-btn').onclick = handleSend;
 
