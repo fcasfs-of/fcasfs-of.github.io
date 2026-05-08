@@ -403,7 +403,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
 
     chatBox.innerHTML = `
         <div style="background:#0056b3; padding:15px; color:white; display:flex; justify-content:space-between; align-items:center;">
-            <strong style="font-size:1.1rem;">Smart Support</strong>
+            <strong style="font-size:1.1rem; display: flex; gap: 5px; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;">${icons.chat}  Chat Support</strong>
             <div style="display:flex; gap:10px;">
                 <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px;">${dict.backupBtn}</button>
                 <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px;">${dict.clearBtn}</button>
