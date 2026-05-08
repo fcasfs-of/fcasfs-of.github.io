@@ -712,7 +712,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 .js-divider { gap: 8px; }
             }
 			
-            .fs-acc-area { position: fixed; bottom: 20px; ${config.position}: 20px;  z-index: 9999; display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
+            .fs-acc-area { position: fixed; bottom: 20px; ${config.position}: 20px;  z-index: 9999;  display: grid;       width: 60%;    height: 80px;    grid-auto-flow: column;    align-content: center;    align-items: center;    justify-content: center;    justify-items: center;    overflow: auto;  transition: transform 0.3s; }
 			
             .fs-acc-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
