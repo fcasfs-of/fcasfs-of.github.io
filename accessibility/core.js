@@ -373,7 +373,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     };
 
     const icons = {
-        chat: `<svg viewBox="0 0 24 24" width="30px" height="30px" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
+        chat: `<svg viewBox="0 0 24 24" width="24px" height="24px" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
         close: `<svg viewBox="0 0 24 24" width="24px" height="24px" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
         send: `<svg viewBox="0 0 24 24" width="20px" height="20px" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`
     };
@@ -892,9 +892,9 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 			
             .fs-acc-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
-			.fs-acc-btnch {   }
+			.fs-acc-btnch {      transition: transform 0.3s;     }
 			.fs-acc-btnch:hover { transform: scale(1.1); }
-            .fs-acc-btnch svg, .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
+            .fs-acc-btnch svg, .fs-acc-btn svg { width: 30px; height: 30px;   fill: #fff; }
 
             .fs-acc-modal { position: fixed; top: 0; bottom: 0; width: 320px; background: var(--fs-acc-bg); z-index: 10000; box-shadow: 0 0 20px rgba(0,0,0,0.1); display: none; flex-direction: column; font-family: sans-serif; color: var(--fs-acc-text); overflow-y: auto; transition: all 0.3s ease; }
             .fs-acc-modal.active { display: flex; }
