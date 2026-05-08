@@ -328,7 +328,7 @@ const AgeGate = {
 };
 
 
-const SmartChatAI = (isOpen = false, lang = 'pt') => {
+const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     
     const i18n = {
         pt: {
@@ -414,7 +414,7 @@ const SmartChatAI = (isOpen = false, lang = 'pt') => {
         </div>
     `;
 
-    trigger_ares.appendChild(mainContainer);
+    obj.appendChild(mainContainer);
     mainContainer.appendChild(chatBtn);
     mainContainer.appendChild(chatBox);
 
@@ -962,7 +962,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         trigger.onclick = toggleModal;
 
 		trigger_ares.appendChild(trigger);
-		SmartChatAI(false, config.lang);
+		SmartChatAI(trigger_ares, false, config.lang);
 		
         document.body.appendChild(trigger_ares);
 
