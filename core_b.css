@@ -35,6 +35,7 @@
       padding: 0;
       box-sizing: border-box;
       user-select: none;
+        -webkit-print-color-adjust: exact !important;        print-color-adjust: exact !important;        color-adjust: exact !important;  
     }
     
     body {
