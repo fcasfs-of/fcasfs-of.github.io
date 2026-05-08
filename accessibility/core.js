@@ -471,7 +471,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
             const reply = getAiResponse(val);
             chatHistory.push({ type: 'bot', text: reply });
             renderMessage(reply, 'bot');
-            saveHistory();
+            saveHistory();    loadHistory();
         }, 800);
     };
 
