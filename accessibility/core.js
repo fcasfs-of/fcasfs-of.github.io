@@ -533,9 +533,9 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
         if(chatBox.style.display === 'flex'){ chatBtn.classList.add("show");   loadHistory();    }
     };
 
-    chatBox.querySelector('#close-chat').onclick = () => { chatBtn.classList.remove("show");  chatBox.style.display = 'none';   };
+    chatBox.querySelector('#close-chat').onclick = () => {  chatBtn.classList.remove("show");  chatBox.style.display = 'none';   };
 
-    chatBox.querySelector('#btn-bkpint').onclick = () => {  imprimirPorId("messages-flow");   };
+    chatBox.querySelector('#btn-bkpint').onclick = () => {  if (chatHistory.length === 0) {   }   else {   imprimirPorId("messages-flow");  }    };
 	
     chatBox.querySelector('#send-btn').onclick = handleSend;
 
@@ -548,12 +548,13 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     };
 
     chatBox.querySelector('#btn-bkp').onclick = () => {
-        const blob = new Blob([JSON.stringify(chatHistory, null, 2)], { type: 'application/json' });
+if (chatHistory.length === 0) {   }   else {         
+	const blob = new Blob([JSON.stringify(chatHistory, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
         a.download = 'chat-history.json';
-        a.click();
+        a.click();    }
     };
 
     loadHistory();
