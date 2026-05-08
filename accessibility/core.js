@@ -37,12 +37,17 @@ function imprimirPorId(idElemento) {
     janela.document.write('</head><body>');
     janela.document.write(`<div id="header-print">Documento extraído de: ${urlSite}</div><br/>`);
     janela.document.write(elemento.outerHTML); 
-    janela.document.write(`<br/><div id="footer-print">Impresso em: ${dataHora}</div>`);
+    janela.document.write(`<br/><div id="footer-print">Impresso em: ${dataHora}</div>
+	        <script>
+                window.onload = function() {
+                        window.print();   window.close(); 
+                };
+            <\/script>`);
     janela.document.write('</body></html>');
 
     janela.document.close();
       
-        janela.print();        janela.close();
+        //janela.print();        janela.close();
 }
 
 
