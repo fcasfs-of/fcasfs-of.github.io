@@ -334,7 +334,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
         pt: {
             welcome: "Olá! Como posso ajudar você hoje?",
             placeholder: "Pergunte algo sobre esta página...",
-            emptyMsg: "O chat está vazio. Inicie uma conversa profissional agora mesmo.",
+            emptyMsg: "O chat está vazio. <br/><br/> Inicie uma conversa profissional agora mesmo.",
             backupBtn: "Backup",
             clearBtn: "Limpar Chat",
             aiThinking: "Analisando conteúdo...",
@@ -343,7 +343,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
         en: {
             welcome: "Hello! How can I help you today?",
             placeholder: "Ask something about this page...",
-            emptyMsg: "The chat is empty. Start a professional conversation now.",
+            emptyMsg: "The chat is empty. <br/><br/> Start a professional conversation now.",
             backupBtn: "Backup",
             clearBtn: "Clear Chat",
             aiThinking: "Analyzing content...",
@@ -443,7 +443,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     const loadHistory = () => {
         msgFlow.innerHTML = "";
         if (chatHistory.length === 0) {
-            msgFlow.innerHTML = `<div style="color:#999; text-align:center; position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  margin: 0;  font-size:13px;">${dict.emptyMsg}</div>`;
+            msgFlow.innerHTML = `<div style="color:#999; text-align:center; width: 90%;  position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  margin: 0;  font-size:13px;">${dict.emptyMsg}</div>`;
         } else {
             chatHistory.forEach(m => renderMessage(m.text, m.type));
         }
