@@ -373,9 +373,9 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     };
 
     const icons = {
-        chat: `<svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
-        close: `<svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
-        send: `<svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`
+        chat: `<svg viewBox="0 0 24 24" width="30px" height="30px" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
+        close: `<svg viewBox="0 0 24 24" width="24px" height="24px" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
+        send: `<svg viewBox="0 0 24 24" width="20px" height="20px" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`
     };
 
     const mainContainer = document.createElement('div');
@@ -385,11 +385,12 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
 	mainContainer.style.marginLeft="3px";
 
     Object.assign(chatBtn.style, {
-        width: '60px', height: '60px', borderRadius: '50%',
+        width: '56px', height: '56px', borderRadius: '50%',
         backgroundColor: '#0056b3', border: 'none', cursor: 'pointer',
         boxShadow: '0 4px 15px rgba(0,0,0,0.2)', display: 'flex',
         alignItems: 'center', justifyContent: 'center', zIndex: '9999'
     });
+	chatBtn.className="fs-acc-btnch";
     chatBtn.innerHTML = icons.chat;
 
     Object.assign(chatBox.style, {
