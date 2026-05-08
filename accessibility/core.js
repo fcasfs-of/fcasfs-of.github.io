@@ -375,7 +375,9 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     const icons = {
         chat: `<svg viewBox="0 0 24 24" width="24px" height="24px" fill="white"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>`,
         close: `<svg viewBox="0 0 24 24" width="24px" height="24px" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>`,
-        send: `<svg viewBox="0 0 24 24" width="20px" height="20px" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`
+        send: `<svg viewBox="0 0 24 24" width="20px" height="20px" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`,
+		clear: `<svg fill="#fff" width="24px" height="24px" viewBox="0 0 1024 1024" t="1569683368540" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9723" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M899.1 869.6l-53-305.6H864c14.4 0 26-11.6 26-26V346c0-14.4-11.6-26-26-26H618V138c0-14.4-11.6-26-26-26H432c-14.4 0-26 11.6-26 26v182H160c-14.4 0-26 11.6-26 26v192c0 14.4 11.6 26 26 26h17.9l-53 305.6c-0.3 1.5-0.4 3-0.4 4.4 0 14.4 11.6 26 26 26h723c1.5 0 3-0.1 4.4-0.4 14.2-2.4 23.7-15.9 21.2-30zM204 390h272V182h72v208h272v104H204V390z m468 440V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H416V674c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v156H202.8l45.1-260H776l45.1 260H672z" p-id="9724"></path></svg>`,
+		backup: `<svg fill="#fff" width="24" height="24" viewBox="0 0 36 36" version="1.1" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">      <rect class="clr-i-outline clr-i-outline-path-1" x="6" y="22" width="24" height="2"></rect><path class="clr-i-outline clr-i-outline-path-2" d="M30.84,13.37A1.94,1.94,0,0,0,28.93,12H26.55a3,3,0,0,1-.14,2h2.54C30,16.94,31.72,21.65,32,22.48V30H4V22.48C4.28,21.65,7.05,14,7.05,14H9.58a3,3,0,0,1-.14-2H7.07a1.92,1.92,0,0,0-1.9,1.32C2,22,2,22.1,2,22.33V30a2,2,0,0,0,2,2H32a2,2,0,0,0,2-2V22.33C34,22.1,34,22,30.84,13.37Z"></path><path class="clr-i-outline clr-i-outline-path-3" d="M18,19.84l6.38-6.35A1,1,0,1,0,23,12.08L19,16V4a1,1,0,1,0-2,0V16l-4-3.95a1,1,0,0,0-1.41,1.42Z"></path>    <rect x="0" y="0" width="36" height="36" fill-opacity="0"></rect></svg>`
     };
 
     const mainContainer = document.createElement('div');
@@ -405,8 +407,8 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
         <div style="background:#0056b3; padding:15px; color:white; display:flex; justify-content:space-between; align-items:center;">
             <strong style="font-size:1.1rem; display: flex; gap: 5px; flex-direction: row; flex-wrap: nowrap; align-items: center; justify-content: center;">${icons.chat}  Chat Support</strong>
             <div style="display:flex; gap:10px;">
-                <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px;">${dict.backupBtn}</button>
-                <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px;">${dict.clearBtn}</button>
+                <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px; display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;align-items: center;justify-content: center;gap: 5px; ">${icons.backup}  ${dict.backupBtn}</button>
+                <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px; display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;align-items: center;justify-content: center;gap: 5px; ">${icons.clear}  ${dict.clearBtn}</button>
                 <span id="close-chat" style="cursor:pointer; margin-left:10px;display: flex;">${icons.close}</span>
             </div>
         </div>
