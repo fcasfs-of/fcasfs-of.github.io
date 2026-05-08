@@ -402,18 +402,18 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     });
 
     chatBox.innerHTML = `
-        <div style="background:#0056b3; padding:15px; color:white; display:flex; justify-content:space-between; align-items:center">
-            <strong style="font-size:1.1rem">Smart Support</strong>
-            <div style="display:flex; gap:10px">
-                <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px">${dict.backupBtn}</button>
-                <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px">${dict.clearBtn}</button>
-                <span id="close-chat" style="cursor:pointer; margin-left:10px">${icons.close}</span>
+        <div style="background:#0056b3; padding:15px; color:white; display:flex; justify-content:space-between; align-items:center;">
+            <strong style="font-size:1.1rem;">Smart Support</strong>
+            <div style="display:flex; gap:10px;">
+                <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px;">${dict.backupBtn}</button>
+                <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px;">${dict.clearBtn}</button>
+                <span id="close-chat" style="cursor:pointer; margin-left:10px;display: flex;">${icons.close}</span>
             </div>
         </div>
-        <div id="messages-flow" style="flex:1; padding:15px; overflow-y:auto; background:#f8f9fa; display:flex; flex-direction:column; gap:12px"></div>
-        <div style="padding:15px; border-top:1px solid #eee; display:flex; gap:10px">
-            <input id="user-input" type="text" placeholder="${dict.placeholder}" style="flex:1; padding:10px; border:1px solid #ddd; border-radius:20px; outline:none">
-            <button id="send-btn" style="background:#0056b3; border:none; width:40px; height:40px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center">${icons.send}</button>
+        <div id="messages-flow" style="flex:1; padding:15px; overflow-y:auto; background:#f8f9fa; display:flex; flex-direction:column; gap:12px;"></div>
+        <div style="padding:15px; border-top:1px solid #eee; display:flex; gap:10px;">
+            <input id="user-input" type="text" placeholder="${dict.placeholder}" style="flex:1; padding:10px; border:1px solid #ddd; border-radius:20px; outline:none;">
+            <button id="send-btn" style="background:#0056b3; border:none; width:40px; height:40px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center;">${icons.send}</button>
         </div>
     `;
 
