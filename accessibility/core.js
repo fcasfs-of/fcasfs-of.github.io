@@ -394,8 +394,8 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     chatBtn.innerHTML = icons.chat;
 
     Object.assign(chatBox.style, {
-        position: 'fixed', bottom: '90px', left: '20px',
-        width: 'min(400px, 90vw)', height: '500px', backgroundColor: '#fff',
+        position: 'fixed', bottom: '0', left: '0', right: '0', top: '0',
+        width: '100%', height: '90%', backgroundColor: '#fff',
         borderRadius: '15px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
         display: isOpen ? 'flex' : 'none', flexDirection: 'column',
         overflow: 'hidden', zIndex: '9999', fontFamily: 'sans-serif'
