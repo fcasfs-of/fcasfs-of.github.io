@@ -409,7 +409,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
             <div style="display:flex; gap:10px;">
                 <button id="btn-bkp" style="background:rgba(255,255,255,0.2); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px; display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;align-items: center;justify-content: center;gap: 5px; ">${icons.backup}  ${dict.backupBtn}</button>
                 <button id="btn-cls" style="background:rgba(255,0,0,0.3); border:none; color:white; padding:5px 8px; border-radius:5px; cursor:pointer; font-size:11px; display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;align-items: center;justify-content: center;gap: 5px; ">${icons.clear}  ${dict.clearBtn}</button>
-                <span id="close-chat" style="cursor:pointer; margin-left:10px;display: flex;">${icons.close}</span>
+                <span id="close-chat" style="cursor:pointer; margin-left:10px;display: flex; flex-direction: row; flex-wrap: nowrap; align-content: center; justify-content: center; align-items: center;">${icons.close}</span>
             </div>
         </div>
         <div id="messages-flow" style="flex:1; padding:15px; overflow-y:auto; background:#f8f9fa; display:flex; flex-direction:column; gap:12px;"></div>
