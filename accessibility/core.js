@@ -443,7 +443,7 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     const loadHistory = () => {
         msgFlow.innerHTML = "";
         if (chatHistory.length === 0) {
-            msgFlow.innerHTML = `<div style="color:#999; text-align:center; margin-top:50%; font-size:13px">${dict.emptyMsg}</div>`;
+            msgFlow.innerHTML = `<div style="color:#999; text-align:center; position: absolute;  top: 50%;  left: 50%;  transform: translate(-50%, -50%);  margin: 0;  font-size:13px;">${dict.emptyMsg}</div>`;
         } else {
             chatHistory.forEach(m => renderMessage(m.text, m.type));
         }
