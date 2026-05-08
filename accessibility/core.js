@@ -887,11 +887,13 @@ function state_appendObjeto(novoDado) {    if(novoDado){
                 .js-divider { gap: 8px; }
             }
 			
-            .fs-acc-area { position: fixed; bottom: 20px; ${config.position}: 20px;  z-index: 9999;  display: grid;       width: 60%;    height: 80px;       align-content: center;   align-items: center;    justify-content: start;  grid-auto-flow: column;   overflow: auto;  transition: transform 0.3s; }
+            .fs-acc-area { position: fixed; bottom: 20px; ${config.position}: 20px;  z-index: 9999;  display: grid;   padding: 8px;    width: 60%;    height: 80px;       align-content: center;   align-items: center;    justify-content: start;  grid-auto-flow: column;   overflow: auto;  transition: transform 0.3s; }
 			
             .fs-acc-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
-            .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
+			.fs-acc-btnch {   }
+			.fs-acc-btnch:hover { transform: scale(1.1); }
+            ..fs-acc-btnch svg, .fs-acc-btn svg { width: 30px; height: 30px; fill: currentColor; }
 
             .fs-acc-modal { position: fixed; top: 0; bottom: 0; width: 320px; background: var(--fs-acc-bg); z-index: 10000; box-shadow: 0 0 20px rgba(0,0,0,0.1); display: none; flex-direction: column; font-family: sans-serif; color: var(--fs-acc-text); overflow-y: auto; transition: all 0.3s ease; }
             .fs-acc-modal.active { display: flex; }
