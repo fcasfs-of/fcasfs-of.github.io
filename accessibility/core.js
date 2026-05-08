@@ -476,11 +476,12 @@ const SmartChatAI = (obj=document.body, isOpen = false, lang = 'pt') => {
     };
 
     chatBtn.onclick = () => {
+		chatBtn.classList.remove("show");
         chatBox.style.display = chatBox.style.display === 'none' ? 'flex' : 'none';
-        if(chatBox.style.display === 'flex') loadHistory();
+        if(chatBox.style.display === 'flex') chatBtn.classList.add("show");   loadHistory();
     };
 
-    chatBox.querySelector('#close-chat').onclick = () => chatBox.style.display = 'none';
+    chatBox.querySelector('#close-chat').onclick = () => chatBtn.classList.remove("show");  chatBox.style.display = 'none';
 
     chatBox.querySelector('#send-btn').onclick = handleSend;
 
@@ -895,7 +896,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
             .fs-acc-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
 			.fs-acc-btnch {      transition: transform 0.3s;     }
-			.fs-acc-btnch:hover { transform: scale(1.1); }
+			.fs-acc-btnch:hover, .fs-acc-btnch.show { transform: scale(1.1); }
             .fs-acc-btnch svg, .fs-acc-btn svg { width: 30px; height: 30px;   fill: #fff; }
 
             .fs-acc-modal { position: fixed; top: 0; bottom: 0; width: 320px; background: var(--fs-acc-bg); z-index: 10000; box-shadow: 0 0 20px rgba(0,0,0,0.1); display: none; flex-direction: column; font-family: sans-serif; color: var(--fs-acc-text); overflow-y: auto; transition: all 0.3s ease; }
