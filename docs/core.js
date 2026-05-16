@@ -2,6 +2,7 @@ function inicializarGerenciadorDocumentos(config) {
   // Configurações Padrão e Customizadas
   const idContainer = config.id || null;
   const listaDocumentos = config.documentos || [];
+  const call_favs = config.call_fav || function(){};
   const idioma = config.idioma === 'en' ? 'en' : 'pt';
   const itensPorPaginaCustom = parseInt(config.itensPorPagina) || 4;
   
@@ -261,6 +262,9 @@ function inicializarGerenciadorDocumentos(config) {
 
     // Alternar Visibilidade dos Botões de Fluxo
     if (estado.exibindoFavoritos) {
+    
+    if (typeof call_favs === 'function') {  call_favs(textos[idioma].favoritos);  } 
+    
       btnFavEl.innerHTML = `${svgs.voltar} ${textos[idioma].voltar}`;
       menuAbasEl.style.display = 'none';
       buscaWrapperEl.style.display = 'none';
@@ -271,6 +275,8 @@ function inicializarGerenciadorDocumentos(config) {
       btnImportEl.style.display = 'inline-flex';
       btnImportEl.innerHTML = `${svgs.uploadBox} ${textos[idioma].impBackup}`;
     } else {
+        if (typeof call_favs === 'function') {  call_favs(" ");  } 
+
       btnFavEl.innerHTML = `${svgs.estrelaMenu} ${textos[idioma].favoritos}`;
       menuAbasEl.style.display = 'flex';
       buscaWrapperEl.style.display = 'flex';
@@ -370,5 +376,3 @@ function inicializarGerenciadorDocumentos(config) {
   // Renderização de Entrada da Aplicação
   renderizar();
 }
-
-
