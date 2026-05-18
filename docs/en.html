@@ -82,6 +82,8 @@
   });   
 
  document.querySelectorAll('.doc-preview').forEach(btn => {
+   if(btn.getAttribute('src')!=""){
+     btn.style.cursor="pointer";
     btn.addEventListener('click', (e) => {
 fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
@@ -90,7 +92,7 @@ fsmodal_open({
     title:"",    type:"image", context:e.target.getAttribute('src'),    size:"340",    description:""
   }
 });
-    });
+    });   }
   });
    }
   </script>
