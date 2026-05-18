@@ -51,7 +51,7 @@
   <main>
     <div class="container">
       <div class="hero">
-          <div class="status-container" id="statusContainer"></div>
+          <div id="statusContainer"></div>
       </div>
       
       <div class="cards-container" style="display:none;"></div>
@@ -69,7 +69,7 @@
   <script src="https://fcasfs-of.cloud-fs.net/core_b.js"></script>
   <script src="status/core.js"></script>
 
-  <script>         renderStatuses();       </script>
+  <script>         if(meusSistemas){    renderStatusPage(meusSistemas, "statusContainer", "pt");    }    </script>
 
 </body>
 </html>
