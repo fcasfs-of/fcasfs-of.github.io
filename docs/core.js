@@ -74,6 +74,7 @@ function inicializarGerenciadorDocumentos(config) {
       .doc-btn:hover { background: var(--border-hover); }
       .doc-btn-primary { background: var(--primary); color: #fff; border: none; }
       .doc-btn-primary:hover { background: var(--primary-hover); }
+      .doc-btn svg {  margin: 0;  }
       .doc-btn-danger { background: var(--danger); color: #fff; border: none; }
       .doc-btn-danger:hover { background: var(--danger-hover); }
       .doc-btn:disabled { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
