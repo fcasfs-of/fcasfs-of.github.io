@@ -301,13 +301,18 @@ function inicializarGerenciadorDocumentos(config) {
 
       const visualizacaoMedia = doc.imagemPreview 
         ? `<img src="${doc.imagemPreview}" class="doc-preview" alt="Preview">`
-        : `<div class="doc-icon-frame">${doc.iconeSvg || svgs.arquivo}</div>`;
+        : ``;
+      
+      const visualizacaoMediaIcon = doc.iconeSvg 
+        ? `<div class="doc-icon-frame">${doc.iconeSvg}</div>`
+        : `<div class="doc-icon-frame">${svgs.arquivo}</div>`;
 
       return `
         <div class="doc-card">
           <div class="doc-fav-wrapper" data-index="${inicio + idx}">
             ${svgs.favorito.replace('class="doc-fav-icon"', `class="doc-fav-icon ${favAtivo}"`)}
           </div>
+          ${visualizacaoMediaIcon}
           ${visualizacaoMedia}
           <h3 class="doc-title">${doc.titulo || 'Documento'}</h3>
           <span class="doc-category">${doc.categoria || ''}</span>
