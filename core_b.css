@@ -410,8 +410,9 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .ribbon.disabled span::after {   transition: var(--transition);border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
 
 
-.card .ribbond, .card .ribbond.left {  user-select:none;  position: absolute;  top: 20px;  left: -8px;  padding: 6.5px 22px;  border-radius: 0 4px 4px 0;  background: linear-gradient(#9BC90D 0%, #79A70A 100%);  color: #FFFFFF;  box-shadow: 0 5px 10px rgba(0,0,0,0.15);  font-size: 13px;  font-weight: 600;  letter-spacing: 1px;}
-.card .ribbond::after, .card .ribbond.left::after {  content: "";   user-select:none;   position: absolute;  bottom: -8px;  left: 0;  border-top: 8px solid #79A70A;  filter: brightness(70%);  border-left: 8px solid transparent;}
+
+.card .ribbond.left {  user-select:none;  position: absolute;  top: 20px;  left: -8px;  padding: 6.5px 22px;  border-radius: 0 4px 4px 0;  background: linear-gradient(#9BC90D 0%, #79A70A 100%);  color: #FFFFFF;  box-shadow: 0 5px 10px rgba(0,0,0,0.15);  font-size: 13px;  font-weight: 600;  letter-spacing: 1px;}
+.card .ribbond.left::after {  content: "";   user-select:none;   position: absolute;  bottom: -8px;  left: 0;  border-top: 8px solid #79A70A;  filter: brightness(70%);  border-left: 8px solid transparent;}
 .card .ribbond.right {  position: absolute;  top: 20px;  right: -8px;  padding: 6.5px 22px;  border-radius: 4px 0 0 4px;  background: linear-gradient(#9BC90D 0%, #79A70A 100%);  color: #FFFFFF;  box-shadow: 0 5px 10px rgba(0,0,0,0.15);  font-size: 13px;  font-weight: 600;  letter-spacing: 1px;}
 .card .ribbond.right::after {  content: "";  position: absolute;  bottom: -8px;  right: 0;  border-top: 8px solid #79A70A;  filter: brightness(70%);  border-right: 8px solid transparent;}
 
