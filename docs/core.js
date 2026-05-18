@@ -3,6 +3,7 @@ function inicializarGerenciadorDocumentos(config) {
   const idContainer = config.id || null;
   const listaDocumentos = config.documentos || [];
   const call_favs = config.call_fav || function(){};
+  const call_prevs = config.call_prev || function(){};
   const idioma = config.idioma === 'en' ? 'en' : 'pt';
   const itensPorPaginaCustom = parseInt(config.itensPorPagina) || 4;
   
@@ -323,6 +324,8 @@ function inicializarGerenciadorDocumentos(config) {
         </div>
       `;
     }).join('');
+
+      if (typeof call_prevs === 'function') {  call_prevs();  } 
 
     // Criação da Barra de Paginação com Contadores de Registros
     const t = textos[idioma];
