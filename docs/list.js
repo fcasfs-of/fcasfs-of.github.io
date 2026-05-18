@@ -1,7 +1,7 @@
 //    { iconeSvg:"", imagemPreview:"", titulo: "", categoria: "", urlVer: "", urlBaixar: "" },
 
 const meusDocumentos = [
-  { iconeSvg:"", imagemPreview:"tplayer.png", titulo: "Suporte - TECH Player", categoria: "App", urlVer: "/TECH-Free/support-br", urlBaixar: "" },
- { iconeSvg:"", imagemPreview:"tplayer.png", titulo: "Support - TECH Player", categoria: "App", urlVer: "/TECH-Free/support-en", urlBaixar: "" }
+  { imagemPreview:"tplayer.png", titulo: "Suporte - TECH Player, Português", categoria: "App", urlVer: "/TECH-Free/support-br", urlBaixar: "" },
+ { imagemPreview:"tplayer.png", titulo: "Support - TECH Player, English", categoria: "App", urlVer: "/TECH-Free/support-en", urlBaixar: "" }
 ];
 
