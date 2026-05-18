@@ -50,7 +50,16 @@
         <p>Faça download dos meus projetos completos.</p>
       </div>
       
-      <div class="cards-container" id="listr"></div>
+<div class="busca" style="width:70%;">   <input type="text" id="filtroInputB" placeholder="...">  <button onclick="filtrarListda();"><svg fill="#fff" width="20px" height="20px" viewBox="0 0 50 50" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" overflow="inherit"><path d="M35.66 29.539c1.661-2.739 2.632-5.948 2.632-9.385 0-10.029-8.115-18.15-18.146-18.154-10.022.003-18.146 8.125-18.146 18.152 0 10.018 8.125 18.139 18.152 18.139 3.44 0 6.645-.972 9.384-2.633l12.343 12.342 6.121-6.124-12.34-12.337zm-15.51 1.841c-6.202-.015-11.216-5.027-11.227-11.216.012-6.202 5.027-11.215 11.227-11.229 6.199.016 11.215 5.028 11.228 11.229-.013 6.182-5.031 11.201-11.228 11.216z"></path></svg></button>   </div><br/><br/>
+
+  <div class="cards-container" id="listr"></div>
+
+   <br/>     <div class="dealerti" id="dcont_ksit"></div>
+<div class="pagination-container">
+    <button class="pagination-button" id="prev-button" aria-label="Previous Page">      <svg width="24px" height="24px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">   <path d="m 12 2 c 0 -0.265625 -0.105469 -0.519531 -0.292969 -0.707031 c -0.390625 -0.390625 -1.023437 -0.390625 -1.414062 0 l -6 6 c -0.1875 0.1875 -0.292969 0.441406 -0.292969 0.707031 s 0.105469 0.519531 0.292969 0.707031 l 6 6 c 0.390625 0.390625 1.023437 0.390625 1.414062 0 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 s -0.105469 -0.519531 -0.292969 -0.707031 l -5.292969 -5.292969 l 5.292969 -5.292969 c 0.1875 -0.1875 0.292969 -0.441406 0.292969 -0.707031 z m 0 0"/></svg>    </button>
+    <div id="pagination-numbers" style="width: 100%;"></div>
+    <button class="pagination-button" id="next-button" aria-label="Next Page">      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 55.752 55.752" style="enable-background:new 0 0 55.752 55.752;" xml:space="preserve"><g>	<path d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001		c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58		s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912		C44.605,26.413,44.086,24.993,43.006,23.916z"/></g></svg>    </button>
+</div>  <br/>
 
     </div>
   </main>
@@ -76,7 +85,18 @@ itens:loaded_listff("download","pt")
 }, "", []);
 
 
+update_Pagination({
+  paginationNumbers:"pagination-numbers",
+  paginatedList:"listr", listItems:".card",
+  nextButton:"next-button",  prevButton:"prev-button",
+  paginationLimit:6,
+  paginationNumberp:".pagination-number",
+  paginationLindex: "page-index",
+  paginationclass: "pagination-number",
+  contItems:"dcont_ksit"
+  });   
 
+  
 </script>
 
 </body>
