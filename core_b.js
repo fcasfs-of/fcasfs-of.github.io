@@ -316,12 +316,13 @@ return create_infoxrs;  }
 function create_infoxr(op){    var create_infoxrs="";   
  if (op){
    if (op.text && op.text!=""){  
-   var create_infoxrcolorid="";    var create_infoxrcolor="";   var create_infsixeolor="10px";    var dcreate_infoxrcolor=""; 
+   var create_infoxrcolorid="";    var create_infoxvw="";   var create_infoxrcolor="";   var create_infsixeolor="10px";    var dcreate_infoxrcolor=""; 
      if (op.color && op.color!=""){   create_infoxrcolor=" "+op.color;   }
+	  if (op.type && op.type!=""){   create_infoxvw=""+op.type;   }
      if (op.pos && op.pos!=""){   dcreate_infoxrcolor=" "+op.pos;   }
      if (op.size && op.size!=""){   create_infsixeolor=" "+op.size;   }
      if (op.id && op.id!=""){   create_infoxrcolorid=" id='"+op.id+"'";    }
-   create_infoxrs='<div class="ribbond'+dcreate_infoxrcolor+create_infoxrcolor+'"> '+op.text+' <span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';"></span></div>';
+   create_infoxrs='<div class="ribbon'+create_infoxvw+dcreate_infoxrcolor+create_infoxrcolor+'"> '+op.text+' <span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';"></span></div>';
    }
  }
 return create_infoxrs;  }
