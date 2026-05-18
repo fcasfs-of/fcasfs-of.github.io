@@ -84,6 +84,7 @@
  document.querySelectorAll('.doc-preview').forEach(btn => {
    if(btn.getAttribute('src')!=""){
      btn.style.cursor="pointer";
+     btn.style.pointerEvents="auto";
     btn.addEventListener('click', (e) => {
 fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
