@@ -78,10 +78,8 @@
     documentos: meusDocumentos,
     idioma: "en",
     itensPorPagina: 6,
-    call_fav: function(txt){  var ddcabessd=document.getElementById('actiba');  if(ddcabessd && txt){   if(txt!=""){  ddcabessd.innerHTML=": "+txt;   if (txt==" "){  ddcabessd.innerHTML=""; }  }  }   }
-  });   
-
- document.querySelectorAll('.doc-preview').forEach(btn => {
+    call_prev: function(){
+        document.querySelectorAll('.doc-preview').forEach(btn => {
    if(btn.getAttribute('src')!=""){
      btn.style.cursor="pointer";
      btn.style.pointerEvents="auto";
@@ -94,7 +92,11 @@ fsmodal_open({
   }
 });
     });   }
-  });
+  });   },
+    call_fav: function(txt){  var ddcabessd=document.getElementById('actiba');  if(ddcabessd && txt){   if(txt!=""){  ddcabessd.innerHTML=": "+txt;   if (txt==" "){  ddcabessd.innerHTML=""; }  }  }   }
+  });   
+
+
    }
   </script>
   
