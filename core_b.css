@@ -410,6 +410,35 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .ribbon.disabled span::after {   transition: var(--transition);border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
 
 
+.card .ribbond, .card .ribbond.left {  user-select:none;  position: absolute;  top: 20px;  left: -8px;  padding: 6.5px 22px;  border-radius: 0 4px 4px 0;  background: linear-gradient(#9BC90D 0%, #79A70A 100%);  color: #FFFFFF;  box-shadow: 0 5px 10px rgba(0,0,0,0.15);  font-size: 13px;  font-weight: 600;  letter-spacing: 1px;}
+.card .ribbond::after, .card .ribbond.left::after {  content: "";   user-select:none;   position: absolute;  bottom: -8px;  left: 0;  border-top: 8px solid #79A70A;  filter: brightness(70%);  border-left: 8px solid transparent;}
+.card .ribbond.right {  position: absolute;  top: 20px;  right: -8px;  padding: 6.5px 22px;  border-radius: 4px 0 0 4px;  background: linear-gradient(#9BC90D 0%, #79A70A 100%);  color: #FFFFFF;  box-shadow: 0 5px 10px rgba(0,0,0,0.15);  font-size: 13px;  font-weight: 600;  letter-spacing: 1px;}
+.card .ribbond.right::after {  content: "";  position: absolute;  bottom: -8px;  right: 0;  border-top: 8px solid #79A70A;  filter: brightness(70%);  border-right: 8px solid transparent;}
+
+.card .ribbond.green {     background: linear-gradient(#9BC90D 0%, #79A70A 100%);   }
+.card .ribbond.blue {       background: linear-gradient(#2989D8 0%, #1E5799 100%);   }
+.card .ribbond.red {        background: linear-gradient(#F70505 0%, #8F0808 100%);   }
+.card .ribbond.disabled {          background: linear-gradient(#B6BAC9 0%, #808080 100%);   }
+.card .ribbond.blue2 {        background: linear-gradient(#05EFF7 0%, #087F8F 100%);  }
+.card .ribbond.orange {        background: linear-gradient(#F79E05 0%, #8F5408 100%);  }
+
+.card .ribbond.right.green::after {      border-top: 8px solid #79A70A;  border-right: 8px solid transparent;   }
+.card .ribbond.right.blue::after {     border-top: 8px solid #1E5799;  border-right: 8px solid transparent;   }
+.card .ribbond.right.red::after {      border-top: 8px solid #8F0808;  border-right: 8px solid transparent;   }
+.card .ribbond.right.disabled::after {        border-top: 8px solid #808080;   border-right: 8px solid transparent;  }
+.card .ribbond.right.blue2::after {      border-top: 8px solid #087F8F;   border-right: 8px solid transparent;  }
+.card .ribbond.right.orange::after {      border-top: 8px solid #8F5408;     border-right: 8px solid transparent;  }
+
+.card .ribbond.left.green::after {      border-top: 8px solid #79A70A;    border-left: 8px solid transparent;   }
+.card .ribbond.left.blue::after {     border-top: 8px solid #1E5799;    border-left: 8px solid transparent;   }
+.card .ribbond.left.red::after {      border-top: 8px solid #8F0808;    border-left: 8px solid transparent;  }
+.card .ribbond.left.disabled::after {        border-top: 8px solid #808080;     border-left: 8px solid transparent;  }
+.card .ribbond.left.blue2::after {      border-top: 8px solid #087F8F;     border-left: 8px solid transparent; }
+.card .ribbond.left.orange::after {      border-top: 8px solid #8F5408;      border-left: 8px solid transparent;  }
+
+
+
+
  /* Modal */
   .modalfd {   transition: all .1s linear;
     display: none; 
