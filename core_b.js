@@ -630,7 +630,7 @@ body.oncontextmenu=function() { return false; };
 
     window.addEventListener('load', function() {
       document.body.style.opacity = '0';
-      document.body.style.transition = 'opacity 0.5s';
+      document.body.style.transition = 'all 0.5s linear';
 
       setTimeout(function() {   
         document.body.style.opacity = '1';   
