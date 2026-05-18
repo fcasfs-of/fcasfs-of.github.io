@@ -259,7 +259,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     .card-links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: center;    align-content: center;      align-items: center;
       gap: 15px;
       width: 100%;
     }
