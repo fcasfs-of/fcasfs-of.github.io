@@ -91,6 +91,7 @@ function inicializarGerenciadorDocumentos(config) {
       .doc-actions .doc-btn { flex: 1; padding: 8px; font-size: 13px; }
       .doc-pagination { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px; margin-top: 30px; }
       .doc-counter-text { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+      .doc-fav-wrapper, #doc-btn-fav, #doc-btn-import {  display:none;  }
       @media(max-width: 768px) { .doc-top-bar { flex-direction: column; align-items: stretch; } .doc-input-wrapper, .doc-btn { width: 100%; } .doc-pagination { flex-direction: column; gap: 12px; } }
     `;
     document.head.appendChild(estilo);
