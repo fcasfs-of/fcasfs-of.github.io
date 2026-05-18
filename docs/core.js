@@ -312,8 +312,8 @@ function inicializarGerenciadorDocumentos(config) {
           <div class="doc-fav-wrapper" data-index="${inicio + idx}">
             ${svgs.favorito.replace('class="doc-fav-icon"', `class="doc-fav-icon ${favAtivo}"`)}
           </div>
-          ${visualizacaoMediaIcon}
           ${visualizacaoMedia}
+          ${visualizacaoMediaIcon}
           <h3 class="doc-title">${doc.titulo || 'Documento'}</h3>
           <span class="doc-category">${doc.categoria || ''}</span>
           <div class="doc-actions">
