@@ -12,10 +12,10 @@ pt:[
 },
 download:{
 en:[
-{ separate:true, icon:'<img src="/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video ',desc:"Our innovative player recognizes your PDF files, videos, audio, and images. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"/TECH-Free/downloads/TechPlayer-English.zip",text:"Windows", icon:'windows', disable: true }  ]}
+{ separate:true, info:{pos:"left",text:"App",color:"disabled"}, icon:'<img src="/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem and Video ',desc:"Our innovative player recognizes your PDF files, videos, audio, and images. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"/TECH-Free/downloads/TechPlayer-English.zip",text:"Windows", icon:'windows', disable: true }  ]}
 ],
 pt:[
-{ separate:true, icon:'<img src="/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem e Video ',desc:"Nosso player inovador reconhece seus arquivos PDF, vídeos, áudios e imagens. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"/TECH-Free/downloads/TechPlayer-Portugues.zip",text:"Windows", icon:'windows', disable:true }  ]}
+{ separate:true, info:{pos:"left",text:"App",color:"disabled"}, icon:'<img src="/Icon/mdpl.png"/>',title:'Player: PDF, Audio, Imagem e Video ',desc:"Nosso player inovador reconhece seus arquivos PDF, vídeos, áudios e imagens. ", links:[{type:"a",link:"https://apkpure.com/fcas-tech-player/fcas.techplayer/download",text:"Android", icon:'android'},{type:"a",link:"/TECH-Free/downloads/TechPlayer-Portugues.zip",text:"Windows", icon:'windows', disable:true }  ]}
 ]
 },
 sidebar:{
