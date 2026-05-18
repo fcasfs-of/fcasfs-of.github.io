@@ -133,7 +133,7 @@ return is_renderStatusesdf;    }
                 --color-operational: #10b981; --color-degraded: #f59e0b;
                 --color-maintenance: #3b82f6; --color-down: #ef4444;
             }
-            .status-container-wrapper { font-family: system-ui, -apple-system, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 40px 20px;   }
+            .status-container-wrapper { font-family: system-ui, -apple-system, sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0;   }
             .status-header-title { text-align: center; margin-bottom: 32px; }
             .status-header-title h1 { font-size: 24px; margin-bottom: 8px; margin-top: 0; }
             .status-banner { background: var(--card-bg); padding: 20px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 16px; margin-bottom: 24px; font-size: 18px; font-weight: 600; transition: all 0.3s ease; }
