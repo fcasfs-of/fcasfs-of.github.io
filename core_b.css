@@ -358,8 +358,9 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     }
 
   .page-link.svg .icon {
-      width: 20px;    pointer-events:none;  
-      height: 24px;  top:-2px;   position:relative; 
+      width: 24px;    pointer-events:none;  
+      /*height: 24px;*/  
+      top:-1px;   position:relative; 
     }
 
 
