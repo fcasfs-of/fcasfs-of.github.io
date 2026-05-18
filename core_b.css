@@ -306,6 +306,19 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
     background-repeat: no-repeat;
 }
 
+.page-link.svg .icon.preview::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTIgNTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPgk8cGF0aCBkPSJNNTEuOCwyNS4xQzQ3LjEsMTUuNiwzNy4zLDksMjYsOVM0LjksMTUuNiwwLjIsMjUuMWMtMC4zLDAuNi0wLjMsMS4zLDAsMS44QzQuOSwzNi40LDE0LjcsNDMsMjYsNDMJCXMyMS4xLTYuNiwyNS44LTE2LjFDNTIuMSwyNi4zLDUyLjEsMjUuNyw1MS44LDI1LjF6IE0yNiwzN2MtNi4xLDAtMTEtNC45LTExLTExczQuOS0xMSwxMS0xMXMxMSw0LjksMTEsMTFTMzIuMSwzNywyNiwzN3oiLz48cGF0aCBkPSJNMjYsMTljLTMuOSwwLTcsMy4xLTcsN3MzLjEsNyw3LDdzNy0zLjEsNy03UzI5LjksMTksMjYsMTl6Ii8+PC9nPjwvc3ZnPg==');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 .page-link.svg .icon.android::before {
     content: "";
     display: inline-block;
