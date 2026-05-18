@@ -39,7 +39,7 @@ function inicializarGerenciadorDocumentos(config) {
         padding: 24px; 
         border-radius: var(--radius); 
         color: var(--text-main); 
-        max-width: 1200px; 
+        max-width: 100%; 
         margin: 0 auto;
         transition: background 0.3s, color 0.3s;
       }
