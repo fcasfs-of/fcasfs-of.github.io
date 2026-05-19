@@ -1462,7 +1462,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         
    }
 	
- function Keyboard_Vk(){    if(VirtualKeyboardMO){   if(VirtualKeyboardMO.show && typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show(); }   }    }
+ function Keyboard_Vk(VirtualKeyboardMO){    if(VirtualKeyboardMO){   if(typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show(); }   }    }
 	
 
     function injectStyles() {
@@ -1606,7 +1606,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 		
         document.body.appendChild(trigger_ares);
 
-		const triggervk = document.createElement('button');
+		const triggervk = document.createElement('span');
         triggervk.id = 'vk_fss';
         triggervk.innerHTML = "";
 		trigger_ares.appendChild(triggervk);
@@ -1737,7 +1737,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 		if(document.getElementById("vk_fss")) {
 			document.getElementById("vk_fss").innerHTML="";
 			if(state.virtualteclado===true){
-				document.getElementById("vk_fss").innerHTML=`<button onclick="Keyboard_Vk();" class="fs-acc-btnch" style="width: 56px; height: 56px; border-radius: 50%; background-color: rgb(0, 86, 179); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px; display: flex; align-items: center; justify-content: center; z-index: 9999;">${icons.virtualk}</button>`;
+				document.getElementById("vk_fss").innerHTML=`<button onclick="Keyboard_Vk(VirtualKeyboardMO);" class="fs-acc-btnch" style="width: 56px; height: 56px; border-radius: 50%; background-color: rgb(0, 86, 179); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px; display: flex; align-items: center; justify-content: center; z-index: 9999;">${icons.virtualk}</button>`;
 			}
 		}
 		
