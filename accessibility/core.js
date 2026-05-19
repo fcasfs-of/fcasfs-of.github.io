@@ -1456,11 +1456,14 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         state_appendObjeto(config.customConfig);
         loadSettings();
         render();
+		var VirtualKeyboardMO=VirtualKeyboard.init(config.lang);
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
         
    }
- 
+	
+ function Keyboard_Vk(){    if(VirtualKeyboardMO){   if(VirtualKeyboardMO.show && typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show(); }   }    }
+	
 
     function injectStyles() {
         const css = `
@@ -1734,7 +1737,7 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 		if(document.getElementById("vk_fss")) {
 			document.getElementById("vk_fss").innerHTML="";
 			if(state.virtualteclado===true){
-				document.getElementById("vk_fss").innerHTML=`<button class="fs-acc-btnch" style="width: 56px; height: 56px; border-radius: 50%; background-color: rgb(0, 86, 179); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px; display: flex; align-items: center; justify-content: center; z-index: 9999;">${icons.virtualk}</button>`;
+				document.getElementById("vk_fss").innerHTML=`<button onclick="Keyboard_Vk();" class="fs-acc-btnch" style="width: 56px; height: 56px; border-radius: 50%; background-color: rgb(0, 86, 179); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px; display: flex; align-items: center; justify-content: center; z-index: 9999;">${icons.virtualk}</button>`;
 			}
 		}
 		
