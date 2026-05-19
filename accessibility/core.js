@@ -1460,7 +1460,7 @@ function Keyboard_Vk(VirtualKeyboardMO){    }
         render();
 		
 		var VirtualKeyboardMO=VirtualKeyboard.init(config.lang);
-		 function Keyboard_Vk(VirtualKeyboardMO){     if(typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show();  }    }
+		 function Keyboard_Vk(){     if(typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show();  }    }
 		
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
@@ -1742,7 +1742,7 @@ function Keyboard_Vk(VirtualKeyboardMO){    }
 			document.getElementById("vk_fss").innerHTML="";
 			if(state.virtualteclado===true){
 				document.getElementById("vk_fss").innerHTML=`<button id="Keyboard_Vk_btn" class="fs-acc-btnch" style="width: 56px; height: 56px; border-radius: 50%; background-color: rgb(0, 86, 179); border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 15px; display: flex; align-items: center; justify-content: center; z-index: 9999;">${icons.virtualk2}</button>`;
-				if(document.getElementById("Keyboard_Vk_btn")) {   document.getElementById("Keyboard_Vk_btn").onclick=function(){  if(Keyboard_Vk){   Keyboard_Vk(VirtualKeyboardMO);  }   };   }
+				if(document.getElementById("Keyboard_Vk_btn")) {   document.getElementById("Keyboard_Vk_btn").onclick=function(){  if(Keyboard_Vk){   Keyboard_Vk();  }   };   }
 			}
 		}
 		
