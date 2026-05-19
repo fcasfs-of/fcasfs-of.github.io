@@ -1456,14 +1456,15 @@ function state_appendObjeto(novoDado) {    if(novoDado){
         state_appendObjeto(config.customConfig);
         loadSettings();
         render();
+		
 		var VirtualKeyboardMO=VirtualKeyboard.init(config.lang);
+		 function Keyboard_Vk(VirtualKeyboardMO){     if(typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show();  }    }
+		
          LibrasInclusivo({ idioma: config.lang, tema: 'dark', botao: false,  posicao: 'bottom-right', seletor: 'body'  }); 
         applyAll();
         
    }
-	
- function Keyboard_Vk(VirtualKeyboardMO){    if(VirtualKeyboardMO){   if(typeof VirtualKeyboardMO.show === 'function'){   VirtualKeyboardMO.show(); }   }    }
-	
+		
 
     function injectStyles() {
         const css = `
