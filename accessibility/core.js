@@ -1724,7 +1724,7 @@ var Keyboard_Vk=null;
     function applyAll() {
         const b = document.body;
         //b.style.fontSize = state.zoom + '%';
-		if(document.getElementById("fs-acc-custom")){   document.getElementById("fs-acc-custom").textContent=".fs-acc-stu, .fs-acc-stu * {  fontSize: "+state.zoom+"%; }";  }
+		if(document.getElementById("fs-acc-custom")){   document.getElementById("fs-acc-custom").textContent=".fs-acc-stu, .fs-acc-stu * {  font-size: "+state.zoom+"%; }";  }
 
 		b.classList.toggle('fs-acc-readable', state.fontReadable);
         b.classList.toggle('fs-acc-contrast', state.contrast);
