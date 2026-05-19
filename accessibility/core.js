@@ -1456,6 +1456,8 @@ function state_appendObjeto(novoDado) {    if(novoDado){
 var Keyboard_Vk=null;
 	
     function init(options = {}) {
+		document.body.classList.add("fs-acc-stu");
+		
         Object.assign(config, options);
         injectStyles();
         state_appendObjeto(config.customConfig);
@@ -1530,6 +1532,8 @@ var Keyboard_Vk=null;
             }
 			
             .fs-acc-area { position: fixed; bottom: 20px; ${config.position}: 20px;  z-index: 9999;  display: grid;   padding: 8px;    width: 60%;    height: 80px;       align-content: center;   align-items: center;    justify-content: start;  grid-auto-flow: column;   overflow: auto;  transition: transform 0.3s; }
+
+			.fs-acc-stu {  }
 			
             .fs-acc-btn { width: 56px; height: 56px; border-radius: 50%; background: var(--fs-acc-primary); color: white; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.3s; }
             .fs-acc-btn:hover { transform: scale(1.1); }
@@ -1571,7 +1575,7 @@ var Keyboard_Vk=null;
 			body.fs-acc-lupa {  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.4s;    transform-origin: left top;    transform: scale(1.3);    width: 83.33%;    overflow: auto;  }
 			body.fs-acc-teclado *:focus { outline: 5px solid #2ecc71 !important; outline-offset: 3px; transition: outline 0.1s; }
 
-            body.fs-acc-readable { font-family: 'OpenDyslexic', Arial, sans-serif !important; }
+            body.fs-acc-readable, body.fs-acc-readable * {  font-family: 'OpenDyslexic', Arial, sans-serif !important;  }
             body.fs-acc-contrast { background: #000 !important; color: #fff !important; filter: contrast(150%); }
             body.fs-acc-grayscale { filter: grayscale(100%); }
             body.fs-acc-no-anim, body.fs-acc-no-anim * { animation: none !important; transition: none !important; }
@@ -1593,6 +1597,10 @@ var Keyboard_Vk=null;
         const style = document.createElement('style');
         style.textContent = css;
         document.head.appendChild(style);
+		
+        const styled = document.createElement('style');
+        styled.id = "fs-acc-custom";    styled.textContent = "";
+        document.head.appendChild(styled);
     }
 
     function render() {
@@ -1715,9 +1723,10 @@ var Keyboard_Vk=null;
 
     function applyAll() {
         const b = document.body;
-        b.style.fontSize = state.zoom + '%';
-		
-        b.classList.toggle('fs-acc-readable', state.fontReadable);
+        //b.style.fontSize = state.zoom + '%';
+		if(document.getElementById("fs-acc-custom")){   document.getElementById("fs-acc-custom").textContent=".fs-acc-stu, .fs-acc-stu * {  fontSize: "+state.zoom+"%; }";  }
+
+		b.classList.toggle('fs-acc-readable', state.fontReadable);
         b.classList.toggle('fs-acc-contrast', state.contrast);
         b.classList.toggle('fs-acc-grayscale', state.grayscale);
         b.classList.toggle('fs-acc-no-anim', state.noAnim);
