@@ -392,6 +392,8 @@ const VirtualKeyboard = (function () {
 .vk-light.vk-btn-trigger { background-color: var(--vk-accent-light); color: #fff; border: 1px solid var(--vk-border-light); }
 .vk-light .vk-toolbar { border-bottom: 2px solid var(--vk-border-light); }
 
+.vk-toolbar svg {  margin:0;  }
+
 /* ==========================================
    MEDIA QUERIES - MÁXIMA COMPATIBILIDADE MOBILE
    ========================================== */
