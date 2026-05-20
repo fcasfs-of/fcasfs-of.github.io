@@ -452,7 +452,6 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .ribbon.disabled span::after {   transition: var(--transition);border-right: 3px solid #808080;  border-top: 3px solid #808080;   }
 
 
-
 .card .ribbond {    user-select:none;    pointer-events:none;    }
 .card .ribbond.left {  user-select:none;  position: absolute;  top: 20px;  left: -8px;  padding: 6.5px 22px;  border-radius: 0 4px 4px 0;  background: linear-gradient(#9BC90D 0%, #79A70A 100%);  color: #FFFFFF;  box-shadow: 0 5px 10px rgba(0,0,0,0.15);  font-size: 13px;  font-weight: 600;  letter-spacing: 1px;}
 .card .ribbond.left::after {  content: "";   user-select:none;   position: absolute;  bottom: -8px;  left: 0;  border-top: 8px solid #79A70A;  filter: brightness(70%);  border-left: 8px solid transparent;}
@@ -480,9 +479,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .ribbond.left.blue2::after {      border-top: 8px solid #087F8F;     border-left: 8px solid transparent; }
 .card .ribbond.left.orange::after {      border-top: 8px solid #8F5408;      border-left: 8px solid transparent;  }
 
-/* Estrutura principal do Badge */
-.card .badge {    display: inline-block;    padding: 4px 8px;    font-size: 12px;    font-weight: bold;    font-family: sans-serif;     border-radius: 4px;    text-transform: uppercase;    line-height: 1;    text-align: center;    vertical-align: middle;}
-
+.card .badge {   overflow: auto;  user-select: none;    pointer-events: none;   display: inline-block;    padding: 4px 9px;    font-size: 12px;    font-weight: bold;    font-family: sans-serif;     border-radius: 4px;    text-transform: uppercase;    line-height: 1;    text-align: center;    vertical-align: middle;}
 .card .badge.badge-blue {    color: #ffffff;   background-color: #007bff;}
 .card .badge.badge-green {  color: #ffffff;     background-color: #28a745;}
 .card .badge.badge-red {   color: #ffffff;    background-color: #dc3545;}
