@@ -322,8 +322,8 @@ function create_tbadge(op, jh){    var create_infoxrs="";    var create_infoxrat
  }
 return create_infoxrs;  }
 
-function create_tbadge_status(op, jh){    var create_infoxrs="";    var create_infoxratts={ ["planejado"]:"Planejado", ["desenvolvimento"]:"Em Desenvolvimento", ["testes"]:"Em Testes", ["versao"]:"Nova Versão", ["manutencao"]:"Em Manutenção", ["concluido"]:"Concluído", ["pausado"]:"Pausado", ["descontinuado"]:"Descontinuado" };  
-   if(jh && jh=="en"){  create_infoxratts={ ["planejado"]:"Planned", ["desenvolvimento"]:"In Development", ["testes"]:"Testing", ["versao"]:"New Version", ["manutencao"]:"Maintenance", ["concluido"]:"Completed", ["pausado"]:"Paused", ["descontinuado"]:"Deprecated" };   }
+function create_tbadge_status(op, jh){    var create_infoxrs="";    var create_infoxratts={ planejado:"Planejado", desenvolvimento:"Em Desenvolvimento", testes:"Em Testes", versao:"Nova Versão", manutencao:"Em Manutenção", concluido:"Concluído", pausado:"Pausado", descontinuado:"Descontinuado" };  
+   if(jh && jh=="en"){  create_infoxratts={ planejado:"Planned", desenvolvimento:"In Development", testes:"Testing", versao:"New Version", manutencao:"Maintenance", concluido:"Completed", pausado:"Paused", descontinuado:"Deprecated" };   }
  if (op){
    if (op.type && op.type!=""){  
    create_infoxrs='  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  ';
