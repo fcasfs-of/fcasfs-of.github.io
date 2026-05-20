@@ -249,25 +249,25 @@ const VirtualKeyboard = (function () {
   width: 100vw;
   transform: translateY(100%);  display:none;
 }
-#vk-main.pos-bottom.open { transform: translateY(0); display:block; }
+#vk-main.pos-bottom.open { transform: translateY(0); display:flex; }
 
 #vk-main.pos-left {
   bottom: 20px;
   left: 20px;
   width: min(540px, 95vw);
-  border-radius: 16px;
+  border-radius: 16px;  display: none;
   transform: translateY(140%) scale(0.95);
 }
-#vk-main.pos-left.open { transform: translateY(0) scale(1); }
+#vk-main.pos-left.open { transform: translateY(0) scale(1);  display:flex;  }
 
 #vk-main.pos-right {
   bottom: 20px;
   right: 20px;
   width: min(540px, 95vw);
-  border-radius: 16px;
+  border-radius: 16px;  display:none; 
   transform: translateY(140%) scale(0.95);
 }
-#vk-main.pos-right.open { transform: translateY(0) scale(1); }
+#vk-main.pos-right.open { transform: translateY(0) scale(1);  display:flex;  }
 
 /* ==========================================
    BARRA SUPERIOR (TOOLBAR RESPONSIVA)
