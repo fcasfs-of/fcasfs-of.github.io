@@ -487,6 +487,8 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .badge.badge-purple {   color: #ffffff;    background-color: #6f42c1;}
 
 
+.align_ob {  position: relative;    top: -1px;   }
+
 
  /* Modal */
   .modalfd {   transition: all .1s linear;
