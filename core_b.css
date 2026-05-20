@@ -512,6 +512,19 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .badge-status.status-concluido {  background-color: #e0f2f1;  color: #004d40;}
 
 
+.card .card-destaque.card-laranja {  border: 2px solid #fd7e14;  box-shadow: 0 10px 25px rgba(253, 126, 20, 0.25);}
+.card .card-destaque.card-amarelo {  border: 2px solid #ffc107;  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.25);}
+.card .card-destaque.card-turquesa {  border: 2px solid #0dcaf0;  box-shadow: 0 10px 25px rgba(13, 202, 240, 0.25);}
+.card .card-destaque.card-vermelho {  border: 2px solid #dc3545;  box-shadow: 0 10px 25px rgba(220, 53, 69, 0.25);}
+.card .card-destaque.card-magenta {  border: 2px solid #d63384;  box-shadow: 0 10px 25px rgba(214, 51, 132, 0.25);}
+.card .card-destaque.card-indigo {  border: 2px solid #6610f2;  box-shadow: 0 10px 25px rgba(102, 16, 242, 0.25);}
+.card .card-destaque.card-azul { border: 2px solid #007bff; box-shadow: 0 10px 25px rgba(0, 123, 255, 0.25); }
+.card .card-destaque.card-roxo { border: 2px solid #6f42c1; box-shadow: 0 10px 25px rgba(111, 66, 193, 0.25); }
+.card .card-destaque.card-verde { border: 2px solid #28a745; box-shadow: 0 10px 25px rgba(40, 167, 69, 0.25); }
+.card .card-destaque.card-rosa { border: 2px solid #e83e8c; box-shadow: 0 10px 25px rgba(232, 62, 140, 0.25); }
+
+
+
 .align_ob {  position: relative;    top: -1px;   }
 
 
