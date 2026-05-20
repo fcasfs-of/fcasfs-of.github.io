@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos e Condições / Terms and Conditions - FCAS_FS Portfolio</title>
+    <style>
+        /* Variáveis de Cores e Estilos Básicos */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --icon-color: #3b82f6;
+        }
+
+        /* Variáveis para o Modo Escuro */
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --primary-light: #1e293b;
+            --border: #334155;
+            --icon-color: #60a5fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;  user-select:none;
+            padding: 0;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: clamp(1rem, 5vw, 3rem) clamp(0.5rem, 3vw, 1.5rem);
+            font-size: clamp(0.95rem, 1vw + 0.5rem, 1.05rem);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Barra de Ferramentas Superior (Idioma e Tema) */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .controls-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .btn-action {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-action:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-action.active {
+            background-color: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .theme-icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: clamp(2rem, 6vw, 3.5rem);
+        }
+
+        .domain {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            border: 1px solid transparent;
+        }
+        [data-theme="dark"] .domain {
+            border-color: var(--border);
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        .intro {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: var(--text-muted);
+            margin-top: 1.25rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Seções e Estrutura Principal */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(1rem, 3vw, 1.75rem);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: clamp(1.25rem, 4vw, 2.25rem);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        h2 {
+            font-size: clamp(1.15rem, 2vw, 1.35rem);
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        h2 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--icon-color);
+            flex-shrink: 0;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        .space-p {
+            margin-top: 1.25rem;
+        }
+
+        /* FAQ Sanfona */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--bg-color);
+        }
+
+        .faq-question {
+            font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+            font-weight: 600;
+            color: var(--text-main);
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            gap: 1rem;
+        }
+
+        .faq-question svg {
+            width: 16px;
+            height: 16px;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-out;
+            color: var(--text-muted);
+            background-color: var(--card-bg);
+        }
+
+        .faq-answer-content {
+            padding: 1.25rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        /* Links e Botões */
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+            font-size: 0.95rem;
+            width: fit-content;
+        }
+
+        .btn-support:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-support svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: clamp(3rem, 8vw, 5rem);
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Mecanismo de Tradução via Atributos CSS */
+        [lang="pt-BR"] .en-text { display: none !important; }
+        [lang="en"] .pt-text { display: none !important; }
+
+        @media (max-width: 480px) {
+            .top-bar { justify-content: center; }
+            .btn-support { width: 100%; justify-content: center; }
+            h2 { flex-direction: row; align-items: flex-start; }
+            h2 svg { margin-top: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra superior utilitária -->
+        <div class="top-bar">
+            <!-- Alternador de Idioma -->
+            <div class="controls-group">
+                <button class="btn-action lang-btn" id="btn-pt" onclick="setLanguage('pt-BR')">PT</button>
+                <button class="btn-action lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            </div>
+            
+            <!-- Botão de Alternância de Tema -->
+            <button class="btn-action" onclick="toggleTheme()" aria-label="Mudar tema">
+                <svg class="theme-icon" viewBox="0 0 24 24">
+                    <path id="theme-icon-path" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="pt-text" id="theme-text-pt">Modo Escuro</span>
+                <span class="en-text" id="theme-text-en">Dark Mode</span>
+            </button>
+        </div>
+
+        <header>
+            <span class="domain">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7s0 6 8 10z"/></svg>
+                fcasfs-of.cloud-fs.net
+            </span>
+            <h1 class="pt-text">Termos e Condições de Uso</h1>
+            <h1 class="en-text">Terms and Conditions of Use</h1>
+            <p class="intro pt-text">Estes termos estabelecem as regras de navegação e as diretrizes normativas para a utilização e testes de projetos de software hospedados neste ecossistema de portfólio.</p>
+            <p class="intro en-text">These terms establish the browsing rules and regulatory guidelines for utilizing and testing the software projects hosted in this portfolio ecosystem.</p>
+        </header>
+
+        <main>
+            <!-- Aceitação dos Termos -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    <span class="pt-text">1. Aceitação dos Termos</span>
+                    <span class="en-text">1. Acceptance of Terms</span>
+                </h2>
+                <p class="pt-text">Ao acessar este portfólio pessoal e interagir com as demonstrações de códigos e softwares aqui hospedados, você concorda de forma integral em cumprir com as regras listadas nesta página. Caso discorde de qualquer um dos pontos apresentados, recomendamos que interrompa a navegação pelas páginas ou subdomínios deste ambiente.</p>
+                <p class="en-text">By accessing this personal portfolio and interacting with the code and software demonstrations hosted here, you fully agree to comply with the rules outlined on this page. If you disagree with any point presented, we advise you to stop browsing this environment and its subdomains.</p>
+            </section>
+
+            <!-- Natureza dos Projetos -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <span class="pt-text">2. Finalidade e Escopo das Aplicações</span>
+                    <span class="en-text">2. Purpose and Scope of Applications</span>
+                </h2>
+                <p class="pt-text">Todas as aplicações web, scripts, layouts e sistemas vinculados a este domínio possuem finalidade puramente educacional, experimental e demonstrativa. Tratam-se de produtos desenvolvidos para exibição de habilidades técnicas em engenharia de software e design, não devendo ser utilizados como ferramentas corporativas oficiais sem autorização.</p>
+                <p class="en-text">All web applications, scripts, layouts, and system designs linked to this domain are for educational, experimental, and showcasing purposes only. These products are developed to display technical software engineering and design skills, and should not be used as official enterprise tools without authorization.</p>
+            </section>
+
+            <!-- Propriedade Intelectual -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M14.83 14.83a4 4 0 1 1 0-5.66"/></svg>
+                    <span class="pt-text">3. Propriedade Intelectual</span>
+                    <span class="en-text">3. Intellectual Property</span>
+                </h2>
+                <p class="pt-text">Exceto quando indicado o contrário (como em códigos sob licença open-source explicitada no GitHub), a arquitetura visual, os arquivos CSS, os códigos lógicos de frontend e o conteúdo escrito pertencem ao desenvolvedor titular deste portfólio. É permitida a inspeção e o estudo do código, porém a cópia integral ou distribuição comercial não autorizada é vedada.</p>
+                <p class="en-text">Unless stated otherwise (such as open-source repositories explicitly licensed on GitHub), the visual architecture, CSS structures, frontend logic, and written text belong to the owner of this portfolio. Code inspection for educational study is encouraged, but full copying or unauthorized commercial distribution is prohibited.</p>
+            </section>
+
+            <!-- Limitação de Responsabilidade -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <span class="pt-text">4. Isenção e Limitação de Responsabilidade</span>
+                    <span class="en-text">4. Disclaimer and Limitation of Liability</span>
+                </h2>
+                <p class="pt-text">O desenvolvedor fornece estas aplicações "como estão" (as-is), sem garantias de funcionamento ininterrupto ou correções imediatas de bugs. O criador não se responsabiliza por quaisquer danos indiretos, indisponibilidades de servidores, perda temporária de dados fictícios digitados nos testes ou incompatibilidades em navegadores específicos dos visitantes.</p>
+                <p class="en-text">The developer provides these applications "as-is" without promises of uninterrupted runtime or instant bug fixes. The creator cannot be held liable for any indirect damages, server drops, temporary loss of dummy data typed during evaluations, or styling inconsistencies across external browsers.</p>
+            </section>
+
+            <!-- Modificações -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                    <span class="pt-text">5. Modificações nos Projetos e Termos</span>
+                    <span class="en-text">5. Modifications to Projects and Terms</span>
+                </h2>
+                <p class="pt-text">Reservou-se o direito de remover, alterar código-fonte, descontinuar sistemas experimentais ou reestruturar as bases visuais do portfólio a qualquer momento, sem aviso prévio. Da mesma forma, os presentes Termos e Condições podem sofrer atualizações visando cobrir novas ferramentas agregadas.</p>
+                <p class="en-text">The right to drop projects, alter source code, pull down experimental systems, or modify portfolio designs at any moment without prior notice is fully reserved. Similarly, these Terms and Conditions may adapt over time to safely cover new architectural additions.</p>
+            </section>
+
+            <!-- Seção FAQ Aprimorada e Abrangente -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <span class="pt-text">Dúvidas Frequentes sobre as Regras</span>
+                    <span class="en-text">Frequently Asked Questions on Rules</span>
+                </h2>
+                
+                <div class="faq-container">
+                    <!-- FAQ 1: Comercialização -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Posso clonar e vender um dos seus projetos do portfólio?</span>
+                            <span class="en-text">Can I clone and sell one of your portfolio projects?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">Não. A comercialização direta do código estrutural ou dos layouts nativos deste site é estritamente proibida sem o meu consentimento prévio por escrito. Códigos abertos (Open-Source) seguem os limites da licença anexada aos seus respectivos repositórios (como MIT, GPL ou Apache).</p>
+                                <p class="en-text">No. Directly commercializing the design blueprints or source files of this site is strictly forbidden without my explicit written consent. Open-Source code sub-modules adhere strictly to the terms of the licenses packaged in their individual repositories (such as MIT, GPL, or Apache).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2: Pentest / Abuso de Inputs -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Posso realizar testes de invasão ou estresse (Pentest/DDoS) nos projetos?</span>
+                            <span class="en-text">Am I allowed to run penetration or stress tests (Pentest/DDoS) on the apps?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">Não. É proibido submeter os formulários a injeções maliciosas de código (SQL Injection, XSS), scripts automatizados de spam ou ataques de negação de serviço (DDoS). O uso abusivo ou tentativas de derrubar a infraestrutura que hospeda o portfólio resultarão no bloqueio automático do seu endereço IP.</p>
+                                <p class="en-text">No. Submitting forms to malicious script inputs (SQL Injection, XSS), spamming automated bot routines, or running denial-of-service (DDoS) tests is prohibited. Malicious activities targeting the underlying deployment framework will trigger automated structural IP bans.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3: Uso em Produção Comercial -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Posso usar uma das ferramentas integradas para fins comerciais reais?</span>
+                            <span class="en-text">Can I use one of the integrated tools for real commercial use?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">As demonstrações operam em arquitetura de testes e não possuem as redundâncias de segurança ou certificados de disponibilidade necessários para o tráfego corporativo ativo. O uso comercial ocorre por sua conta e risco, não cabendo qualquer responsabilidade técnica ou jurídica ao criador por falhas operacionais.</p>
+                                <p class="en-text">The demos run in test-bed instances and lack the enterprise security infrastructure, encryption audits, or structural redundancy required for processing active assets. Commercial application of these sandboxed layouts is done entirely at your own risk.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4: Modificações de código -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Como posso relatar uma falha de segurança ou sugerir melhorias no código?</span>
+                            <span class="en-text">How can I report a code vulnerability or suggest software improvements?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">Feedbacks construtivos de engenharia e avisos sobre possíveis vulnerabilidades em minhas demonstrações de software são extremamente bem-vindos. Você pode entrar em contato diretamente utilizando o botão de suporte localizado na parte inferior desta página.</p>
+                                <p class="en-text">Constructive engineering reviews or vulnerability notifications concerning my software implementations are highly appreciated. Please communicate these concerns directly via the developer contact button at the footer of this interface.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fale Conosco -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span class="pt-text">Contatos Legais ou Comerciais</span>
+                    <span class="en-text">Legal or Business Inquiries</span>
+                </h2>
+                <p class="pt-text">Caso necessite de esclarecimentos adicionais sobre as diretrizes normativas deste site ou queira negociar parcerias em projetos de software, utilize o canal direto de e-mail.</p>
+                <p class="en-text">If you require further explanation regarding the rules of this platform or wish to negotiate professional software agreements, use our direct mail address.</p>
+                
+                <a href="mailto:fcasfs.of@cloud-fs.net?subject=Portfolio%20Terms%20Inquiry" class="btn-support pt-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+                    Contatar Criador
+                </a>
+                <a href="mailto:fcasfs.of@cloud-fs.net?subject=Portfolio%20Terms%20Inquiry" class="btn-support en-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+                    Contact Creator
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 fcasfs-of.cloud-fs.net. <span class="pt-text">Todos os direitos reservados.</span><span class="en-text">All rights reserved.</span></p>
+        </footer>
+    </div>
+
+    <script>
+        // --- GERENCIADOR DE IDIOMA ---
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            localStorage.setItem('preferred-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (lang === 'pt-BR') document.getElementById('btn-pt').classList.add('active');
+            if (lang === 'en') document.getElementById('btn-en').classList.add('active');
+        }
+
+        const savedLang = localStorage.getItem('preferred-lang');
+        const userLang = savedLang || (navigator.language.startsWith('en') ? 'en' : 'pt-BR');
+        setLanguage(userLang);
+
+
+        // --- GERENCIADOR DE TEMA (CLARO/ESCURO) ---
+        const sunPath = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z";
+        const moonPath = "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z";
+
+        function updateThemeUI(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const iconPath = document.getElementById('theme-icon-path');
+            
+            if (theme === 'dark') {
+                iconPath.setAttribute('d', moonPath);
+                document.getElementById('theme-text-pt').innerText = 'Modo Claro';
+                document.getElementById('theme-text-en').innerText = 'Light Mode';
+            } else {
+                iconPath.setAttribute('d', sunPath);
+                document.getElementById('theme-text-pt').innerText = 'Modo Escuro';
+                document.getElementById('theme-text-en').innerText = 'Dark Mode';
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('preferred-theme', newTheme);
+            updateThemeUI(newTheme);
+        }
+
+        const savedTheme = localStorage.getItem('preferred-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        updateThemeUI(initialTheme);
+
+
+        // --- CONTROLE DO ACORDEÃO ---
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = element.nextElementSibling;
+            
+            if (item.classList.contains('open')) {
+                answer.style.maxHeight = null;
+                item.classList.remove('open');
+            } else {
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    //el.classList.remove('open');
+                    //el.querySelector('.faq-answer').style.maxHeight = null;
+                });
+                
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                item.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
