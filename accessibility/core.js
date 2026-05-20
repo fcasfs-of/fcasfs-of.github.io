@@ -247,9 +247,9 @@ const VirtualKeyboard = (function () {
   bottom: 0;
   left: 0;
   width: 100vw;
-  transform: translateY(100%);
+  transform: translateY(100%);  display:none;
 }
-#vk-main.pos-bottom.open { transform: translateY(0); }
+#vk-main.pos-bottom.open { transform: translateY(0); display:block; }
 
 #vk-main.pos-left {
   bottom: 20px;
