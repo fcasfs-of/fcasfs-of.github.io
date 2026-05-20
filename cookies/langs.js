@@ -6,7 +6,7 @@ var langs_cokkiesd = {
                     acceptAllBtn: "Aceitar tudo",
                     acceptNecessaryBtn: "Rejeitar tudo",
                     showPreferencesBtn: "Gerenciar preferências",
-                    footer: ""
+                    footer: '<a href="/privacy-policy.html">Política de Privacidade</a>  <a href="/terms.html">Termos e Condições</a>'
                 },
                 preferencesModal: {
                     title: "Central de Preferências de Consentimento",
@@ -49,7 +49,7 @@ var langs_cokkiesd = {
                     acceptAllBtn: "Accept all",
                     acceptNecessaryBtn: "Reject all",
                     showPreferencesBtn: "Manage preferences",
-                    footer: ""
+                    footer: '<a href="/privacy-policy.html">Privacy Policy</a>  <a href="/terms.html">Terms and Conditions</a>'
                 },
                 preferencesModal: {
                     title: "Consent Preferences Center",
