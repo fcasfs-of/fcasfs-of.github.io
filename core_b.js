@@ -329,7 +329,6 @@ function create_tbadge_status(op, jh){    var create_infoxrs="";    var create_i
    create_infoxrs='  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  ';
    }
    }
- }
 return create_infoxrs;  }
 
 
