@@ -312,8 +312,8 @@ function create_tooltipr(op){    var create_infoxrs="";
  }
 return create_infoxrs;  }
 
-function create_tbadge(op){    var create_infoxrs="";       var sscreate_infoxrs="Novo";    
-	 if(cokk_plu_esdnf && cokk_plu_esdnf=="en"){   sscreate_infoxrs="New";  }
+function create_tbadge(op, jh){    var create_infoxrs="";       var sscreate_infoxrs="Novo";    
+	 if(jh && jh=="en"){   sscreate_infoxrs="New";  }
  if (op){
    if (op.type && op.type!=""){  
    create_infoxrs='  <span class="badge badge-'+op.type+'">'+sscreate_infoxrs+'</span>  ';
@@ -389,7 +389,7 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
     if (op.itens[is].icon && op.itens[is].icon!=""){      dad_icond_itens_fra='<div class="'+dadd_itens_fra_co["class"]+'-icon">'+op.itens[is].icon+'</div>';     } 
     
     
-      if(op.itens[is].title && op.itens[is].title!=""){  dad_titlend_itens_fra='<h2>'+op.itens[is].title+create_tbadge(op.itens[is].new)+'</h2>';   }
+      if(op.itens[is].title && op.itens[is].title!=""){  dad_titlend_itens_fra='<h2>'+op.itens[is].title+create_tbadge(op.itens[is].new, cokk_plu_esdnf)+'</h2>';   }
   if(op.itens[is].desc && op.itens[is].desc!=""){   dad_descnd_itens_fra='<p>'+op.itens[is].desc+'</p>';   }
 
   var dad_icond_itens_fra_odfd="";
