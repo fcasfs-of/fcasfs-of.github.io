@@ -319,7 +319,6 @@ function create_tbadge(op, jh){    var create_infoxrs="";       var sscreate_inf
    create_infoxrs='  <span class="badge badge-'+op.type+'">'+sscreate_infoxrs+'</span>  ';
    }
  }
- }
 return create_infoxrs;  }
 
 
