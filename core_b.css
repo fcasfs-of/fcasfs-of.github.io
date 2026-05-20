@@ -480,6 +480,14 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card .ribbond.left.blue2::after {      border-top: 8px solid #087F8F;     border-left: 8px solid transparent; }
 .card .ribbond.left.orange::after {      border-top: 8px solid #8F5408;      border-left: 8px solid transparent;  }
 
+/* Estrutura principal do Badge */
+.card .badge {    display: inline-block;    padding: 4px 8px;    font-size: 12px;    font-weight: bold;    font-family: sans-serif;     border-radius: 4px;    text-transform: uppercase;    line-height: 1;    text-align: center;    vertical-align: middle;}
+
+.card .badge.badge-blue {    color: #ffffff;   background-color: #007bff;}
+.card .badge.badge-green {  color: #ffffff;     background-color: #28a745;}
+.card .badge.badge-red {   color: #ffffff;    background-color: #dc3545;}
+.card .badge.badge-orange {   color: #ffffff;    background-color: #fd7e14;}
+.card .badge.badge-purple {   color: #ffffff;    background-color: #6f42c1;}
 
 
 
