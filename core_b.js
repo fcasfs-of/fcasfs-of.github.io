@@ -312,11 +312,13 @@ function create_tooltipr(op){    var create_infoxrs="";
  }
 return create_infoxrs;  }
 
-function create_tbadge(op, jh){    var create_infoxrs="";       var sscreate_infoxrs="Novo";    
+function create_tbadge(op, jh){    var create_infoxrs="";    var create_infoxratts="";    var sscreate_infoxrs="Novo";    
 	 if(jh && jh=="en"){   sscreate_infoxrs="New";  }
+  if (op.align && op.align===true){   create_infoxratts='align_ob ';   }
+	
  if (op){
    if (op.type && op.type!=""){  
-   create_infoxrs='  <span class="badge badge-'+op.type+'">'+sscreate_infoxrs+'</span>  ';
+   create_infoxrs='  <span class="badge '+create_infoxratts+'badge-'+op.type+'">'+sscreate_infoxrs+'</span>  ';
    }
  }
 return create_infoxrs;  }
