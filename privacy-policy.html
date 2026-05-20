@@ -282,11 +282,193 @@
             h2 { flex-direction: row; align-items: flex-start; }
             h2 svg { margin-top: 2px; }
         }
+
+        /* Generated CSS Menu */
+.gen-nav {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  min-height: 52px;
+  border-radius: 8px;
+  border: 0px solid #1e3a8a;
+  box-shadow: 0 4px 12px rgba(0,0,0,.18);
+  padding: 0 16px;
+  position: relative;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  
+  display: flex;
+}
+.gen-nav *, .gen-nav *::before, .gen-nav *::after {
+  box-sizing: border-box;
+}
+.gen-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gen-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-right: auto;
+}
+.gen-logo-text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.gen-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column; gap:0;
+  
+}
+.gen-hamburger span {
+  display: block;
+  background: #ffffff;
+  transition: all .3s;
+  width:22px; height:3px; border-radius:2px; margin:2.5px 0;
+}
+
+.gen-nav > ul {
+  display: flex; justify-content:center; flex: 1;
+  flex-wrap: wrap;
+}
+.gen-nav > ul > li {
+  position: relative;
+}
+.gen-nav > ul > li > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 16px;
+  height: 52px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  white-space: nowrap;
+}
+.gen-nav > ul > li > a:hover,
+.gen-nav > ul > li:hover > a {
+  background: #1d4ed8;
+  color: #bfdbfe;
+}
+.gen-arrow { font-size: .7em; opacity: .8; }
+/* Dropdown */
+.gen-nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1e3a8a;
+  min-width: 170px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  z-index: 1000;
+  overflow: hidden;
+}
+.gen-nav > ul > li:hover > ul {
+  display: block;
+}
+.gen-nav > ul > li > ul > li > a {
+  display: block;
+  padding: 10px 18px;
+  color: #dbeafe;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.gen-nav > ul > li > ul > li > a:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+.gen-nav > ul > li > ul > li:last-child {
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+.gen-nav > ul > li > ul > li:last-child > a {
+  border-radius: 0 0 6px 6px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .gen-hamburger { display: flex; }
+  .gen-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gen-logo { margin-right: auto; justify-self: unset; }
+  .gen-nav > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    background: linear-gradient(90deg, #1e40af, #2563eb);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.2);
+    z-index: 9999;
+    padding: 8px 0;
+    overflow: hidden;
+  }
+  .gen-nav > ul.open { display: flex; }
+  /* Remove nav bottom radius when dropdown is open so they flow together */
+  .gen-nav.mobile-open { border-radius: 8px 8px 0 0; }
+  .gen-nav > ul > li > a { height: auto; padding: 14px 20px; }
+  /* Reset desktop last-child rounding — not needed on mobile */
+  .gen-nav > ul > li:last-child { border-radius: 0; overflow: visible; }
+  .gen-nav > ul > li:last-child > a { border-radius: 0; }
+  .gen-nav > ul > li > ul {
+    display: block;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    background: rgba(0,0,0,.15);
+    min-width: 0;
+  }
+  /* No rounding on submenu items in mobile */
+  .gen-nav > ul > li > ul > li:last-child { border-radius: 0; overflow: visible; }
+  .gen-nav > ul > li > ul > li:last-child > a { border-radius: 0; }
+  .gen-nav > ul > li > ul > li > a { padding: 10px 32px; }
+  /* Hamburger animates to X when open */
+  
+  .gen-nav.mobile-open .gen-hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .gen-nav.mobile-open .gen-hamburger span:nth-child(2) { opacity: 0; }
+  .gen-nav.mobile-open .gen-hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  
+}
     </style>
 </head>
 <body>
 
     <div class="container">
+        
+<nav class="gen-nav" id="gen-nav">  
+  <button class="gen-hamburger" id="gen-ham" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="gen-menu">
+      <li class="pt-text"><a href="/">Voltar à Página Inicial</a></li>
+      <li class="en-text"><a href="/en">Return Home Page</a></li>
+      <li class="pt-text"><a href="/terms.html">Termos e Condições</a></li>
+      <li class="en-text"><a href="/terms.html">Terms and Conditions</a></li>
+  </ul>
+</nav>
+        
         <!-- Barra superior utilitária -->
         <div class="top-bar">
             <!-- Alternador de Idioma -->
@@ -553,6 +735,26 @@
                 item.classList.add('open');
             }
         }
+
+        
+// Mobile menu toggle
+document.getElementById('gen-ham').addEventListener('click', function() {
+  var nav = document.getElementById('gen-nav');
+  var menu = document.getElementById('gen-menu');
+  var isOpen = menu.classList.toggle('open');
+  nav.classList.toggle('mobile-open', isOpen);
+});
+ 
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('gen-nav');
+  var menu = document.getElementById('gen-menu');
+  if (!nav.contains(e.target) && menu.classList.contains('open')) {
+    menu.classList.remove('open');
+    nav.classList.remove('mobile-open');
+  }
+});
+        
     </script>
 </body>
 </html>
