@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade / Privacy Policy - FCAS_FS Portfolio</title>
+    <style>
+        /* Variáveis de Cores e Estilos Básicos */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --primary: #2563eb;
+            --primary-light: #eff6ff;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --icon-color: #3b82f6;
+        }
+
+        /* Variáveis para o Modo Escuro */
+        [data-theme="dark"] {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --primary-light: #1e293b;
+            --border: #334155;
+            --icon-color: #60a5fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: clamp(1rem, 5vw, 3rem) clamp(0.5rem, 3vw, 1.5rem);
+            font-size: clamp(0.95rem, 1vw + 0.5rem, 1.05rem);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Barra de Ferramentas Superior (Idioma e Tema) */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .controls-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .btn-action {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-action:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-action.active {
+            background-color: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .theme-icon {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            margin-bottom: clamp(2rem, 6vw, 3.5rem);
+        }
+
+        .domain {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            border: 1px solid transparent;
+        }
+        [data-theme="dark"] .domain {
+            border-color: var(--border);
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        .intro {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: var(--text-muted);
+            margin-top: 1.25rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Seções e Estrutura Principal */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(1rem, 3vw, 1.75rem);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: clamp(1.25rem, 4vw, 2.25rem);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        h2 {
+            font-size: clamp(1.15rem, 2vw, 1.35rem);
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        h2 svg {
+            width: 24px;
+            height: 24px;
+            color: var(--icon-color);
+            flex-shrink: 0;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        .space-p {
+            margin-top: 1.25rem;
+        }
+
+        /* FAQ Sanfona */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--bg-color);
+        }
+
+        .faq-question {
+            font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+            font-weight: 600;
+            color: var(--text-main);
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            gap: 1rem;
+        }
+
+        .faq-question svg {
+            width: 16px;
+            height: 16px;
+            transform: rotate(0deg);
+            transition: transform 0.2s ease;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-out;
+            color: var(--text-muted);
+            background-color: var(--card-bg);
+        }
+
+        .faq-answer-content {
+            padding: 1.25rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        /* Links e Botões de Suporte */
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 0.85rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+            font-size: 0.95rem;
+            width: fit-content;
+        }
+
+        .btn-support:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-support svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: clamp(3rem, 8vw, 5rem);
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Mecanismo de Tradução via Atributos CSS */
+        [lang="pt-BR"] .en-text { display: none !important; }
+        [lang="en"] .pt-text { display: none !important; }
+
+        @media (max-width: 480px) {
+            .top-bar { justify-content: center; }
+            .btn-support { width: 100%; justify-content: center; }
+            h2 { flex-direction: row; align-items: flex-start; }
+            h2 svg { margin-top: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra superior utilitária -->
+        <div class="top-bar">
+            <!-- Alternador de Idioma -->
+            <div class="controls-group">
+                <button class="btn-action lang-btn" id="btn-pt" onclick="setLanguage('pt-BR')">PT</button>
+                <button class="btn-action lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            </div>
+            
+            <!-- Botão de Alternância de Tema -->
+            <button class="btn-action" onclick="toggleTheme()" aria-label="Mudar tema">
+                <svg class="theme-icon" viewBox="0 0 24 24">
+                    <path id="theme-icon-path" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="pt-text" id="theme-text-pt">Modo Escuro</span>
+                <span class="en-text" id="theme-text-en">Dark Mode</span>
+            </button>
+        </div>
+
+        <header>
+            <span class="domain">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7s0 6 8 10z"/></svg>
+                fcasfs-of.cloud-fs.net
+            </span>
+            <h1 class="pt-text">Política de Privacidade do Portfólio</h1>
+            <h1 class="en-text">Portfolio Privacy Policy</h1>
+            <p class="intro pt-text">Esta política descreve as práticas de privacidade aplicadas ao meu portfólio pessoal e aos projetos de software desenvolvidos e hospedados neste domínio.</p>
+            <p class="intro en-text">This policy describes the privacy practices applied to my personal portfolio and the software projects developed and hosted on this domain.</p>
+        </header>
+
+        <main>
+            <!-- Coleta de Informações -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span class="pt-text">Uso de Informações e Projetos</span>
+                    <span class="en-text">Information Usage and Projects</span>
+                </h2>
+                <p class="pt-text">Este site serve como vitrine para meu portfólio profissional e demonstrações de projetos. Não coletamos nenhuma informação de identificação pessoal (IIP) de nossos visitantes. Para garantir o carregamento correto dos projetos e o desempenho da página, nosso servidor armazena apenas dados técnicos estritamente necessários para a operação estável da plataforma.</p>
+                <p class="en-text">This website serves as a showcase for my professional portfolio and project demonstrations. We do not collect any Personally Identifiable Information (PII) from our visitors. To ensure the correct loading of the projects and page performance, our server only stores technical data strictly necessary for the stable operation of the platform.</p>
+            </section>
+
+            <!-- Cookies -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 0 0-7 7c0 1.5 1 2.5 2 3.5S8.5 14 8.5 16s1 2 2 2 3.5-1 3.5-3-1-3-2-4 1.5-2.5 2-3.5a7 7 0 0 0-2-5.5z"/></svg>
+                    <span class="pt-text">Cookies e Scripts de Análise</span>
+                    <span class="en-text">Cookies and Analytics Scripts</span>
+                </h2>
+                <p class="pt-text">Cookies são pequenos arquivos usados para melhorar sua experiência de navegação. Scripts básicos de análise de tráfego podem ser aplicados de forma integrada para avaliar dados anônimos de acesso (como número de visitas e páginas mais visualizadas) para métricas de desempenho dos projetos.</p>
+                <p class="en-text">Cookies are small files used to enhance your browsing experience. Basic traffic analytics scripts may be integrated to evaluate anonymous access data (such as page views and project popularity) for performance metrics.</p>
+            </section>
+
+            <!-- Consentimento -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span class="pt-text">Consentimento e Revogação</span>
+                    <span class="en-text">Consent and Revocation</span>
+                </h2>
+                <p class="pt-text">Ao navegar pelo portfólio e interagir com as demonstrações dos projetos, você concorda com o monitoramento técnico anônimo essencial. Caso tenha dúvidas sobre a execução de algum projeto específico ou deseje revogar qualquer permissão técnica, entre em contato diretamente através do suporte.</p>
+                <p class="en-text">By browsing the portfolio and interacting with project demos, you agree to essential anonymous technical monitoring. If you have questions about a specific project execution or wish to revoke any technical permission, contact support directly.</p>
+            </section>
+
+            <!-- Opções de Desativação -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+                    <span class="pt-text">Opções de Controle</span>
+                    <span class="en-text">Control Options</span>
+                </h2>
+                <p class="pt-text">Você possui controle total sobre seu ambiente. O uso de cookies pode ser desativado ou bloqueado a qualquer momento de forma nativa por meio das configurações de privacidade do seu navegador web.</p>
+                <p class="en-text">You have total control over your environment. The use of cookies can be disabled or blocked natively at any time through the privacy settings of your web browser.</p>
+            </section>
+
+            <!-- Alterações -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"/></svg>
+                    <span class="pt-text">Atualizações do Site</span>
+                    <span class="en-text">Site Updates</span>
+                </h2>
+                <p class="pt-text">À medida que novos projetos, ferramentas e aplicações práticas forem adicionados ao meu portfólio, esta Política de Privacidade poderá ser atualizada para refletir as novas implementações técnicas.</p>
+                <p class="en-text">As new projects, tools, and practical applications are added to my portfolio, this Privacy Policy may be updated to accurately reflect the new technical implementations.</p>
+            </section>
+
+            <!-- Seção FAQ Aprimorada e Completa -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <span class="pt-text">Perguntas Frequentes (FAQ)</span>
+                    <span class="en-text">Frequently Asked Questions (FAQ)</span>
+                </h2>
+                
+                <div class="faq-container">
+                    <!-- FAQ 1: Dados Digitados -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">O que acontece se eu digitar dados nos formulários dos projetos de teste?</span>
+                            <span class="en-text">What happens if I enter data into the test project forms?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">Os formulários contidos nas aplicações de demonstração operam apenas de forma superficial (frontend) ou utilizam bancos de dados voláteis de simulação (mock data). Nenhum dado real de cartão, senha ou informação privada é capturado ou armazenado permanentemente por mim.</p>
+                                <p class="en-text">Forms inside the demonstration applications operate only on the client side (frontend) or use temporary simulation databases (mock data). No real credit card details, passwords, or private information are permanently collected or stored by me.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2: APIs Externas -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Os projetos consomem serviços ou APIs de plataformas externas?</span>
+                            <span class="en-text">Do the projects consume external APIs or services?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">Algumas demonstrações integradas podem fazer requisições a APIs públicas externas (repositórios públicos). Essas requisições trafegam de forma criptografada via HTTPS e também não transmitem dados pessoais seus a essas plataformas.</p>
+                                <p class="en-text">Some integrated demos may issue requests to public external APIs (public code repositories). These requests travel encrypted via HTTPS and do not share any personal visitor details with those platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3: Hospedagem -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Onde este portfólio e os projetos associados ficam hospedados?</span>
+                            <span class="en-text">Where are this portfolio and its associated projects hosted?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">O site e os subprojetos estão hospedados em infraestruturas de nuvem seguras e modernas. Esses servidores registram logs automáticos básicos de requisições de rede (como endereço IP mascarado e tipo de navegador) exclusivamente para prevenir ataques digitais e garantir que a página fique no ar.</p>
+                                <p class="en-text">The website and subprojects are hosted on secure, modern cloud infrastructures. These cloud nodes record basic automated request network logs (such as masked IP addresses and browser types) exclusively to prevent digital attacks and maintain high uptime.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4: Finalidade do Monitoramento -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Por que o portfólio avalia o tráfego de usuários?</span>
+                            <span class="en-text">Why does the portfolio monitor user traffic?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">O monitoramento de acessos possui finalidade puramente estatística. Ele me ajuda a compreender de quais regiões geográficas (países/estados) meu portfólio é acessado e quais projetos despertam maior interesse de recrutadores e engenheiros.</p>
+                                <p class="en-text">Traffic monitoring is handled purely for statistical insights. It allows me to evaluate the geographic distribution (countries/states) of visits and understand which built projects pique the interest of recruiters and software engineers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5: Legislação -->
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            <span class="pt-text">Este site está em conformidade com as leis gerais de proteção de dados (LGPD / GDPR)?</span>
+                            <span class="en-text">Is this site compliant with privacy regulations (LGPD / GDPR)?</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p class="pt-text">Sim. Uma vez que o portfólio e as aplicações desenvolvidas não efetuam cadastro de usuários, coleta ativa de e-mails para marketing ou armazenamento de registros confidenciais, o site respeita integralmente os pilares fundamentais da LGPD (Brasil) e da GDPR (Europa) focados na minimização e proteção absoluta de dados.</p>
+                                <p class="en-text">Yes. Since the portfolio and built applications do not include user sign-ups, active marketing email tracking, or confidential profile database logging, the architecture fully respects the core design principles of minimizing and protecting data scope under LGPD and GDPR guidelines.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fale Conosco -->
+            <section>
+                <h2>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span class="pt-text">Contato do Desenvolvedor</span>
+                    <span class="en-text">Developer Contact</span>
+                </h2>
+                <p class="pt-text">Dúvidas sobre o código de privacidade, arquitetura técnica dos projetos ou propostas profissionais? Entre em contato direto.</p>
+                <p class="en-text">Questions about the privacy layout, technical project architecture, or career opportunities? Reach out directly.</p>
+                
+                <a href="mailto:suporte@fcasfs-of.cloud-fs.net?subject=Portfolio%20Privacy%20Inquiry" class="btn-support pt-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+                    Contatar Desenvolvedor
+                </a>
+                <a href="mailto:fcasfs.of@cloud-fs.net?subject=Portfolio%20Privacy%20Inquiry" class="btn-support en-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+                    Contact Developer
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 fcasfs-of.cloud-fs.net. <span class="pt-text">Todos os direitos reservados.</span><span class="en-text">All rights reserved.</span></p>
+        </footer>
+    </div>
+
+    <script>
+        // --- GERENCIADOR DE IDIOMA ---
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('lang', lang);
+            localStorage.setItem('preferred-lang', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (lang === 'pt-BR') document.getElementById('btn-pt').classList.add('active');
+            if (lang === 'en') document.getElementById('btn-en').classList.add('active');
+        }
+
+        const savedLang = localStorage.getItem('preferred-lang');
+        const userLang = savedLang || (navigator.language.startsWith('en') ? 'en' : 'pt-BR');
+        setLanguage(userLang);
+
+
+        // --- GERENCIADOR DE TEMA (CLARO/ESCURO) ---
+        const sunPath = "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z";
+        const moonPath = "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z";
+
+        function updateThemeUI(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const iconPath = document.getElementById('theme-icon-path');
+            
+            if (theme === 'dark') {
+                iconPath.setAttribute('d', moonPath);
+                document.getElementById('theme-text-pt').innerText = 'Modo Claro';
+                document.getElementById('theme-text-en').innerText = 'Light Mode';
+            } else {
+                iconPath.setAttribute('d', sunPath);
+                document.getElementById('theme-text-pt').innerText = 'Modo Escuro';
+                document.getElementById('theme-text-en').innerText = 'Dark Mode';
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('preferred-theme', newTheme);
+            updateThemeUI(newTheme);
+        }
+
+        const savedTheme = localStorage.getItem('preferred-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        updateThemeUI(initialTheme);
+
+
+        // --- CONTROLE DO FAQ ACORDEÃO ---
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = element.nextElementSibling;
+            
+            if (item.classList.contains('open')) {
+                answer.style.maxHeight = null;
+                item.classList.remove('open');
+            } else {
+                document.querySelectorAll('.faq-item').forEach(el => {
+                    el.classList.remove('open');
+                    el.querySelector('.faq-answer').style.maxHeight = null;
+                });
+                
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                item.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>
