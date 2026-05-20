@@ -326,7 +326,7 @@ function create_tbadge_status(op, jh){    var create_infoxrs="";    var create_i
    if(jh && jh=="en"){  create_infoxratts={ planejado:"Planned", desenvolvimento:"In Development", testes:"Testing", versao:"New Version", manutencao:"Maintenance", concluido:"Completed", pausado:"Paused", descontinuado:"Deprecated" };   }
  if (op){
    if (op.type && op.type!=""){  
-   create_infoxrs='  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  <br/> ';
+   create_infoxrs='  <div>  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  <br/>  </div>';
    }
    }
 return create_infoxrs;  }
