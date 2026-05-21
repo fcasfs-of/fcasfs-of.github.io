@@ -128,10 +128,10 @@ var cookies_pre= getObj_nInfoEx({ local:'button.cm__btn', text:'[data-role="show
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
  const cookies_pre_tl = document.getElementById("pm__title");
- if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerHTML;  }
-ddloaded_listff.push({ separate:true });
-ddloaded_listff.push({ label: cookies_pre.innerHTML, desc: cookies_pre_tl_cusd, icon: '', onClick: cookies_pre.onclickProperty  });
- }     }
+ if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerText;  }
+ddloaded_listff[ddloaded_listff.length]={ separate:true };
+ddloaded_listff[ddloaded_listff.length]={ label: cookies_pre.innerText, desc: cookies_pre_tl_cusd, icon: '', onClick: cookies_pre.onclickProperty  };
+}     }
 
 }  }
 } else if (tp=="project" && lag && lag!=""){
