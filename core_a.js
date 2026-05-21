@@ -102,7 +102,7 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
 
 
 
-function loaded_listff(tp, lag, cookies_pre){
+function loaded_listff(tp, lag, opt_pre){
 var ddloaded_listff="";
 if(tp && tp!=""){
 
@@ -123,9 +123,9 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
- if (cookies_pre && cookies_pre.title && cookies_pre.desc && cookies_pre.icon && typeof cookies_pre.open === 'function') {
+ if (opt_pre && opt_pre.title && opt_pre.desc && opt_pre.icon && typeof opt_pre.open === 'function') {
 ddloaded_listff.push({ separate:true });
-ddloaded_listff.push({ label: cookies_pre.title, desc: cookies_pre.desc, icon: cookies_pre.icon, onClick: cookies_pre.open });
+ddloaded_listff.push({ label: opt_pre.title, desc: opt_pre.desc, icon: opt_pre.icon, onClick: opt_pre.open });
 }     
 
 }  }
