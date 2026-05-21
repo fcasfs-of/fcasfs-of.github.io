@@ -88,7 +88,7 @@ function getObj_nInfoEx(obj) {
 const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttribute: "",onclickProperty: function(){},onclickCode: null };
   if(obj){
      if (obj.text && obj.text!="" && obj.local && obj.local!=""){  
-   const sdbutton = document.querySelector(""+obj.local+" "+obj.text+"");
+   const sdbutton = document.querySelector(""+obj.local+""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      igetObj_nInfonfo = {
         element: sdbutton,
@@ -123,7 +123,7 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
-var cookies_pre= getObj_nInfoEx({ local:'.cm__btns', text:'button[data-role="show"]' });
+var cookies_pre= getObj_nInfoEx({ local:'button', text:'[data-role="show"]' });
  if(cookies_pre){
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
