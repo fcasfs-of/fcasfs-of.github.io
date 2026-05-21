@@ -455,7 +455,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-
+var cookies_pre = null;
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
  if (document.body.classList.contains('dark-mode')) {      document.documentElement.classList.add('cc--darkmode');     }
@@ -488,8 +488,11 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
         translations: langs_cokkiesd,
         autoDetect: "document"
     }
-});    }
-}
+});   
+if(document.getElementById("cc-main")){
+cookies_pre = getObj_nInfoEx({ local: document.getElementById("cc-main"), text:'[data-role="show"]' });
+}	
+}   }
 
 
 function update_Pagination(asdd){
