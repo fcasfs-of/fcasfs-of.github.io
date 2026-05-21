@@ -11,8 +11,8 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
         innerHTML: sdbutton.innerHTML,
         innerText: sdbutton.innerText || sdbutton.textContent,
         onclickProperty: sdbutton.onclick,
-    };
-}    }     return igetObj_nInfonfo;   }
+    };     return igetObj_nInfonfo;
+}    }       }
 
 
 
