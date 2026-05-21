@@ -102,7 +102,7 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
 
 
 
-function loaded_listff(tp, lag){
+function loaded_listff(tp, lag, cookies_pre){
 var ddloaded_listff="";
 if(tp && tp!=""){
 
