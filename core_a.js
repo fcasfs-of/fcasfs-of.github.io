@@ -88,7 +88,7 @@ function getObj_nInfoEx(obj) {
 const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttribute: "",onclickProperty: function(){},onclickCode: null };
   if(obj){
      if (obj.text && obj.text!="") {  
-   const sdbutton = document.querySelectorAll((""+obj.text+"");
+   const sdbutton = document.querySelectorAll(""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      const new_igetObj_nInfonfo = {
         element: sdbutton[0],
