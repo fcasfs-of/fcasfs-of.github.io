@@ -453,7 +453,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre;
+var cookies_pre = {};
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
  if (document.body.classList.contains('dark-mode')) {      document.documentElement.classList.add('cc--darkmode');     }
