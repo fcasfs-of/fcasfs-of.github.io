@@ -467,8 +467,8 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
             flipButtons: false
         },
         preferencesModal: {
-            layout: "bar",
-            kposition: "right",
+            layout: "box",
+            position: "right",
             equalWeightButtons: true,
             flipButtons: true
         }
