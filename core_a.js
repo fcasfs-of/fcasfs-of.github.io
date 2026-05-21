@@ -130,7 +130,7 @@ if(cookies_pre.element){
  const cookies_pre_tl = document.getElementById("pm__title");
  if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerText;  }
 ddloaded_listff.push({ separate:true });
-ddloaded_listff.push({ label: cookies_pre.innerText, desc: cookies_pre_tl_cusd, icon: '', onClick: function(){ cookies_pre.onclickProperty ();   });
+ddloaded_listff.push({ label: cookies_pre.innerText, desc: cookies_pre_tl_cusd, icon: '', onClick: function(){  cookies_pre.onclickProperty();   });
 }     }
 
 }  }
