@@ -99,7 +99,7 @@ if (obj) {
                 onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
             };
             return igetObj_nInfonfo;        }    }    else {  return igetObj_nInfonfo;   }
-return igetObj_nInfonfo;   }
+ }
 
 
 
