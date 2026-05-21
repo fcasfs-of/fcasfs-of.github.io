@@ -455,7 +455,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre = null;
+var cookies_pre;
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
  if (document.body.classList.contains('dark-mode')) {      document.documentElement.classList.add('cc--darkmode');     }
@@ -489,7 +489,8 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
         autoDetect: "document"
     }
 });   
-cookies_pre = getObj_nInfoEx({ local: document, text:'[data-role="show"]' });
+	
+cookies_pre = getObj_nInfoEx({ local: document, text:'button[data-role="show"]' });
 }   }
 
 
