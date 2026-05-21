@@ -123,7 +123,7 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
-var cookies_pre= getObj_nInfoEx({ local:'#cc-main .cm-wrapper .cm__btns ', text:'.cm__btn[data-role="show"]' });
+var cookies_pre= getObj_nInfoEx({ local:'button', text:'.cm__btn[data-role="show"]' });
  if(cookies_pre){
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
