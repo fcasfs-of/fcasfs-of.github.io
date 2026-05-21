@@ -488,7 +488,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
     }
 });   
 	
-cookies_pre = { title: langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, open: getObj_nInfo({ local: "button", text:'[data-role="show"]' }).onclickProperty };
+cookies_pre = { title: langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, open: function(){ CookieConsent.show(true); } };
 }   }
 
 
