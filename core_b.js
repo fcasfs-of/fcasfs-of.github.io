@@ -453,7 +453,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre = {};
+//var cookies_pre;
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
  if (document.body.classList.contains('dark-mode')) {      document.documentElement.classList.add('cc--darkmode');     }
@@ -488,7 +488,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
     }
 });   
 	
-cookies_pre = { title: langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, open: function(){ CookieConsent.showPreferences(); } };
+var cookies_pre = { title: langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, open: function(){ CookieConsent.showPreferences(); } };
 }   }
 
 
