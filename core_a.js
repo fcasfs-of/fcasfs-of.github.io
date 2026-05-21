@@ -91,10 +91,10 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
    const sdbutton = document.querySelectorAll(""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      const new_igetObj_nInfonfo = {
-        element: sdbutton || null,
-        innerHTML: sdbutton.innerHTML || "",
-        innerText: sdbutton.innerText || sdbutton.textContent || "",
-        onclickProperty: sdbutton.onclick || function(){},
+        element: sdbutton[0] || null,
+        innerHTML: sdbutton[0].innerHTML || "",
+        innerText: sdbutton[0].innerText || sdbutton[0].textContent || "",
+        onclickProperty: sdbutton[0].onclick || function(){},
     };    return new_igetObj_nInfonfo;
 }    }   else {   return igetObj_nInfonfo;  }   }
 
