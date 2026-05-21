@@ -124,12 +124,9 @@ if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
  if(cookies_pre){
-if(cookies_pre.element){
-     var cookies_pre_tl_cusd="";
- const cookies_pre_tl = document.getElementById("pm__title");
- if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerText;  }
+if(cookies_pre.title && cookies_pre.desc && cookies_pre.open){
 ddloaded_listff.push({ separate:true });
-ddloaded_listff.push({ label: cookies_pre.innerText, desc: cookies_pre_tl_cusd, icon: '', onClick: function(){  cookies_pre.onclickProperty();   }});
+ddloaded_listff.push({ label: cookies_pre.title, desc: cookies_pre.desc, icon: '', onClick: cookies_pre.open });
 }     }     
 
 }  }
