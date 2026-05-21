@@ -489,9 +489,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
         autoDetect: "document"
     }
 });   
-if(document.getElementById("cc-main")){
-cookies_pre = getObj_nInfoEx({ local: document.getElementById("cc-main"), text:'[data-role="show"]' });
-}	
+cookies_pre = getObj_nInfoEx({ local: document, text:'[data-role="show"]' });
 }   }
 
 
