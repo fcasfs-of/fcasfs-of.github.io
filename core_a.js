@@ -87,16 +87,16 @@ en:[
 function getObj_nInfoEx(obj) {  
 const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttribute: "",onclickProperty: function(){},onclickCode: null };
   if(obj){
-     if (obj.text && obj.text!="" && obj.local && obj.local!=""){  
-   const sdbutton = document.querySelector(""+obj.local+""+obj.text+"");
+     if (obj.text && obj.text!="") {  
+   const sdbutton = document.querySelectorAll((""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      const new_igetObj_nInfonfo = {
-        element: sdbutton,
-        innerHTML: sdbutton.innerHTML,
-        innerText: sdbutton.innerText || sdbutton.textContent,
-        onclickAttribute: sdbutton.getAttribute("onclick") || "",
-        onclickProperty: sdbutton.onclick,
-        onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
+        element: sdbutton[0],
+        innerHTML: sdbutton[0].innerHTML,
+        innerText: sdbutton[0].innerText || sdbutton[0].textContent,
+        onclickAttribute: sdbutton[0].getAttribute("onclick") || "",
+        onclickProperty: sdbutton[0].onclick,
+        onclickCode: sdbutton[0].onclick ? sdbutton[0].onclick.toString() : null
     };    return new_igetObj_nInfonfo;
 }    }   else {   return igetObj_nInfonfo;  }   }
 
@@ -123,7 +123,7 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
-var cookies_pre= getObj_nInfoEx({ local:'#cc-main ', text:'button[data-role="show"]' });
+var cookies_pre= getObj_nInfoEx({ text:'[data-role="show"]' });
  if(cookies_pre){
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
