@@ -1,18 +1,16 @@
 
 
 function getObj_nInfo(obj) {  
-const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttribute: "",onclickProperty: function(){},onclickCode: null };
+const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProperty: function(){} };
   if(obj){
      if (obj.text && obj.text!="" && obj.local && obj.local!=""){  
-   const sdbutton = document.querySelector(""+obj.local+" "+obj.text+"");
+   const sdbutton = document.querySelector(""+obj.local+""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      igetObj_nInfonfo = {
         element: sdbutton,
         innerHTML: sdbutton.innerHTML,
         innerText: sdbutton.innerText || sdbutton.textContent,
-        onclickAttribute: sdbutton.getAttribute("onclick") || "",
         onclickProperty: sdbutton.onclick,
-        onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
     };
 }    }     return igetObj_nInfonfo;   }
 
@@ -490,7 +488,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
     }
 });   
 	
-cookies_pre = getObj_nInfoEx({ local: document, text:'button[data-role="show"]' });
+cookies_pre = getObj_nInfo({ local: "button", text:'[data-role="show"]' })//getObj_nInfoEx();
 }   }
 
 
