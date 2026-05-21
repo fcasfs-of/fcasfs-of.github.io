@@ -85,7 +85,7 @@ en:[
 
 
 function getObj_nInfoEx(obj) {  
-const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttribute: "",onclickProperty: function(){},onclickCode: null };
+const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProperty: function(){} };
   if(obj){
      if (obj.text && obj.text!="") {  
    const sdbutton = document.querySelectorAll(""+obj.text+"");
@@ -94,9 +94,7 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttr
         element: sdbutton || null,
         innerHTML: sdbutton.innerHTML || "",
         innerText: sdbutton.innerText || sdbutton.textContent || "",
-        onclickAttribute: sdbutton.getAttribute("onclick") || "",
         onclickProperty: sdbutton.onclick || function(){},
-        onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
     };    return new_igetObj_nInfonfo;
 }    }   else {   return igetObj_nInfonfo;  }   }
 
