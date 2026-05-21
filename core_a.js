@@ -91,12 +91,12 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttr
    const sdbutton = document.querySelectorAll(""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      const new_igetObj_nInfonfo = {
-        element: sdbutton[0],
-        innerHTML: sdbutton[0].innerHTML,
-        innerText: sdbutton[0].innerText || sdbutton[0].textContent,
-        onclickAttribute: sdbutton[0].getAttribute("onclick") || "",
-        onclickProperty: sdbutton[0].onclick,
-        onclickCode: sdbutton[0].onclick ? sdbutton[0].onclick.toString() : null
+        element: sdbutton || null,
+        innerHTML: sdbutton.innerHTML || "",
+        innerText: sdbutton.innerText || sdbutton.textContent || "",
+        onclickAttribute: sdbutton.getAttribute("onclick") || "",
+        onclickProperty: sdbutton.onclick || function(){},
+        onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
     };    return new_igetObj_nInfonfo;
 }    }   else {   return igetObj_nInfonfo;  }   }
 
