@@ -123,8 +123,6 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
-if(document.getElementById("cc-main")){
-var cookies_pre= getObj_nInfoEx({ local: document.getElementById("cc-main"), text:'[data-role="show"]' });
  if(cookies_pre){
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
@@ -132,7 +130,7 @@ if(cookies_pre.element){
  if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerText;  }
 ddloaded_listff.push({ separate:true });
 ddloaded_listff.push({ label: cookies_pre.innerText, desc: cookies_pre_tl_cusd, icon: '', onClick: function(){  cookies_pre.onclickProperty();   }});
-}     }     }
+}     }     
 
 }  }
 } else if (tp=="project" && lag && lag!=""){
