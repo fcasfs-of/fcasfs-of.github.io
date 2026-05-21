@@ -90,7 +90,7 @@ if (obj) {
         if (obj.text && obj.text !== "" && obj.local && obj.local !== "") {
             const sdbutton = document.querySelector(obj.local + obj.text);
             if (!sdbutton) {                return igetObj_nInfonfo;            }
-            const igetObj_nInfonfo_result = {
+            igetObj_nInfonfo = {
                 element: sdbutton,
                 innerHTML: sdbutton.innerHTML,
                 innerText: sdbutton.innerText || sdbutton.textContent,
@@ -98,7 +98,7 @@ if (obj) {
                 onclickProperty: sdbutton.onclick,
                 onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
             };
-            return igetObj_nInfonfo_result;        }    }
+            return igetObj_nInfonfo;        }    }    else {  return igetObj_nInfonfo;   }
 return igetObj_nInfonfo;   }
 
 
