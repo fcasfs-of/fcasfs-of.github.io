@@ -453,7 +453,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre = { title: "", desc: "", icon:'', open: null };
+var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
