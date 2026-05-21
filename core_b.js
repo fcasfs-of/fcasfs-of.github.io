@@ -275,14 +275,6 @@ carregarTudo([
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
-			  'src': 'https://fcasfs-of.cloud-fs.net/TECH-SideBar/app/api.js'
-        },
-                    'defer': "",
-                    'init': "",
-'onload': "initSidebar_start(loadedsiders);"
-    }, {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/cmenu.js'
         }
     }, {
@@ -302,6 +294,14 @@ carregarTudo([
 		    'onload': "loaded_menus();",
             'src': 'https://fcasfs-of.cloud-fs.net/iframe/manager.js'
         }
+    },  {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+			  'src': 'https://fcasfs-of.cloud-fs.net/TECH-SideBar/app/api.js'
+        },
+                    'defer': "",
+                    'init': "",
+'onload': "initSidebar_start(loadedsiders);"
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
