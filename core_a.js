@@ -102,6 +102,17 @@ ddloaded_listff=set_itend_cd[tp][lag];
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
+
+var cookies_pre= getObj_nInfo({ local:'#cc-main .cm-wrapper .cm__btns', text:'button[data-role=\'show\']' });
+ if(cookies_pre){
+if(cookies_pre.element){
+     var cookies_pre_tl_cusd="";
+ const cookies_pre_tl = document.getElementById("pm__title");
+ if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerHTML;  }
+ddloaded_listff.push({ separate:true });
+ddloaded_listff.push(     { label: cookies_pre.innerHTML, desc: cookies_pre_tl_cusd, icon: '', onClick: cookies_pre.onclickProperty  });
+ }     }
+
 }  }
 } else if (tp=="project" && lag && lag!=""){
 if(set_itend_cd[tp]){
