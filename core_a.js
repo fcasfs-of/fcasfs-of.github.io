@@ -126,7 +126,7 @@ ddloaded_listff=set_itend_cd[tp][lag];
  if(cookies_pre){
 if(cookies_pre.title && cookies_pre.desc && cookies_pre.open){
 ddloaded_listff.push({ separate:true });
-ddloaded_listff.push({ label: cookies_pre.title, desc: cookies_pre.desc, icon: '', onClick: cookies_pre.open });
+ddloaded_listff.push({ label: cookies_pre.title, desc: cookies_pre.desc, icon: ' ', onClick: cookies_pre.open });
 }     }     
 
 }  }
