@@ -125,7 +125,7 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
-var cookies_pre= getObj_nInfoEx({ local:'button', text:'[data-role="show"]' });
+var cookies_pre= getObj_nInfoEx({ local:'.cm__btn-group button.cm__btn', text:'[data-role="show"]' });
  if(cookies_pre){
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
