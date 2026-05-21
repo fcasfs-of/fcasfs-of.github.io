@@ -84,17 +84,19 @@ en:[
 
 
 
-function getObj_nInfoEx(obj) {  
+function getObj_nInfoEx(local=document, obj) {  
+     var igetObj_nInfonfo_pp=document;
+     if(local){  igetObj_nInfonfo_pp=local;   }
 const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProperty: function(){} };
   if(obj){
      if (obj.text && obj.text!="") {  
-   const sdbutton = document.querySelectorAll(""+obj.text+"");
+   const sdbutton = igetObj_nInfonfo_pp.querySelector(""+obj.text+"");
     if (!sdbutton) {        return igetObj_nInfonfo;    }
      const new_igetObj_nInfonfo = {
-        element: sdbutton[0] || null,
-        innerHTML: sdbutton[0].innerHTML || "",
-        innerText: sdbutton[0].innerText || sdbutton[0].textContent || "",
-        onclickProperty: sdbutton[0].onclick || function(){},
+        element: sdbutton || null,
+        innerHTML: sdbutton.innerHTML || "",
+        innerText: sdbutton.innerText || sdbutton.textContent || "",
+        onclickProperty: sdbutton.onclick || function(){},
     };    return new_igetObj_nInfonfo;
 }    }   else {   return igetObj_nInfonfo;  }   }
 
@@ -121,7 +123,8 @@ if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
 
-var cookies_pre= getObj_nInfoEx({ text:'[data-role="show"]' });
+if(document.getElementById("cc-main")){
+var cookies_pre= getObj_nInfoEx({ local: document.getElementById("cc-main"), text:'[data-role="show"]' });
  if(cookies_pre){
 if(cookies_pre.element){
      var cookies_pre_tl_cusd="";
@@ -129,7 +132,7 @@ if(cookies_pre.element){
  if(cookies_pre_tl){   cookies_pre_tl_cusd=cookies_pre_tl.innerText;  }
 ddloaded_listff.push({ separate:true });
 ddloaded_listff.push({ label: cookies_pre.innerText, desc: cookies_pre_tl_cusd, icon: '', onClick: function(){  cookies_pre.onclickProperty();   }});
-}     }
+}     }     }
 
 }  }
 } else if (tp=="project" && lag && lag!=""){
