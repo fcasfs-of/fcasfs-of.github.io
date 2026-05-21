@@ -84,21 +84,23 @@ en:[
 
 
 
-function getObj_nInfoEx(obj) {  
-const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickAttribute: "",onclickProperty: function(){},onclickCode: null };
-  if(obj){
-     if (obj.text && obj.text!="" && obj.local && obj.local!=""){  
-   const sdbutton = document.querySelector(""+obj.local+""+obj.text+"");
-    if (!sdbutton) {        return igetObj_nInfonfo;    }
-     igetObj_nInfonfo = {
-        element: sdbutton,
-        innerHTML: sdbutton.innerHTML,
-        innerText: sdbutton.innerText || sdbutton.textContent,
-        onclickAttribute: sdbutton.getAttribute("onclick") || "",
-        onclickProperty: sdbutton.onclick,
-        onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
-    };    return igetObj_nInfonfo;
-}    }     return igetObj_nInfonfo;   }
+function getObj_nInfoEx(obj) {
+const igetObj_nInfonfo = {        element: null,        innerHTML: "",        innerText: "",        onclickAttribute: "",        onclickProperty: function() {},        onclickCode: null    };
+if (obj) {
+        if (obj.text && obj.text !== "" && obj.local && obj.local !== "") {
+            const sdbutton = document.querySelector(obj.local + obj.text);
+            if (!sdbutton) {                return igetObj_nInfonfo;            }
+            const igetObj_nInfonfo_result = {
+                element: sdbutton,
+                innerHTML: sdbutton.innerHTML,
+                innerText: sdbutton.innerText || sdbutton.textContent,
+                onclickAttribute: sdbutton.getAttribute("onclick") || "",
+                onclickProperty: sdbutton.onclick,
+                onclickCode: sdbutton.onclick ? sdbutton.onclick.toString() : null
+            };
+            return igetObj_nInfonfo_result;        }    }
+return igetObj_nInfonfo;   }
+
 
 
 
