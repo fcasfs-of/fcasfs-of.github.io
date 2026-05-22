@@ -41,6 +41,11 @@ var langs_cokkiesd = {
                             linkedCategory: "performance"
                         },
                         {
+                            title: "Cookies de Publicidade",
+                            description: "Utilizamos cookies apenas para exibir anúncios próprios e originais do nosso site. Eles não coletam dados para redes de terceiros nem rastreiam sua navegação fora daqui. Servem exclusivamente para mostrar ofertas e conteúdos promocionais criados por nós.",
+                            linkedCategory: "marketing"
+                        },
+                        {
                             title: "Mais informações",
                             description: "Para qualquer dúvida relacionada à minha política de cookies e às suas opções, entre em contato comigo."
                         }
@@ -87,6 +92,11 @@ var langs_cokkiesd = {
                             title: "Performance Cookies",
                             description: "Performance Cookies: These cookies collect anonymous data about how you use the website (pages visited, errors, loading time). They are used to optimize functionality, improve user experience, and identify technical problems.",
                             linkedCategory: "performance"
+                        },
+                        {
+                            title: "Advertising Cookies",
+                            description: "We use cookies only to display our own original ads from our website. They do not collect data for third-party networks or track your browsing outside of this site. They serve exclusively to show offers and promotional content created by us.",
+                            linkedCategory: "marketing"
                         },
                         {
                             title: "More information",
