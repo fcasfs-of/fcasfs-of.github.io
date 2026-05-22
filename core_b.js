@@ -479,6 +479,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
         functionality: { enabled: true },
         analytics: { enabled: false },
 		performance: { enabled: true },
+		security: { enabled: true },
         marketing: { enabled: false }
     },
     language: {
