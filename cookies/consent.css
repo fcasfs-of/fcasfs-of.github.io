@@ -2,5 +2,5 @@
 
 #cc-main .pm__close-btn span svg {      position: relative;    top: 2px;   height: 32px;     }  #cc-main svg{  position: relative;    top: 1px;  }
 
-#cc-main .pm--box {    transform: translateY(0%);    max-width: 100%;    position: fixed;    top: 0;    left: 0;    right: 0;    bottom: 0;    height: 100%;    width: 100%;    max-height: 100%;   }
-.show--preferences #cc-main .pm--box {    transform: translateY(0%) !important;    }
+#cc-main .pm--box {     max-width: 100%;    position: fixed;    top: 0;    left: 0;    right: 0;    bottom: 0;    height: 100%;    width: 100%;    max-height: 100%;   }
+#cc-main .pm--box, .show--preferences #cc-main .cc--anim .pm--box, .show--preferences #cc-main .pm--box {    transform: translateY(0%) !important;    }
