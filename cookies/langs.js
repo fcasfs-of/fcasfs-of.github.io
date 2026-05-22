@@ -17,7 +17,7 @@ var langs_cokkiesd = {
                     serviceCounterLabel: "Service|Services",
                     sections: [
                         {
-                            title: "Utilização de cookies",
+                            title: "Utilização de Cookies",
                             description: "Nossa plataforma utiliza cookies para aprimorar a sua experiência de navegação, proporcionando um funcionamento mais eficiente e personalizado. Os cookies são pequenos arquivos de texto armazenados no seu dispositivo que nos ajudam a entender suas preferências, melhorar nossos serviços e oferecer conteúdos relevantes. Ao continuar usando nosso site, você concorda com o uso de cookies de acordo com nossa política de privacidade. Você pode gerenciar suas preferências de cookies a qualquer momento nas configurações do seu navegador."
                         },
                         {
@@ -26,14 +26,19 @@ var langs_cokkiesd = {
                             linkedCategory: "necessary"
                         },
                         {
-                            title: "Cookies de funcionalidade",
-                            description: "Cookies de funcionalidade são cookies essenciais que garantem o funcionamento adequado do site, permitindo que recursos e funcionalidades específicas operem corretamente. Eles ajudam a personalizar sua experiência, lembrando suas preferências e configurações, como idioma, região ou opções de acessibilidade. Esses cookies também podem ser usados para fornecer serviços solicitados pelo usuário, como vídeos ou chats ao vivo, garantindo uma navegação mais eficiente e agradável.",
+                            title: "Cookies de Funcionalidade",
+                            description: "Cookies de Funcionalidade são cookies essenciais que garantem o funcionamento adequado do site, permitindo que recursos e funcionalidades específicas operem corretamente. Eles ajudam a personalizar sua experiência, lembrando suas preferências e configurações, como idioma, região ou opções de acessibilidade. Esses cookies também podem ser usados para fornecer serviços solicitados pelo usuário, como vídeos ou chats ao vivo, garantindo uma navegação mais eficiente e agradável.",
                             linkedCategory: "functionality"
                         },
                         {
-                            title: "Cookies analíticos",
-                            description: "Cookies analíticos são pequenos arquivos de texto utilizados por websites para coletar informações sobre como os usuários interagem com o site. Eles ajudam a entender o desempenho do site, identificando padrões de navegação, número de visitas, páginas mais acessadas e outros dados estatísticos. Essas informações permitem aprimorar a experiência do usuário, otimizar o conteúdo e melhorar a funcionalidade do site, garantindo uma navegação mais eficiente e personalizada. Os cookies analíticos geralmente não armazenam informações pessoais identificáveis, sendo utilizados de forma a preservar a privacidade dos usuários.",
+                            title: "Cookies Analíticos",
+                            description: "Cookies Analíticos são pequenos arquivos de texto utilizados por websites para coletar informações sobre como os usuários interagem com o site. Eles ajudam a entender o desempenho do site, identificando padrões de navegação, número de visitas, páginas mais acessadas e outros dados estatísticos. Essas informações permitem aprimorar a experiência do usuário, otimizar o conteúdo e melhorar a funcionalidade do site, garantindo uma navegação mais eficiente e personalizada. Os cookies analíticos geralmente não armazenam informações pessoais identificáveis, sendo utilizados de forma a preservar a privacidade dos usuários.",
                             linkedCategory: "analytics"
+                        },
+                        {
+                            title: "Cookies de Desempenho",
+                            description: "Cookies de Desempenho: Coletam dados anônimos sobre como você utiliza o site (páginas visitadas, erros, tempo de carregamento). Servem para otimizar o funcionamento, melhorar a experiência do usuário e identificar problemas técnicos.",
+                            linkedCategory: "performance"
                         },
                         {
                             title: "Mais informações",
@@ -77,6 +82,11 @@ var langs_cokkiesd = {
                             title: "Analytics Cookies",
                             description: "Analytical cookies are small text files used by websites to collect information about how users interact with the site. They help understand website performance by identifying browsing patterns, number of visits, most accessed pages, and other statistical data. This information allows for improving the user experience, optimizing content, and enhancing website functionality, ensuring more efficient and personalized navigation. Analytical cookies generally do not store personally identifiable information and are used in a way that preserves user privacy.",
                             linkedCategory: "analytics"
+                        },
+                        {
+                            title: "Performance Cookies",
+                            description: "Performance Cookies: These cookies collect anonymous data about how you use the website (pages visited, errors, loading time). They are used to optimize functionality, improve user experience, and identify technical problems.",
+                            linkedCategory: "performance"
                         },
                         {
                             title: "More information",
