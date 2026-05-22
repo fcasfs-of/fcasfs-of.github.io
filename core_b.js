@@ -468,7 +468,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
             flipButtons: false
         },
         preferencesModal: {
-            layout: "box",
+            layout: "box_ful",
             position: "right",
             equalWeightButtons: true,
             flipButtons: true
@@ -480,6 +480,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
         },
         functionality: { enabled: true },
         analytics: { enabled: false },
+		performance: { enabled: false },
         marketing: { enabled: false }
     },
     language: {
