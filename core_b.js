@@ -475,9 +475,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
         }
     },
     categories: {
-        necessary: {
-            readOnly: true
-        },
+        necessary: {  enabled: true, readOnly: true },
         functionality: { enabled: true },
         analytics: { enabled: false },
 		performance: { enabled: false },
