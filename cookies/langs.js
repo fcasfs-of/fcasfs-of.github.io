@@ -46,6 +46,11 @@ var langs_cokkiesd = {
                             linkedCategory: "marketing"
                         },
                         {
+                            title: "Cookies de Segurança",
+                            description: "Autenticam utilizadores e protegem o site contra fraudes.",
+                            linkedCategory: "security"
+                        },
+                        {
                             title: "Mais informações",
                             description: "Para qualquer dúvida relacionada à minha política de cookies e às suas opções, entre em contato comigo."
                         }
@@ -97,6 +102,11 @@ var langs_cokkiesd = {
                             title: "Advertising Cookies",
                             description: "We use cookies only to display our own original ads from our website. They do not collect data for third-party networks or track your browsing outside of this site. They serve exclusively to show offers and promotional content created by us.",
                             linkedCategory: "marketing"
+                        },
+                        {
+                            title: "Security Cookies",
+                            description: "They authenticate users and protect the site against fraud.",
+                            linkedCategory: "security"
                         },
                         {
                             title: "More information",
