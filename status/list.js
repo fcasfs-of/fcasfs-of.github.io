@@ -1,5 +1,5 @@
 const incidenteSSite = { 
-        en:{ text: "Site Principal" },
+        en:{ text: "Main WebSite" },
         pt:{ text: "Site Principal" },
         list:[
         {
