@@ -1,4 +1,7 @@
-const incidenteBancoDados = [
+const incidenteSSite = { 
+        en:{ text: "Site Principal" },
+        pt:{ text: "Site Principal" },
+        list:[
         {
         status: "Monitorando",
         mensagem: {
@@ -17,7 +20,8 @@ const incidenteBancoDados = [
         dataHora: "26 de maio de 2026 - 10:10 UTC",
         tipo: "investigando"
     }
-];
+]  
+};
 
 
 const meusSistemas = [
