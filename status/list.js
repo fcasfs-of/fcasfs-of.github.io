@@ -1,4 +1,9 @@
-    const meusSistemas = [
+const incidenteBancoDados = [
+    
+];
+
+
+const meusSistemas = [
         { 
             name: { pt: "Servidor Web Principal", en: "Main Web Server" }, 
             type: "server", 
