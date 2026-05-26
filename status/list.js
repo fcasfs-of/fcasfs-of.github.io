@@ -1,5 +1,22 @@
 const incidenteBancoDados = [
-    
+        {
+        status: "Monitorando",
+        mensagem: {
+            pt: "O site principal voltou a carregar após a correção nos servidores. Seguimos acompanhando os acessos.",
+            en: "The main website is loading normally following a fix on the servers. We continue monitoring traffic."
+        },
+        dataHora: "26 de maio de 2026 - 10:35 UTC",
+        tipo: "monitorando"
+    },
+    {
+        status: "Investigando",
+        mensagem: {
+            pt: "Estamos investigando relatos de lentidão extrema e erro 502 ao tentar acessar o site principal.",
+            en: "We are investigating reports of extreme slowness and 502 errors when trying to access our main website."
+        },
+        dataHora: "26 de maio de 2026 - 10:10 UTC",
+        tipo: "investigando"
+    }
 ];
 
 
