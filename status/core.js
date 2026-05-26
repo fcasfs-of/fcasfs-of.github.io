@@ -218,11 +218,8 @@ const Incidente_estiloCSS = `
     }
 `;
 
-const styleTag = document.createElement('style');
-styleTag.textContent = Incidente_estiloCSS;
-document.head.appendChild(styleTag);
 
-function gerarTemplateIncidente(nome, lista, idDoContainer, idioma) {
+function gerarTemplateIncidente(nome="", lista=[], idDoContainer, idioma="pt") {
     const lang = (idioma === 'en' || idioma === 'pt') ? idioma : 'pt';
     const textos = Incidente_TRADUCOES[lang];
 
@@ -336,7 +333,9 @@ function gerarTemplateIncidente(nome, lista, idDoContainer, idioma) {
         const styleTag = document.createElement("style");
         styleTag.id = "dynamic-status-styles";
         styleTag.textContent = `
-            :root {
+        ${Incidente_estiloCSS}
+        
+           :root {
                 --bg-color: #f8fafc; --card-bg: #ffffff; --text-main: #0f172a;
                 --text-muted: #64748b; --border-color: #e2e8f0;
                 --color-operational: #10b981; --color-degraded: #f59e0b;
@@ -440,8 +439,9 @@ function gerarTemplateIncidente(nome, lista, idDoContainer, idioma) {
                 <div class="legend-item"><span class="txt-degraded">●</span> ${t.degraded}</div>
                 <div class="legend-item"><span class="txt-maintenance">●</span> ${t.maintenance}</div>
                 <div class="legend-item"><span class="txt-down">●</span> ${t.down}</div>
-            </div>
+            </div>  <br/><br/> <div id="incidenteStatus"></div><br/><br/>
         `;
+           if(incidenteSSite){  if(incidenteSSite.list && incidenteSSite[lang].text && incidenteSSite[lang].text!=""){   gerarTemplateIncidente(incidenteSSite[lang].text, incidenteSSite.list, "incidenteStatus", lang);   }   }
     }
 
 
