@@ -1,6 +1,6 @@
 
 
-var set_itend_cd = {
+var set_itend_cd ={
 
 mural:{
 en:[
