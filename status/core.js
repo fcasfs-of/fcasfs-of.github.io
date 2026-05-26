@@ -74,6 +74,215 @@ return is_renderStatusesdf;    }
 
 
 
+const Incidente_TRADUCOES = {
+    pt: {
+        titulo: "Incidente com",
+        investigando: "Investigando",
+        atualizacao: "Atualização",
+        identificado: "Identificado",
+        monitorando: "Monitorando",
+        resolvido: "Resolvido"
+    },
+    en: {
+        titulo: "Incident with",
+        investigando: "Investigating",
+        atualizacao: "Update",
+        identificado: "Identified",
+        monitorando: "Monitoring",
+        resolvido: "Resolved"
+    }
+};
+
+const Incidente_ICONES_SVG = {
+    alertaPrincipal: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+    investigando: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>',
+    atualizacao: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M11 5h2M11 9h4M11 13h2M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>',
+    identificado: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 0-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 0 7.94-7.94l-3.76 3.76z"/></svg>',
+    monitorando: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
+    resolvido: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'
+};
+
+const Incidente_estiloCSS = `
+    :root {
+        --bg-color: #fff;
+        --card-bg: #11151c;
+        --border-color: #21262d;
+        --text-main: #e6edf3;
+        --text-muted: #7d8590;
+        --color-investigando: #f0883e;
+        --color-atualizacao: #58a6ff;
+        --color-identificado: #ff7b72;
+        --color-monitorando: #d29922;
+        --color-resolvido: #3fb950;
+    }
+
+   .incident-container {   user-select:none;  overflow:auto;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        padding: 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        margin: 0;
+
+    }
+
+    .incident-card {     overflow:auto;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.75rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+
+    .incident-header {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.75rem;
+        color: #ff7b72;
+    }
+
+    .incident-title {
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: -0.25px;
+    }
+
+    .updates-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+    }
+
+    .update-item {
+        display: flex;
+        gap: 1.25rem;
+        position: relative;
+    }
+
+    .update-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 26px;
+        bottom: -22px;
+        width: 2px;
+        background-color: var(--border-color);
+    }
+
+    .update-icon {
+        margin-top: 3px;
+        flex-shrink: 0;
+        z-index: 1;
+        background: var(--card-bg);
+        display: inline-flex;
+    }
+
+    .update-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    .update-text {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .update-status {
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .status-investigando { color: var(--color-investigando); }
+    .status-atualizacao { color: var(--color-atualizacao); }
+    .status-identificado { color: var(--color-identificado); }
+    .status-monitorando { color: var(--color-monitorando); }
+    .status-resolvido { color: var(--color-resolvido); }
+
+    .update-time {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+
+    @media (max-width: 480px) {
+        .incident-card { padding: 1.25rem; }
+        .update-item::after { display: none; }
+    }
+`;
+
+const styleTag = document.createElement('style');
+styleTag.textContent = Incidente_estiloCSS;
+document.head.appendChild(styleTag);
+
+function gerarTemplateIncidente(nome, lista, idDoContainer, idioma) {
+    const lang = (idioma === 'en' || idioma === 'pt') ? idioma : 'pt';
+    const textos = Incidente_TRADUCOES[lang];
+
+    const Incidente_executarGeral = function() {
+        let container = null;
+
+        if (idDoContainer) {
+            container = document.getElementById(idDoContainer);
+        }
+
+        if (!container) {
+            container = document.createElement('div');
+            container.id = idDoContainer || 'incident-container-' + Math.floor(Math.random() * 1000);
+            container.className = 'incident-container';
+            document.body.appendChild(container);
+        }
+
+        const itensHTML = lista.map(function(item) {
+            let iconeEscolhido = Incidente_ICONES_SVG[item.tipo] || Incidente_ICONES_SVG.atualizacao;
+            const classeStatus = 'status-' + item.tipo;
+            
+            const statusTraduzido = textos[item.tipo] || item.status;
+            const mensagemFinal = item.mensagem[lang] || item.mensagem;
+
+            return `
+                <div class="update-item">
+                    <div class="update-icon ${classeStatus}">
+                        ${iconeEscolhido}
+                    </div>
+                    <div class="update-content">
+                        <div class="update-text">
+                            <span class="update-status ${classeStatus}">${statusTraduzido}</span> - ${mensagemFinal}
+                        </div>
+                        <div class="update-time">${item.dataHora}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        container.innerHTML = `
+            <div class="incident-card">
+                <div class="incident-header">
+                    ${Incidente_ICONES_SVG.alertaPrincipal}
+                    <h1 class="incident-title">${textos.titulo} '${nome}'</h1>
+                </div>
+                <div class="updates-list">
+                    ${itensHTML}
+                </div>
+            </div>
+        `;
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', Incidente_executarGeral);
+    } else {
+        Incidente_executarGeral();
+    }
+}
+
+
 
 
     const icons_status = {
