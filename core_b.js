@@ -77,6 +77,8 @@ function fs_pagination(config) {
   pagContainer.appendChild(wrapper);
 
   function atualizar() {
+   if(listaContainer){   listaContainer.scrollIntoView({ behavior: 'smooth' });    }
+	  
     itens.forEach((item, index) => {
       const inicio = (paginaAtual - 1) * itensPorPagina;
       const fim = inicio + itensPorPagina;
