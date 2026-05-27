@@ -428,7 +428,7 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
   if(op.itens[is].desc && op.itens[is].desc!=""){   dad_descnd_itens_fra='<p>'+op.itens[is].desc+'</p>';   }
 
   var dad_icond_itens_fra_odfd="";
-  if(op.itens[is].separate && op.itens[is].separate==true){   dad_icond_itens_fra_odfd="<div class='separate'></div>";   }
+  if(op.itens[is].separate && op.itens[is].separate==true){   if(dalickstens_fra!=""){   dad_icond_itens_fra_odfd="<div class='separate'></div>";  }   }
 
     if(op.itens[is].remove_efect && op.itens[is].remove_efect==true){   dadd_itens_efect="";   }
 
