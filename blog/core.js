@@ -301,16 +301,14 @@ lbox_moday=` onclick="postF_imgs('${postiid}');" `;
 
             renderPosts();   
 
- ufpdate_hiscopagge({
-  paginationNumbers:"pagination-numbers",
-  paginatedList:"posts-container", listItems:".post-card",
-  nextButton:"next-button",  prevButton:"prev-button",
-  paginationLimit:6,
-  paginationNumberp:".pagination-number",
-  paginationLindex: "page-index",
-  paginationclass: "pagination-number",
-  contItems:"dcont_ksit"
-  });    
+ fs_pagination({
+            listaId: 'posts-container', 
+            paginacaoId: 'bloco-dos-botoes', 
+            itens: 'post-card',      
+            itensPorPagina: 6,       
+            idioma: lang         
+});
+              
         
       }
    }
