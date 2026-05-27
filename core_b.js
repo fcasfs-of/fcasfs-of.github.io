@@ -89,14 +89,14 @@ function fs_pagination(config) {
     btnAnterior.className = 'pag-btn';
     btnAnterior.innerHTML = svgAnterior;
     btnAnterior.disabled = paginaAtual === 1;
-    btnAnterior.onclick = () => { paginaAtual--; atualizar();     if(listaContainer){   listaContainer.scrollTop(0);    }   };
+    btnAnterior.onclick = () => { paginaAtual--; atualizar();     if(listaContainer){   listaContainer.scrollTo({ top: 0, behavior: 'smooth' });    }   };
     nav.appendChild(btnAnterior);
 
     for (let i = 1; i <= totalPaginas; i++) {
       const btnNum = document.createElement('button');
       btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
       btnNum.innerText = i;
-      btnNum.onclick = () => { paginaAtual = i; atualizar();    if(listaContainer){   listaContainer.scrollTop(0);    }  };
+      btnNum.onclick = () => { paginaAtual = i; atualizar();    if(listaContainer){   listaContainer.scrollTo({ top: 0, behavior: 'smooth' });    }  };
       nav.appendChild(btnNum);
     }
 
@@ -104,7 +104,7 @@ function fs_pagination(config) {
     btnProximo.className = 'pag-btn';
     btnProximo.innerHTML = svgProximo;
     btnProximo.disabled = paginaAtual === totalPaginas;
-    btnProximo.onclick = () => { paginaAtual++; atualizar();     if(listaContainer){   listaContainer.scrollTop(0);    }   };
+    btnProximo.onclick = () => { paginaAtual++; atualizar();     if(listaContainer){   listaContainer.scrollTo({ top: 0, behavior: 'smooth' });    }   };
     nav.appendChild(btnProximo);
 	  
   }
