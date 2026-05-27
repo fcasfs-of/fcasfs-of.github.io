@@ -54,6 +54,9 @@
     }
 
 
+   .area-paginacao { margin-top: 20px; background: #fff; padding: 5px; border-radius: 8px; }
+
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
