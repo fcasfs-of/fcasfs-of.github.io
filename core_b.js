@@ -1,101 +1,116 @@
 
-        function fs_pagination(config) {
-            const itemClasse = config.itens || 'item';
-            const itensPorPagina = config.itensPorPagina || 5;
-            const idioma = config.idioma || 'pt';
+function fs_pagination(config) {
+  const listaContainerId = config.listaId;
+  const paginacaoContainerId = config.paginacaoId || 'fs-paginacao-default';
+  const itemClasse = config.itens || 'item';
+  const itensPorPagina = config.itensPorPagina || 5;
+  const idioma = config.idioma || 'pt';
 
-            let container = document.getElementById(config.id);
-            
-            if (!container) {
-                container = document.createElement('div');
-                container.id = config.id || 'paginacao-container-automatico';
-                document.body.appendChild(container);
-            }
+  const listaContainer = document.getElementById(listaContainerId);
+  if (!listaContainer) return;
 
-            const itens = Array.from(container.getElementsByClassName(itemClasse));
-            const totalItens = itens.length;
-            const totalPaginas = Math.ceil(totalItens / itensPorPagina) || 1;
-            let paginaAtual = 1;
+  let pagContainer = document.getElementById(paginacaoContainerId);
+  
+  if (!pagContainer) {
+    pagContainer = document.createElement('div');
+    pagContainer.id = paginacaoContainerId; 
+    document.body.appendChild(pagContainer);
+  }
 
-            const textos = {
-                pt: { info: `Exibindo ${itensPorPagina} itens por página de um total de ${totalItens}` },
-                en: { info: `Showing ${itensPorPagina} items per page out of ${totalItens} total` }
-            };
-            const txt = textos[idioma] || textos['pt'];
+  const itens = Array.from(listaContainer.getElementsByClassName(itemClasse));
+  const totalItens = itens.length;
+  const totalPaginas = Math.ceil(totalItens / itensPorPagina) || 1;
+  let paginaAtual = 1;
 
-            const svgAnterior = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>`;
-            const svgProximo = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>`;
+  const textos = {
+    pt: { info: `Exibindo <strong>${itensPorPagina}</strong> itens por página de um total de <strong>${totalItens}</strong>` },
+    en: { info: `Showing <strong>${itensPorPagina}</strong> items per page out of <strong>${totalItens}</strong> total` }
+  };
+  const txt = textos[idioma] || textos['pt'];
 
-            if (!document.getElementById('style-paginacao-dinamica')) {
-                const style = document.createElement('style');
-                style.id = 'style-paginacao-dinamica';
-                style.innerHTML = `
-                    .pag-wrapper { font-family: system-ui, -apple-system, sans-serif; margin: 20px 0; display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
-                    .pag-info { font-size: 14px; color: #4b5563; text-align: center; font-weight: 500; }
-                    .pag-nav { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; width: 100%; max-width: 450px; }
-                    .pag-btn { background-color: #ffffff; color: #374151; border: 1px solid #d1d5db; padding: 8px 14px; min-width: 40px; height: 38px; font-size: 14px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; user-select: none; }
-                    .pag-btn:hover:not(:disabled) { background-color: #f3f4f6; border-color: #9ca3af; transform: translateY(-1px); }
-                    .pag-btn:active:not(:disabled) { transform: translateY(0); }
-                    .pag-btn:disabled { color: #9ca3af; background-color: #f9fafb; border-color: #e5e7eb; cursor: not-allowed; }
-                    .pag-btn.ativo { background-color: #2563eb; color: #ffffff; border-color: #2563eb; box-shadow: 0 4px 6px -1px rgba(37,99,235, 0.2); }
-                    .pag-icon { width: 16px; height: 16px; display: block; }
-                    @media (max-width: 480px) { .pag-btn { padding: 6px 10px; font-size: 12px; min-width: 34px; height: 32px; border-radius: 6px; } .pag-info { font-size: 12px; } .pag-icon { width: 14px; height: 14px; } }
-                `;
-                document.head.appendChild(style);
-            }
+  const svgAnterior = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>`;
+  const svgProximo = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>`;
 
-            let controleWrapper = container.querySelector('.pag-wrapper');
-            if (!controleWrapper) {
-                controleWrapper = document.createElement('div');
-                controleWrapper.className = 'pag-wrapper';
-                container.appendChild(controleWrapper);
-            }
-            
-            controleWrapper.innerHTML = '';
+  if (!document.getElementById('style-paginacao-dinamica')) {
+    const style = document.createElement('style');
+    style.id = 'style-paginacao-dinamica';
+    style.innerHTML = `
+      .pag-wrapper { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; box-sizing: border-box; }
+      .pag-info { font-size: 13.5px; color: #64748b; text-align: center; font-weight: 400; line-height: 1.5; }
+      .pag-info strong { color: #0f172a; font-weight: 600; }
+      .pag-nav { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; width: 100%; max-width: 100%; padding: 0 4px; box-sizing: border-box; }
+      .pag-btn { background-color: #ffffff; color: #334155; border: 1px solid #e2e8f0; padding: 0 12px; min-width: 38px; height: 38px; font-size: 14px; font-weight: 500; border-radius: 8px; cursor: pointer; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); display: inline-flex; align-items: center; justify-content: center; user-select: none; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
+      .pag-btn:hover:not(:disabled) { background-color: #f8fafc; border-color: #cbd5e1; color: #0f172a; }
+      .pag-btn:active:not(:disabled) { transform: scale(0.96); }
+      .pag-btn:disabled { color: #cbd5e1; background-color: #f8fafc; border-color: #f1f5f9; cursor: not-allowed; box-shadow: none; }
+      .pag-btn.ativo { background-color: #0f172a; color: #ffffff; border-color: #0f172a; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.15), 0 2px 4px -2px rgba(15, 23, 42, 0.15); }
+      .pag-icon { width: 16px; height: 16px; display: block; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Responsividade Avançada para Dispositivos Móveis */
+      @media (max-width: 480px) {
+        .pag-wrapper { gap: 10px; margin: 16px 0; }
+        .pag-info { font-size: 12px; }
+        .pag-nav { gap: 4px; }
+        .pag-btn { min-width: 32px; height: 32px; font-size: 13px; padding: 0 8px; border-radius: 6px; }
+        .pag-icon { width: 14px; height: 14px; }
+      }
+      @media (max-width: 350px) {
+        .pag-nav { gap: 3px; }
+        .pag-btn { min-width: 28px; height: 28px; font-size: 12px; padding: 0 6px; }
+      }
+    `;
+    document.head.appendChild(style);
+  }
 
-            const infoDiv = document.createElement('div');
-            infoDiv.className = 'pag-info';
-            infoDiv.innerText = txt.info;
-            controleWrapper.appendChild(infoDiv);
+  pagContainer.innerHTML = '';
+  const wrapper = document.createElement('div');
+  wrapper.className = 'pag-wrapper';
 
-            const nav = document.createElement('nav');
-            nav.className = 'pag-nav';
-            controleWrapper.appendChild(nav);
+  const infoDiv = document.createElement('div');
+  infoDiv.className = 'pag-info';
+  infoDiv.innerHTML = txt.info;
+  wrapper.appendChild(infoDiv);
 
-            function atualizar() {
-                itens.forEach((item, index) => {
-                    const inicio = (paginaAtual - 1) * itensPorPagina;
-                    const fim = inicio + itensPorPagina;
-                    item.style.display = (index >= inicio && index < fim) ? '' : 'none';
-                });
+  const nav = document.createElement('nav');
+  nav.className = 'pag-nav';
+  wrapper.appendChild(nav);
+  pagContainer.appendChild(wrapper);
 
-                nav.innerHTML = '';
+  function atualizar() {
+    itens.forEach((item, index) => {
+      const inicio = (paginaAtual - 1) * itensPorPagina;
+      const fim = inicio + itensPorPagina;
+      item.style.display = (index >= inicio && index < fim) ? '' : 'none';
+    });
 
-                const btnAnterior = document.createElement('button');
-                btnAnterior.className = 'pag-btn';
-                btnAnterior.innerHTML = svgAnterior;
-                btnAnterior.disabled = paginaAtual === 1;
-                btnAnterior.onclick = () => { paginaAtual--; atualizar(); };
-                nav.appendChild(btnAnterior);
+    nav.innerHTML = '';
 
-                for (let i = 1; i <= totalPaginas; i++) {
-                    const btnNum = document.createElement('button');
-                    btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
-                    btnNum.innerText = i;
-                    btnNum.onclick = () => { paginaAtual = i; atualizar(); };
-                    nav.appendChild(btnNum);
-                }
+    const btnAnterior = document.createElement('button');
+    btnAnterior.className = 'pag-btn';
+    btnAnterior.innerHTML = svgAnterior;
+    btnAnterior.disabled = paginaAtual === 1;
+    btnAnterior.onclick = () => { paginaAtual--; atualizar(); };
+    nav.appendChild(btnAnterior);
 
-                const btnProximo = document.createElement('button');
-                btnProximo.className = 'pag-btn';
-                btnProximo.innerHTML = svgProximo;
-                btnProximo.disabled = paginaAtual === totalPaginas;
-                btnProximo.onclick = () => { paginaAtual++; atualizar(); };
-                nav.appendChild(btnProximo);
-            }
+    for (let i = 1; i <= totalPaginas; i++) {
+      const btnNum = document.createElement('button');
+      btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
+      btnNum.innerText = i;
+      btnNum.onclick = () => { paginaAtual = i; atualizar(); };
+      nav.appendChild(btnNum);
+    }
 
-            atualizar();
-        }
+    const btnProximo = document.createElement('button');
+    btnProximo.className = 'pag-btn';
+    btnProximo.innerHTML = svgProximo;
+    btnProximo.disabled = paginaAtual === totalPaginas;
+    btnProximo.onclick = () => { paginaAtual++; atualizar(); };
+    nav.appendChild(btnProximo);
+  }
+
+  atualizar();
+}
+
 
 
 function getObj_nInfo(obj) {  
