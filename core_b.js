@@ -76,9 +76,7 @@ function fs_pagination(config) {
   wrapper.appendChild(nav);
   pagContainer.appendChild(wrapper);
 
-  function atualizar() {
-   if(listaContainer){   listaContainer.scrollIntoView({ behavior: 'smooth' });    }
-	  
+  function atualizar() {  
     itens.forEach((item, index) => {
       const inicio = (paginaAtual - 1) * itensPorPagina;
       const fim = inicio + itensPorPagina;
@@ -108,6 +106,9 @@ function fs_pagination(config) {
     btnProximo.disabled = paginaAtual === totalPaginas;
     btnProximo.onclick = () => { paginaAtual++; atualizar(); };
     nav.appendChild(btnProximo);
+
+   if(listaContainer){   listaContainer.scrollIntoView({ behavior: 'smooth' });    }
+
   }
 
   atualizar();
