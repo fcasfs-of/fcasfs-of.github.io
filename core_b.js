@@ -35,7 +35,7 @@ function fs_pagination(config) {
     const style = document.createElement('style');
     style.id = 'style-paginacao-dinamica';
     style.innerHTML = `
-      .pag-wrapper { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; box-sizing: border-box; }
+      .pag-wrapper {  user-select:none;   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; box-sizing: border-box; }
       .pag-info { font-size: 13.5px; color: #64748b; text-align: center; font-weight: 400; line-height: 1.5; }
       .pag-info strong { color: #0f172a; font-weight: 600; }
       .pag-nav { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; width: 100%; max-width: 100%; padding: 0 4px; box-sizing: border-box; }
