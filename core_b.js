@@ -107,7 +107,7 @@ function fs_pagination(config) {
     btnProximo.onclick = () => { paginaAtual++; atualizar(); };
     nav.appendChild(btnProximo);
 
-   if(listaContainer){   listaContainer.scrollIntoView({ behavior: 'smooth' });    }
+   if(listaContainer){   listaContainer.scrollIntoView({ behavior: 'smooth', block: "start" });    }
 
   }
 
