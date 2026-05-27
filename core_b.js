@@ -1,4 +1,102 @@
 
+        function fs_pagination(config) {
+            const itemClasse = config.itens || 'item';
+            const itensPorPagina = config.itensPorPagina || 5;
+            const idioma = config.idioma || 'pt';
+
+            let container = document.getElementById(config.id);
+            
+            if (!container) {
+                container = document.createElement('div');
+                container.id = config.id || 'paginacao-container-automatico';
+                document.body.appendChild(container);
+            }
+
+            const itens = Array.from(container.getElementsByClassName(itemClasse));
+            const totalItens = itens.length;
+            const totalPaginas = Math.ceil(totalItens / itensPorPagina) || 1;
+            let paginaAtual = 1;
+
+            const textos = {
+                pt: { info: `Exibindo ${itensPorPagina} itens por página de um total de ${totalItens}` },
+                en: { info: `Showing ${itensPorPagina} items per page out of ${totalItens} total` }
+            };
+            const txt = textos[idioma] || textos['pt'];
+
+            const svgAnterior = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>`;
+            const svgProximo = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>`;
+
+            if (!document.getElementById('style-paginacao-dinamica')) {
+                const style = document.createElement('style');
+                style.id = 'style-paginacao-dinamica';
+                style.innerHTML = `
+                    .pag-wrapper { font-family: system-ui, -apple-system, sans-serif; margin: 20px 0; display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+                    .pag-info { font-size: 14px; color: #4b5563; text-align: center; font-weight: 500; }
+                    .pag-nav { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; width: 100%; max-width: 450px; }
+                    .pag-btn { background-color: #ffffff; color: #374151; border: 1px solid #d1d5db; padding: 8px 14px; min-width: 40px; height: 38px; font-size: 14px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.2s ease; display: inline-flex; align-items: center; justify-content: center; user-select: none; }
+                    .pag-btn:hover:not(:disabled) { background-color: #f3f4f6; border-color: #9ca3af; transform: translateY(-1px); }
+                    .pag-btn:active:not(:disabled) { transform: translateY(0); }
+                    .pag-btn:disabled { color: #9ca3af; background-color: #f9fafb; border-color: #e5e7eb; cursor: not-allowed; }
+                    .pag-btn.ativo { background-color: #2563eb; color: #ffffff; border-color: #2563eb; box-shadow: 0 4px 6px -1px rgba(37,99,235, 0.2); }
+                    .pag-icon { width: 16px; height: 16px; display: block; }
+                    @media (max-width: 480px) { .pag-btn { padding: 6px 10px; font-size: 12px; min-width: 34px; height: 32px; border-radius: 6px; } .pag-info { font-size: 12px; } .pag-icon { width: 14px; height: 14px; } }
+                `;
+                document.head.appendChild(style);
+            }
+
+            let controleWrapper = container.querySelector('.pag-wrapper');
+            if (!controleWrapper) {
+                controleWrapper = document.createElement('div');
+                controleWrapper.className = 'pag-wrapper';
+                container.appendChild(controleWrapper);
+            }
+            
+            controleWrapper.innerHTML = '';
+
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'pag-info';
+            infoDiv.innerText = txt.info;
+            controleWrapper.appendChild(infoDiv);
+
+            const nav = document.createElement('nav');
+            nav.className = 'pag-nav';
+            controleWrapper.appendChild(nav);
+
+            function atualizar() {
+                itens.forEach((item, index) => {
+                    const inicio = (paginaAtual - 1) * itensPorPagina;
+                    const fim = inicio + itensPorPagina;
+                    item.style.display = (index >= inicio && index < fim) ? '' : 'none';
+                });
+
+                nav.innerHTML = '';
+
+                const btnAnterior = document.createElement('button');
+                btnAnterior.className = 'pag-btn';
+                btnAnterior.innerHTML = svgAnterior;
+                btnAnterior.disabled = paginaAtual === 1;
+                btnAnterior.onclick = () => { paginaAtual--; atualizar(); };
+                nav.appendChild(btnAnterior);
+
+                for (let i = 1; i <= totalPaginas; i++) {
+                    const btnNum = document.createElement('button');
+                    btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
+                    btnNum.innerText = i;
+                    btnNum.onclick = () => { paginaAtual = i; atualizar(); };
+                    nav.appendChild(btnNum);
+                }
+
+                const btnProximo = document.createElement('button');
+                btnProximo.className = 'pag-btn';
+                btnProximo.innerHTML = svgProximo;
+                btnProximo.disabled = paginaAtual === totalPaginas;
+                btnProximo.onclick = () => { paginaAtual++; atualizar(); };
+                nav.appendChild(btnProximo);
+            }
+
+            atualizar();
+        }
+
 
 function getObj_nInfo(obj) {  
 const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProperty: function(){} };
