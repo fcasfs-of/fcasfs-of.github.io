@@ -163,8 +163,8 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
 
 
 function filtrarprijfa(inputd="") {    var filtrarprijfa_d="";
-  var filter, ul, li, a, i;
   if(inputd!=""){
+  var filter, ul, li, a, i;
   filter = inputd.toUpperCase();
   ul = document.getElementById("listr");
   li = ul.querySelectorAll(".card");
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function(){
 			   
   const wrapdproper = document.createElement('div');
   wrapdproper.id = 'dpag-wrapperprj';      wrapdproper.innerHTML = '';
- document.body.appendChild(btnProximo);
+ document.body.appendChild(wrapdproper);
 
 			   function initSidebar_onload(api){       if(api){
   api("dpag-wrapperprj", "this", [{ label: , desc: ""+spsdrojeufgg, icon: null, onClick: null }], "", '', 'light', 'fullscreen', function(api){
