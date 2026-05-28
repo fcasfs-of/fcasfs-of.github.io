@@ -174,15 +174,8 @@ function filtrarListda() {
 	  if(searchpgg && searchpgg!=""){
         const pagCsearchpgg = document.getElementById("filtroInputB");
 	     if(pagCsearchpgg){   pagCsearchpgg.value=searchpgg;    }
-	var filter, ul, li, a, i;
-  filter = pagCsearchpgg.value.toUpperCase();
-  ul = document.getElementById("listr");
-  li = ul.querySelectorAll(".card");
-  for (i = 0; i < li.length; i++) {
-    if (li[i].innerText.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {      li[i].style.display = "none";    }
-  }   
+	  const botapaimo = document.querySelector('.busca button');
+     if (botapaimo) {  botapaimo.click();   }
 	  }
 
 
