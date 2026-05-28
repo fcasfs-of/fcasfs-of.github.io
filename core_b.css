@@ -54,7 +54,7 @@
     }
 
 
-   .area-paginacao {    transition: all 0.1s linear;    margin-top: 20px;   background: var(--primary-cardcolor); padding: 5px;  border-radius: 8px;  }
+   .area-paginacao {   box-shadow: var(--shadow);    border: 1px solid #ccc;    transition: all 0.1s linear;    margin-top: 20px;   background: var(--primary-cardcolor); padding: 5px;  border-radius: 8px;  }
 
 
 .material-icons {
