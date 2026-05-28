@@ -204,21 +204,15 @@ document.addEventListener("DOMContentLoaded", function(){
 document.addEventListener("DOMContentLoaded", function(){	
 	const sprojeufgg = getUrlParameter("project");
 	  if(sprojeufgg && sprojeufgg!=""){
-  const wrapdproper = document.createElement('span');
-  wrapdproper.id = 'dpag-wrapperprj';    wrapdproper.style.display="none";   wrapdproper.innerHTML = '';
- document.body.appendChild(wrapdproper);
-
  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
 		   if(spsdrojeufgg && spsdrojeufgg!=""){
-function initSidebar_onload(api){       if(api){
-	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], "Status", '', 'light', 'fullscreen', function(api){
-      if(api){
-        api.close(0);      api.active(0);
-      }
-    });
-}  }
-	const botdsapaimo = document.getElementById("dpag-wrapperprj");
-     if (botdsapaimo) {  botdsapaimo.click();   }
+fsmodal_open({
+  id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:true,  remove_efect: false,
+  include:{    player:"no"  },
+  content:{
+    title:"",    type:"", context:"<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>",    size:"340",    description:""
+  }
+});
 		   }
 	  }
 });
