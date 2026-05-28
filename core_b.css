@@ -54,7 +54,7 @@
     }
 
 
-   .area-paginacao { margin-top: 20px; background: #fff; padding: 5px; border-radius: 8px; }
+   .area-paginacao {  margin-top: 20px;   background: var(--primary-cardcolor); padding: 5px;  border-radius: 8px;  }
 
 
 .material-icons {
