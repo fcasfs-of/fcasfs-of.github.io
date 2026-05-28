@@ -201,6 +201,31 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 
+document.addEventListener("DOMContentLoaded", function(){	
+	const sprojeufgg = getUrlParameter("project");
+	  if(sprojeufgg && sprojeufgg!=""){
+		  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
+		   if(spsdrojeufgg && spsdrojeufgg!=""){
+			   
+  const wrapdproper = document.createElement('span');
+  wrapdproper.id = 'dpag-wrapperprj';    wrapdproper.style.display="none";   wrapdproper.innerHTML = '';
+ document.body.appendChild(wrapdproper);
+
+function initSidebar_onload(api){       if(api){
+	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], "  ", '', 'light', 'fullscreen', function(api){
+      if(api){
+        api.close(0);      api.active(0);
+      }
+    });
+}  }
+		   
+	const botdsapaimo = document.getElementById("dpag-wrapperprj");
+     if (botdsapaimo) {  botdsapaimo.click();   }
+		   }
+	  }
+});
+
+
 
 function carregarTudo(listaRecursos) {   if(listaRecursos){
     listaRecursos.forEach(item => {
@@ -859,32 +884,5 @@ body.oncontextmenu=function() { return false; };
       }, 100);
     });
 
-
-
-
-document.addEventListener("DOMContentLoaded", function(){	
-	const sprojeufgg = getUrlParameter("project");
-	  if(sprojeufgg && sprojeufgg!=""){
-		  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
-		   if(spsdrojeufgg && spsdrojeufgg!=""){
-			   
-  const wrapdproper = document.createElement('span');
-  wrapdproper.id = 'dpag-wrapperprj';    wrapdproper.style.display="none";   wrapdproper.innerHTML = '';
- document.body.appendChild(wrapdproper);
-
-function initSidebar_onload(api){       if(api){
-	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], "  ", '', 'light', 'fullscreen', function(api){
-      if(api){
-        api.close(0);      api.active(0);
-      }
-    });
-}  }
-	if (typeof initSidebar_start === 'function') {  initSidebar_start();		}  
-		   
-	const botdsapaimo = document.getElementById("dpag-wrapperprj");
-     if (botdsapaimo) {  botdsapaimo.click();   }
-		   }
-	  }
-});
 
 
