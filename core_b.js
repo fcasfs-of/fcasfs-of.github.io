@@ -204,21 +204,19 @@ document.addEventListener("DOMContentLoaded", function(){
 document.addEventListener("DOMContentLoaded", function(){	
 	const sprojeufgg = getUrlParameter("project");
 	  if(sprojeufgg && sprojeufgg!=""){
-		  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
-		   if(spsdrojeufgg && spsdrojeufgg!=""){
-			   
   const wrapdproper = document.createElement('span');
   wrapdproper.id = 'dpag-wrapperprj';    wrapdproper.style.display="none";   wrapdproper.innerHTML = '';
  document.body.appendChild(wrapdproper);
 
+ const spsdrojeufgg = filtrarprijfa(sprojeufgg);
+		   if(spsdrojeufgg && spsdrojeufgg!=""){
 function initSidebar_onload(api){       if(api){
-	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], "  ", '', 'light', 'fullscreen', function(api){
+	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], "Status", '', 'light', 'fullscreen', function(api){
       if(api){
         api.close(0);      api.active(0);
       }
     });
 }  }
-		   
 	const botdsapaimo = document.getElementById("dpag-wrapperprj");
      if (botdsapaimo) {  botdsapaimo.click();   }
 		   }
