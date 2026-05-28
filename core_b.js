@@ -35,7 +35,7 @@ function fs_pagination(config) {
     const style = document.createElement('style');
     style.id = 'style-paginacao-dinamica';
     style.innerHTML = `
-      .pag-wrapper {  user-select:none;   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; box-sizing: border-box; }
+      .pag-wrapper {  transition: all 0.1s linear;    user-select:none;   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 24px 0; display: flex; flex-direction: column; align-items: center; gap: 16px; width: 100%; box-sizing: border-box; }
       .pag-info { font-size: 13.5px; color: #64748b; text-align: center; font-weight: 400; line-height: 1.5; }
       .pag-info strong { color: #0f172a; font-weight: 600; }
       .pag-nav { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; width: 100%; max-width: 100%; padding: 0 4px; box-sizing: border-box; }
@@ -45,8 +45,15 @@ function fs_pagination(config) {
       .pag-btn:disabled { color: #cbd5e1; background-color: #f8fafc; border-color: #f1f5f9; cursor: not-allowed; box-shadow: none; }
       .pag-btn.ativo { background-color: #0f172a; color: #ffffff; border-color: #0f172a; font-weight: 600; box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.15), 0 2px 4px -2px rgba(15, 23, 42, 0.15); }
       .pag-icon { width: 16px; height: 16px; display: block; stroke-linecap: round; stroke-linejoin: round; }
+
+	  .dark-mode .pag-info {   color: #94a3b8;  }
+	  .dark-mode .pag-info strong {   color: #f8fafc; }
+	  .dark-mode .pag-btn {  background-color: #1e293b;   color: #cbd5e1;   border: 1px solid #334155;  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);   }
+	  .dark-mode .pag-btn:hover:not(:disabled) {   background-color: #334155;   border-color: #475569;   color: #f8fafc;  }
+	  .dark-mode .pag-btn:disabled {   color: #475569;   background-color: #0f172a;   border-color: #1e293b;    }
+	  .dark-mode .pag-btn.ativo {   background-color: #38bdf8;   color: #0f172a;   border-color: #38bdf8;     box-shadow: 0 4px 6px -1px rgba(56, 189, 248, 0.2), 0 2px 4px -2px rgba(56, 189, 248, 0.2);  }
+
       
-      /* Responsividade Avançada para Dispositivos Móveis */
       @media (max-width: 480px) {
         .pag-wrapper { gap: 10px; margin: 16px 0; }
         .pag-info { font-size: 12px; }
