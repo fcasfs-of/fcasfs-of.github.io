@@ -1,4 +1,16 @@
 
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+       var paramName = decodeURIComponent(sParameterName[0]);
+        var paramValue = sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        if (paramName === sParam) {            return paramValue;        }
+    }    
+return "";   }
+
+
 function fs_pagination(config) {
   const listaContainerId = config.listaId;
   const paginacaoContainerId = config.paginacaoId || 'fs-paginacao-default';
@@ -103,6 +115,7 @@ function fs_pagination(config) {
       const btnNum = document.createElement('button');
       btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
       btnNum.innerText = i;
+	  btnNum.id = `sh_page_${i}`;
       btnNum.onclick = () => { paginaAtual = i;  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
       nav.appendChild(btnNum);
     }
@@ -114,9 +127,11 @@ function fs_pagination(config) {
     btnProximo.onclick = () => { paginaAtual++;  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnProximo);
 	  
+   //getUrlParameter
+  
   }
 
-  atualizar();
+  atualizar();   
 }
 
 
