@@ -96,6 +96,9 @@ function fs_pagination(config) {
   pagContainer.appendChild(wrapper);
 
   function atualizar() {  
+	const pagCdsearchpgg = document.getElementById("filtroInputB");
+	if(pagCdsearchpgg){   pagCdsearchpgg.value="";    }
+	  
     itens.forEach((item, index) => {
       const inicio = (paginaAtual - 1) * itensPorPagina;
       const fim = inicio + itensPorPagina;
