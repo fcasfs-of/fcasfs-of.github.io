@@ -210,7 +210,7 @@ fsmodal_open({
   id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:true,  remove_efect: false,
   include:{    player:"no"  },
   content:{
-    title:"",    type:"", context:"<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>",    size:"340",    description:""
+    title:"",    type:"", context:"<div class='scards-container dark-mode' style='overflow: hidden;  padding: 10px;  '><div class='card'>"+spsdrojeufgg+"</div></div>",    size:"340",    description:""
   }
 });
 		   }
