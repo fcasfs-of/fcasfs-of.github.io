@@ -173,7 +173,7 @@ function filtrarListda() {
 	  let searchpgg = getUrlParameter("s");
 	  if(searchpgg && searchpgg!=""){
         let pagCsearchpgg = document.getElementById("filtroInputB");
-	     if(pagCsearchpgg){   pagCsearchpgg.value=searchpgg;   filtrarListda();  }
+	     if(pagCsearchpgg){   pagCsearchpgg.value=searchpgg;    }    filtrarListda();
 	  }
 
 
