@@ -170,10 +170,10 @@ function filtrarListda() {
   }
 }
 
-	  let searchpgg = getUrlParameter("s");
+	  const searchpgg = getUrlParameter("s");
 	  if(searchpgg && searchpgg!=""){
-        let pagCsearchpgg = document.getElementById("filtroInputB");
-	     if(pagCsearchpgg){   pagCsearchpgg.value=searchpgg;    }    filtrarListda();
+        const pagCsearchpgg = document.getElementById("filtroInputB");
+	     if(pagCsearchpgg){   pagCsearchpgg.value=searchpgg;    if(pagCsearchpgg.value!=""){  filtrarListda();   }   }    
 	  }
 
 
