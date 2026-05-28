@@ -210,7 +210,7 @@ fsmodal_open({
   id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:true,  remove_efect: true,
   include:{    player:"no"  },
   content:{
-    title:"",    type:"", context:"<div class='scards-container dark-mode' style='overflow: hidden;  padding: 10px;  '><div class='card' style='width: 100%; position: absolute; height: 100%; top: 0; left: 0; overflow: auto; right: 0; bottom: 0;'>"+spsdrojeufgg+"</div></div>  <style>.modal-content .card-links button.page-link { display:none;  }  .modal-content .card-links card-icon svg { fill: currentColor;  }   </style>",    size:"500",    description:""
+    title:"",    type:"", context:"<div class='scards-container dark-mode' style='overflow: hidden;  padding: 10px;  '><div class='card' style='width: 100%; position: absolute; height: 100%; top: 0; left: 0; overflow: auto; right: 0; bottom: 0;'>"+spsdrojeufgg+"</div></div>  <style>.modal-content .card .card-links button.page-link { display:none;  }  .modal-content .card .card-icon svg { fill: currentColor;  }   </style>",    size:"500",    description:""
   }
 });
 		   }
