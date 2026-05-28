@@ -130,7 +130,7 @@ function fs_pagination(config) {
 	  let pagConIshd = getUrlParameter("p");
 	  if(pagConIshd && pagConIshd!=""){
         let pagConId = document.getElementById(`sh_page_${pagConIshd}`);
-	     if(pagConId){   if(pagConId.click){  pagConId.click();  }  }
+	     if(pagConId){   pagConId.click();   }
 	  }
 
   
