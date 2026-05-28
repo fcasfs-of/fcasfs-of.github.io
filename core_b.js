@@ -215,10 +215,9 @@ document.addEventListener("DOMContentLoaded", function(){
         api.close(0);      api.active(0);
       }
     });
-} 
-		  const botdsapaimo = document.getElementById("dpag-wrapperprj");
+}  }
+	const botdsapaimo = document.getElementById("dpag-wrapperprj");
      if (botdsapaimo) {  botdsapaimo.click();   }
-}
 		   }
 	  }
 
