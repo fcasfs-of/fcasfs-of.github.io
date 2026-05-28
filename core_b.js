@@ -206,16 +206,10 @@ document.addEventListener("DOMContentLoaded", function(){
 		   if(spsdrojeufgg && spsdrojeufgg!=""){
 			   
   const wrapdproper = document.createElement('div');
-  wrapdproper.id = 'dpag-wrapperprj';      wrapdproper.innerHTML = '';
+  wrapdproper.id = 'dpag-wrapperprj';    wrapdproper.style.display="none";   wrapdproper.innerHTML = '';
  document.body.appendChild(wrapdproper);
 
-			   function initSidebar_onload(api){       if(api){
-  api("dpag-wrapperprj", "this", [{ label: , desc: ""+spsdrojeufgg, icon: null, onClick: null }], "", '', 'light', 'fullscreen', function(api){
-      if(api){
-        api.close(0);      api.active(0);
-      }
-    });
-}  }
+
 	const botdsapaimo = document.getElementById("dpag-wrapperprj");
      if (botdsapaimo) {  botdsapaimo.click();   }
 		   }
