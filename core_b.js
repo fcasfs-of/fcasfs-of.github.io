@@ -134,11 +134,13 @@ function fs_pagination(config) {
 
   atualizar();  
 	
-	  let pagConIshd = getUrlParameter("p");
+document.addEventListener("DOMContentLoaded", function(){
+	const pagConIshd = getUrlParameter("p");
 	  if(pagConIshd && pagConIshd!=""){
-        let pagConId = document.getElementById(`sh_page_${pagConIshd}`);
+        const pagConId = document.getElementById(`sh_page_${pagConIshd}`);
 	     if(pagConId){   pagConId.click();   }
 	  }
+});
 	
 }
 
