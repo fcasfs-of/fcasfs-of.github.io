@@ -162,6 +162,20 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
 
 
 
+function filtrarprijfa(inputd="") {    var filtrarprijfa_d="";
+  var filter, ul, li, a, i;
+  if(inputd!=""){
+  filter = inputd.toUpperCase();
+  ul = document.getElementById("listr");
+  li = ul.querySelectorAll(".card");
+  for (i = 0; i < li.length; i++) {
+    if (li[i].innerText.toUpperCase().indexOf(filter) > -1) {
+      filtrarprijfa_d="<div class='cards-container'><div class='card'>"+li[i].innerHTML+"</div></div>";    return filtrarprijfa_d;
+    } else {      filtrarprijfa_d="";     }
+  }    }
+return filtrarprijfa_d;   }
+
+
 function filtrarListda() {
   var input, filter, ul, li, a, i;
   input = document.getElementById("filtroInputB");
@@ -184,6 +198,30 @@ document.addEventListener("DOMContentLoaded", function(){
 	  const botapaimo = document.querySelector('.busca button');
      if (botapaimo) {  botapaimo.click();   }
 	  }
+
+	
+	const sprojeufgg = getUrlParameter("project");
+	  if(sprojeufgg && sprojeufgg!=""){
+		  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
+		   if(spsdrojeufgg && spsdrojeufgg!=""){
+			   
+  const wrapdproper = document.createElement('div');
+  wrapdproper.id = 'dpag-wrapperprj';      wrapdproper.innerHTML = '';
+ document.body.appendChild(btnProximo);
+
+			   function initSidebar_onload(api){       if(api){
+  api("dpag-wrapperprj", "this", [{ label: , desc: ""+spsdrojeufgg, icon: null, onClick: null }], "", '', 'light', 'fullscreen', function(api){
+      if(api){
+        api.close(0);      api.active(0);
+      }
+    });
+} 
+		  const botdsapaimo = document.getElementById("dpag-wrapperprj");
+     if (botdsapaimo) {  botdsapaimo.click();   }
+}
+		   }
+	  }
+
 });
 
 
