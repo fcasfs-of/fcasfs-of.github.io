@@ -127,16 +127,16 @@ function fs_pagination(config) {
     btnProximo.onclick = () => { paginaAtual++;  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnProximo);
 
+  }
+
+  atualizar();  
+	
 	  let pagConIshd = getUrlParameter("p");
 	  if(pagConIshd && pagConIshd!=""){
         let pagConId = document.getElementById(`sh_page_${pagConIshd}`);
 	     if(pagConId){   pagConId.click();   }
 	  }
-
-  
-  }
-
-  atualizar();   
+	
 }
 
 
