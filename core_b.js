@@ -873,13 +873,14 @@ document.addEventListener("DOMContentLoaded", function(){
  document.body.appendChild(wrapdproper);
 
 function initSidebar_onload(api){       if(api){
-	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], ""+sprojeufgg, '', 'light', 'fullscreen', function(api){
+	api("dpag-wrapperprj", "this", [{ label: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", desc: '', icon: null, onClick: null }], "  ", '', 'light', 'fullscreen', function(api){
       if(api){
         api.close(0);      api.active(0);
       }
     });
 }  }
-			   
+	if (typeof initSidebar_start === 'function') {  initSidebar_start();		}  
+		   
 	const botdsapaimo = document.getElementById("dpag-wrapperprj");
      if (botdsapaimo) {  botdsapaimo.click();   }
 		   }
