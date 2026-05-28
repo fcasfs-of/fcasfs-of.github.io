@@ -170,13 +170,16 @@ function filtrarListda() {
   }
 }
 
-	  const searchpgg = getUrlParameter("s");
+
+document.addEventListener("DOMContentLoaded", function(){
+	const searchpgg = getUrlParameter("s");
 	  if(searchpgg && searchpgg!=""){
         const pagCsearchpgg = document.getElementById("filtroInputB");
 	     if(pagCsearchpgg){   pagCsearchpgg.value=searchpgg;    }
 	  const botapaimo = document.querySelector('.busca button');
      if (botapaimo) {  botapaimo.click();   }
 	  }
+});
 
 
 function carregarTudo(listaRecursos) {   if(listaRecursos){
