@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function(){
  document.body.appendChild(wrapdproper);
 
  function initSidebar_onload(api){       if(api){
-  api("dpag-wrapperprj", "this", [{ label: '', desc: ""+spsdrojeufgg, icon: null, onClick: null }], "", '', 'light', 'fullscreen', function(api){
+  api("dpag-wrapperprj", "this", [{ label: '', desc: "<div class='cards-container'><div class='card'>"+spsdrojeufgg+"</div></div>", icon: null, onClick: null }], "", '', 'light', 'fullscreen', function(api){
       if(api){
         api.close(0);      api.active(0);
       }
