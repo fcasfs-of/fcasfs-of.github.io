@@ -170,8 +170,8 @@ function filtrarprijfa(inputd="") {    var filtrarprijfa_d="";
   li = ul.querySelectorAll(".card");
   for (i = 0; i < li.length; i++) {
     if (li[i].innerText.toUpperCase().indexOf(filter) > -1) {
-      filtrarprijfa_d="<div class='cards-container'><div class='card'>"+li[i].innerHTML+"</div></div>";    return filtrarprijfa_d;
-    } else {      filtrarprijfa_d="";     }
+      filtrarprijfa_d=li[i].innerHTML;    return filtrarprijfa_d;
+    } else {      }
   }    }
 return filtrarprijfa_d;   }
 
