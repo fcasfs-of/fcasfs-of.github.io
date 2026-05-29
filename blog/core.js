@@ -283,7 +283,7 @@ lbox_moday=` onclick="postF_imgs('${postiid}');" `;
 
 
     function switchLanguage(lang) {
-           if(lang && lang!=""){    currentLanguage = lang;
+          if(lang && lang!=""){    currentLanguage = lang;
 
              document.querySelectorAll('[data-pt], [data-en]').forEach(element => {
                 if (element.hasAttribute(`data-${lang}`)) {
@@ -301,15 +301,25 @@ lbox_moday=` onclick="postF_imgs('${postiid}');" `;
 
             renderPosts();   
 
- fs_pagination({
+function loadsd_onpgsd(){  fs_pagination({
             listaId: 'posts-container', 
             paginacaoId: 'bloco-dos-botoes', 
             itens: 'post-card',      
-            itensPorPagina: 6,       
+            itensPorPagina: loaded_listff("pagination","blog"),       
             idioma: lang         
-});
+});     }
               
-        
+carregarTudo([
+    {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'onload': 'loadsd_onpgsd(); ',
+            'src': '/core_a.js'
+        }
+    }
+]);
+
+         
       }
    }
 
