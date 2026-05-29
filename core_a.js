@@ -122,7 +122,7 @@ function loaded_listff(tpe, lang, options) {
     if (set_itend_cd && set_itend_cd[tpe] && set_itend_cd[tpe][lang]) {
         result = set_itend_cd[tpe][lang];
 
-        if (type === "sidebar" && options) {
+        if (tpe === "sidebar" && options) {
             if (options.title && options.desc && options.icon && typeof options.open === "function") {
                 result.push({
                     label: options.title,
