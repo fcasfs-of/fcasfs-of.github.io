@@ -1,7 +1,11 @@
 
 
 var set_itend_cd ={
-
+pagination:{
+     download:8,
+     project:8,
+     blog:8
+},
 mural:{
 en:[
 {  alvo: '.container .hero',  mensagem: "New look, same core. <br/> I’ve redesigned my digital space to highlight what truly matters: impactful projects. <br/> Explore the new experience.",  tipo: 'info',  exibirBotaoFechar:false,  fixo: true, duration: 1400 }
@@ -131,6 +135,11 @@ ddloaded_listff.push({ label: opt_pre.title, desc: opt_pre.desc, icon: opt_pre.i
 
 }  }
 } else if (tp=="project" && lag && lag!=""){
+if(set_itend_cd[tp]){
+if(set_itend_cd[tp][lag]){
+ddloaded_listff=set_itend_cd[tp][lag]; 
+}  }
+} else if (tp=="pagination" && lag && lag!=""){
 if(set_itend_cd[tp]){
 if(set_itend_cd[tp][lag]){
 ddloaded_listff=set_itend_cd[tp][lag]; 
