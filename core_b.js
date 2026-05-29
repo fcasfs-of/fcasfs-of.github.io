@@ -43,7 +43,7 @@ function fs_pagination(config) {
   };
   const txt = textos[idioma] || textos['pt'];
 
-	function stardt_all_pro(){  if(Catalogo_prj){  if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }  }   }
+	function stardt_all_pro(){    if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }   }
 	
   const svgAnterior = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>`;
   const svgProximo = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>`;
