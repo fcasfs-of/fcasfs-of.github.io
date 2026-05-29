@@ -101,6 +101,8 @@ function fs_pagination(config) {
   function atualizar() {  
 	const pagCdsearchpgg = document.getElementById("filtroInputB");
 	if(pagCdsearchpgg){   pagCdsearchpgg.value="";    }
+
+	   if(Catalogo_prj && typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  } 
 	  
     itens.forEach((item, index) => {
       const inicio = (paginaAtual - 1) * itensPorPagina;
@@ -114,7 +116,7 @@ function fs_pagination(config) {
     btnAnterior.className = 'pag-btn';
     btnAnterior.innerHTML = svgAnterior;
     btnAnterior.disabled = paginaAtual === 1;
-    btnAnterior.onclick = () => { paginaAtual--;   if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnAnterior.onclick = () => { paginaAtual--;    listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnAnterior);
 
     for (let i = 1; i <= totalPaginas; i++) {
@@ -122,7 +124,7 @@ function fs_pagination(config) {
       btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
       btnNum.innerText = i;
 	  btnNum.id = `sh_page_${i}`;
-      btnNum.onclick = () => { paginaAtual = i;  if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+      btnNum.onclick = () => { paginaAtual = i;  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
       nav.appendChild(btnNum);
     }
 
@@ -130,7 +132,7 @@ function fs_pagination(config) {
     btnProximo.className = 'pag-btn';
     btnProximo.innerHTML = svgProximo;
     btnProximo.disabled = paginaAtual === totalPaginas;
-    btnProximo.onclick = () => { paginaAtual++;    if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnProximo.onclick = () => { paginaAtual++;     listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnProximo);
 
   }
