@@ -169,59 +169,7 @@ carregarTudo([
 ]);
 
   
-function share_btsD(att, listd, listdld, opti, id){
-var add_vjif = document.getElementsByTagName("main")[0];
-if(id){   var addd_vjif = document.getElementById(id);   if(addd_vjif){  add_vjif=addd_vjif;  }   }
-
-var share_btsD_vars={ icon:true, text:false };
-if(opti){ 
-if(opti.icon && opti.icon==="false"){  share_btsD_vars.icon=false;  }
-if(opti.text && opti.text==="true"){  share_btsD_vars.text=true;  }
-}
-
-if(share_btsD_vars.text===false && share_btsD_vars.icon===false){  share_btsD_vars.icon=true;   share_btsD_vars.text=false;  }
-
-var share_btsD_al="";
-if(listd){
-for(var jdd=0; jdd<listd.length; jdd++){
-var share_btsDdf_al="";
-if(listdld){  if(listdld[listd[jdd]]){ 
-for(var gfff=0; gfff<listdld[listd[jdd]].length; gfff++){
-share_btsDdf_al=share_btsDdf_al+" "+listdld[listd[jdd]][gfff][0]+"=\'"+listdld[listd[jdd]][gfff][1]+"\' "; 
-}    }    }
-
-var share_btsD_al_tectf="";   var shaicon_btsD_al_tectf="";  
-if(share_btsD_vars.icon===false){  shaicon_btsD_al_tectf=" icon_none";    }
-if(share_btsD_vars.text===true){  share_btsD_al_tectf=listd[jdd].toUpperCase();   }
-
- var object_shre='<a class="'+listd[jdd]+shaicon_btsD_al_tectf+'"'+share_btsDdf_al+'>'+share_btsD_al_tectf+'</a>';
- if(listd[jdd]=="separate"){  object_shre="<span class='separte'></span>";  }
-share_btsD_al=share_btsD_al+object_shre;
-}  }
-
-const scripjkshd = document.createElement("div");
-const scriptfd_shd = document.createElement("div");
-scriptfd_shd.className="shareon";
-scriptfd_shd.innerHTML = ""+share_btsD_al+"";
- scripjkshd.style.padding="5px";     scripjkshd.style.width="94%";
-scripjkshd.style.margin="0 auto";
- scripjkshd.innerHTML = "<br/>";
-
-
-if(att){
-for(var jdsdd=0; jdsdd<att.length; jdsdd++){
-if(att[jdsdd]){  
-for(var jddsdd=0; jddsdd<att[jdsdd].length; jddsdd++){   
-  if(att[jdsdd][0] && att[jdsdd][0]!=""){  
-scriptfd_shd.setAttribute(att[jdsdd][0], att[jdsdd][1]);     
-}   }   }   }   }   
-
-if(scriptfd_shd){  add_vjif.appendChild(scripjkshd);  
-  scripjkshd.appendChild(scriptfd_shd);   
- scripjkshd.innerHTML = scripjkshd.innerHTML+"<br/><br/>";               
- }
-
-}
+function share_btsD(att, listd, listdld, opti, id){ var add_vjif = (id && document.getElementById(id)) || document.getElementsByTagName("main")[0], opt = {icon: !(opti && opti.icon === "false"), text: !!(opti && opti.text === "true")}, html = (listd || []).map(function(item){ if(item === "separate") return "<span class='separte'></span>"; var attrs = ((listdld && listdld[item]) || []).map(function(a){ return " " + a[0] + "='" + a[1] + "' "; }).join(""), cls = item + (!opt.icon || (opt.icon === false && opt.text === false) ? " icon_none" : ""), txt = opt.text && !(opt.icon === false && opt.text === false) ? item.toUpperCase() : ""; return '<a class="' + cls + '"' + attrs + '>' + txt + '</a>'; }).join(""), div1 = document.createElement("div"), div2 = document.createElement("div"); div2.className = "shareon"; div2.innerHTML = html; div1.style.cssText = "padding:5px;width:94%;margin:0 auto;"; div1.innerHTML = "<br/>"; (att || []).forEach(function(a){ if(a && a[0]) div2.setAttribute(a[0], a[1]); }); if(div2){ add_vjif.appendChild(div1); div1.appendChild(div2); div1.innerHTML += "<br/><br/>"; } }
 
 
 function share_btsD_all(){   
