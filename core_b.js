@@ -102,7 +102,7 @@ function fs_pagination(config) {
 	const pagCdsearchpgg = document.getElementById("filtroInputB");
 	if(pagCdsearchpgg){   pagCdsearchpgg.value="";    }
 
-	   if(Catalogo_prj && txt){   if(typeof Catalogo_prj.filtrar === 'function' && txt.todos!=""){  Catalogo_prj.filtrar(txt.todos);  }    } 
+if (Catalogo_prj && typeof Catalogo_prj.filtrar === 'function' && txt?.todos) {    Catalogo_prj.filtrar(txt.todos);    }
 	  
     itens.forEach((item, index) => {
       const inicio = (paginaAtual - 1) * itensPorPagina;
