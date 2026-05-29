@@ -80,6 +80,9 @@
   }
 
   .category {
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px;
     margin-bottom: 2rem;
   }
 
