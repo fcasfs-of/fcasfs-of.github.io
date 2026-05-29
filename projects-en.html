@@ -96,7 +96,21 @@ fs_pagination({
             itensPorPagina: loaded_listff("pagination","project"),       
             idioma: 'en'         
 });   
-      renderizarCatalogo('proj-filtro-dinamico', 'listr', '.card', 'en');
+
+  
+   function minhaFuncaoAoFiltrar(dados) {
+    // 'dados.categoria' retorna o nome da categoria ativa ou 'all'
+    // 'dados.apenasNovos' retorna true ou false
+    // 'dados.visiveis' retorna um Array com os elementos HTML visíveis na tela
+    
+    const pagCfdsearchpgg = document.getElementById("filtroInputB");
+	if(pagCfdsearchpgg){   pagCfdsearchpgg.value="";    }
+	  
+    if (dados.visiveis.length === 0) {
+    }
+  }
+  
+renderizarCatalogo('proj-filtro-dinamico', 'listr', '.card', 'en', minhaFuncaoAoFiltrar);
 
 
 
