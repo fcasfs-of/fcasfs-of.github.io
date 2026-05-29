@@ -101,8 +101,6 @@ function fs_pagination(config) {
   function atualizar() {  
 	const pagCdsearchpgg = document.getElementById("filtroInputB");
 	if(pagCdsearchpgg){   pagCdsearchpgg.value="";    }
-
-if (Catalogo_prj?.filtrar && txt?.todos) {    Catalogo_prj.filtrar(txt.todos);   }
 	  
     itens.forEach((item, index) => {
       const inicio = (paginaAtual - 1) * itensPorPagina;
@@ -116,7 +114,7 @@ if (Catalogo_prj?.filtrar && txt?.todos) {    Catalogo_prj.filtrar(txt.todos);  
     btnAnterior.className = 'pag-btn';
     btnAnterior.innerHTML = svgAnterior;
     btnAnterior.disabled = paginaAtual === 1;
-    btnAnterior.onclick = () => { paginaAtual--;    listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnAnterior.onclick = () => { paginaAtual--;    if (Catalogo_prj_filtrar === 'function') {    Catalogo_prj_filtrar(txt.todos);   }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnAnterior);
 
     for (let i = 1; i <= totalPaginas; i++) {
@@ -124,7 +122,7 @@ if (Catalogo_prj?.filtrar && txt?.todos) {    Catalogo_prj.filtrar(txt.todos);  
       btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
       btnNum.innerText = i;
 	  btnNum.id = `sh_page_${i}`;
-      btnNum.onclick = () => { paginaAtual = i;  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+      btnNum.onclick = () => { paginaAtual = i;   if (Catalogo_prj_filtrar === 'function') {    Catalogo_prj_filtrar(txt.todos);   }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
       nav.appendChild(btnNum);
     }
 
@@ -132,7 +130,7 @@ if (Catalogo_prj?.filtrar && txt?.todos) {    Catalogo_prj.filtrar(txt.todos);  
     btnProximo.className = 'pag-btn';
     btnProximo.innerHTML = svgProximo;
     btnProximo.disabled = paginaAtual === totalPaginas;
-    btnProximo.onclick = () => { paginaAtual++;     listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnProximo.onclick = () => { paginaAtual++;    if (Catalogo_prj_filtrar === 'function') {    Catalogo_prj_filtrar(txt.todos);   }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnProximo);
 
   }
