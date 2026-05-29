@@ -96,8 +96,10 @@ fs_pagination({
             itensPorPagina: loaded_listff("pagination","project"),       
             idioma: 'pt'         
 });        
-  
-   function minhaFuncaoAoFiltrar(dados) {
+
+	
+
+function minhaFuncaoAoFiltrar(dados) {
     // 'dados.categoria' retorna o nome da categoria ativa ou 'all'
     // 'dados.apenasNovos' retorna true ou false
     // 'dados.visiveis' retorna um Array com os elementos HTML visíveis na tela
@@ -110,7 +112,8 @@ fs_pagination({
   }
   
 const Catalogo_prj = renderizarCatalogo('proj-filtro-dinamico', 'listr', '.card', 'pt', minhaFuncaoAoFiltrar);
-
+function Catalogo_prj_filtrar(lang) {  if(Catalogo_prj){   Catalogo_prj.filtrar(lang);   }   }
+	
 
 
   
