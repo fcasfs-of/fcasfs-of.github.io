@@ -38,8 +38,8 @@ function fs_pagination(config) {
   let paginaAtual = 1;
 
   const textos = {
-    pt: { info: `Exibindo <strong>${itensPorPagina}</strong> itens por página de um total de <strong>${totalItens}</strong>` },
-    en: { info: `Showing <strong>${itensPorPagina}</strong> items per page out of <strong>${totalItens}</strong> total` }
+    pt: { todos:"Todos", info: `Exibindo <strong>${itensPorPagina}</strong> itens por página de um total de <strong>${totalItens}</strong>` },
+    en: { todos:"All", info: `Showing <strong>${itensPorPagina}</strong> items per page out of <strong>${totalItens}</strong> total` }
   };
   const txt = textos[idioma] || textos['pt'];
 
@@ -114,7 +114,7 @@ function fs_pagination(config) {
     btnAnterior.className = 'pag-btn';
     btnAnterior.innerHTML = svgAnterior;
     btnAnterior.disabled = paginaAtual === 1;
-    btnAnterior.onclick = () => { paginaAtual--;   if(Catalogo_prj){Catalogo_prj.filtrar("Todos");Catalogo_prj.filtrar("All");}   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnAnterior.onclick = () => { paginaAtual--;   if(Catalogo_prj){Catalogo_prj.filtrar(txt.todos);}   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnAnterior);
 
     for (let i = 1; i <= totalPaginas; i++) {
@@ -122,7 +122,7 @@ function fs_pagination(config) {
       btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
       btnNum.innerText = i;
 	  btnNum.id = `sh_page_${i}`;
-      btnNum.onclick = () => { paginaAtual = i;   if(Catalogo_prj){Catalogo_prj.filtrar("Todos");Catalogo_prj.filtrar("All");}   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+      btnNum.onclick = () => { paginaAtual = i;   if(Catalogo_prj){Catalogo_prj.filtrar(txt.todos);}   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
       nav.appendChild(btnNum);
     }
 
@@ -130,7 +130,7 @@ function fs_pagination(config) {
     btnProximo.className = 'pag-btn';
     btnProximo.innerHTML = svgProximo;
     btnProximo.disabled = paginaAtual === totalPaginas;
-    btnProximo.onclick = () => { paginaAtual++;   if(Catalogo_prj){Catalogo_prj.filtrar("Todos");Catalogo_prj.filtrar("All");}   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnProximo.onclick = () => { paginaAtual++;   if(Catalogo_prj){Catalogo_prj.filtrar(txt.todos);}   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnProximo);
 
   }
