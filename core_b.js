@@ -42,8 +42,6 @@ function fs_pagination(config) {
     en: { todos:"All", info: `Showing <strong>${itensPorPagina}</strong> items per page out of <strong>${totalItens}</strong> total` }
   };
   const txt = textos[idioma] || textos['pt'];
-
-	function stardt_all_pro(){    if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }   }
 	
   const svgAnterior = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>`;
   const svgProximo = `<svg xmlns="http://w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="pag-icon"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>`;
@@ -116,7 +114,7 @@ function fs_pagination(config) {
     btnAnterior.className = 'pag-btn';
     btnAnterior.innerHTML = svgAnterior;
     btnAnterior.disabled = paginaAtual === 1;
-    btnAnterior.onclick = () => { paginaAtual--;   stardt_all_pro();   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnAnterior.onclick = () => { paginaAtual--;   if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnAnterior);
 
     for (let i = 1; i <= totalPaginas; i++) {
@@ -124,7 +122,7 @@ function fs_pagination(config) {
       btnNum.className = `pag-btn ${i === paginaAtual ? 'ativo' : ''}`;
       btnNum.innerText = i;
 	  btnNum.id = `sh_page_${i}`;
-      btnNum.onclick = () => { paginaAtual = i;  stardt_all_pro();  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+      btnNum.onclick = () => { paginaAtual = i;  if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
       nav.appendChild(btnNum);
     }
 
@@ -132,7 +130,7 @@ function fs_pagination(config) {
     btnProximo.className = 'pag-btn';
     btnProximo.innerHTML = svgProximo;
     btnProximo.disabled = paginaAtual === totalPaginas;
-    btnProximo.onclick = () => { paginaAtual++;    stardt_all_pro();  listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
+    btnProximo.onclick = () => { paginaAtual++;    if(typeof Catalogo_prj.filtrar === 'function'){  Catalogo_prj.filtrar(txt.todos);  }   listaContainer.scrollIntoView({ behavior: "smooth", block: "start" });  atualizar();  };
     nav.appendChild(btnProximo);
 
   }
