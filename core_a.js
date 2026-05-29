@@ -108,51 +108,37 @@ const igetObj_nInfonfo = { element: null,innerHTML: "",innerText: "",onclickProp
 
 
 
-function loaded_listff(tp, lag, opt_pre){
-var ddloaded_listff="";
-if(tp && tp!=""){
 
-if(tp=="skin"){
-ddloaded_listff={ class:"card", class_b:"page-link", class_icon:"svg" };
-} else if (tp=="home" && lag && lag!=""){
-if(set_itend_cd[tp]){
-if(set_itend_cd[tp][lag]){
-ddloaded_listff=set_itend_cd[tp][lag]; 
-}  }
-} else if (tp=="mural" && lag && lag!=""){
-if(set_itend_cd[tp]){
-if(set_itend_cd[tp][lag]){
-ddloaded_listff=set_itend_cd[tp][lag]; 
-}  }
-} else if (tp=="sidebar" && lag && lag!=""){
-if(set_itend_cd[tp]){
-if(set_itend_cd[tp][lag]){
-ddloaded_listff=set_itend_cd[tp][lag]; 
+function loaded_listff(tpe, lang, options) {
+    var result = "";
+    if (!tpe || tpe === "") {        return result;    }
 
- if (opt_pre && opt_pre.title && opt_pre.desc && opt_pre.icon && typeof opt_pre.open === 'function') {
-ddloaded_listff.push({ label: opt_pre.title, desc: opt_pre.desc, icon: opt_pre.icon, onClick: opt_pre.open });
-}     
+    if (tpe === "skin") {
+        return { class: "card", class_b: "page-link", class_icon: "svg" };
+    }
 
-}  }
-} else if (tp=="project" && lag && lag!=""){
-if(set_itend_cd[tp]){
-if(set_itend_cd[tp][lag]){
-ddloaded_listff=set_itend_cd[tp][lag]; 
-}  }
-} else if (tp=="pagination" && lag && lag!=""){
-if(set_itend_cd[tp]){
-if(set_itend_cd[tp][lag]){
-ddloaded_listff=set_itend_cd[tp][lag]; 
-}  }
-} else if (tp=="download" && lag && lag!=""){
-if(set_itend_cd[tp]){
-if(set_itend_cd[tp][lag]){
-ddloaded_listff=set_itend_cd[tp][lag]; 
-}  }
-}
+    if (!lang || lang === "") {        return result;    }
 
-}
-return ddloaded_listff;   }
+    if (set_itend_cd && set_itend_cd[tpe] && set_itend_cd[tpe][lang]) {
+        result = set_itend_cd[tpe][lang];
+
+        if (type === "sidebar" && options) {
+            if (options.title && options.desc && options.icon && typeof options.open === "function") {
+                result.push({
+                    label: options.title,
+                    desc: options.desc,
+                    icon: options.icon,
+                    onClick: options.open
+                });
+            }
+        }
+    }
+
+return result;    }
+
+
+
+
 
 
 
