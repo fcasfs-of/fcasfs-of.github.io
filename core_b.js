@@ -379,60 +379,11 @@ carregarTudo([
 
 
 
-function create_tooltipr(op){    var create_infoxrs="";   
- if (op){
-   if (op.text && op.text!=""){  
-    var create_infoxrcolor="";    var dcreate_infoxrcolor="top"; 
-     if (op.visible && op.visible==true){   create_infoxrcolor=' data-ver="true"';   }
-     if (op.pos && op.pos!=""){   dcreate_infoxrcolor=""+op.pos;   }
-   create_infoxrs=' data-tooltip="'+op.text+'" data-flow="'+dcreate_infoxrcolor+'"'+create_infoxrcolor;
-   }
- }
-return create_infoxrs;  }
-
-function create_tdestque(op){    var create_infoxrs="";       
- if (op){
-   if (op.type && op.type!=""){  
-   create_infoxrs=' card-destaque card-'+op.type;
-   }
- }
-return create_infoxrs;  }
-
-function create_tbadge(op, jh){    var create_infoxrs="";    var create_infoxratts="";    var sscreate_infoxrs="Novo";    
-  if(jh && jh=="en"){   sscreate_infoxrs="New";  }	
- if (op){
-  if (op.align && op.align===true){   create_infoxratts='align_ob ';   }
-   if (op.type && op.type!=""){  
-   create_infoxrs='  <span class="badge '+create_infoxratts+'badge-'+op.type+'">'+sscreate_infoxrs+'</span>  ';
-   }
- }
-return create_infoxrs;  }
-
-function create_tbadge_status(op, jh){    var create_infoxrs="";    var create_infoxratts={ planejado:"Planejado", desenvolvimento:"Em Desenvolvimento", testes:"Em Testes", versao:"Nova Versão", manutencao:"Em Manutenção", concluido:"Concluído", pausado:"Pausado", descontinuado:"Descontinuado" };  
-   if(jh && jh=="en"){  create_infoxratts={ planejado:"Planned", desenvolvimento:"In Development", testes:"Testing", versao:"New Version", manutencao:"Maintenance", concluido:"Completed", pausado:"Paused", descontinuado:"Deprecated" };   }
- if (op){
-   if (op.type && op.type!=""){  
-   create_infoxrs='  <span>  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  <br/><br/>  </span>';
-   }
-   }
-return create_infoxrs;  }
-
-
-
-function create_infoxr(op){    var create_infoxrs="";   
- if (op){
-   if (op.text && op.text!=""){  
-   var create_infoxrcolorid="";    var create_infoxvw="";   var create_infoxrcolor="";   var create_infsixeolor="10px";    var dcreate_infoxrcolor=""; 
-     if (op.color && op.color!=""){   create_infoxrcolor=" "+op.color;   }
-     if (op.pos && op.pos!=""){   dcreate_infoxrcolor=" "+op.pos;   }
-     if (op.size && op.size!=""){   create_infsixeolor=" "+op.size;   }
-     if (op.id && op.id!=""){   create_infoxrcolorid=" id='"+op.id+"'";    }
-	   var create_infoxpadrd='<span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';">'+op.text+'</span>';
-	  if (op.type && op.type!=""){   create_infoxvw=""+op.type;    create_infoxpadrd=' '+op.text+' <span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';"></span>';    }
-   create_infoxrs='<div class="ribbon'+create_infoxvw+dcreate_infoxrcolor+create_infoxrcolor+'">'+create_infoxpadrd+'</div>';
-   }
- }
-return create_infoxrs;  }
+function create_tooltipr(op){ var create_infoxrs=""; if (op){ if (op.text && op.text!=""){ var create_infoxrcolor=""; var dcreate_infoxrcolor="top"; if (op.visible && op.visible==true){ create_infoxrcolor=' data-ver="true"'; } if (op.pos && op.pos!=""){ dcreate_infoxrcolor=""+op.pos; } create_infoxrs=' data-tooltip="'+op.text+'" data-flow="'+dcreate_infoxrcolor+'"'+create_infoxrcolor; } } return create_infoxrs; }
+function create_tdestque(op){ var create_infoxrs=""; if (op){ if (op.type && op.type!=""){ create_infoxrs=' card-destaque card-'+op.type; } } return create_infoxrs; }
+function create_tbadge(op, jh){ var create_infoxrs=""; var create_infoxratts=""; var sscreate_infoxrs="Novo"; if(jh && jh=="en"){ sscreate_infoxrs="New"; } if (op){ if (op.align && op.align===true){ create_infoxratts='align_ob '; } if (op.type && op.type!=""){ create_infoxrs='  <span class="badge '+create_infoxratts+'badge-'+op.type+'">'+sscreate_infoxrs+'</span>  '; } } return create_infoxrs; }
+function create_tbadge_status(op, jh){ var create_infoxrs=""; var create_infoxratts={ planejado:"Planejado", desenvolvimento:"Em Desenvolvimento", testes:"Em Testes", versao:"Nova Versão", manutencao:"Em Manutenção", concluido:"Concluído", pausado:"Pausado", descontinuado:"Descontinuado" }; if(jh && jh=="en"){ create_infoxratts={ planejado:"Planned", desenvolvimento:"In Development", testes:"Testing", versao:"New Version", manutencao:"Maintenance", concluido:"Completed", pausado:"Paused", descontinuado:"Deprecated" }; } if (op){ if (op.type && op.type!=""){ create_infoxrs='  <span>  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  <br/><br/>  </span>'; } } return create_infoxrs; }
+function create_infoxr(op){ var create_infoxrs=""; if (op){ if (op.text && op.text!=""){ var create_infoxrcolorid=""; var create_infoxvw=""; var create_infoxrcolor=""; var create_infsixeolor="10px"; var dcreate_infoxrcolor=""; if (op.color && op.color!=""){ create_infoxrcolor=" "+op.color; } if (op.pos && op.pos!=""){ dcreate_infoxrcolor=" "+op.pos; } if (op.size && op.size!=""){ create_infsixeolor=" "+op.size; } if (op.id && op.id!=""){ create_infoxrcolorid=" id='"+op.id+"'"; } var create_infoxpadrd='<span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';">'+op.text+'</span>'; if (op.type && op.type!=""){ create_infoxvw=""+op.type; create_infoxpadrd=' '+op.text+' <span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';"></span>'; } create_infoxrs='<div class="ribbon'+create_infoxvw+dcreate_infoxrcolor+create_infoxrcolor+'">'+create_infoxpadrd+'</div>'; } } return create_infoxrs; }
 
 
 function add_itens_fr(id, op, conn, objsd){  
