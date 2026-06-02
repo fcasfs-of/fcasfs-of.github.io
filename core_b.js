@@ -74,6 +74,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 document.addEventListener("DOMContentLoaded", function(){	
+	const readmfolder = getUrlParameter("lerFile");
+	const readmfile = getUrlParameter("lerFile");
+	const readmfilelang = getUrlParameter("langFile");
+	  if(readmfile && readmfile!=""&& readmfolder && readmfolder!=""&& readmfilelang && readmfilelang!=""){
+fcas_reder('/'+readmfolder+'/'+readmfile+'', readmfilelang);
+	  }
+	
 	const sprojeufgg = getUrlParameter("project");
 	  if(sprojeufgg && sprojeufgg!=""){
  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
