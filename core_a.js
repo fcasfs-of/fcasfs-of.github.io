@@ -1,6 +1,9 @@
 
 
 var set_itend_cd ={
+routes:[
+  { name: "github", link: "https://github.com/fcasfs-of/" }
+],
 pagination:{
      download:8,
      project:8,
@@ -117,8 +120,10 @@ function loaded_listff(tpe, lang, options) {
 
     if (tpe === "skin") {
         return { class: "card", class_b: "page-link", class_icon: "svg" };
+    }   else if (tpe === "routes") {
+        return set_itend_cd[tpe];
     }
-
+         
     if (!lang || lang === "") {        return result;    }
 
     if (set_itend_cd && set_itend_cd[tpe] && set_itend_cd[tpe][lang]) {
