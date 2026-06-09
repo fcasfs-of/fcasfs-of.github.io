@@ -20,6 +20,7 @@ const fs_subdomains_pp = [
        { title: "MP3_MP", url: "/mp3_mp/" },
        { title: "Search Files in Folders", url: "/Search-Files-in-Folders/", disable: true },
        { title: "GradientS", url: "/GradientS/" },
+       { title: "PaletteApp", url: "/PaletteApp/" },
        { title: "TECH-SideBar", url: "/TECH-SideBar/" }
       ]
     }
