@@ -300,7 +300,7 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
 		    'onload': "setup_CookieBadr();",
-            'src': 'https://fcasfs-of.cloud-fs.net/cookies/consent.js'
+            'src': 'https://fcasfs-of.cloud-fs.net//consent.js'
         }
     }, {
         destino: 'body',  tag: 'script',   
@@ -419,6 +419,35 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 
 
 var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };
+
+var storage_ps_ctl="Inspetor de Armazenamento";
+var storage_ps_che= function() {
+	if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open('pt', { fullscreen: false, backup: true, close: true }, true, {
+    onOpen: (dominio) => {    },
+    onClose: () => {    },
+    onDelete: (tipo, chave) => {    },
+    onSearch: (textoDigitado) => {    },
+    onBackup: (dadosColetados) => {    },
+    onFullscreen: (isAtivo) => {    },
+    onError: (origem, erro) => {    }
+});     }
+};
+if(cokk_plu_esdnf=="en"){
+	storage_ps_ctl="Storage Inspector";
+	storage_ps_che= function() {
+	if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open('en', { fullscreen: false, backup: true, close: true }, true, {
+    onOpen: (dominio) => {    },
+    onClose: () => {    },
+    onDelete: (tipo, chave) => {    },
+    onSearch: (textoDigitado) => {    },
+    onBackup: (dadosColetados) => {    },
+    onFullscreen: (isAtivo) => {    },
+    onError: (origem, erro) => {    }
+});     }
+};
+}
+var storage_ps = { title: storage_ps_ctl, desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_ps_che  };
+
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
