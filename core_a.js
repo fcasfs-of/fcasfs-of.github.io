@@ -138,16 +138,16 @@ function loaded_listff(tpe, lang, options) {
         result = set_itend_cd[tpe][lang];
 
         if (tpe === "sidebar" && options) {
-      options.forEach(opt => {
-        if (opt.title && opt.desc && opt.icon && typeof opt.open === "function") {
+  for (var fdi = 0; fdi < options.length; fdi++) {
+        if (options[fdi].title && options[fdi].desc && options[fdi].icon && typeof options[fdi].open === "function") {
             result.push({
-                label: opt.title,
-                desc: opt.desc,
-                icon: opt.icon,
-                onClick: opt.open
+                label: options[fdi].title,
+                desc: options[fdi].desc,
+                icon: options[fdi].icon,
+                onClick: options[fdi].open
             });
         }
-    });
+    }
         }
     }
 
