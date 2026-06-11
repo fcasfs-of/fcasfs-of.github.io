@@ -419,7 +419,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };
+var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };    var storage_ps={};
 
 function storage_ps_crtew(cokk_plu_esdnf) {   var storaged_ps = { title: "", desc: "", icon:null, open: null }
 	if (typeof StorageInspector_ON === 'function'){
@@ -434,7 +434,7 @@ storaged_ps = { title: "Storage Inspector", desc: "", icon:'<svg viewBox="0 0 24
 }    }
 return storaged_ps;  }
 
-function astorage_ps_crtew(cokk_plu_esdnf) {    var storage_ps = storage_ps_crtew(cokk_plu_esdnf);     }
+function astorage_ps_crtew(cokk_plu_esdnf) {     storage_ps = storage_ps_crtew(cokk_plu_esdnf);     }
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
