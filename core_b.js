@@ -208,7 +208,7 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js',
-			'onload': "var storage_ps = storage_ps_crtew('"+cokk_plu_esdnf+"');",
+			'onload': "astorage_ps_crtew('"+cokk_plu_esdnf+"');",
         }
     }, {
         destino: 'head',    tag: 'link',
@@ -434,6 +434,7 @@ storaged_ps = { title: "Storage Inspector", desc: "", icon:'<svg viewBox="0 0 24
 }    }
 return storaged_ps;  }
 
+function astorage_ps_crtew(cokk_plu_esdnf) {    var storage_ps = storage_ps_crtew(cokk_plu_esdnf);     }
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
