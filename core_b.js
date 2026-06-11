@@ -419,12 +419,12 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };    var storage_ps={};
+var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };    var storage_ps={ title: "", desc: "", icon:null, open: null };
 
 function storage_ps_crtew(cokk_plu_esdnf) {   var storadged_ps = { title: "", desc: "", icon:null, open: null };
 	if (typeof StorageInspector_ON === 'function'){
 StorageInspector_ON();
-function storage_ps_show(laj) {  if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open(laj, { fullscreen: false, backup: true, close: true }, true, {  });     }  }
+function storage_ps_show(laj) {  if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open(laj, { fullscreen: false, backup: true, close: true }, true);     }  }
 function storage_pspt_show() {  storage_ps_show("pt");  }
 function storage_psen_show() {  storage_ps_show("en");  }
 
