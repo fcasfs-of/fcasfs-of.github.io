@@ -248,6 +248,11 @@ carregarTudo([
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/cookies/langs.js'
         }
     }, {
