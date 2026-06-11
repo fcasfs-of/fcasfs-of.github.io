@@ -428,13 +428,13 @@ function storage_ps_show(laj) {  if (typeof analisadorAPI.open === 'function'){ 
 function storage_pspt_show() {  storage_ps_show("pt");  }
 function storage_psen_show() {  storage_ps_show("en");  }
 
-storadged_ps = { title: "Inspetor de Armazenamento", desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_pspt_show };
+storage_ps = { title: "Inspetor de Armazenamento", desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_pspt_show };
 if(cokk_plu_esdnf && cokk_plu_esdnf=="en"){
-storadged_ps = { title: "Storage Inspector", desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_psen_show };
+storage_ps = { title: "Storage Inspector", desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_psen_show };
 }    }
-obh = storadged_ps;  }
+  }
 
-function astorage_ps_crtew(cokk_plu_esdnf) {     storage_ps_crtew(storage_ps, cokk_plu_esdnf);     }
+function astorage_ps_crtew(cokk_plu_esdnf) {     storage_ps_crtew(cokk_plu_esdnf);     }
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
  
