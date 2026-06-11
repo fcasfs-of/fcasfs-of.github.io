@@ -300,7 +300,7 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
 		    'onload': "setup_CookieBadr();",
-            'src': 'https://fcasfs-of.cloud-fs.net//consent.js'
+            'src': 'https://fcasfs-of.cloud-fs.net/cookies/consent.js'
         }
     }, {
         destino: 'body',  tag: 'script',   
