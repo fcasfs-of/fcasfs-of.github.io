@@ -426,15 +426,7 @@ function storage_ps_crtew(cokk_plu_esdnf) {
 	if (typeof StorageInspector_ON === 'function'){
 StorageInspector_ON();
 function storage_ps_show(laj) {
-	if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open(laj, { fullscreen: false, backup: true, close: true }, true, {
-    onOpen: (dominio) => {    },
-    onClose: () => {    },
-    onDelete: (tipo, chave) => {    },
-    onSearch: (textoDigitado) => {    },
-    onBackup: (dadosColetados) => {    },
-    onFullscreen: (isAtivo) => {    },
-    onError: (origem, erro) => {    }
-});     }  }
+	if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open(laj, { fullscreen: false, backup: true, close: true }, true, {  });     }  }
 function storage_pspt_show() {  storage_ps_show("pt");  }
 function storage_psen_show() {  storage_ps_show("en");  }
 
