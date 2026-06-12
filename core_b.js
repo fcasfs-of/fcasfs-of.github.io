@@ -428,9 +428,9 @@ function storage_ps_show(laj) {  if (typeof analisadorAPI.open === 'function'){ 
 function storage_pspt_show() {  storage_ps_show("pt");  }
 function storage_psen_show() {  storage_ps_show("en");  }
 
-storage_ps = { title: "Inspetor de Armazenamento", desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_pspt_show };
+storage_ps = { title: "Inspetor de Armazenamento", desc: " ", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_pspt_show };
 if(cokk_plu_esdnf && cokk_plu_esdnf=="en"){
-storage_ps = { title: "Storage Inspector", desc: "", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_psen_show };
+storage_ps = { title: "Storage Inspector", desc: " ", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_psen_show };
 }    }
   }
 
@@ -471,7 +471,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
     }
 });   
 	
-cookies_pre = { title: "Cookies: "+langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, icon:' ', open: CookieConsent.showPreferences };
+cookies_pre = { title: "Cookies: "+langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2a10 10 0 0 0-5 1.5 4 4 0 0 1-4 4A10 10 0 0 0 2 12c0 5.523 4.477 10 10 10z M12 6h.01 M7.5 10.5h.01 M16.5 11.5h.01 M13 16.5h.01 M8.5 15.5h.01"/></svg>', open: CookieConsent.showPreferences };
 }   }
 
 
