@@ -52,7 +52,7 @@ var langs_cokkiesd = {
                         },
                         {
                             title: "Mais informações",
-                            description: "Para qualquer dúvida relacionada à minha política de cookies e às suas opções, entre em contato comigo."
+                            description: "Para qualquer dúvida relacionada à minha política de cookies e às suas opções, entre em <a class='cc__link' href='/contact'>contato comigo</a>."
                         }
                     ]
                 }
@@ -110,7 +110,7 @@ var langs_cokkiesd = {
                         },
                         {
                             title: "More information",
-                            description: "For any query in relation to my policy on cookies and your choices, please contact me."
+                            description: "For any query in relation to my policy on cookies and your choices, please <a class='cc__link' href='/contact-en'>contact me</a>."
                         }
                     ]
                 }
