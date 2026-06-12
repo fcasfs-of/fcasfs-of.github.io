@@ -434,7 +434,7 @@ storage_ps = { title: "Storage Inspector", desc: " ", icon:'<svg viewBox="0 0 24
 }    }
   }
 
-function astorage_ps_crtew(cokk_plu_esdnf) {     document.addEventListener("DOMContentLoaded", function(){  storage_ps_crtew(cokk_plu_esdnf);  });     }
+function astorage_ps_crtew(cokk_plu_esdnf) {    storage_ps_crtew(cokk_plu_esdnf);    document.addEventListener("DOMContentLoaded", function(){  storage_ps_crtew(cokk_plu_esdnf);  });     }
 
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
