@@ -421,16 +421,16 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 
 var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };    var storage_ps={ title: "Inspector", desc: "", icon:'', open: null };
 
-function storage_ps_crtew(obh,cokk_plu_esdnf) {   var storadged_ps = { title: "", desc: "", icon:null, open: null };
+function storage_ps_crtew(cokk_plu_esdnf) {   var storadged_ps = { title: "", desc: "", icon:null, open: null };
 	if (typeof StorageInspector_ON === 'function'){
 StorageInspector_ON();
 function storage_ps_show(laj) {  if (typeof analisadorAPI.open === 'function'){   analisadorAPI.open(laj, { fullscreen: false, backup: true, close: true }, true);     }  }
 function storage_pspt_show() {  storage_ps_show("pt");  }
 function storage_psen_show() {  storage_ps_show("en");  }
 
-storage_ps = { title: "Inspetor de Armazenamento", desc: " ", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_pspt_show };
+storage_ps = { title: "Inspetor de Armazenamento", desc: " ", icon:'<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve"><path d="M40.9,23.6c-0.2,0-0.3,0-0.5,0c0-0.3,0-0.5,0-0.8c0-5-4.1-9.1-9.1-9.1c-2.4,0-4.5,0.9-6.1,2.4	c-1.3-3.4-4.6-5.9-8.5-5.9c-5,0-9.1,4.1-9.1,9.1c0,1.7,0.5,3.2,1.2,4.6c-4,1-6.9,4.5-6.9,8.8c0,4.9,3.8,8.8,8.7,9v0h30.2	c5,0,9.1-4.1,9.1-9.1S45.9,23.6,40.9,23.6z M16.3,24.4l7.8-3.7c0.3-0.2,0.8-0.2,1.1,0l7.8,3.7c0.5,0.2,0.5,0.8,0,1.1l-7.8,3.7	c-0.3,0.2-0.8,0.2-1.1,0l-7.8-3.7C15.9,25.3,15.9,24.6,16.3,24.4z M33.1,33.6l-7.8,3.7c-0.3,0.2-0.8,0.2-1.1,0l-7.8-3.7	c-0.5-0.2-0.5-0.8,0-1.1l1-0.5c0.1-0.1,0.3-0.1,0.5,0l6.3,3c0.3,0.2,0.8,0.2,1.1,0l6.2-3c0.1-0.1,0.3-0.1,0.5,0l1,0.5	C33.5,32.7,33.5,33.4,33.1,33.6z M33.1,29.6l-7.8,3.7c-0.3,0.2-0.8,0.2-1.1,0l-7.8-3.7c-0.5-0.2-0.5-0.8,0-1.1l1.1-0.5	c0.1-0.1,0.3-0.1,0.5,0l6.2,3c0.3,0.2,0.8,0.2,1.1,0l6.2-3c0.1-0.1,0.3-0.1,0.5,0l1.1,0.5C33.5,28.7,33.5,29.3,33.1,29.6z"/></svg>', open:storage_pspt_show };
 if(cokk_plu_esdnf && cokk_plu_esdnf=="en"){
-storage_ps = { title: "Storage Inspector", desc: " ", icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>', open:storage_psen_show };
+storage_ps = { title: "Storage Inspector", desc: " ", icon:'<svg fill="none" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve"><path d="M40.9,23.6c-0.2,0-0.3,0-0.5,0c0-0.3,0-0.5,0-0.8c0-5-4.1-9.1-9.1-9.1c-2.4,0-4.5,0.9-6.1,2.4	c-1.3-3.4-4.6-5.9-8.5-5.9c-5,0-9.1,4.1-9.1,9.1c0,1.7,0.5,3.2,1.2,4.6c-4,1-6.9,4.5-6.9,8.8c0,4.9,3.8,8.8,8.7,9v0h30.2	c5,0,9.1-4.1,9.1-9.1S45.9,23.6,40.9,23.6z M16.3,24.4l7.8-3.7c0.3-0.2,0.8-0.2,1.1,0l7.8,3.7c0.5,0.2,0.5,0.8,0,1.1l-7.8,3.7	c-0.3,0.2-0.8,0.2-1.1,0l-7.8-3.7C15.9,25.3,15.9,24.6,16.3,24.4z M33.1,33.6l-7.8,3.7c-0.3,0.2-0.8,0.2-1.1,0l-7.8-3.7	c-0.5-0.2-0.5-0.8,0-1.1l1-0.5c0.1-0.1,0.3-0.1,0.5,0l6.3,3c0.3,0.2,0.8,0.2,1.1,0l6.2-3c0.1-0.1,0.3-0.1,0.5,0l1,0.5	C33.5,32.7,33.5,33.4,33.1,33.6z M33.1,29.6l-7.8,3.7c-0.3,0.2-0.8,0.2-1.1,0l-7.8-3.7c-0.5-0.2-0.5-0.8,0-1.1l1.1-0.5	c0.1-0.1,0.3-0.1,0.5,0l6.2,3c0.3,0.2,0.8,0.2,1.1,0l6.2-3c0.1-0.1,0.3-0.1,0.5,0l1.1,0.5C33.5,28.7,33.5,29.3,33.1,29.6z"/></svg>', open:storage_psen_show };
 }    }
   }
 
