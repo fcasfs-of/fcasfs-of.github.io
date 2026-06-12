@@ -419,7 +419,7 @@ if(document.getElementById(objsd[sis].id)){ document.getElementById(objsd[sis].i
 }
 
 
-var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };    var storage_ps={ title: "", desc: "", icon:'', open: null };
+var cookies_pre = { title: "Cookies", desc: "", icon:'', open: null };    var storage_ps={ title: "Inspector", desc: "", icon:'', open: null };
 
 function storage_ps_crtew(obh,cokk_plu_esdnf) {   var storadged_ps = { title: "", desc: "", icon:null, open: null };
 	if (typeof StorageInspector_ON === 'function'){
@@ -471,7 +471,7 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
     }
 });   
 	
-cookies_pre = { title: "Cookies: "+langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, icon:'<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2a10 10 0 0 0-5 1.5 4 4 0 0 1-4 4A10 10 0 0 0 2 12c0 5.523 4.477 10 10 10z M12 6h.01 M7.5 10.5h.01 M16.5 11.5h.01 M13 16.5h.01 M8.5 15.5h.01"/></svg>', open: CookieConsent.showPreferences };
+cookies_pre = { title: "Cookies: "+langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, icon:'<svg fill="none" width="24px" height="24px" viewBox="0 0 24 24" data-name="Line Color" xmlns="http://www.w3.org/2000/svg"><line x1="9.05" y1="9.5" x2="8.95" y2="9.5" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><line data-name="secondary-upstroke" x1="9.55" y1="15" x2="9.45" y2="15" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><line data-name="secondary-upstroke" x1="14.55" y1="14" x2="14.45" y2="14" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><path d="M18.12,9.78a3,3,0,0,1-3.9-3.9A3,3,0,0,1,12,3a9,9,0,1,0,9,9A3,3,0,0,1,18.12,9.78Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>', open: CookieConsent.showPreferences };
 }   }
 
 
