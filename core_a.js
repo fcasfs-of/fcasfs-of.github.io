@@ -99,9 +99,8 @@ en:[
 
 
 //     { label: 'Status', desc: 'Stay informed about how the system works.  <span id="statusu" style="display:none;"></span>', icon: '<svg width="24px" height="24px" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><rect height="6" rx="3" transform="translate(52 27.52) rotate(180)" width="6" x="23" y="10.76"/><path d="M27,41.24a2,2,0,0,1-2-2v-13H23a2,2,0,0,1,0-4h4a2,2,0,0,1,2,2v15A2,2,0,0,1,27,41.24Z"/><path d="M26,52A26,26,0,1,1,52,26,26,26,0,0,1,26,52ZM26,4A22,22,0,1,0,48,26,22,22,0,0,0,26,4Z"/></svg>', onClickf: function(){   if(document.getElementById("statusu")){  document.getElementById("statusu").click();  } }  },
-//     { separate:true }, 
 //     { label: 'Status', desc: 'Mantenha-se informado sobre o funcionamento do sistema.  <span id="statusu" style="display:none;"></span>', icon: '<svg width="24px" height="24px" viewBox="0 0 52 52" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><rect height="6" rx="3" transform="translate(52 27.52) rotate(180)" width="6" x="23" y="10.76"/><path d="M27,41.24a2,2,0,0,1-2-2v-13H23a2,2,0,0,1,0-4h4a2,2,0,0,1,2,2v15A2,2,0,0,1,27,41.24Z"/><path d="M26,52A26,26,0,1,1,52,26,26,26,0,0,1,26,52ZM26,4A22,22,0,1,0,48,26,22,22,0,0,0,26,4Z"/></svg>', onClickf: function(){   if(document.getElementById("statusu")){  document.getElementById("statusu").click();  } }  },
-//     { separate:true }, 
+
 
 
 function getObj_nInfoEx(local=document, obj) {  
