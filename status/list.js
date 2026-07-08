@@ -1,4 +1,4 @@
-const incidenteSSite = { 
+const sincidenteSSite = { 
         en:{ text: "Main WebSite" },
         pt:{ text: "Site Principal" },
         list:[
@@ -24,7 +24,7 @@ const incidenteSSite = {
 };
 
 
-const meusSistemas = [
+const smeusSistemas = [
         { 
             name: { pt: "Servidor Web Principal", en: "Main Web Server" }, 
             type: "server", 
