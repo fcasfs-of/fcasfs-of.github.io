@@ -336,7 +336,7 @@ carregarTudo([
 		    'type': "text/javascript",
 		    'defer': "",
 		    'init': "",
-		    'onload': "share_btsD_all();  share_txtD_all('"+cokk_plu_esdnf+"');",
+		    'onload': "share_btsD_all('"+cokk_plu_esdnf+"');",
             'src': 'https://fcasfs-of.cloud-fs.net/share/core.js'
         }
     }
@@ -685,6 +685,8 @@ body.oncontextmenu=function() { return false; };
 
 
 document.addEventListener("DOMContentLoaded", function(){	
+	share_txtD_all(cokk_plu_esdnf);
+	
 	const readmfolder = getUrlParameter("lerFolder");
 	const readmfile = getUrlParameter("lerFile");
 	const readmfilelang = getUrlParameter("langFile");
