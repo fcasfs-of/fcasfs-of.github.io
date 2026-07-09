@@ -1,4 +1,7 @@
 
+function fsummary_accAdd(val, titler, icons) { return (val && titler) ? (val === true ? '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + (icons ? '<div class="fjs-divider-icon">' + icons + '</div>' : '') + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>' : '<div class="fjs-divider-icon"></div><br/>') : ''; }
+
+
 function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
