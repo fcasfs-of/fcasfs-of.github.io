@@ -1,6 +1,9 @@
 
 function fsummary_accAdd(val, titler, icons) { return (val && titler) ? (val === true ? '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + (icons ? '<div class="fjs-divider-icon">' + icons + '</div>' : '') + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>' : '<div class="fjs-divider-icon"></div><br/>') : ''; }
 
+function fsummary_Add(o, t, i) { const e = typeof o === 'string' && o.trim() ? document.querySelector(o) : null; if (e?.parentElement) e.parentNode.insertBefore(Object.assign(document.createElement('span'), { innerHTML: `<br/> ${fsummary_accAdd(true, t, i)} ` }), e); }
+
+
 
 function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
