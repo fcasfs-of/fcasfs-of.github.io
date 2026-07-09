@@ -185,10 +185,11 @@ function share_txtD_all(fg){
 }
 }
 
-function share_btsD_all(){   
+function share_btsD_all(ggf){   
+		share_txtD_all(ggf);
  share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","threads","viber","vkontakte","whatsapp","separate","copy-url","email","print","separate","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
 	if(Shareon){  Shareon.init();   }
-}
+	share_txtD_all(ggf);     }
 
 function micAccessTool_run(cokk_plu_esdnf){ 
 	if(cokk_plu_esdnf && fs_accessibility){   fs_accessibility.init({ 
@@ -685,8 +686,6 @@ body.oncontextmenu=function() { return false; };
 
 
 document.addEventListener("DOMContentLoaded", function(){	
-	share_txtD_all(cokk_plu_esdnf);
-	
 	const readmfolder = getUrlParameter("lerFolder");
 	const readmfile = getUrlParameter("lerFile");
 	const readmfilelang = getUrlParameter("langFile");
