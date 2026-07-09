@@ -1,7 +1,7 @@
 
-function fsummary_accAdd(val, titler, icons) { return (val && titler) ? (val === true ? '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + (icons ? '<div class="fjs-divider-icon">' + icons + '</div>' : '') + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>' : '<div class="fjs-divider-icon"></div><br/>') : ''; }
+function fsummary_accAdd(val, titler, icons) { if (val && titler) { if (val === true) { let iconHtml = ''; if (icons) { iconHtml = '<div class="fjs-divider-icon">' + icons + '</div>'; } return '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>'; } else { return '<div class="fjs-divider-icon"></div><br/>'; } } else { return ''; } }
 
-function fsummary_Add(o, t, i) { const e = typeof o === 'string' && o.trim() ? document.querySelector(o) : null; if (e?.parentElement) e.parentNode.insertBefore(Object.assign(document.createElement('span'), { innerHTML: `<br/> ${fsummary_accAdd(true, t, i)} ` }), e); }
+function fsummary_Add(seletor, texto, item) { if (typeof seletor === 'string' && seletor.trim()) { const elemento = document.querySelector(seletor); if (elemento && elemento.parentElement) { const novoSpan = document.createElement('span'); novoSpan.innerHTML = '<br/> ' + fsummary_accAdd(true, texto, item) + ' '; elemento.parentNode.insertBefore(novoSpan, elemento); } } }
 
 
 
