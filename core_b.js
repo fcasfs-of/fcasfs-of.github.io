@@ -1,7 +1,24 @@
 
-function fsummary_accAdd(val, titler, icons) { if (val && titler) { if (val === true) { let iconHtml = ''; if (icons) { iconHtml = '<div class="fjs-divider-icon">' + icons + '</div>'; } return '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>'; } else { return '<div class="fjs-divider-icon"></div><br/>'; } } else { return ''; } }
+function fsummary_accAdd(val, titler, icons) {
+  if (!val && !titler) {    return '';  }
+  if (val === true && titler) {
+    let iconHtml = '';
+    if (icons) {      iconHtml = '<div class="fjs-divider-icon">' + icons + '</div>';    }
+    return '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>';
+  }
+  return '<div class="fjs-divider-icon"></div><br/>';
+}
 
-function fsummary_Add(seletor, texto, item) { if (typeof seletor === 'string' && seletor.trim()) { const elemento = document.querySelector(seletor); if (elemento && elemento.parentElement) { const novoSpan = document.createElement('span'); novoSpan.innerHTML = '<br/> ' + fsummary_accAdd(true, texto, item) + ' '; elemento.parentNode.insertBefore(novoSpan, elemento); } } }
+function fsummary_Add(seletor, texto, item) {
+  if (typeof seletor === 'string' && seletor.trim()) {
+    const elemento = document.querySelector(seletor);
+        if (elemento && elemento.parentElement) {
+      const novoSpan = document.createElement('span');
+          novoSpan.innerHTML = '<br/> ' + fsummary_accAdd(true, texto, item) + ' ';
+      elemento.parentElement.insertBefore(novoSpan, elemento);
+    }
+  }
+}
 
 
 
@@ -186,10 +203,10 @@ function share_txtD_all(fg){
 }
 
 function share_btsD_all(ggf){   
-		share_txtD_all(ggf);
  share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","threads","viber","vkontakte","whatsapp","separate","copy-url","email","print","separate","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
+	share_txtD_all(ggf);  
 	if(Shareon){  Shareon.init();   }
-	share_txtD_all(ggf);     }
+}
 
 function micAccessTool_run(cokk_plu_esdnf){ 
 	if(cokk_plu_esdnf && fs_accessibility){   fs_accessibility.init({ 
