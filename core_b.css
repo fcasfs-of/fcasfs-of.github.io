@@ -57,6 +57,20 @@
    .area-paginacao {   box-shadow: var(--shadow);    border: 1px solid #ccc;    transition: all 0.1s linear;    margin-top: 20px;   background: var(--primary-cardcolor); padding: 5px;  border-radius: 8px;  }
 
 
+ .fjs-divider {      user-select:none;  pointer-events:none;             display: flex;                align-items: center;                width: 100%;                margin: 7px 0;                gap: 15px;            }
+  .fjs-divider-line {                flex: 1;                height: 1px;                background: linear-gradient(90deg, transparent, #d1d5db, transparent);            }
+  .fjs-divider-content {                display: flex;                align-items: center;                gap: 8px;                   color: #000;                font-family: system-ui, -apple-system, sans-serif;                white-space: nowrap;            }
+  .fjs-divider-content svg {   fill: #000;   }
+.fjs-divider-icon {                width: 18px;                height: 18px;                display: flex;                align-items: center;                color: #6366f1;         }
+ .fjs-divider-text {                font-size: clamp(11px, 2.5vw, 13px);                font-weight: 700;                text-transform: uppercase;                letter-spacing: 0.1em;            }
+.cc--darkmode .fjs-divider-content{   color: #fff;   }
+.cc--darkmode .fjs-divider-content svg {   fill: #fff;   }
+			
+@media (max-width: 480px) {
+    .fjs-divider { gap: 8px; }
+ }
+
+
 .material-icons {
   font-family: 'Material Icons';
   font-weight: normal;
