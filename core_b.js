@@ -4,9 +4,9 @@ function fsummary_accAdd(val, titler, icons) {
   if (val === true && titler) {
     let iconHtml = '';
     if (icons) {      iconHtml = '<div class="fjs-divider-icon" style="margin-right: 2px;">' + icons + '</div>';    }
-    return '<br/><br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text" style="text-transform: none;">' + titler + '</span></div><div class="fjs-divider-line"></div></div>';
+    return '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text" style="text-transform: none;">' + titler + '</span></div><div class="fjs-divider-line"></div></div>';
   }
-  return '<br/><br/><div class="fjs-divider"><div class="fjs-divider-line"></div> <div class="fjs-divider-line"></div></div>';
+  return '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div> <div class="fjs-divider-line"></div></div><br/>';
 }
 
 function fsummary_Add(seletor, texto, item) {
