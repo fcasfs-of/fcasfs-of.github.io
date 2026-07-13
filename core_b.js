@@ -1,13 +1,13 @@
 
 function fsummary_accAdd(val, titler, icons) {   var fsummary_accAddadd=""; 
-  //if (!val && !titler) {    fsummary_accAddadd= '';  }
+  if (!val && !titler) {    return '';  }
   if (val === true && titler) {
     let iconHtml = '';
     if (icons) {      iconHtml = '<div class="fjs-divider-icon">' + icons + '</div>';    }
-    fsummary_accAddadd= '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>';
+    return '<br/><br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div>';
   }
-  //fsummary_accAddadd= '<br/><div class="fjs-divider-icon"></div><br/>';
-return fsummary_accAddadd;   }
+  return '<br/><br/><div class="fjs-divider"><div class="fjs-divider-line"></div> <div class="fjs-divider-line"></div></div>';
+}
 
 function fsummary_Add(seletor, texto, item) {
   if (typeof seletor === 'string' && seletor!="") {
