@@ -12,11 +12,11 @@ function fsummary_accAdd(val, titler, icons) {
 function fsummary_Add(seletor, texto, item) {
   if (typeof seletor === 'string' && seletor.trim()) {
     const elemento = document.querySelector(seletor);
-        if (elemento && elemento.parentElement) {
+        if (elemento) {   if (elemento.parentElement) {
       const novoSpan = document.createElement('span');
           novoSpan.innerHTML = '<br/> ' + fsummary_accAdd(true, texto, item) + ' ';
       elemento.parentElement.insertBefore(novoSpan, elemento);
-    }
+    }    }
   }
 }
 
