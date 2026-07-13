@@ -1,20 +1,20 @@
 
 function fsummary_accAdd(val, titler, icons) {
   if (!val && !titler) {    return '';  }
-  if (val === true && titler) {
+  else if (val === true && titler) {
     let iconHtml = '';
     if (icons) {      iconHtml = '<div class="fjs-divider-icon">' + icons + '</div>';    }
-    return '<div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>';
+    return '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>';
   }
-  return '<div class="fjs-divider-icon"></div><br/>';
+  return '<br/><div class="fjs-divider-icon"></div><br/>';
 }
 
 function fsummary_Add(seletor, texto, item) {
-  if (typeof seletor === 'string' && seletor.trim()) {
+  if (typeof seletor === 'string' && seletor!="") {
     const elemento = document.querySelector(seletor);
         if (elemento) {   if (elemento.parentElement) {
       const novoSpan = document.createElement('span');
-          novoSpan.innerHTML = '<br/> ' + fsummary_accAdd(true, texto, item) + ' ';
+          novoSpan.innerHTML = '' + fsummary_accAdd(true, texto, item) + '';
       elemento.parentElement.insertBefore(novoSpan, elemento);
     }    }
   }
