@@ -13,7 +13,7 @@ function fsummary_accAdd(obj) {
   if (!obj.val && !obj.titler) {        return '';    }
   let fsummary_accAdd_attrit = "";
   if (obj.name && obj.name !== "") { 
-    fsummary_accAdd_attrit = " id='" + obj.name + "_" + gerarID_ffSimples(6) + "'"; 
+    fsummary_accAdd_attrit = " id='" + obj.name + "_" + gerarID_ffSimples(8) + "'"; 
   }
   if (obj.val === true && obj.titler) {
     let iconHtml = '';
@@ -33,7 +33,7 @@ function fsummary_Add(obj) {
   if (elemento && elemento.parentElement) {
     const novaDiv = document.createElement('div');
         novaDiv.style.cssText = 'width: 95%; overflow: auto; margin: 0 auto; text-align: center;';
-        novaDiv.innerHTML = fsummary_accAdd({ val: true, titler: obj.texto || '', icons:obj.item || '', name:obj.seletor });
+        novaDiv.innerHTML = fsummary_accAdd({ val: true, titler: obj.texto || '', icons:obj.item || '', name:"divider_obj" });
     elemento.parentElement.insertBefore(novaDiv, elemento);
   }
 }
