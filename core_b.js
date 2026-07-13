@@ -1,4 +1,12 @@
 
+function repetirTexto(texto, quantidade) {
+    let resultado = "";
+        if (texto && quantidade && quantidade >= 1) {
+        for (let i = 0; i < quantidade; i++) {            resultado += texto;        }
+    }    
+return resultado;  }
+
+
 function fsummary_accAdd(val, titler, icons) {   
   if (!val && !titler) {    return '';  }
   if (val === true && titler) {
@@ -6,7 +14,7 @@ function fsummary_accAdd(val, titler, icons) {
     if (icons) {      iconHtml = '<div class="fjs-divider-icon" style="margin-right: 2px;">' + icons + '</div>';    }
     return '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text" style="text-transform: none;">' + titler + '</span></div><div class="fjs-divider-line"></div></div>';
   }
-  return '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div> <div class="fjs-divider-line"></div></div><br/>';
+  return '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div>'+repetirTexto('<div class="fjs-divider-line"></div>', icons)+'</div><br/>';
 }
 
 function fsummary_Add(seletor, texto, item) {
@@ -703,7 +711,7 @@ body.oncontextmenu=function() { return false; };
 
 
 document.addEventListener("DOMContentLoaded", function(){    
-		fsummary_Add("cards-container", "", '');
+		fsummary_Add("cards-container", "", 0);
 
 	const readmfolder = getUrlParameter("lerFolder");
 	const readmfile = getUrlParameter("lerFile");
