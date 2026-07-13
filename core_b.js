@@ -14,7 +14,8 @@ function fsummary_Add(seletor, texto, item) {
     const elemento = document.querySelector("."+seletor);
         if (elemento) {   
       const novoSpan = document.createElement('span');
-          novoSpan.innerHTML = '' + fsummary_accAdd(true, texto, item) + '';
+		novoSpan.style.cssText = 'width: 95%;    overflow: auto;    margin: 0 auto;    text-align: center;";
+        novoSpan.innerHTML = '' + fsummary_accAdd(true, texto, item) + '';
       elemento.parentElement.insertBefore(novoSpan, elemento);
     }
   }
