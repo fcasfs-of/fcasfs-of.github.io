@@ -1,12 +1,12 @@
 
 function fsummary_accAdd(val, titler, icons) {   var fsummary_accAddadd=""; 
-  if (!val && !titler) {    fsummary_accAddadd= '';  }
+  //if (!val && !titler) {    fsummary_accAddadd= '';  }
   if (val === true && titler) {
     let iconHtml = '';
     if (icons) {      iconHtml = '<div class="fjs-divider-icon">' + icons + '</div>';    }
     fsummary_accAddadd= '<br/><div class="fjs-divider"><div class="fjs-divider-line"></div><div class="fjs-divider-content">' + iconHtml + '<span class="fjs-divider-text">' + titler + '</span></div><div class="fjs-divider-line"></div></div><br/>';
   }
-  fsummary_accAddadd= '<br/><div class="fjs-divider-icon"></div><br/>';
+  //fsummary_accAddadd= '<br/><div class="fjs-divider-icon"></div><br/>';
 return fsummary_accAddadd;   }
 
 function fsummary_Add(seletor, texto, item) {
@@ -204,8 +204,7 @@ function share_txtD_all(fg){
 
 function share_btsD_all(ggf){   
  share_btsD([["data-via","website"],["data-title",""],["data-media",""],["data-url",""],["data-hashtags","fcasfs-of"]], [ "bluesky","facebook","fediverse","hackernews","linkedin","lobsters","mastodon","messenger","odnoklassniki","pinterest","pocket","reddit","teams","telegram","tumblr","twitter","threads","viber","vkontakte","whatsapp","separate","copy-url","email","print","separate","web-share" ], { messenger:[["data-fb-app-id",""]] }, { icon:"true", text:"false" }, "");    
-	share_txtD_all(ggf);  
-	if(Shareon){  Shareon.init();   }
+	if(Shareon){  Shareon.init();   }    	 
 }
 
 function micAccessTool_run(cokk_plu_esdnf){ 
@@ -702,7 +701,7 @@ body.oncontextmenu=function() { return false; };
 
 
 
-document.addEventListener("DOMContentLoaded", function(){	
+document.addEventListener("DOMContentLoaded", function(){   share_txtD_all(cokk_plu_esdnf); 	
 	const readmfolder = getUrlParameter("lerFolder");
 	const readmfile = getUrlParameter("lerFile");
 	const readmfilelang = getUrlParameter("langFile");
