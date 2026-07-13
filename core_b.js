@@ -1,5 +1,5 @@
 
-function fsummary_accAdd(val, titler, icons) {   var fsummary_accAddadd=""; 
+function fsummary_accAdd(val, titler, icons) {   
   if (!val && !titler) {    return '';  }
   if (val === true && titler) {
     let iconHtml = '';
