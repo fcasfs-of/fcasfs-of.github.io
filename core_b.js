@@ -234,6 +234,18 @@ function micAccessTool_run(cokk_plu_esdnf){
  });    }
 }
 
+function marregamentol_run(){ 
+if (typeof carregamentoGlobal === 'function'){ 	carregamentoGlobal('show', {
+    modelo: 'spinner', posicao: 'center',
+    tipo: 'classic',   // Opções: classic, ring, dash, dots, bars, pulse, custom
+    cor: '#111',  tamanho: '75px',   
+    velocidade: '0.8s', arredondamento: '20px',
+    fundoOpacity: 0.8,  
+    autoDetect: true,
+    mostrarPorcentagem: false, texto: ''
+});   }
+}
+
 
 function execr_runff(ff){   if (typeof ff === 'function') {  ff();  }     }
 
@@ -254,6 +266,12 @@ carregarTudo([
             'rel': 'stylesheet'
         }
     }, {
+        destino: 'head',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/core_k.js',
+			'onload': "marregamentol_run();",
+        }
+    },	{
         destino: 'body',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js',
