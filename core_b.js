@@ -266,7 +266,7 @@ carregarTudo([
             'rel': 'stylesheet'
         }
     }, {
-        destino: 'head',  tag: 'script',   
+        destino: 'body',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/core_k.js',
 			'onload': "marregamentol_run();",
