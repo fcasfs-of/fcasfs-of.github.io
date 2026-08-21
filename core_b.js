@@ -268,12 +268,6 @@ carregarTudo([
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/core_k.js',
-			'onload': "marregamentol_run();",
-        }
-    },	{
-        destino: 'body',  tag: 'script',   
-        atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/StorageInspector.js',
 			'onload': "astorage_ps_crtew('"+cokk_plu_esdnf+"');",
         }
@@ -392,6 +386,12 @@ carregarTudo([
 		    'init': "",
 		    'onload': "share_btsD_all('"+cokk_plu_esdnf+"');  share_txtD_all('"+cokk_plu_esdnf+"');",
             'src': 'https://fcasfs-of.cloud-fs.net/share/core.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/core_k.js',
+			'onload': "marregamentol_run();",
         }
     }
 ]);
