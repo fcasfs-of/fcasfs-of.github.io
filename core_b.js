@@ -250,6 +250,16 @@ if (typeof carregamentoGlobal === 'function'){ 	carregamentoGlobal('show', {
     autoDetect: true,
     mostrarPorcentagem: false, texto: ''
 });   }
+
+if (typeof inicializarHistorico === 'function'){ 	var inicializarHistorico_the="claro";
+if(currentTheme === 'dark'){  inicializarHistorico_the="escuro";  }
+    inicializarHistorico({  tema:inicializarHistorico_the, idioma: cokk_plu_esdnf, 
+        idBotao: "hsitoricacc",
+        stextoBotao: "Abrir Painel de Acessos",
+        stituloModal: "Minhas Visitas Recentes",
+        exibirIcone: true, exibirTexto: false,
+    });     }
+	
 }
 
 
