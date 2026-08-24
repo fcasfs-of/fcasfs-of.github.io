@@ -11,6 +11,11 @@ function inicializarHistorico(e){const t=e.idBotao||"btn-historico",a=e.idioma||
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    inicializarHistorico();
+    if (typeof inicializarHistorico === 'function'){ 	
+    inicializarHistorico({  tema:"claro", idioma: "en", 
+        idBotao: "nonehist",
+        exibirIcone: false, exibirTexto: false
+    });     }
+    
 });
 
