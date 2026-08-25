@@ -161,7 +161,25 @@ itens:loaded_listff("home","en")
 }, "");
 
 
-</script>
 
+  
+function minhaFuncaoAoFiltrar(dados) {
+    // 'dados.categoria' retorna o nome da categoria ativa ou 'all'
+    // 'dados.apenasNovos' retorna true ou false
+    // 'dados.visiveis' retorna um Array com os elementos HTML visíveis na tela
+
+    if (dados.visiveis.length === 0) {
+    }
+  }
+  
+const Catalogo_prj = renderizarCatalogo('proj-filtro-dinamico', 'listr', '.card', 'pt', minhaFuncaoAoFiltrar);
+function Catalogo_prj_filtrar(lang) {  if(Catalogo_prj){   Catalogo_prj.filtrar(lang);   }   }
+	
+
+</script>
+<style>
+  .card .ribbond, .catalog-controls-container .catalog-toggle-wrapper {  display:none;  }
+</style>
+  
 </body>
 </html>
