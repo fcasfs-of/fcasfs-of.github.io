@@ -1,4 +1,27 @@
 const blogPosts = [
+{
+    category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
+    custom: { pt: { more: "Ver mais" }, en: { more: "View more" } },
+    name: {
+        pt: "LightBox", 
+        en: "LightBox"
+    },
+    title: { 
+        pt: "Nova versão do LightBox: '2.0.0.0'", 
+        en: "New LightBox Version: '2.0.0.0'" 
+    },
+    excerpt: { 
+        pt: "A nova versão inclui: <br/><br/>  Adicionado: Playlist, SVG, Lista, Tabela, Carrossel e Gráfico.<br/>  Mudou: Áudio e vídeo agora contam com o projeto integrado 'TECH Player'.<br/>  Design e responsividade aprimorados com correções de erros. ", 
+        en: "The new version includes: <br/><br/>  Added: Playlist, SVG, List, Table, Carousel, and Chart.<br/> Changed: Audio and video now feature the integrated 'TECH Player' project.<br/>  Improved design, responsiveness, and bug fixes. " 
+    },
+    date: "28/08/2026",
+    author: "FCASFS-OF",
+    more: true,
+    link: { pt: "https://lightbox.fcasfs-of.cloud-fs.net/", en: "https://lightbox.fcasfs-of.cloud-fs.net/en" },
+    lbox: false,
+    image: ""
+},
+
             {
                 category: { pt: "Atualizacao_Projeto", en: "Project_Update" },
                 custom: { pt: { more:"Ver mais" }, en: { more:"View more" } },
