@@ -416,6 +416,9 @@ function create_tbadge(op, jh){ var create_infoxrs=""; var create_infoxratts="";
 function create_tbadge_status(op, jh){ var create_infoxrs=""; var create_infoxratts={ planejado:"Planejado", desenvolvimento:"Em Desenvolvimento", testes:"Em Testes", versao:"Nova Versão", manutencao:"Em Manutenção", concluido:"Concluído", pausado:"Pausado", descontinuado:"Descontinuado" }; if(jh && jh=="en"){ create_infoxratts={ planejado:"Planned", desenvolvimento:"In Development", testes:"Testing", versao:"New Version", manutencao:"Maintenance", concluido:"Completed", pausado:"Paused", descontinuado:"Deprecated" }; } if (op){ if (op.type && op.type!=""){ create_infoxrs='  <span>  <span class="badge-status status-'+op.type+'">'+create_infoxratts[op.type]+'</span>  <br/><br/>  </span>'; } } return create_infoxrs; }
 function create_infoxr(op){ var create_infoxrs=""; if (op){ if (op.text && op.text!=""){ var create_infoxrcolorid=""; var create_infoxvw=""; var create_infoxrcolor=""; var create_infsixeolor="10px"; var dcreate_infoxrcolor=""; if (op.color && op.color!=""){ create_infoxrcolor=" "+op.color; } if (op.pos && op.pos!=""){ dcreate_infoxrcolor=" "+op.pos; } if (op.size && op.size!=""){ create_infsixeolor=" "+op.size; } if (op.id && op.id!=""){ create_infoxrcolorid=" id='"+op.id+"'"; } var create_infoxpadrd='<span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';">'+op.text+'</span>'; if (op.type && op.type!=""){ create_infoxvw=""+op.type; create_infoxpadrd=' '+op.text+' <span'+create_infoxrcolorid+' style="font-size: '+create_infsixeolor+';"></span>'; } create_infoxrs='<div class="ribbon'+create_infoxvw+dcreate_infoxrcolor+create_infoxrcolor+'">'+create_infoxpadrd+'</div>'; } } return create_infoxrs; }
 
+function showPageCard_info(df) { return (!df || !df.text || !df.text.trim()) ? "" : '<div class="info-alert">' + (df.svg && df.svg.trim() ? df.svg : (df.icon === true ? '<svg class="info-icon" viewBox="0 0 24 24" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>' : '')) + '<p class="info-text">' + (df.title && df.title.trim() ? '<strong>' + df.title + ':</strong> ' : '') + df.text + '</p></div>'; }
+
+
 
 function add_itens_fr(id, op, conn, objsd){  
 var dadd_itens_ocu="";   var dadd_itens_efect="";     var dadd_itens_fra="";   var dadd_itens_fra_co = { class:"", class_b:"" };
@@ -477,7 +480,7 @@ if (op.itens[is].links[i].disable && op.itens[is].links[i].disable==true){  hred
 
     if(op.itens[is].remove_efect && op.itens[is].remove_efect==true){   dadd_itens_efect="";   }
 
-    dadd_itens_fra=dadd_itens_fra+'<div'+create_tooltipr(op.itens[is].tip)+' class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+create_tdestque(op.itens[is].topo)+'" '+dadd_itens_ocu+'>'+create_infoxr(op.itens[is].info)+dad_icond_itens_fra+dad_titlend_itens_fra+create_tbadge_status(op.itens[is].status, cokk_plu_esdnf)+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
+    dadd_itens_fra=dadd_itens_fra+'<div'+create_tooltipr(op.itens[is].tip)+' class="'+dadd_itens_fra_co["class"]+dadd_itens_efect+create_tdestque(op.itens[is].topo)+'" '+dadd_itens_ocu+'>'+create_infoxr(op.itens[is].info)+dad_icond_itens_fra+dad_titlend_itens_fra+create_tbadge_status(op.itens[is].status, cokk_plu_esdnf)+showPageCard_info(op.itens[is].alert)+dad_descnd_itens_fra+dad_icond_itens_fra_odfd+dalickstens_fra+'</div>';       
   
   } }
 
