@@ -586,10 +586,21 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
 .card.card-destaque.card-rosa { border: 2px solid #e83e8c; box-shadow: 0 10px 25px rgba(232, 62, 140, 0.25); }
 
 
-.card .info-alert {    background-color: #f0f7ff;    border-left: 4px solid #0066cc;    border-radius: 4px;    padding: 12px;    margin-bottom: 16px;    display: flex;    gap: 10px;    align-items: flex-start;  }
+.card .info-alert {   user-select:none;   background-color: #f0f7ff;    border-left: 4px solid #0066cc;    border-radius: 4px;    padding: 12px;    margin-bottom: 16px;    display: flex;    gap: 10px;    align-items: flex-start;  }
 .card .info-alert .info-icon {   width:18px; height:18px; flex-shrink: 0;    margin-top: 2px;  }
 .card .info-alert svg, .card .info-alert svg *, .card .info-alert svg.info-icon, .card .info-alert svg.info-icon * { fill:#0066cc; }
 .card .info-alert .info-text {    color: #1e3a5f;    font-size: 12.5px;    line-height: 1.5;    margin: 0;  }
+
+.card .info-alert.success { background-color: #f0fdf4; border-color: #16a34a; } 
+.card .info-alert.success .info-text { color: #14532d; } 
+.card .info-alert.success svg, .card .info-alert.success svg * { fill: #16a34a; }
+.card .info-alert.warning { background-color: #fffbeb; border-color: #d97706; } 
+.card .info-alert.warning .info-text { color: #78350f; } 
+.card .info-alert.warning svg, .card .info-alert.warning svg * { fill: #d97706; }
+.card .info-alert.danger  { background-color: #fef2f2; border-color: #dc2626; } 
+.card .info-alert.danger.danger .info-text { color: #7f1d1d; }
+.card .info-alert.danger svg, .card .info-alert.danger svg * { fill: #dc2626; }
+
 
 
 .align_ob {  position: relative;    top: -1px;   }
