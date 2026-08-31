@@ -121,12 +121,13 @@ var iapp11 = document.getElementById("prev1");
 var iapp12 = document.getElementById("prev2"); 
 var iapp13 = document.getElementById("prev3"); 
 
+
 if(iapp11){   iapp11.onclick= function() {  
 fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
   include:{    player:"no"  },
   content:{
-    title:"Captura de Tela",    type:"image", context:"https://fcasfs-of.cloud-fs.net/Search-Files-in-Folders/pics001.jpg",    size:"340",    description:"01"
+    title:"Captura de Tela",    type:"image", context:iapp11.getAttribute('fs_VarN')?.trim() || "",    size:"340",    description:"01"
   }
 });
  }     }
@@ -135,7 +136,7 @@ fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,
   include:{    player:"yes"  },
   content:{
-    title:"Pré-visualização",    type:"link", context:"https://player.fcasfs-of.cloud-fs.net/",    size:"300",    description:""
+    title:"Pré-visualização",    type:"link", context:iapp12.getAttribute('fs_VarN')?.trim() || "",    size:"300",    description:""
   }
 });
  }    }
@@ -144,10 +145,13 @@ fsmodal_open({
   id:"modalffs",  tiptext:text_thnv,  scroll_hide:"yes",  noclose:false,  remove_efect: true,  
   include:{    player:"yes"  },
   content:{
-    title:"Pré-visualização",    type:"link", context:"https://lightbox.fcasfs-of.cloud-fs.net/",    size:"300",    description:""
+    title:"Pré-visualização",    type:"link", context:iapp13.getAttribute('fs_VarN')?.trim() || "",    size:"300",    description:""
   }
 });
  }    }
+
+
+
   
 </script>
 
