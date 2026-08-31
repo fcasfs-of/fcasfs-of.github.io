@@ -1,6 +1,9 @@
 
 function gerarID_ffSimples(tamanho = 8) {  return Math.random().toString(36).substring(2, 2 + tamanho);   }
 
+function fs_session_token(t){if(!sessionStorage.getItem('fcas_token')){const c='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?';let r='FS_';for(let i=0;i<t;i++){r+=c.charAt(Math.floor(Math.random()*c.length));}sessionStorage.setItem('fcas_token',r);}}
+
+
 function repetirTexto(texto, quantidade) {
     let resultado = "";
         if (texto && quantidade && quantidade >= 1) {
@@ -713,6 +716,7 @@ if(containerId && dados){
 const body = document.body;
 body.oncontextmenu=function() { return false; };
 
+fs_session_token(16);
 
 
     const toggleThemeBtn = document.getElementById('toggle-theme');
