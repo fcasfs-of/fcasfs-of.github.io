@@ -141,7 +141,7 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
       z-index: 1000;
     }
 
-header {   position: absolute;  left: 0;  right: 0;  width:100%;  }
+header {   position: relative;  display:block;   left: 0;  right: 0;  width:100%;  }
 
 
     .header-content {
