@@ -140,7 +140,10 @@ svg {   width:19px;  height:19px;   margin: 0 auto;   }
       top: 0;
       z-index: 1000;
     }
-    
+
+header {   position: absolute;  left: 0;  right: 0;  width:100%;  }
+
+
     .header-content {
       display: flex;
       justify-content: space-between;
