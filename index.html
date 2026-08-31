@@ -157,7 +157,9 @@ config:loaded_listff("skin"),
 itens:loaded_listff("home","pt")
 }, "");
 
-  
+  	    fs_lismode({ gap: loaded_listff("list","gap"), theme: 'modern', listaId: 'listr', itens: 'card',align: loaded_listff("list","pos") });
+
+	  
 function minhaFuncaoAoFiltrar(dados) {
     // 'dados.categoria' retorna o nome da categoria ativa ou 'all'
     // 'dados.apenasNovos' retorna true ou false
