@@ -281,6 +281,13 @@ if(cokk_plu && cokk_plu==true){
  if (location.href.toUpperCase().indexOf(cokk_plu_enfdd.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 
 
+var ads_pre = function(){};
+	
+function start_adsPg(ff){
+	 ads_pre = function(lisatansi, liston){  if(lisatansi && liston && typeof fcasfs_ads === 'function'){    fcasfs_ads({  theme: 'light',embed: true, lang:ff | |"pt",  targets: liston || [],  list: lisatansi} || []);    } };
+}
+	
+
 carregarTudo([
     {
         destino: 'head',    tag: 'link',
@@ -392,6 +399,12 @@ carregarTudo([
         atributos: {    
 		    'onload': "loaded_menus();",
             'src': 'https://fcasfs-of.cloud-fs.net/iframe/manager.js'
+        }
+    },  {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+		    'onload': "start_adsPg('"+cokk_plu_esdnf+"');",
+            'src': 'https://fcasfs-of.cloud-fs.net/ads.js'
         }
     },  {
         destino: 'body',  tag: 'script',   
