@@ -5,11 +5,9 @@ function fs_session_token(t){if(!sessionStorage.getItem('fcas_token')){const c='
 
 
 function repetirTexto(texto, quantidade) {
-    let resultado = "";
-        if (texto && quantidade && quantidade >= 1) {
-        for (let i = 0; i < quantidade; i++) {            resultado += texto;        }
-    }    
+    let resultado = "";        if (texto && quantidade && quantidade >= 1) {        for (let i = 0; i < quantidade; i++) {            resultado += texto;        }    }    
 return resultado;  }
+
 
 function fsummary_accAdd(obj) {   
   if (!obj) {     return '';   }
