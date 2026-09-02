@@ -2,10 +2,12 @@ function fcasfs_checkLang() { const url = location.href.toLowerCase(); return ur
 function fcasfs_checkLangModifier(obj) { return fcasfs_checkLang() === 'pt' ? '' : (obj && obj.separator || '/') + fcasfs_checkLang(); }
 
 
+function verificarEAdicionar(listaDestino, objetosParaVerificar) {  objetosParaVerificar.forEach(objeto => {    if (objeto) {      listaDestino.push(objeto);    }  });   }
+
 
 var set_itend_cd ={
 plist:{
-  menu:function(){ return [cookies_pre,storage_ps,bookmarkmanages_pre]; }
+  menu:function(){  const meuResult = [];   verificarEAdicionar(meuResult, [cookies_pre, storage_ps, bookmarkmanages_pre]);   return meuResult;  }
 },
 ads:{
 home:[
