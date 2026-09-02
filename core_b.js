@@ -380,11 +380,6 @@ carregarTudo([
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/cmenu.js'
-        }
-    }, {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/core_ds.js'
         }
     }, {
@@ -409,7 +404,6 @@ carregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
 		    'onload': "gerenciarAreaFav_start('"+cokk_plu_esdnf+"');",
-             'defer': "",  'init': "",
             'src': 'https://fcasfs-of.cloud-fs.net/player/fav.js'
         }
     },  {
@@ -429,14 +423,19 @@ carregarTudo([
 		    'onload': "share_btsD_all('"+cokk_plu_esdnf+"');  share_txtD_all('"+cokk_plu_esdnf+"');",
             'src': 'https://fcasfs-of.cloud-fs.net/share/core.js'
         }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/cmenu.js'
+        }
     }
 ]);
 
 }
 
-
-function gerenciarAreaFav(idioma){    const titulosBookmark = { pt: "Gerenciador de Favoritos", en: "Bookmark Manager" };       if(typeof initBookmarkManager=='function'){     var initBookmarkManager_mo=initBookmarkManager({containerId:"areafavlist",targetMode:"modal",lang:idioma || "pt",startMaximized:false});      bookmarkmanages_pre={title:titulosBookmark[idioma] || titulosBookmark.en,icon:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>',open:initBookmarkManager_mo.abrir}; }  }
-function gerenciarAreaFav_start(idioma){gerenciarAreaFav(idioma);  }
+var initBookmarkManager_mo;
+function gerenciarAreaFav(idioma){    const titulosBookmark = { pt: "Gerenciador de Favoritos", en: "Bookmark Manager" };       if(typeof initBookmarkManager=='function'){     initBookmarkManager_mo=initBookmarkManager({containerId:"areafavlist",targetMode:"modal",lang:idioma || "pt",startMaximized:false});      var bookmarkmanages_pre={title:titulosBookmark[idioma] || titulosBookmark.en,icon:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>',open:initBookmarkManager_mo.abrir}; }  }
+function gerenciarAreaFav_start(idioma){  gerenciarAreaFav(idioma);  }
 
 
 function create_tooltipr(op){ var create_infoxrs=""; if (op){ if (op.text && op.text!=""){ var create_infoxrcolor=""; var dcreate_infoxrcolor="top"; if (op.visible && op.visible==true){ create_infoxrcolor=' data-ver="true"'; } if (op.pos && op.pos!=""){ dcreate_infoxrcolor=""+op.pos; } create_infoxrs=' data-tooltip="'+op.text+'" data-flow="'+dcreate_infoxrcolor+'"'+create_infoxrcolor; } } return create_infoxrs; }
