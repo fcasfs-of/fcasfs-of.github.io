@@ -87,11 +87,11 @@
 
 <script>
 
-function preview_lins(link,kdf){
-	if(link && link!="" && kdf && kdf!=""){  fsmodal_open({
+function preview_lins(link,kdf,iof, vofff){
+	if(link && link!="" && kdf && kdf!="" && iof && iof!=""){  fsmodal_open({
   id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:false,  remove_efect: false,
-  include:{    player:"no"  },
-  content:{    title:kdf || "",    type:"link", context:link || "",    size:"430",    description:""  }
+  include:{    player:"yes"  },
+  content:{  config: vofff || {},   title:kdf || "",    type:iof || "id", context:link || "",    size:"430",    description:""  }
 });  }   }
 
 function initSidebar_onload(api){       if(api){
@@ -102,8 +102,8 @@ api("btn_searchplayer", "this", [
 if(api){
 
 api.acc("optionspl", [
-{ name:"Seção ID", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form onama="Seção ID" class="busca" action="https://fcasfs-of.cloud-fs.net/player/">  <input required type="text" value="" placeholder="ID..." id="textidf" name="fileID"/>  <label class="container" data-tooltip="Prévia" data-flow="bottom">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>   <label class="range" data-tooltip="Posição" data-flow="bottom"><span>  </span>    <input type="range" min="1" max="99" value="1" name="select" id="fileSelect"/>    <span class="value" style="color:#000;"></span>  </label> <br/> <input type="text" value="00:00:00" placeholder="00:00:00" id="texttime" name="time"/> <br/><br/> <button type="submit" value="Procurar">Procurar</button></form>  <br/></div>' },
-{ name:"Seção LINK", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form onama="Seção LINK" class="busca" action="https://fcasfs-of.cloud-fs.net/player/"> <input required type="text" value="" placeholder="URL..." name="fileLINK"/>  <label class="container" data-tooltip="Preview" data-flow="bottom" style="display:none;">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>  <input type="text" value="00:00:00" placeholder="00:00:00" name="time"/> <br/><br/> <button type="submit" value="Abrir">Abrir</button></form>  <br/></div> <br/>' }
+{ name:"Seção ID", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form onamas="id" onama="Seção ID" class="busca" action="https://fcasfs-of.cloud-fs.net/player/">  <input required type="text" value="" placeholder="ID..." id="textidf" name="fileID"/>  <label class="container" data-tooltip="Prévia" data-flow="bottom">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>   <label class="range" data-tooltip="Posição" data-flow="bottom"><span>  </span>    <input type="range" min="1" max="99" value="1" name="select" id="fileSelect"/>    <span class="value" style="color:#000;"></span>  </label> <br/> <input type="text" value="00:00:00" placeholder="00:00:00" id="texttime" name="time"/> <br/><br/> <button type="submit" value="Procurar">Procurar</button></form>  <br/></div>' },
+{ name:"Seção LINK", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form onamas="video" onama="Seção LINK" class="busca" action="https://fcasfs-of.cloud-fs.net/player/"> <input required type="text" value="" placeholder="URL..." name="fileLINK"/>  <label class="container" data-tooltip="Preview" data-flow="bottom" style="display:none;">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>  <input type="text" value="00:00:00" placeholder="00:00:00" name="time"/> <br/><br/> <button type="submit" value="Abrir">Abrir</button></form>  <br/></div> <br/>' }
 ]);
   progressScriptfile("#fileSelect",".value");  
 
@@ -111,7 +111,7 @@ document.querySelectorAll('form.busca').forEach(form => {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const linkCompleto = form.getAttribute('action') + '?' + new URLSearchParams(new FormData(this)).toString();
-preview_lins(linkCompleto,form.getAttribute('onama'));  api.close();
+preview_lins(new URLSearchParams(new FormData(this)).get("fileID") || new URLSearchParams(new FormData(this)).get("fileLINK"),form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(this)).get("time") });  api.close();
     });
 });
      api.active(1);
