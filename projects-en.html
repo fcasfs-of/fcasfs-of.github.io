@@ -100,7 +100,7 @@ function preview_lins(link){
     title:"",    type:"image", context:link || "",    size:"540",    description:""
   }
 });  }   }
-function preview_iside(initSidebar_onload_oid,jj){   initSidebar_onload_oid.close(); preview_lins(preview_islins(jj));  }
+function preview_iside(initSidebar_onload_oid,jj){    preview_lins(preview_islins(jj));  initSidebar_onload_oid.close(); }
 	
 function initSidebar_onload(api){       if(api){
 var initSidebar_onload_oid=api("btn_searchplayer", "this", [
