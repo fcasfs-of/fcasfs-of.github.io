@@ -93,9 +93,7 @@ function preview_lins(link){
 	if(link && link!=""){  fsmodal_open({
   id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:false,  remove_efect: false,
   include:{    player:"no"  },
-  content:{
-    title:"",    type:"image", context:link || "",    size:"540",    description:""
-  }
+  content:{    title:"",    type:"link", context:link || "",    size:"540",    description:""  }
 });  }   }
 	
 function initSidebar_onload(api){       if(api){
