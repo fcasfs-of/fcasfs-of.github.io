@@ -282,7 +282,7 @@ if(cokk_plu && cokk_plu==true){
 
 
 var ads_pre = function(){}; 
-function start_adsPg(ff){  document.body.onload=function(){  ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } }; }; }
+function start_adsPg(ff){   ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } };  }
 
 var bookmarkmanages_pre={title:"Bookmark",desc:"",icon:"",open:null};
 
@@ -554,7 +554,7 @@ storage_ps = { title: "Storage Inspector", desc: " ", icon:'<svg fill="none" xml
 }    }
   }
 
-function astorage_ps_crtew(cokk_plu_esdnf) {  storage_ps_crtew(cokk_plu_esdnf);  document.body.onload=function(){    storage_ps_crtew(cokk_plu_esdnf);  };     }
+function astorage_ps_crtew(cokk_plu_esdnf) {  storage_ps_crtew(cokk_plu_esdnf);       }
 
 
 function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cokkiesd){
@@ -592,7 +592,6 @@ function setup_CookieBadr(){     if(CookieConsent && cokk_plu_esdnf && langs_cok
 });   
 
 cookies_pre = { title: "Cookies: "+langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, icon:'<svg fill="none" width="24px" height="24px" viewBox="0 0 24 24" data-name="Line Color" xmlns="http://www.w3.org/2000/svg"><line x1="9.05" y1="9.5" x2="8.95" y2="9.5" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><line data-name="secondary-upstroke" x1="9.55" y1="15" x2="9.45" y2="15" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><line data-name="secondary-upstroke" x1="14.55" y1="14" x2="14.45" y2="14" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><path d="M18.12,9.78a3,3,0,0,1-3.9-3.9A3,3,0,0,1,12,3a9,9,0,1,0,9,9A3,3,0,0,1,18.12,9.78Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>', open: CookieConsent.showPreferences }; 
-document.body.onload=function(){   cookies_pre = { title: "Cookies: "+langs_cokkiesd[cokk_plu_esdnf].consentModal.showPreferencesBtn, desc: langs_cokkiesd[cokk_plu_esdnf].preferencesModal.title, icon:'<svg fill="none" width="24px" height="24px" viewBox="0 0 24 24" data-name="Line Color" xmlns="http://www.w3.org/2000/svg"><line x1="9.05" y1="9.5" x2="8.95" y2="9.5" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><line data-name="secondary-upstroke" x1="9.55" y1="15" x2="9.45" y2="15" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><line data-name="secondary-upstroke" x1="14.55" y1="14" x2="14.45" y2="14" style="fill: none; stroke: rgb(44, 169, 188); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></line><path d="M18.12,9.78a3,3,0,0,1-3.9-3.9A3,3,0,0,1,12,3a9,9,0,1,0,9,9A3,3,0,0,1,18.12,9.78Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></svg>', open: CookieConsent.showPreferences };   };
 }   }
 
 
