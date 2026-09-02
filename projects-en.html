@@ -102,7 +102,7 @@ itens:loaded_listff("project","en")
 ]);
 
 	
-document.addEventListener("DOMContentLoaded", function(){    ads_pre(loaded_listff("ads","project"),"#f_ads2","light",false);  });
+   document.body.onload=function(){     ads_pre(loaded_listff("ads","project"),"#f_ads2","light",false);  };
 
 
 	    fs_lismode({ gap: loaded_listff("list","gap"), theme: 'modern', listaId: 'listr', itens: 'card',align: loaded_listff("list","pos") });
