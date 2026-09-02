@@ -282,7 +282,7 @@ if(cokk_plu && cokk_plu==true){
 
 
 var ads_pre = function(){}; 
-function start_adsPg(ff){ ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } }; }
+function start_adsPg(ff){  document.body.onload=function(){  ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } }; }; }
 
 var bookmarkmanages_pre={title:"Bookmark",desc:"",icon:"",open:null};
 
