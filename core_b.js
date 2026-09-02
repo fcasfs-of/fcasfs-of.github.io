@@ -283,7 +283,7 @@ var ads_pre = function(){};
 function start_adsPg(ff){   ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } };  }
 
 var bookmarkmanages_pre={title:"Bookmark",desc:"",icon:"",open:null};
- var divPai = document.getElementById("areafav"); if (!divPai) { divPai = document.createElement("div"); divPai.id = "areafav"; divPai.innerHTML = '<div id="areafavlist"></div><style>.bkm-main-wrapper, .bkm-main-wrapper div, .bkm-main-wrapper div button { pointer-events: none; display: none; } .bkm-iframe-overlay{ z-index: 10000000000001; }</style>'; document.body.appendChild(divPai); }   
+window.addEventListener('DOMContentLoaded', function(){ var areaFav = document.getElementById("areafav"); if (!areaFav) { var dareaFav = document.createElement("div"); dareaFav.id = "areafav"; dareaFav.innerHTML = '<div id="areafavlist"></div><style>.bkm-main-wrapper, .bkm-main-wrapper div, .bkm-main-wrapper div button { pointer-events: none; display: none; } .bkm-iframe-overlay{ z-index: 10000000000001; }</style>'; document.body.appendChild(dareaFav); } });
 	
 
 
