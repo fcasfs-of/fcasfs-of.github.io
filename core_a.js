@@ -4,6 +4,9 @@ function fcasfs_checkLangModifier(obj) { return fcasfs_checkLang() === 'pt' ? ''
 
 
 var set_itend_cd ={
+plist:{
+  menu:function(){ return [cookies_pre,storage_ps,bookmarkmanages_pre]; }
+},
 ads:{
 home:[
 {
