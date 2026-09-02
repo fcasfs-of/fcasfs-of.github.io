@@ -85,6 +85,31 @@
     </div>
   </footer>
 
+<script>
+
+function initSidebar_onload(api){       if(api){
+api("btn_searchplayer", "this", [
+   { label: 'Página', desc: '<br/><div class="accordion-group" id="optionspl"></div><br/>', icon: '<svg width="32px" height="32px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g>	<path style="fill:#2D527C;" d="M102.374,479.485C45.926,479.485,0,433.56,0,377.11c0-56.448,45.926-102.374,102.374-102.374		c36.125,0,69.958,19.362,88.293,50.532c4.075,6.929,1.762,15.849-5.165,19.923c-6.929,4.077-15.848,1.762-19.923-5.165		c-13.129-22.318-37.348-36.182-63.206-36.182c-40.4,0-73.267,32.867-73.267,73.267s32.867,73.268,73.267,73.268		c25.404,0,48.634-12.873,62.142-34.431c4.269-6.813,13.25-8.873,20.059-4.608c6.811,4.269,8.873,13.25,4.606,20.059		C170.318,461.509,137.866,479.485,102.374,479.485z"/>	<path style="fill:#2D527C;" d="M497.446,359.756H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h243.122		c8.037,0,14.554,6.517,14.554,14.554S505.483,359.756,497.446,359.756z"/>	<path style="fill:#2D527C;" d="M406.276,423.573H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h151.951		c8.037,0,14.554,6.517,14.554,14.554S414.314,423.573,406.276,423.573z"/></g><circle style="fill:#CEE8FA;" cx="102.371" cy="134.884" r="87.817"/><g>	<path style="fill:#2D527C;" d="M102.374,237.263C45.924,237.263,0,191.338,0,134.89C0,78.44,45.924,32.515,102.374,32.515		S204.748,78.44,204.748,134.89C204.75,191.338,158.824,237.263,102.374,237.263z M102.374,61.622		c-40.4,0-73.267,32.868-73.267,73.268s32.867,73.267,73.267,73.267s73.267-32.867,73.267-73.267S142.774,61.622,102.374,61.622z"/>	<path style="fill:#2D527C;" d="M497.446,117.535H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h243.122		c8.037,0,14.554,6.517,14.554,14.554S505.483,117.535,497.446,117.535z"/>	<path style="fill:#2D527C;" d="M406.276,181.35H254.324c-8.038,0-14.554-6.517-14.554-14.554s6.516-14.554,14.554-14.554h151.951		c8.037,0,14.554,6.517,14.554,14.554S414.314,181.35,406.276,181.35z"/></g></svg>', onClick: null }
+ ], "Procurar", '<svg fill="#fff" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22.241 24-7.414-7.414c-1.559 1.169-3.523 1.875-5.652 1.885h-.002c-.032 0-.07.001-.108.001-5.006 0-9.065-4.058-9.065-9.065 0-.038 0-.076.001-.114v.006c0-5.135 4.163-9.298 9.298-9.298s9.298 4.163 9.298 9.298c-.031 2.129-.733 4.088-1.904 5.682l.019-.027 7.414 7.414zm-12.942-21.487c-3.72.016-6.73 3.035-6.73 6.758 0 3.732 3.025 6.758 6.758 6.758s6.758-3.025 6.758-6.758c0-1.866-.756-3.555-1.979-4.778-1.223-1.223-2.912-1.979-4.778-1.979-.01 0-.02 0-.03 0h.002z"/></svg>', 
+'light', 'fullscreen', function(api){
+if(api){
+
+api.acc("optionspl", [
+{ name:"Seção ID", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form class="busca" action="https://fcasfs-of.cloud-fs.net/player/">  <input required type="text" value="" placeholder="ID..." id="textidf" name="fileID"/>  <label class="container" data-tooltip="Prévia" data-flow="bottom">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>   <label class="range" data-tooltip="Posição" data-flow="bottom"><span>  </span>    <input type="range" min="1" max="99" value="1" name="select" id="fileSelect"/>    <span class="value" style="color:#000;"></span>  </label> <br/> <input type="text" value="00:00:00" placeholder="00:00:00" id="texttime" name="time"/> <br/><br/> <button type="submit" value="Procurar">Procurar</button></form>  <br/></div>' },
+{ name:"Seção LINK", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form class="busca" action="https://fcasfs-of.cloud-fs.net/player/"> <input required type="text" value="" placeholder="URL..." name="fileLINK"/>  <label class="container" data-tooltip="Preview" data-flow="bottom" style="display:none;">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>  <input type="text" value="00:00:00" placeholder="00:00:00" name="time"/> <br/><br/> <button type="submit" value="Abrir">Abrir</button></form>  <br/></div> <br/>' }
+]);
+  progressScriptfile("#fileSelect",".value");  
+	
+     api.active(1);
+	   
+      }
+    }, { btn:"Search", icon:'<svg fill="#fff" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m22.241 24-7.414-7.414c-1.559 1.169-3.523 1.875-5.652 1.885h-.002c-.032 0-.07.001-.108.001-5.006 0-9.065-4.058-9.065-9.065 0-.038 0-.076.001-.114v.006c0-5.135 4.163-9.298 9.298-9.298s9.298 4.163 9.298 9.298c-.031 2.129-.733 4.088-1.904 5.682l.019-.027 7.414 7.414zm-12.942-21.487c-3.72.016-6.73 3.035-6.73 6.758 0 3.732 3.025 6.758 6.758 6.758s6.758-3.025 6.758-6.758c0-1.866-.756-3.555-1.979-4.778-1.223-1.223-2.912-1.979-4.778-1.979-.01 0-.02 0-.03 0h.002z"/></svg>'
+});
+	
+
+}   }
+</script>
+	
 <script src="core_b.js"></script>
 
 <script>  var text_thnv="Fechar";
@@ -167,6 +192,19 @@ fsmodal_open({
  }    }
 
 
+	carregarTudo([
+    {
+        destino: 'head',  tag: 'link',   
+        atributos: {    
+  "rel":"stylesheet", "href":"https://fcasfs-of.cloud-fs.net/player/theme2.css"
+     }
+}, {
+        destino: 'head',  tag: 'script',   
+        atributos: {    
+  'src': 'https://fcasfs-of.cloud-fs.net/player/busc.js',
+     }
+	}
+]);    
 
   
 </script>
