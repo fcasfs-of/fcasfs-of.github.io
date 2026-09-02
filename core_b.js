@@ -405,7 +405,7 @@ carregarTudo([
     }, {
         destino: 'body',  tag: 'script',   
         atributos: {    
-		    'onload': "gerenciarAreaFav_start('"+cokk_plu_esdnf+"');",
+		    'onload': "gerenciarAreaFav('"+cokk_plu_esdnf+"');",
             'src': 'https://fcasfs-of.cloud-fs.net/player/fav.js'
         }
     },  {
