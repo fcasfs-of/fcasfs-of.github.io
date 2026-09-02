@@ -423,11 +423,6 @@ carregarTudo([
 		    'onload': "share_btsD_all('"+cokk_plu_esdnf+"');  share_txtD_all('"+cokk_plu_esdnf+"');",
             'src': 'https://fcasfs-of.cloud-fs.net/share/core.js'
         }
-    }, {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/cmenu.js'
-        }
     }
 ]);
 
@@ -796,6 +791,16 @@ fs_session_token(16);
 
 
 document.addEventListener("DOMContentLoaded", function(){    
+	carregarTudo([
+	 {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+            'src': 'https://fcasfs-of.cloud-fs.net/cmenu.js'
+        }
+     }
+	]);
+
+	
 		fsummary_Add({ tpp:".", seletor:"cards-container", texto:"", item:0 });
 
 	const readmfolder = getUrlParameter("lerFolder");
