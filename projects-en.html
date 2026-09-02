@@ -123,7 +123,7 @@ document.querySelectorAll('form.busca').forEach(form => {
         const linkCompleto = form.getAttribute('action') + '?' + new URLSearchParams(new FormData(form)).toString();
 if (new URLSearchParams(new FormData(form)).get("fileView")=="on"){
 if(form.getAttribute('onamas')=="id"){
-preview_lins(new URLSearchParams(new FormData(form)).get("fileID") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { select: new URLSearchParams(new FormData(form)).get("select"))+"", pos: ""+convertDurationtoSeconds(new URLSearchParams(new FormData(form)).get("time")) });  api.close();
+preview_lins(new URLSearchParams(new FormData(form)).get("fileID") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { select: new URLSearchParams(new FormData(form)).get("select")+"", pos: ""+convertDurationtoSeconds(new URLSearchParams(new FormData(form)).get("time")) });  api.close();
 } else if(form.getAttribute('onamas')=="video"){
 preview_lins(new URLSearchParams(new FormData(form)).get("fileLINK") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: convertDurationtoSeconds(new URLSearchParams(new FormData(form)).get("time"))+"" });  api.close();
 }   }   else {   location.href=linkCompleto;   }
