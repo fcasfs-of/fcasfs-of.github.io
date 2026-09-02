@@ -284,6 +284,10 @@ if(cokk_plu && cokk_plu==true){
 var ads_pre = function(){}; function start_adsPg(ff){ ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } }; }
 
 
+
+var BookmarkManages_pre={title:"Bookmark",desc:"",icon:"",open:null};
+function gerenciarAreaFav(idioma){var divPai=document.getElementById("areafav");if(!divPai){divPai=document.createElement("div");divPai.id="areafav";var divFilho=document.createElement("div");divFilho.id="areafavlist";var style=document.createElement("style");style.textContent=".bkm-main-wrapper, .bkm-main-wrapper div, .bkm-main-wrapper div button { pointer-events: none; display: none; }";divPai.appendChild(style);divPai.appendChild(divFilho);document.body.appendChild(divPai);var initBookmarkManager_mo=initBookmarkManager({containerId:"areafavlist",targetMode:"modal",lang:idioma==="pt"?"pt":"en",startMaximized:true});if(initBookmarkManager_mo){BookmarkManages_pre={title:idioma==="pt"?"Gerenciador de Favoritos":"Bookmark Manager",icon:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>',open:initBookmarkManager_mo.abrir}}}}
+
 	
 
 carregarTudo([
@@ -403,6 +407,12 @@ carregarTudo([
         atributos: {    
 		    'onload': "start_adsPg('"+cokk_plu_esdnf+"');",
             'src': 'https://fcasfs-of.cloud-fs.net/ads.js'
+        }
+    }, {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+		    'onload': "gerenciarAreaFav('"+cokk_plu_esdnf+"');",
+            'src': 'https://fcasfs-of.cloud-fs.net/player/fav.js'
         }
     },  {
         destino: 'body',  tag: 'script',   
