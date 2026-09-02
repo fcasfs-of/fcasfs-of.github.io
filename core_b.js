@@ -281,7 +281,7 @@ if(cokk_plu && cokk_plu==true){
  if (location.href.toUpperCase().indexOf(cokk_plu_enfdd.toUpperCase()) > -1) {    cokk_plu_esdnf="en";    }
 
 
-var ads_pre = function(){}; function start_adsPg(ff){ ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } }; }
+var ads_pre = function(){}; function start_adsPg(ff){ ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] });  document.addEventListener("DOMContentLoaded", function(){  fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] });  }); } }; }
 
 
 	
