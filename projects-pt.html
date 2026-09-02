@@ -110,11 +110,11 @@ api.acc("optionspl", [
 document.querySelectorAll('form.busca').forEach(form => {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        const linkCompleto = form.getAttribute('action') + '?' + new URLSearchParams(new FormData(this)).toString();
+        const linkCompleto = form.getAttribute('action') + '?' + new URLSearchParams(new FormData(form)).toString();
 if(form.getAttribute('onamas')=="id"){
-preview_lins(new URLSearchParams(new FormData(this)).get("fileID") + "&fileSelect="+ new URLSearchParams(new FormData(this)).get("fileSelect")+"&pos_time"+ new URLSearchParams(new FormData(this)).get("time") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(this)).get("time") });  api.close();
-} if(form.getAttribute('onamas')=="vide"){
-preview_lins(new URLSearchParams(new FormData(this)).get("fileLINK") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(this)).get("time") });  api.close();
+preview_lins(new URLSearchParams(new FormData(form)).get("fileID") + "&fileSelect="+ new URLSearchParams(new FormData(form)).get("fileSelect")+"&pos_time"+ new URLSearchParams(new FormData(form)).get("time") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(form)).get("time") });  api.close();
+} else if(form.getAttribute('onamas')=="video"){
+preview_lins(new URLSearchParams(new FormData(form)).get("fileLINK") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(form)).get("time") });  api.close();
 }
 });
 });
