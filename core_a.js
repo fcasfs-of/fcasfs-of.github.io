@@ -1,6 +1,11 @@
+function fcasfs_checkLang() { const url = location.href.toLowerCase(); return url.includes('/en') || url.includes('-en') ? 'en' : 'pt'; }
+
+
 
 var set_itend_cd ={
 ads:{
+home:[
+],
 project:[
 {
   id: 'lightbox_player_integration', sponsor: false,
