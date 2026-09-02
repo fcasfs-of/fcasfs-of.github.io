@@ -1,7 +1,5 @@
 function fcasfs_checkLang() { const url = location.href.toLowerCase(); return url.includes('/en') || url.includes('-en') ? 'en' : 'pt'; }
-
 function fcasfs_checkLangModifier(obj) { return fcasfs_checkLang() === 'pt' ? '' : (obj && obj.separator || '/') + fcasfs_checkLang(); }
-
 
 
 
