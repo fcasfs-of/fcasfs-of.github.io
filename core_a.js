@@ -19,7 +19,7 @@ project:[
   title_pt: 'Lightbox com Player Integrado', title_en: 'Lightbox with Integrated Player',
   content_pt: 'Nova atualização do Lightbox: agora com total integração ao Player para reproduzir instantaneamente todos os formatos de arquivos suportados.', content_en: 'New Lightbox update: now fully integrated with the Player to seamlessly play all supported file formats.',
   image: 'https://lightbox.fcasfs-of.cloud-fs.net/favicon.png',
-link:'https://lightbox.fcasfs-of.cloud-fs.net'+fcasfs_checkLangModifier()
+aba:false, link:'https://lightbox.fcasfs-of.cloud-fs.net'+fcasfs_checkLangModifier()
 }
 ]
 },
