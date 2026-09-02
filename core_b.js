@@ -283,7 +283,7 @@ if(cokk_plu && cokk_plu==true){
 
 var ads_pre = function(){};
 function start_adsPg(ff){
-    ads_pre = function(lisatansi, liston){  if(lisatansi && liston && typeof fcasfs_ads === 'function'){    fcasfs_ads({  theme: 'light',embed: true, lang: ff || "pt",targets: liston || [],  list: lisatansi});    } };
+    ads_pre = function(lisatansi, liston, th,eb){  if(lisatansi && liston && typeof fcasfs_ads === 'function'){    fcasfs_ads({  theme: th || 'light',embed: eb || false, lang: ff || "pt",targets: liston || [],  list: lisatansi || []});    } };
 }
 
 	
