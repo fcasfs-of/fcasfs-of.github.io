@@ -283,8 +283,7 @@ var ads_pre = function(){};
 function start_adsPg(ff){   ads_pre = function(list_ads, liston, th, eb){ if(list_ads && liston && typeof fcasfs_ads === 'function'){ fcasfs_ads({ theme: th || 'light', embed: eb || false, lang: ff || "pt", targets: liston || [], list: list_ads || [] }); } };  }
 
 var bookmarkmanages_pre={title:"Bookmark",desc:"",icon:"",open:null};
-window.addEventListener('DOMContentLoaded', function(){ var areaFav = document.getElementById("areafav"); if (!areaFav) { var dareaFav = document.createElement("div"); dareaFav.id = "areafav"; dareaFav.innerHTML = '<div id="areafavlist"></div><style>.bkm-main-wrapper, .bkm-main-wrapper div, .bkm-main-wrapper div button { pointer-events: none; display: none; } .bkm-iframe-overlay{ z-index: 10000000000001; }</style>'; document.body.appendChild(dareaFav); } });
-	
+window.addEventListener('DOMContentLoaded', function(){ var areaFav = document.getElementById("areafav"); if (!areaFav) { var dareaFav = document.createElement("div"); dareaFav.id = "areafav"; dareaFav.innerHTML = '<div id="areafavlist"></div><span id="areafavst"></span>'; document.body.appendChild(dareaFav); } });
 
 
 carregarTudo([
@@ -434,7 +433,8 @@ const textosBookmark = {
     title: { pt: "Gerenciador de Favoritos", en: "Bookmark Manager" },
     desc: { pt: "Ver e acessar seus favoritos salvos", en: "View and access your saved bookmarks" }
 };  
-if(typeof initBookmarkManager=='function'){     var initBookmarkManager_mo=initBookmarkManager({containerId:"areafavlist",targetMode:"modal",lang:idioma || "pt",startMaximized:false});      var bookmarkmanages_pre={title:textosBookmark.title[idioma] || textosBookmark.title.pt,desc:textosBookmark.desc[idioma] || textosBookmark.desc.pt,icon:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>',open:initBookmarkManager_mo.abrir}; }  }
+if(typeof initBookmarkManager=='function'){     var initBookmarkManager_mo=initBookmarkManager({containerId:"areafavlist",targetMode:"modal",lang:idioma || "pt",startMaximized:false});    	 var areaFstav = document.getElementById("areafavst");  if(areaFstav){  areaFstav.innerHTML = '<style> #areafavlist, .bkm-main-wrapper, .bkm-main-wrapper div, .bkm-main-wrapper div button, #areafavst { pointer-events: none; display: none; } .bkm-iframe-overlay{ z-index: 10000000000001; }</style>';  }  
+var bookmarkmanages_pre={title:textosBookmark.title[idioma] || textosBookmark.title.pt,desc:textosBookmark.desc[idioma] || textosBookmark.desc.pt,icon:'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>',open:initBookmarkManager_mo.abrir}; }  }
 function gerenciarAreaFav_start(idioma){  gerenciarAreaFav(idioma);  }
 
 
