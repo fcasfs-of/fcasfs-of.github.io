@@ -1,5 +1,8 @@
 
 var set_itend_cd ={
+ads:{
+home:[]
+},
 list:{ gap: "25px", pos:"right" },
 routes:[
   { name: "github", link: "https://github.com/fcasfs-of/" }
