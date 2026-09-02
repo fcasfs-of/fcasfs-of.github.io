@@ -91,7 +91,7 @@ function preview_lins(link,kdf,iof, vofff){
 	if(link && link!="" && kdf && kdf!="" && iof && iof!=""){  fsmodal_open({
   id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:false,  remove_efect: false,
   include:{    player:"yes"  },
-  content:{  config: vofff || {},   title:kdf || "",    type:iof || "id", context:link || "",    size:"430",    description:""  }
+  content:{  config: vofff || {},   title:kdf || "",    type:iof || "id", context:link || "",    size:"340",    description:""  }
 });  }   }
 
 function initSidebar_onload(api){       if(api){
@@ -111,8 +111,12 @@ document.querySelectorAll('form.busca').forEach(form => {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const linkCompleto = form.getAttribute('action') + '?' + new URLSearchParams(new FormData(this)).toString();
-preview_lins(new URLSearchParams(new FormData(this)).get("fileID") || new URLSearchParams(new FormData(this)).get("fileLINK"),form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(this)).get("time") });  api.close();
-    });
+if(form.getAttribute('onamas')=="id"){
+preview_lins(new URLSearchParams(new FormData(this)).get("fileID") + "&fileSelect="+ new URLSearchParams(new FormData(this)).get("fileSelect")+"&pos_time"+ new URLSearchParams(new FormData(this)).get("time") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(this)).get("time") });  api.close();
+} if(form.getAttribute('onamas')=="vide"){
+preview_lins(new URLSearchParams(new FormData(this)).get("fileLINK") || "",form.getAttribute('onama'),form.getAttribute('onamas'), { pos_time: new URLSearchParams(new FormData(this)).get("time") });  api.close();
+}
+});
 });
      api.active(1);
 	   
