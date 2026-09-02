@@ -43,7 +43,13 @@
   </header>
 
   
-  <main>
+<main>
+
+<div class="ad-container">
+<div id="f_ads1"></div>
+</div>
+
+	
     <div class="container">
       <div class="hero">
         <h2>Download Center</h2>
@@ -58,7 +64,13 @@
   <br/>
 
     </div>
-  </main>
+
+<div class="ad-container">
+<div id="f_ads2"></div>
+</div>
+
+	  
+</main>
   
   
 <div id="modalffs" class="z-index:1000;"></div>
@@ -80,6 +92,8 @@ config:loaded_listff("skin"),
 itens:loaded_listff("download","en")
 }, "", []);
 
+	
+   document.body.onload=function(){     ads_pre(loaded_listff("ads","download"),"#f_ads2","light",false);  };
 
 	    fs_lismode({ gap: loaded_listff("list","gap"), theme: 'modern', listaId: 'listr', itens: 'card',align: loaded_listff("list","pos") });
 
