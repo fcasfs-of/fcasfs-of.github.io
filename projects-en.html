@@ -90,9 +90,6 @@
 
 <script>  var text_thnv="Close";
 
- ads_pre(loaded_listff("ads","project"),"#f_ads2","light",false);  
-
-
 
 add_itens_fr("listr", {
 config:loaded_listff("skin"),
@@ -105,6 +102,9 @@ itens:loaded_listff("project","en")
 ]);
 
 	
+document.addEventListener("DOMContentLoaded", function(){    ads_pre(loaded_listff("ads","project"),"#f_ads2","light",false);  });
+
+
 	    fs_lismode({ gap: loaded_listff("list","gap"), theme: 'modern', listaId: 'listr', itens: 'card',align: loaded_listff("list","pos") });
 
 fs_pagination({
