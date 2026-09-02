@@ -10,7 +10,7 @@ home:[
   id: 'projects_page_updates', sponsor: false,
   title_pt: 'Novidades nos Projetos', title_en: 'Project Page Updates',
   content_pt: 'A página de projetos está cheia de novidades! Confira as últimas atualizações, melhorias recentes e novas funcionalidades implementadas.', content_en: 'The projects page is full of updates! Check out the latest changes, recent improvements, and newly implemented features.',
-  svg: '<svg xmlns="http://w3.org" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg>'
+  svg: '<svg xmlns="http://w3.org" viewBox="0 0 24 24" width="64" height="64" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg>'
 }
 ],
 project:[
