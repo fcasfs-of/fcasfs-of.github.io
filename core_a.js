@@ -1,3 +1,6 @@
+function fcas_extrairDadosDiv(config) { if (!config || !config.seletor) return { titulo: "", pic: "", desc: "" }; const el = document.querySelector(config.seletor); if (!el) return { titulo: "", pic: "", desc: "" }; const d = { titulo: el.querySelector(config.titulo || "h2")?.innerHTML || "", pic: el.querySelector(config.pic || "img")?.getAttribute("src") || "", desc: el.querySelector(config.desc || "p")?.innerHTML || "" }; if (typeof config.callback === "function") el.onclick = function() { config.callback(d); }; return d; }
+
+
 function fcasfs_checkLang() { const url = location.href.toLowerCase(); return url.includes('/en') || url.includes('-en') ? 'en' : 'pt'; }
 function fcasfs_checkLangModifier(obj) { return fcasfs_checkLang() === 'pt' ? '' : (obj && obj.separator || '/') + fcasfs_checkLang(); }
 
