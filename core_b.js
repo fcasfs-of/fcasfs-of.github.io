@@ -201,7 +201,7 @@ function laoded_call_ff(){   loaded_maut();   initAvisos(initAvisos_onload);    
 
 carregarTudo([
      {
-        destino: 'body',  tag: 'script',   
+        destino: 'head',  tag: 'script',   
         atributos: {    
             'src': 'https://lightbox.fcasfs-of.cloud-fs.net/app/api.js'
         }
