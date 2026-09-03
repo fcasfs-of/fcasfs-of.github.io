@@ -79,10 +79,24 @@
 
   </main>
   
+  <div id="modalffs" class="z-index:1000;"></div>
   
 
 <script>
-  
+
+fcas_extrairDadosDiv({
+  seletor: ".welcome-section",
+  titulo: "h2",   pic: "img",   desc: "p",  
+  callback: function(dados) {   if(dados){
+   if(dados.pic && dados.pic!="" && dados.desc && dados.desc!="" && dados.titulo && dados.titulo!=""){  fsmodal_open({
+  id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:false,  remove_efect: false,
+  include:{    player:"no"  },
+  content:{  title:dados.titulo || "",    type:"image", context:dados.pic || "",    size:"130",    description: dados.desc || ""  }
+});  }  
+  }  }
+});
+
+	
 function initAvisos_onload(api){  if (api) {
 initAvisos_onload_mural=loaded_listff("mural","en");
   if(initAvisos_onload_mural){
