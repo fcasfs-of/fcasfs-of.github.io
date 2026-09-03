@@ -242,14 +242,15 @@ header {   position: relative;  display:block;   left: 0;  right: 0;  width:100%
 .welcome-section p { color: var(--text-light);    margin: 0;   }
 
 .welcome-section img {
-    width: 18vw;     height: 18vw;
+    width: 70px;     height: 70px;
+	    max-width: 70px;    min-width: 50px;
     border-radius: 40%; 
     object-fit: contain; 
     flex-shrink: 0;     background: rgba(255, 255, 255, 0.08);    padding: 3px;    box-sizing: border-box;   }
 
 @media (min-width: 768px) {
     .welcome-section {        flex-direction: row;         text-align: left;            padding: 2.5rem 3rem;               justify-content: space-between;        gap: 2.5rem;    }
-    .welcome-section img {        width: 80px;        height: 80px;           }
+    .welcome-section img {        width: 80px;        height: 80px;     max-width: 80px;      }
 }
 
 
