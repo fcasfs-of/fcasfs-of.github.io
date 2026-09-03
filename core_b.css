@@ -224,8 +224,36 @@ header {   position: relative;  display:block;   left: 0;  right: 0;  width:100%
     }
 
 
+
 .welcome-section {            background: var(--primary-cardcolor);            padding: 3rem;            border-radius: 8px;            text-align: center;            box-shadow: 0 4px 6px rgba(0,0,0,0.1);            margin-bottom: 2rem;        }
 .welcome-section h2 {            color: var(--text-light);            margin-bottom: 1rem;        }
+
+
+
+.welcome-section {            
+    background: var(--primary-cardcolor);            
+    padding: 2rem 1.5rem;     border-radius: 12px;               box-shadow: 0 8px 16px rgba(0,0,0,0.12);        margin-bottom: 2rem;
+    box-sizing: border-box;   display: flex;
+    flex-direction: column;    gap: 1.2rem;     align-items: center;     text-align: center;   }
+
+.welcome-content {    width: 100%;}
+
+.welcome-section h2 {                color: var(--text-light);                margin-bottom: 0.5rem;    font-size: 1.6rem;        }
+.welcome-section p { color: var(--text-light);    margin: 0;   }
+
+.welcome-section img {
+    width: 18vw;     height: 18vw;
+    border-radius: 40%; 
+    object-fit: contain; 
+    flex-shrink: 0;     background: rgba(255, 255, 255, 0.08);    padding: 3px;    box-sizing: border-box;   }
+
+@media (min-width: 768px) {
+    .welcome-section {        flex-direction: row;         text-align: left;            padding: 2.5rem 3rem;               justify-content: space-between;        gap: 2.5rem;    }
+    .welcome-section img {        width: 80px;        height: 80px;           }
+}
+
+
+
 
     /* Main Content */
     main {
