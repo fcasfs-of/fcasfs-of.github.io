@@ -11,8 +11,8 @@ const blogPosts = [
         en: "New LightBox Version: '2.0.0.0'" 
     },
     excerpt: { 
-        pt: "A nova versão inclui: <br/><br/>  Adicionado: PDF, Playlist, SVG, slideshow, Lista, Tabela, Carrossel e Gráfico.<br/>  Mudou: Áudio e vídeo agora contam com o projeto integrado 'TECH Player'.<br/>  Design e responsividade aprimorados com correções de erros. <br/> A nova página de Documentação já está disponível. ", 
-        en: "The new version includes: <br/><br/>  Added: PDF, Playlist, SVG, slideshow, List, Table, Carousel, and Chart.<br/> Changed: Audio and video now feature the integrated 'TECH Player' project.<br/>  Improved design, responsiveness, and bug fixes. <br/> The new Documentation page is now available. " 
+        pt: "A nova versão inclui: <br/><br/>  Adicionado: PDF, Playlist, SVG, slideshow, Formulário, Lista, Tabela, Carrossel e Gráfico.<br/>  Mudou: Áudio e vídeo agora contam com o projeto integrado 'TECH Player'.<br/>  Design e responsividade aprimorados com correções de erros. <br/> A nova página de Documentação já está disponível. ", 
+        en: "The new version includes: <br/><br/>  Added: PDF, Playlist, SVG, slideshow, Form, List, Table, Carousel, and Chart.<br/> Changed: Audio and video now feature the integrated 'TECH Player' project.<br/>  Improved design, responsiveness, and bug fixes. <br/> The new Documentation page is now available. " 
     },
     date: "28/08/2026",
     author: "FCASFS-OF",
