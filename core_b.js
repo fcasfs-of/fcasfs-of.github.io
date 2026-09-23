@@ -203,7 +203,7 @@ carregarTudo([
      {
         destino: 'head',  tag: 'script',   
         atributos: {    
-            'src': 'https://fcasfs-of.cloud-fs.net/TECH-LightBox/app/api.js?token=7928184230'
+            'src': 'https://fcasfs-of.cloud-fs.net/TECH-LightBox/app/api.js?token=66496864500'
         }
     }, {
         destino: 'body',  tag: 'script',   
