@@ -117,16 +117,14 @@ document.addEventListener("DOMContentLoaded", function(){
 	  const botapaimo = document.querySelector('.busca button');
      if (botapaimo) {  botapaimo.click();   }
 	  }
-
 });
 
 
 function isprojsvalues(){
-document.addEventListener("DOMContentLoaded", function(){
 	const sprojeufgg = getUrlParameter("project");
-	  if(sprojeufgg && sprojeufgg!=""){
+	  if(sprojeufgg && sprojeufgg!="" && typeof fsmodal_open === 'function'){
  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
-		   if(spsdrojeufgg && spsdrojeufgg!=""){
+   if(spsdrojeufgg && spsdrojeufgg!=""){
 fsmodal_open({
    tiptext:"",  scroll_hide:"yes",  noclose:true,  remove_efect: true,
   include:{    player:"no"  },
@@ -134,9 +132,8 @@ fsmodal_open({
     title:"",    type:"inner", context:"<div class='scards-container dark-mode' style='overflow: hidden;  padding: 10px;  '><div class='card' style='width: 100%; position: fixed; height: 100%; top: 0; left: 0; overflow: auto; right: 0; bottom: 0;'>"+spsdrojeufgg+"</div></div>  <style>.modal-content .card .card-links button.page-link { display:none;  }  .modal-content .card .card-icon svg { fill: currentColor;  }    .modal-content .card .ribbond {   text-align: center;   text-transform: uppercase;  position: absolute;   top: 0;    right: 0;    left: 0;  } </style>",    size:"500",    description:""
   }
 });
-		   }
-	  }
-});    }
+		   }	  }
+  }
 
 
 
