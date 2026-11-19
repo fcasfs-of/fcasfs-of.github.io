@@ -117,10 +117,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	  const botapaimo = document.querySelector('.busca button');
      if (botapaimo) {  botapaimo.click();   }
 	  }
-});
 
-
-document.addEventListener("DOMContentLoaded", function(){	
 	const sprojeufgg = getUrlParameter("project");
 	  if(sprojeufgg && sprojeufgg!=""){
  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
@@ -134,7 +131,9 @@ fsmodal_open({
 });
 		   }
 	  }
+
 });
+
 
 
 
