@@ -118,12 +118,17 @@ document.addEventListener("DOMContentLoaded", function(){
      if (botapaimo) {  botapaimo.click();   }
 	  }
 
+});
+
+
+function isprojsvalues(){
+document.addEventListener("DOMContentLoaded", function(){
 	const sprojeufgg = getUrlParameter("project");
 	  if(sprojeufgg && sprojeufgg!=""){
  const spsdrojeufgg = filtrarprijfa(sprojeufgg);
 		   if(spsdrojeufgg && spsdrojeufgg!=""){
 fsmodal_open({
-  id:"modalffs",  tiptext:"",  scroll_hide:"yes",  noclose:true,  remove_efect: true,
+   tiptext:"",  scroll_hide:"yes",  noclose:true,  remove_efect: true,
   include:{    player:"no"  },
   content:{
     title:"",    type:"inner", context:"<div class='scards-container dark-mode' style='overflow: hidden;  padding: 10px;  '><div class='card' style='width: 100%; position: fixed; height: 100%; top: 0; left: 0; overflow: auto; right: 0; bottom: 0;'>"+spsdrojeufgg+"</div></div>  <style>.modal-content .card .card-links button.page-link { display:none;  }  .modal-content .card .card-icon svg { fill: currentColor;  }    .modal-content .card .ribbond {   text-align: center;   text-transform: uppercase;  position: absolute;   top: 0;    right: 0;    left: 0;  } </style>",    size:"500",    description:""
@@ -131,8 +136,7 @@ fsmodal_open({
 });
 		   }
 	  }
-
-});
+});    }
 
 
 
@@ -203,7 +207,7 @@ carregarTudo([
         destino: 'head',  tag: 'script',   
         atributos: {    
             'src': 'https://fcasfs-of.cloud-fs.net/TECH-LightBox/app/api.js',
-			'id': 'fcasfs_script-lightbox-api', 'token': '66496864500'
+			'id': 'fcasfs_script-lightbox-api', 'token': '66496864500', 'onload':'isprojsvalues();'
         }
     }, {
         destino: 'body',  tag: 'script',   
